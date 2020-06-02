@@ -18,22 +18,22 @@
           "importance": "high"
         },
         {
-          "name": "themes",
+          "name": "subCompetencies",
           "type": "list",
-          "label": "Themes",
+          "label": "Sub Competencies",
           "importance": "low",
           "expanded": false,
           "defaultNum": 1,
           "field": {
-            "name": "theme",
+            "name": "subCompetency",
             "type": "group",
-            "label": "Theme",
+            "label": "Sub Competency",
             "importance": "high",
             "fields": [
               {
                 "name": "label",
                 "type": "text",
-                "label": "Theme",
+                "label": "Sub Competency Name",
                 "widget": "text",
                 "default": ""
               },
@@ -348,14 +348,6 @@
     "importance": "low",
     "common": true,
     "optional": true,
-    "fields": [
-      {
-        "name": "interaction",
-        "type": "text",
-        "label": "Interaction title",
-        "default": "Interaction",
-        "optional": true
-      }
-    ]
+    "fields": []
   }
 ]
