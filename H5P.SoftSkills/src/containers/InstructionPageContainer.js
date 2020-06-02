@@ -16,9 +16,9 @@ const InstructionPageContainer = connect(null,
 )(InstructionPage)
 
 InstructionPageContainer.propTypes =  Object.assign(
-  {},
   {
-    start: PropTypes.func
+    start: PropTypes.func,
+    isReadyToStart: PropTypes.bool
   },
   questionnaireSettings
 );

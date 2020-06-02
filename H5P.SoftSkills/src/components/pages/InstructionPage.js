@@ -11,6 +11,8 @@ import BottomRectangle from '../elements/BottomRectangle';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import 'material-design-icons/iconfont/material-icons.css';
 import NavigationButton from '../elements/NavigationButton';
+import CircularProgressWithStep from '../elements/CircularProgressWithStep';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const styles = () => ({
   generalInstructions: {
@@ -77,9 +79,13 @@ const InstructionPage = withStyles(styles)((props) => {
       </Grid>
       <Grid item container justify="center" alignItems="center" >
         <Box my={"2em"}>
-        <NavigationButton isNext
-                onClick={props.startQuestionnaire}><H5PTranslatedText text='startquestionnaire' />
-        </NavigationButton>
+          {
+            props.isReadyToStart ?
+              (        <NavigationButton isNext
+                                         onClick={props.startQuestionnaire}><H5PTranslatedText text='startquestionnaire' />
+                </NavigationButton>
+              ): <CircularProgress/>
+          }
         </Box>
       </Grid>
     </Grid>
@@ -88,7 +94,8 @@ const InstructionPage = withStyles(styles)((props) => {
 
 InstructionPage.propTypes = Object.assign(
   {
-    startQuestionnaire: PropTypes.func
+    startQuestionnaire: PropTypes.func,
+    isReadyToStart: PropTypes.bool
   },
   questionnaireSettings
 );
@@ -96,7 +103,8 @@ InstructionPage.propTypes = Object.assign(
 
 InstructionPage.defaultProps = Object.assign(
   {
-    startQuestionnaire: null
+    startQuestionnaire: null,
+    isReadyToStart: true
   },
   questionnaireSettingsDefault
 );

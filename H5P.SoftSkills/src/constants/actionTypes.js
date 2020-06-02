@@ -1,4 +1,6 @@
 export const questionnaire = {
+  INIT_USER_DATA: 'softskills/questionnaire/init',
+  READY_TO_START: 'softskills/questionnaire/readytostart',
   START: 'softskills/questionnaire/start',
   FINISH: 'softskills/questionnaire/finish',
   REVIEW: 'softskills/questionnaire/review',

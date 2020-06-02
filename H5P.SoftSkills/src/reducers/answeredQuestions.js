@@ -22,6 +22,8 @@ export function answeredQuestions (state = initialState.answeredQuestions, actio
       }
       return nextState;
     }
+    case types.questionnaire.INIT_USER_DATA:
+      return [...action.answeredQuestions];
     default:
       return state;
   }

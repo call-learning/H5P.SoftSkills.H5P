@@ -14,11 +14,13 @@ import {
   possibleAnswers,
   possibleAnswersDefault,
   questionsByCompetencyAndSubCompetencies,
-  questionnaireCompetenciesQuestionsDefault, questionnaireAnsweredQuestions
+  questionnaireCompetenciesQuestionsDefault,
+  questionnaireAnsweredQuestions,
+  questionnaireResources,
+  questionnaireResourcesDefault
 } from '../../utils/CommonProptypes';
 import { computeProgressPerCompetency } from '../../utils/ComponentsUtils';
 import QuestionnaireResultsPage from './QuestionaireResultsPage';
-import Button from '@material-ui/core/Button';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import NavigationButton from '../elements/NavigationButton';
 
@@ -78,13 +80,15 @@ function ResultsPage (props) {
 ResultsPage.propTypes = Object.assign({},
   possibleAnswers,
   questionsByCompetencyAndSubCompetencies,
-  questionnaireAnsweredQuestions
+  questionnaireAnsweredQuestions,
+  questionnaireResources
 );
 
 ResultsPage.defaultProps = Object.assign({},
   possibleAnswersDefault,
   questionnaireCompetenciesQuestionsDefault,
-  questionnaireAnsweredQuestionsDefault
+  questionnaireAnsweredQuestionsDefault,
+  questionnaireResourcesDefault
 );
 
 export default ResultsPage;

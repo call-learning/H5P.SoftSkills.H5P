@@ -5,24 +5,26 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import PropTypes from 'prop-types';
 
 const NavigationButton = (props) => {
+  const { isNext, isBack, ...otherprops } = props;
   return (
-    <Button {...props}
+    <Button {...otherprops}
             variant="contained"
             color="primary"
-            startIcon={props.isBack ? <ArrowBackIcon/> : ''}
-            endIcon={props.isNext ? <ArrowForwardIcon/> : ''}>
+            startIcon={isBack ? <ArrowBackIcon/> : ''}
+            endIcon={isNext ? <ArrowForwardIcon/> : ''}>
       {props.children}
     </Button>);
 };
 
 NavigationButton.propTypes = {
-  handleActionClick: PropTypes.func,
-  components: PropTypes.arrayOf(PropTypes.element)
+  components: PropTypes.arrayOf(PropTypes.element),
+  isNext: PropTypes.bool,
+  isBack: PropTypes.bool
 };
 NavigationButton.defaultProps = {
-  handleActionClick: () => null,
-  components: []
+  components: [],
+  isNext: false,
+  isBack: false
 };
-
 
 export default NavigationButton;

@@ -11,10 +11,12 @@ export const resultsPage = () => <RoutedResultsPage
   questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
   possibleAnswers={sampleData.settings.possibleAnswers}
   answeredQuestions={sampleAnswerData}
+  resources={sampleData.resources}
 />;
 
 export const resultsPageRandom = () => <RoutedResultsPage
   questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
   possibleAnswers={sampleData.settings.possibleAnswers}
   answeredQuestions={sampleAnswerGenerator(getTotalQuestionCount(sampleData.questionsByCompetencyAndSubCompetencies))}
+  resources={sampleData.resources}
 />;

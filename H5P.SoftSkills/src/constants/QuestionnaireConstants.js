@@ -1,4 +1,5 @@
-export const QSTEP_NOT_STARTED='notyetstarted';
+export const QSTEP_APP_STARTED='appstarted';
+export const QSTEP_READY_TO_START='readytostart';
 export const QSTEP_STARTED='started';
 export const QSTEP_FINISHED='finished';
 export const QSTEP_REVIEWING='review';

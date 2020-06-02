@@ -6,7 +6,11 @@ import {
   questionnaireSettings, questionnaireSettingsDefault,
   questionsByCompetencyAndSubCompetencies,
 } from '../utils/CommonProptypes';
-import { QSTEP_FINISHED, QSTEP_REVIEWING, QSTEP_STARTED } from '../constants/QuestionnaireConstants';
+import {
+  QSTEP_FINISHED,
+  QSTEP_REVIEWING,
+  QSTEP_STARTED, QSTEP_READY_TO_START
+} from '../constants/QuestionnaireConstants';
 import { PossibleAnswersContext } from '../contexts/PossibleAnswersContext';
 import { CompetenciesContext } from '../contexts/CompetenciesContext';
 import CompetencyPageContainer from './CompetencyPageContainer';
@@ -17,10 +21,14 @@ import Container from '@material-ui/core/Container';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+
 function Questionnaire (props) {
-  let currentPage = (<InstructionPageContainer {...props.settings}/>);
+  let currentPage = (<InstructionPageContainer {...props.settings} isReadyToStart={false}/>);
 
   switch (props.currentStep) {
+    case QSTEP_READY_TO_START:
+      currentPage = (<InstructionPageContainer {...props.settings}/>);
+      break;
     case QSTEP_STARTED:
       currentPage =
         (<PossibleAnswersContext.Provider value={props.settings.possibleAnswers}>
@@ -36,16 +44,12 @@ function Questionnaire (props) {
       break;
     case QSTEP_REVIEWING:
       currentPage = (
-        <PossibleAnswersContext.Provider value={props.settings.possibleAnswers}>
-          <CompetenciesContext.Provider value={props.questionsByCompetencyAndSubCompetencies}>
-            <RoutedResultsPageContainer/>
-          </CompetenciesContext.Provider>
-        </PossibleAnswersContext.Provider>
+            <RoutedResultsPageContainer {...props} />
       );
   }
 
   return (<Container maxWidth={false}>{currentPage}</Container>);
-};
+}
 
 Questionnaire.propTypes = Object.assign({
     currentStep: PropTypes.string,

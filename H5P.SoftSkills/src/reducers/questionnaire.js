@@ -1,7 +1,12 @@
 import initialState from '../constants/initialState';
 import * as types from '../constants/actionTypes';
-import { QSTEP_FINISHED, QSTEP_NOT_STARTED, QSTEP_REVIEWING, QSTEP_STARTED } from '../constants/QuestionnaireConstants';
+import {
+  QSTEP_FINISHED,
+  QSTEP_REVIEWING,
+  QSTEP_STARTED, QSTEP_READY_TO_START
+} from '../constants/QuestionnaireConstants';
 import { getTotalQuestionCount } from '../utils/ComponentsUtils';
+import { initializeUserDataQuestionnaire, startQuestionnaire } from '../actions/questionnaire';
 
 /**
  *
@@ -10,6 +15,12 @@ import { getTotalQuestionCount } from '../utils/ComponentsUtils';
  */
 export function currentStep (state = initialState.currentStep, action) {
   switch (action.type) {
+    case types.questionnaire.INIT_USER_DATA: {
+      return action.currentStep;
+    }
+    case types.questionnaire.READY_TO_START: {
+      return QSTEP_READY_TO_START;
+    }
     case types.questionnaire.START: {
       return QSTEP_STARTED;
     }
@@ -33,6 +44,7 @@ export function currentStep (state = initialState.currentStep, action) {
  *
  */
 export function navigation (state = initialState.navigation, action) {
+  // eslint-disable-next-line no-unused-vars
   const { questionGlobalIndex, questionsByCompetencyAndSubCompetencies } = action;
 
   const maxCompetencyIndex = questionsByCompetencyAndSubCompetencies ? questionsByCompetencyAndSubCompetencies.length : 0;
@@ -48,7 +60,8 @@ export function navigation (state = initialState.navigation, action) {
       const prevCompetencyIndex = state.currentCompetencyIndex - 1;
       return { ...state, currentCompetencyIndex: (prevCompetencyIndex > 0) ? prevCompetencyIndex : 0 };
     }
-    case types.questionnaire.RESET_NAVIGATION: {
+    case types.questionnaire.RESET_NAVIGATION:
+    case types.questionnaire.INIT_USER_DATA:  {
       return { currentCompetencyIndex: 0, questionGlobalIndex: 0 };
     }
     case types.questionnaire.MOVE_NEXT_AVAILABLE_QUESTION: {

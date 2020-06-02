@@ -15,7 +15,8 @@
           "name": "label",
           "type": "text",
           "label": "Competency",
-          "importance": "high"
+          "importance": "high",
+          "optional": true
         },
         {
           "name": "subCompetencies",
@@ -35,11 +36,12 @@
                 "type": "text",
                 "label": "Sub Competency Name",
                 "widget": "text",
-                "default": ""
+                "default": "",
+                "optional": true
               },
               {
                 "name": "isVisible",
-                "type": "text",
+                "type": "boolean",
                 "label": "Visible?",
                 "widget": "boolean",
                 "default": true
@@ -60,11 +62,12 @@
                       "type": "text",
                       "label": "Context",
                       "widget": "text",
-                      "default": ""
+                      "default": "",
+                      "optional": true
                     },
                     {
                       "name": "isVisible",
-                      "type": "text",
+                      "type": "boolean",
                       "label": "Visible?",
                       "widget": "boolean",
                       "default": true
@@ -331,7 +334,7 @@
               "widget": "text"
             },
             {
-              "name": "value",
+              "name": "id",
               "type": "number",
               "label": "Answer Value",
               "importance": "high"
@@ -348,6 +351,115 @@
     "importance": "low",
     "common": true,
     "optional": true,
-    "fields": []
+    "fields": [
+      {
+        "name": "congratulations",
+        "type": "text"
+      },
+      {
+        "name": "congratulationtext",
+        "type": "text"
+      },
+      {
+        "name": "seeresults",
+        "type": "text"
+      },
+      {
+        "name": "previouscompetencypage",
+        "type": "text"
+      },
+      {
+        "name": "nextcompetencypage",
+        "type": "text"
+      },
+      {
+        "name": "finishquestionnaire",
+        "type": "text"
+      },
+      {
+        "name": "firstpart",
+        "type": "text"
+      },
+      {
+        "name": "secondpart",
+        "type": "text"
+      },
+      {
+        "name": "thirdpart",
+        "type": "text"
+      },
+      {
+        "name": "fourthpart",
+        "type": "text"
+      },
+      {
+        "name": "over",
+        "type": "text"
+      },
+      {
+        "name": "competencyresultdesc",
+        "type": "text"
+      },
+      {
+        "name": "detailpercompetency",
+        "type": "text"
+      },
+      {
+        "name": "participation",
+        "type": "text"
+      },
+      {
+        "name": "result",
+        "type": "text"
+      },
+      {
+        "name": "over",
+        "type": "text"
+      },
+      {
+        "name": "results",
+        "type": "text"
+      },
+      {
+        "name": "resultspercompetency",
+        "type": "text"
+      },
+      {
+        "name": "back",
+        "type": "text"
+      },
+      {
+        "name": "startquestionnaire",
+        "type": "text"
+      },
+      {
+        "name": "yourcompetencyresults",
+        "type": "text"
+      },
+      {
+        "name": "resources",
+        "type": "text"
+      },
+      {
+        "name": "resultFeedBack0",
+        "type": "text"
+      },
+      {
+        "name": "resultFeedBack25",
+        "type": "text"
+      },
+      {
+        "name": "resultFeedBack50",
+        "type": "text"
+      },
+      {
+        "name": "resultFeedBack75",
+        "type": "text"
+      },
+      {
+        "name": "resultFeedBack100",
+        "type": "text"
+      }
+    ]
   }
 ]

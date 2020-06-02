@@ -6,7 +6,7 @@ let middleware = [thunk];
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-export const store = createStore(
-  questionnaireCombinedReducers, /* preloadedState, */
+export const questionnaireStore = createStore(
+  questionnaireCombinedReducers,
   composeEnhancers(applyMiddleware(...middleware))
 );
