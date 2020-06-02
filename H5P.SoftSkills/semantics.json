@@ -1,0 +1,361 @@
+[
+  {
+    "name": "questionsByCompetencyAndSubCompetencies",
+    "type": "list",
+    "label": "Questions sorted by competencies",
+    "importance": "high",
+    "expanded": false,
+    "defaultNum": 1,
+    "field": {
+      "name": "competency",
+      "type": "group",
+      "label": "Competency",
+      "fields": [
+        {
+          "name": "label",
+          "type": "text",
+          "label": "Competency",
+          "importance": "high"
+        },
+        {
+          "name": "themes",
+          "type": "list",
+          "label": "Themes",
+          "importance": "low",
+          "expanded": false,
+          "defaultNum": 1,
+          "field": {
+            "name": "theme",
+            "type": "group",
+            "label": "Theme",
+            "importance": "high",
+            "fields": [
+              {
+                "name": "label",
+                "type": "text",
+                "label": "Theme",
+                "widget": "text",
+                "default": ""
+              },
+              {
+                "name": "isVisible",
+                "type": "text",
+                "label": "Visible?",
+                "widget": "boolean",
+                "default": true
+              },
+              {
+                "name": "contexts",
+                "type": "list",
+                "label": "Contexts",
+                "importance": "high",
+                "field": {
+                  "name": "context",
+                  "type": "group",
+                  "label": "Context",
+                  "importance": "high",
+                  "fields": [
+                    {
+                      "name": "label",
+                      "type": "text",
+                      "label": "Context",
+                      "widget": "text",
+                      "default": ""
+                    },
+                    {
+                      "name": "isVisible",
+                      "type": "text",
+                      "label": "Visible?",
+                      "widget": "boolean",
+                      "default": true
+                    },
+                    {
+                      "name": "questions",
+                      "type": "list",
+                      "label": "Themes",
+                      "importance": "low",
+                      "expanded": false,
+                      "min": 1,
+                      "defaultNum": 1,
+                      "isSubContent": true,
+                      "field": {
+                        "name": "question",
+                        "type": "text",
+                        "label": "Question Text",
+                        "widget": "html",
+                        "tags": [
+                          "strong",
+                          "em"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "resources",
+    "type": "list",
+    "label": "Resources List",
+    "importance": "medium",
+    "isSubContent": true,
+    "expanded": false,
+    "field": {
+      "name": "resource",
+      "type": "group",
+      "label": "Resource",
+      "importance": "high",
+      "fields": [
+        {
+          "name": "label",
+          "type": "text",
+          "label": "Label",
+          "default": "",
+          "importance": "high"
+        },
+        {
+          "name": "content",
+          "type": "text",
+          "label": "Content",
+          "widget": "html",
+          "tags": [
+            "p",
+            "br",
+            "strong",
+            "em",
+            "code",
+            "table",
+            "a",
+            "ul",
+            "ol"
+          ],
+          "importance": "high"
+        },
+        {
+          "name": "references",
+          "type": "text",
+          "label": "Reference of a category:subcategory:context",
+          "regexp": {
+            "pattern": "([0-9]+(:[0-9]+)*)*",
+            "modifiers": "i"
+          },
+          "default": "",
+          "importance": "high"
+        },
+        {
+          "name": "image",
+          "type": "library",
+          "optional": true,
+          "options": [
+            "H5P.Image 1.0"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "settings",
+    "type": "group",
+    "label": "Miscellaneous Settings",
+    "importance": "high",
+    "widgets": [
+      {
+        "name": "ListEditor",
+        "label": "Instructions List"
+      }
+    ],
+    "expanded": false,
+    "fields": [
+      {
+        "name": "welcomeTitle",
+        "type": "text",
+        "widget": "html",
+        "tags": [
+          "p",
+          "br",
+          "strong",
+          "em",
+          "code"
+        ],
+        "label": "Page title",
+        "default": "Bienvenue sur le\nTest d’auto-positionnement sur les soft skills."
+      },
+      {
+        "name": "generalInstructions",
+        "type": "text",
+        "widget": "html",
+        "tags": [
+          "p",
+          "br",
+          "strong",
+          "em",
+          "code"
+        ],
+        "label": "General Instructions",
+        "default": "Ce questionnaire vous permettra d’identifier vos compétences transversales, autrement appelées soft skills, et vous proposera des ressources d’auto-formation afin d’accompagner le développement de ces compétences."
+      },
+      {
+        "name": "startButtonLabel",
+        "type": "text",
+        "label": "Start Button Label",
+        "default": "Démarrer le test"
+      },
+      {
+        "name": "competenciesDesc",
+        "type": "list",
+        "label": "Description of each competencies",
+        "importance": "low",
+        "expanded": false,
+        "min": 3,
+        "max": 3,
+        "defaultNum": 3,
+        "widgets": [
+          {
+            "name": "ListEditor",
+            "label": "Competencies List"
+          }
+        ],
+        "field": {
+          "name": "competencyDesc",
+          "type": "group",
+          "label": "Competency",
+          "importance": "high",
+          "fields": [
+            {
+              "name": "title",
+              "type": "text",
+              "label": "Title",
+              "widget": "html",
+              "tags": [
+                "p",
+                "br",
+                "strong",
+                "em",
+                "code"
+              ],
+              "importance": "high"
+            },
+            {
+              "name": "description",
+              "type": "text",
+              "label": "Title",
+              "widget": "html",
+              "tags": [
+                "p",
+                "br",
+                "strong",
+                "em",
+                "code"
+              ],
+              "importance": "high"
+            },
+            {
+              "name": "image",
+              "type": "library",
+              "optional": true,
+              "options": [
+                "H5P.Image 1.0"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "instructionsDesc",
+        "type": "list",
+        "label": "Instructions",
+        "importance": "low",
+        "expanded": false,
+        "min": 3,
+        "max": 3,
+        "defaultNum": 3,
+        "widgets": [
+          {
+            "name": "ListEditor",
+            "label": "Instructions List"
+          }
+        ],
+        "field": {
+          "name": "instructionsDesc",
+          "type": "group",
+          "label": "Instruction",
+          "importance": "high",
+          "fields": [
+            {
+              "name": "icon",
+              "type": "text",
+              "label": "Title",
+              "widget": "text",
+              "default": "timer",
+              "importance": "high"
+            },
+            {
+              "name": "text",
+              "type": "text",
+              "label": "Text",
+              "widget": "html",
+              "tags": [
+                "p",
+                "br",
+                "strong",
+                "em",
+                "code"
+              ],
+              "importance": "high"
+            }
+          ]
+        }
+      },
+      {
+        "name": "possibleAnswers",
+        "type": "list",
+        "label": "Possible Answers",
+        "importance": "low",
+        "expanded": false,
+        "defaultNum": 5,
+        "field": {
+          "name": "answer",
+          "type": "group",
+          "label": "Answer",
+          "importance": "high",
+          "fields": [
+            {
+              "name": "text",
+              "type": "text",
+              "label": "Answer Text",
+              "widget": "text"
+            },
+            {
+              "name": "value",
+              "type": "number",
+              "label": "Answer Value",
+              "importance": "high"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "label": "Localize",
+    "importance": "low",
+    "common": true,
+    "optional": true,
+    "fields": [
+      {
+        "name": "interaction",
+        "type": "text",
+        "label": "Interaction title",
+        "default": "Interaction",
+        "optional": true
+      }
+    ]
+  }
+]

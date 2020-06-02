@@ -1,0 +1,22 @@
+{
+  "title": "Soft Skills Questionnaire",
+  "description": "Soft Skill Questionnaire for HESAM Soka project",
+  "majorVersion": 1,
+  "minorVersion": 1,
+  "patchVersion": 8,
+  "runnable": 1,
+  "author": "CALL Learning 2020 (contact@call-learning.fr)",
+  "license": "MIT",
+  "machineName": "H5P.SoftSkills",
+  "preloadedJs": [
+    {
+      "path": "umd/h5p-softskills.js"
+    }
+  ],
+  "preloadedCss": [
+    {
+      "path": "umd/h5p-softskills.css"
+    }
+  ]
+
+}

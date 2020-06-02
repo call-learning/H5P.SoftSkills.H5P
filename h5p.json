@@ -1,0 +1,24 @@
+{
+  "title": "SoftSkills",
+  "language": "en",
+  "author": "CALL Learning (2020) for HESAM Sok@a project",
+  "license": "CC BY-SA",
+  "licenseVersion": "4.0",
+  "authors": [
+    {
+      "name": "Laurent David <laurent@call-learning.fr>",
+      "role": "Author"
+    }
+  ],
+  "preloadedDependencies": [
+    {
+      "machineName": "H5P.SoftSkills",
+      "majorVersion": 1,
+      "minorVersion": 1
+    }
+  ],
+  "mainLibrary": "H5P.SoftSkills",
+  "embedTypes": [
+    "div"
+  ]
+}

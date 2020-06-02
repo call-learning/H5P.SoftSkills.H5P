@@ -1,0 +1,370 @@
+{
+  "l10n": {
+    "congratulations": "Félicitations !",
+    "congratulationstext": "Vous avez répondu à toutes les questions.\nMaintenant il est temps pour vous de découvrir votre bilan de compétences soft skills.",
+    "seeresults": "Voir les résultats",
+    "previouscompetencypage": "Compéténce précédente",
+    "nextcompetencypage": "Compétence suivante",
+    "finishquestionnaire": "Terminer le questionnaire",
+    "first": "Première",
+    "second": "Seconde",
+    "third": "Troisième",
+    "fourth": "Quatrième",
+    "competencyresultdesc": ":compcount compétences on été évalues en moyenne à :percentMean %",
+    "detailpercompetency": "Vos résultats par type de compétence",
+    "participation": "Participation",
+    "result": "Résultat",
+    "over": "sur",
+    "results": "Résultats",
+    "resultspercompetency": "Détail par compétence",
+    "back": "Retour",
+    "startquestionnaire": "Start Questionnaire"
+  },
+  "resources": [
+    {
+      "label": "J'utilise un correcteur orthographique",
+      "content": "<p>My content <a href=\"http:\/\/google.com\" target=\"_blank\">www.google.com<\/a><\/p>\n",
+      "references": "0:1:1,0:0:2"
+    },
+    {
+      "label": "Je relis ou je fais relire mes productions pour corriger les fautes d'orthographe",
+      "content": "<p>My content <a href=\"http:\/\/google.com\" target=\"_blank\">www.google.com<\/a><\/p>\n",
+      "references": "0:1:2,0:1:1"
+    },
+    {
+      "label": "Lorsque je considère nécessaire",
+      "content": "<p>My content <a href=\"http:\/\/google.com\" target=\"_blank\">www.google.com<\/a><\/p>\n",
+      "references": "0:1:2,0:1:2"
+    },
+    {
+      "label": "J'applique les règles",
+      "content": "<p>My content <a href=\"http:\/\/google.com\" target=\"_blank\">www.google.com<\/a><\/p>\n",
+      "references": "0:1:0,0:1:2"
+    }
+  ],
+  "settings": {
+    "welcomeTitle": "Bienvenue sur le\nTest d'auto-positionnement sur les soft skills.",
+    "generalInstructions": "Ce questionnaire vous permettra d’identifier vos compétences transversales, autrement appelées soft skills, et vous proposera des ressources d’auto-formation afin d’accompagner le développement de ces compétences.",
+    "competenciesDesc": [
+      {
+        "title": "Compétences sociales",
+        "description": "Quelle est votre capacité à travailler avec d’autres personnes dans un contexte professionnel où l’interaction est importante ?"
+      },
+      {
+        "title": "Compétences personelles",
+        "description": "Quelles aptitudes personnelles utiles dans un contexte professionnel avez-vous développées ?"
+      },
+      {
+        "title": "Compétences méthodologiques",
+        "description": "Par quelles démarches réussissez-vous à organiser vos activités professionnelles ?"
+      }
+    ],
+
+    "instructionsDesc": [
+      {
+        "icon": "timer",
+        "text": "Le test dure environ 10 minutes\n"
+      },
+      {
+        "icon": "sentiment_very_satisfied",
+        "text": "Répondez avec honnêteté"
+      },
+      {
+        "icon": "playlist_add_check",
+        "text": "Évitez autant que possible les \"je ne sais pas\""
+      }
+    ],
+    "possibleAnswers": [
+      {
+        "text": "Toujours",
+        "id": 5
+      },
+      {
+        "text": "Souvent",
+        "id": 4
+      },
+      {
+        "text": "Parfois",
+        "id": 3
+      },
+      {
+        "text": "Jamais",
+        "id": 2
+      },
+      {
+        "text": "Ne sais pas",
+        "id": 1
+      }
+    ]
+  },
+  "questionsByCompetencyAndSubCompetencies": [
+    {
+      "subCompetencies": [
+        {
+          "label": "Communiquer pour transmettre des idées et des informations nécessaires au travail",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "Je suis amené(e) à rédiger un document écrit dans une situation professionnelle précise:",
+              "isVisible": true,
+              "questions": [
+                "Lors de la rédaction, je prends en considération mon public cible et j’adapte mon langage.",
+                "Je choisis le format et j’adapte mon registre à la situation (rapport, power point, mail, lettre interne, note de service, réseau social interne)."
+              ]
+            },
+            {
+              "label": "Lors de la production écrite:",
+              "isVisible": true,
+              "questions": [
+                "J’utilise un correcteur orthographique",
+                "Je relis et/ou fais relire mes productions pour corriger les fautes d’orthographe et pour vérifier la clarté du contenu.",
+                "Lorsque je le considère nécessaire, je fais valider le contenu de mes productions par un expert métier.",
+                "J’applique les règles de mise en forme en fonction du format (lettre, rapport…).",
+                "J’applique les règles permettant la réalisation d’une synthèse.",
+                "J’applique les règles permettant la production d’un discours argumenté. "
+              ]
+            },
+            {
+              "label": "Je suis amené(e) à faire une présentation orale dans une situation professionnelle précise:",
+              "isVisible": true,
+              "questions": [
+                "Au cours de la présentation j’adapte mon discours au public cible.",
+                "Je choisis des supports adaptés (vidéo, ppt, …) à la situation (discours, pitch, entretien, conférence, réunion), au contenu à transmettre et à mon objectif.",
+                "Je pense à mon comportement gestuel."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Manager une équipe",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "Je suis amené(e) à manager une équipe",
+              "isVisible": true,
+              "questions": [
+                "Je comprends les enjeux et les principes d’animation d’une équipe dans un contexte professionnel.",
+                "Je sais (re)formuler les consignes pour que mes collaborateurs comprennent ce qui est attendu d’eux.",
+                "J’échange avec mes interlocuteurs en appliquant les principes de l’écoute active.",
+                "Pour accompagner le travail de mes collaborateurs, je fais preuve d’empathie et je favorise l’échange."
+              ]
+            },
+            {
+              "label": "Manager une équipe, c’est aussi identifier et reconnaître les compétences de ses collaborateurs",
+              "isVisible": true,
+              "questions": [
+                "Je mets en place des méthodes et des outils d’évaluation des compétences.",
+                "Je mets en place des actions de valorisation des activités de mes collaborateurs.",
+                "Je mets en place des actions pour développer les compétences de mes collaborateurs."
+              ]
+            },
+            {
+              "label": "En tant que manager d’équipe, une de mes missions est la prévention des tensions et conflits",
+              "isVisible": true,
+              "questions": [
+                "Je sais repérer les signaux faibles pour déterminer les situations de malaise.",
+                "Je sais mettre en place un plan de prévention pour éviter les tensions et les conflits."
+              ]
+            },
+            {
+              "label": "En tant que manager d’équipe, je suis amené(e) à gérer des tensions et des conflits.",
+              "isVisible": true,
+              "questions": [
+                "Je sais me mettre dans une posture d’écoute et de médiation pour désamorcer les tensions et les conflits.",
+                "Je sais mettre en place des plans d’action et de suivi des solutions."
+              ]
+            }
+          ]
+        }
+      ],
+      "label": "Compétences sociales"
+    },
+    {
+      "subCompetencies": [
+        {
+          "label": "Identification des apprentissages liés à mon activité professionnelle",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "",
+              "isVisible": false,
+              "questions": [
+                "Au démarrage des projets, j’identifie mes besoins en termes de connaissances et de compétences.",
+                "A l’issue de mes projets, j’identifie mes acquis en termes de connaissances et de compétences.",
+                "Je suis capable d’expliciter mes acquis en termes de connaissances et de compétences pour les valoriser dans d’autres contextes."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Adaptabilité",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "",
+              "isVisible": false,
+              "questions": [
+                "Lorsque je le considère nécessaire, je suis capable de m’adapter aux codes des environnements dans lesquels j’évolue.",
+                "Je modifie mon action afin de m’adapter à des aléas."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Le leadership : un des leviers pour mener et conduire des individus ou des organisations",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "",
+              "isVisible": false,
+              "questions": [
+                "Je stimule et valorise l’apport de chacun dans l’atteinte des objectifs.",
+                "Je fais en sorte que mes actions et mes attitudes soient cohérentes avec mon discours.",
+                "Je sais communiquer et faire accepter une décision."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "L’éthique",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "",
+              "isVisible": false,
+              "questions": [
+                "Dans le contexte professionnel, mes actions visent le bien commun.",
+                "J’agis systématiquement dans le respect de la culture et des valeurs de mon entourage.",
+                "Je me comporte systématiquement vis-à-vis d’autrui avec loyauté, équité et sans discriminer.",
+                "Je respecte les contraintes relevant de la santé, de la sécurité et de l’environnement."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "L’esprit critique",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "",
+              "isVisible": false,
+              "questions": [
+                "J’intègre les remarques de mes pairs.",
+                "J’intègre les remarques des experts.",
+                "Je suis capable de me remettre en question.",
+                "Je défends mon point de vue de manière constructive."
+              ]
+            }
+          ]
+        }
+      ],
+      "label": "Compétences personnelles"
+    },
+    {
+      "subCompetencies": [
+        {
+          "label": "Se tenir au courant des nouvelles technologies et de nouveaux développements",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "",
+              "isVisible": false,
+              "questions": [
+                "Je mets en place des techniques de veille scientifique, technique et technologique.",
+                "Je documente mes activités et les travaux réalisés."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Négocier",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "",
+              "isVisible": false,
+              "questions": [
+                "Je prends en compte les éléments de contexte de mon environnement pour initier la négociation (supérieur hiérarchique, collaborateur, client, fournisseur…).",
+                "Je comprends les rapports de force et j’identifie les concessions possibles.",
+                "J’identifie les arguments servant à convaincre mes interlocuteurs.",
+                "Je mets en place les leviers d’action de la négociation : accords, compromis, personnes ressources.",
+                "Je formalise l’accord de chaque négociation par une contractualisation."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Conduire un projet",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "Recherche et organisation des informations",
+              "isVisible": true,
+              "questions": [
+                "J’applique les techniques et les étapes de recherche d’information.",
+                "J’applique les techniques d’organisation de l’information collectée.",
+                "Dans le cadre d’un projet scientifique et/ou technique, j’établis un état de l’art.",
+                "J’applique les techniques d’analyse de l’information collectée.",
+                "J’applique les techniques de synthèse écrite."
+              ]
+            },
+            {
+              "label": "Savoir délimiter et monter un projet",
+              "isVisible": true,
+              "questions": [
+                "Je définis les objectifs du projet.",
+                "Je définis les différents actions et étapes associées.",
+                "J’identifie les ressources (humaine, matérielle, financière) nécessaires et adaptées aux actions.",
+                "Je connais les règles de rédaction d’un cahier des charges fonctionnel.",
+                "Je connais les règles de rédaction d’un cahier des charges technique."
+              ]
+            },
+            {
+              "label": "Savoir piloter un projet",
+              "isVisible": true,
+              "questions": [
+                "En tant que chef de projet, je mets en place des règles d’animation et de coordination de l’équipe du projet.",
+                "En tant que chef de projet, j’applique les méthodes de suivi du projet.",
+                "En tant que chef de projet, je rends compte systématiquement à ma hiérarchie de l’état d’avancement du projet."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Résoudre un problème",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "Dans une situation problème, ",
+              "isVisible": true,
+              "questions": [
+                "Je pense systématiquement le problème dans un système global.",
+                "Je m’appuie sur des méthodes pour comprendre le problème.",
+                "Je m’appuie sur des méthodes pour déterminer les causes du problème.",
+                "Je mets en œuvre les ressources scientifiques et techniques nécessaires à la résolution du problème.",
+                "Je surveille la mise en œuvre de la solution."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Faire preuve de créativité, chercher à innover et à entreprendre",
+          "isVisible": false,
+          "contexts": [
+            {
+              "label": "Dans le cadre de mes activités,",
+              "isVisible": true,
+              "questions": [
+                "J’utilise les méthodes de créativité. ",
+                "Je m’appuie sur la typologie des innovations pour concevoir des solutions adaptées.",
+                "Je mets en œuvre des processus d’innovation.",
+                "Je pense à transformer mes idées en activités rentables. "
+              ]
+            }
+          ]
+        }
+      ],
+      "label": "Compétences Méthodologiques"
+    }
+  ]
+}
