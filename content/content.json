@@ -6,10 +6,10 @@
     "previouscompetencypage": "Compéténce précédente",
     "nextcompetencypage": "Compétence suivante",
     "finishquestionnaire": "Terminer le questionnaire",
-    "first": "Première",
-    "second": "Seconde",
-    "third": "Troisième",
-    "fourth": "Quatrième",
+    "firstpart": "Première Partie",
+    "secondpart": "Seconde Partie",
+    "thirdpart": "Troisième Partie",
+    "fourthpart": "Quatrième Partie",
     "over": "sur",
     "competencyresultdesc": ":compcount competences ont été évaluées en moyenne à :compPercent sur 100",
     "detailpercompetency": "Vos résultats par type de compétence",
@@ -26,7 +26,8 @@
     "resultFeedBack25": "Avec un résultat de :compPercent, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
     "resultFeedBack50": "Avec un résultat de :compPercent, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
     "resultFeedBack75": "Avec un résultat de :compPercent, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
-    "resultFeedBack100": "Avec un résultat de :compPercent, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence."
+    "resultFeedBack100": "Avec un résultat de :compPercent, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
+    "reviewquestionnaire": "Revoir les questions"
   },
   "resources": [
     {

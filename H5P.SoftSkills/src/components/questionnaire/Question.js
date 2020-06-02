@@ -46,7 +46,11 @@ const Question = withStyles(styles)((props) => {
   return (
     <Container>
       <FormControl component="fieldset" disabled={props.isDisabled} onClick={
-        (e) => props.handleEnableQuestion(props.questionID)
+        (e) => {
+          if (props.isDisabled) {
+            props.handleEnableQuestion(props.questionID)
+          }
+        }
       }>
         <FormLabel className={classes.labelQuestion} component="legend">{props.questionText}</FormLabel>
         <RadioGroup row

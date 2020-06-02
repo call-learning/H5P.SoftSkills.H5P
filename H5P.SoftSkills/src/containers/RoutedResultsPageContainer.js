@@ -20,13 +20,17 @@ const RoutedResultsPageContainer = (props) => {
   return (<RoutedResultsPage {...props}/>);
 };
 
-RoutedResultsPageContainer.propTypes = Object.assign({},
+RoutedResultsPageContainer.propTypes = Object.assign({
+    handleReviewQuestionnaire: PropTypes.func
+  },
   questionsByCompetencyAndSubCompetencies,
   questionnaireSettings,
   questionnaireResources
 );
 
-RoutedResultsPageContainer.defaultProps = Object.assign({},
+RoutedResultsPageContainer.defaultProps = Object.assign({
+    handleReviewQuestionnaire: () => null
+  },
   questionnaireCompetenciesQuestionsDefault,
   questionnaireResourceDefault,
   questionnaireSettingsDefault

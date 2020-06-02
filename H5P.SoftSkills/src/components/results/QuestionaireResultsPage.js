@@ -16,6 +16,7 @@ import {
 } from '../../utils/CommonProptypes';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import Paper from '@material-ui/core/Paper';
+import NavigationButton from '../elements/NavigationButton';
 
 const CompetencyLinearProgress = withStyles({
   root: {
@@ -41,30 +42,25 @@ const QuestionnaireResultsPage = withStyles(styles)((props) => {
       <Box py="2em">
         <Typography variant="h3"><H5PTranslatedText text='results'/></Typography>
       </Box>
-      <Box>
-        <Grid container spacing={1}>
+      <Box width="50%">
           {
-            props.questionsByCompetencyAndSubCompetencies.map((competency, competencyIndex) => (<Fragment>
-                <Grid xs={6}>
-                  <Box px={1} py={1}><Typography align="right">{competency.label}</Typography></Box>
-                </Grid>
-                <Grid xs={6}>
-                  <Box py={1}>
-                  <CompetencyLinearProgress variant="determinate"
+            props.questionsByCompetencyAndSubCompetencies.map((competency, competencyIndex) => (
+              <Box display="flex" flexDirection="row">
+                  <Box flexGrow={1} px={1} py={1}><Typography align="right">{competency.label}</Typography></Box>
+                  <Box minWidth="40%" py={1}>
+                    <CompetencyLinearProgress variant="determinate"
                                             value={props.results[competencyIndex].value}/>
                   </Box>
-                </Grid>
-              </Fragment>
+              </Box>
             ))
           }
-        </Grid>
       </Box>
       <Box>
         <Typography variant="h3"><H5PTranslatedText text='resultspercompetency'/></Typography>
       </Box>
       {
         props.questionsByCompetencyAndSubCompetencies.map((comp, compIndex) => (
-          <Box key={compIndex} width="80%">
+          <Box key={compIndex} maxWidth="80%">
             <CompetencyResultsCard
               questionsByCompetencyAndSubCompetencies={props.questionsByCompetencyAndSubCompetencies}
               results={props.results}
@@ -73,13 +69,21 @@ const QuestionnaireResultsPage = withStyles(styles)((props) => {
             />
           </Box>))
       }
+      <Box>
+        <NavigationButton onClick={props.handleReviewQuestionnaire}
+                          isBack={false}
+                          isNext={false}>
+          <H5PTranslatedText text='reviewquestionnaire'/>
+        </NavigationButton>
+      </Box>
     </Box>
   );
 });
 
 QuestionnaireResultsPage.propTypes = Object.assign(
   {
-    handleViewCompetencyClick: PropTypes.func
+    handleViewCompetencyClick: PropTypes.func,
+    handleReviewQuestionnaire: PropTypes.func
   },
   questionsByCompetencyAndSubCompetencies,
   questionnaireResults
@@ -87,7 +91,8 @@ QuestionnaireResultsPage.propTypes = Object.assign(
 
 QuestionnaireResultsPage.defaultProps = Object.assign(
   {
-    handleViewCompetencyClick: (cid) => null
+    handleViewCompetencyClick: (cid) => null,
+    handleReviewQuestionnaire: (cid) => null
   },
   questionnaireCompetenciesQuestionsDefault,
   questionnaireResultsDefault

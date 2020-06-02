@@ -8,9 +8,14 @@ import { Element, scroller } from 'react-scroll';
 class QuestionWrapper extends React.Component {
   constructor (props) {
     super(props);
+    this.state = {forceEnabled:false};
     this.elementRef = React.createRef();
+    this.handleEnableQuestion = this.handleEnableQuestion.bind(this);
   }
 
+  handleEnableQuestion (questionID) {
+    this.setState((state, props) => ({ forceEnabled: true }));
+  }
   componentDidMount () {
     if (!this.props.isDisabled) {
       scroller.scrollTo(`question-${this.props.questionID}`, {
@@ -34,12 +39,21 @@ class QuestionWrapper extends React.Component {
   }
 
   render () {
+    let {isDisabled, ...otherprops} = this.props;
+    if (this.state.forceEnabled) {
+      isDisabled = false;
+    }
     return (
       <Element name={`question-${this.props.questionID}`}>
         <PossibleAnswersContext.Consumer>
           {allPossibleAnswers =>
             (<Question possibleAnswers={allPossibleAnswers}
-                       {...this.props} // questionIndex, questionText, isDisabled and selectedItemId
+                       {...otherprops} isDisabled={isDisabled}
+                       handleSelectAnswer={(questionID,value) => {
+                         this.setState((state, props) => ({ forceEnabled: false }));
+                         this.props.handleSelectAnswer(questionID, value);
+                       }}
+                       handleEnableQuestion={() => this.handleEnableQuestion()}
             />)}
         </PossibleAnswersContext.Consumer>
       </Element>

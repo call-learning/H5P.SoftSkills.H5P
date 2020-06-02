@@ -23,6 +23,7 @@ import { computeProgressPerCompetency } from '../../utils/ComponentsUtils';
 import QuestionnaireResultsPage from './QuestionaireResultsPage';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import NavigationButton from '../elements/NavigationButton';
+import PropTypes from 'prop-types';
 
 function CompetencyResultsPageWithRoute (props) {
   let { compid } = useParams();
@@ -71,20 +72,26 @@ function ResultsPage (props) {
         <QuestionnaireResultsPage
           questionsByCompetencyAndSubCompetencies={props.questionsByCompetencyAndSubCompetencies}
           results={allCompetenciesResults}
-          handleViewCompetencyClick={handleViewCompetencyClick}/>
+          handleViewCompetencyClick={handleViewCompetencyClick}
+          handleReviewQuestionnaire={props.handleReviewQuestionnaire}
+        />
       </Route>
     </Switch>
   );
 }
 
-ResultsPage.propTypes = Object.assign({},
+ResultsPage.propTypes = Object.assign({
+    handleReviewQuestionnaire: PropTypes.func
+  },
   possibleAnswers,
   questionsByCompetencyAndSubCompetencies,
   questionnaireAnsweredQuestions,
   questionnaireResources
 );
 
-ResultsPage.defaultProps = Object.assign({},
+ResultsPage.defaultProps = Object.assign({
+    handleReviewQuestionnaire: () => null
+  },
   possibleAnswersDefault,
   questionnaireCompetenciesQuestionsDefault,
   questionnaireAnsweredQuestionsDefault,

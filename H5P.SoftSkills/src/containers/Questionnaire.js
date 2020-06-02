@@ -20,6 +20,7 @@ import RoutedResultsPageContainer from './RoutedResultsPageContainer';
 import Container from '@material-ui/core/Container';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { finishQuestionnaireAndSaveData, startQuestionnaireAndPosition } from '../actions/questionnaire';
 
 
 function Questionnaire (props) {
@@ -44,7 +45,10 @@ function Questionnaire (props) {
       break;
     case QSTEP_REVIEWING:
       currentPage = (
-            <RoutedResultsPageContainer {...props} />
+            <RoutedResultsPageContainer {...props}
+                                        handleReviewQuestionnaire={
+                                          () => (props.dispatch(startQuestionnaireAndPosition()))}
+            />
       );
   }
 
