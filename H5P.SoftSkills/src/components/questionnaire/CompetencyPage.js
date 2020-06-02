@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import {
   getTotalQuestionCountCompetency
 } from '../../utils/ComponentsUtils';
@@ -29,8 +29,8 @@ function CompetencyPage (props) {
   const totalQuestionForCompetency = getTotalQuestionCountCompetency(props.questionsByCompetencyAndSubCompetencies[competencyIndex]);
   const currentCompetency = props.questionsByCompetencyAndSubCompetencies[competencyIndex];
 
-  return (<Grid container>
-    <Grid item xs={3}>
+  return (<Box display="flex" flexDirection="row" maxHeight={"100vh"}>
+    <Box mx={1} flex={1}>
       <QuestionnaireSideNavigation
         answeredQuestionCount={props.progressData.totalAnsweredQuestions}
         totalQuestion={totalQuestionCount}
@@ -38,8 +38,8 @@ function CompetencyPage (props) {
         totalQuestionForCompetency={totalQuestionForCompetency}
         subCompetencyProgressData={props.progressData.competenciesProgress[competencyIndex]}
       />
-    </Grid>
-    <Grid item xs={9}>
+    </Box>
+    <Box flex={4} mx={1} overflow={"auto"} id={"competencyPageContainer"}>
       <QuestionsList
         questionComponent={props.questionComponent}
         questionsByCompetencyAndSubCompetencies={props.questionsByCompetencyAndSubCompetencies}
@@ -77,8 +77,8 @@ function CompetencyPage (props) {
         </Box>
 
       </Box>
-    </Grid>
-  </Grid>);
+    </Box>
+  </Box>);
 }
 
 CompetencyPage.propTypes = Object.assign(

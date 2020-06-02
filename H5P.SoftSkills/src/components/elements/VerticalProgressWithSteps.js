@@ -41,7 +41,7 @@ function VerticalProgressWithSteps (props) {
               <Box>
                 <CircularProgressWithStep
                   value={progressPercent}
-                  insideText={index.toString()}
+                  insideText={(index+1).toString()}
                   isActive={currentStep >= index}
                 />
               </Box>
