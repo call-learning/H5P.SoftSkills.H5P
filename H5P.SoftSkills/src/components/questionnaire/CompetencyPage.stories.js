@@ -8,8 +8,24 @@ export default { title: 'Questionnaire' };
 export const simpleCompetencyPage = () =>
   (<Box maxHeight="800px">
     <CompetencyPage questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
-                   currentCompetencyIndex={1}
-                   subCompetencyProgressInCompetency={[100,0,0]}
-  /></Box>);
+                    currentCompetencyIndex={1}
+                    progressData={{
+                      answeredQuestionsCount: 50,
+                      questionsCount: 51,
+                      competenciesProgress: [{
+                        answeredQuestionsCount: 20,
+                        questionsCount: 20,
+                      },
+                        {
+                          answeredQuestionsCount: 5,
+                          questionsCount: 20,
+                        },
+                        {
+                          answeredQuestionsCount: 5,
+                          questionsCount: 11,
+                        }
+                      ]
+                    }}/>
+  </Box>);
 
 

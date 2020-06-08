@@ -18,7 +18,7 @@ const styles = theme => ({
     boxShadow: "0 36px 48px 0 rgba(0, 0, 0, 0.13), 0 8px 11px 0 rgba(0, 0, 0, 0.13)",
   },
   horizontalProgressActive: {
-    backgroundColor: theme.palette.primary.light
+    backgroundColor: theme.palette.primary.main
   }
 });
 

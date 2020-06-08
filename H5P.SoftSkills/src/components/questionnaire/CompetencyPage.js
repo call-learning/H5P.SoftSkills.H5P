@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core';
 import {
   getTotalQuestionCountCompetency
 } from '../../utils/ComponentsUtils';
-import QuestionnaireSideNavigation from './QuestionnaireSideNavigation';
+import CompetencySideNavigation from './CompetencySideNavigation';
 import {
   questionsByCompetencyAndSubCompetencies,
   questionnaireCompetenciesQuestionsDefault,
@@ -21,25 +21,24 @@ import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import NavigationButton from '../elements/NavigationButton';
 
 function CompetencyPage (props) {
-  // Get Question count first (for all categories)
-  const totalQuestionCount = getTotalQuestionCount(props.questionsByCompetencyAndSubCompetencies);
   const competencyIndex = props.currentCompetencyIndex;
+  const competencyProgressData = props.progressData
+    .competenciesProgress.map((cdata) => (100 * cdata.answeredQuestionsCount / cdata.questionsCount));
 
-  // Competency information.
-  const totalQuestionForCompetency = getTotalQuestionCountCompetency(props.questionsByCompetencyAndSubCompetencies[competencyIndex]);
+  // Competency informations
   const currentCompetency = props.questionsByCompetencyAndSubCompetencies[competencyIndex];
+  const currentCompetencyProgress = props.progressData.competenciesProgress[competencyIndex];
 
-  return (<Box display="flex" flexDirection="row" maxHeight={"100vh"}>
+  return (<Box display="flex" flexDirection="row" maxHeight={'100vh'}>
     <Box mx={1} flex={1}>
-      <QuestionnaireSideNavigation
-        answeredQuestionCount={props.progressData.totalAnsweredQuestions}
-        totalQuestion={totalQuestionCount}
+      <CompetencySideNavigation
+        answeredQuestionsCount={currentCompetencyProgress.answeredQuestionsCount}
+        questionsCount={currentCompetencyProgress.questionsCount}
         competencyTitle={currentCompetency.label}
-        totalQuestionForCompetency={totalQuestionForCompetency}
-        subCompetencyProgressData={props.progressData.competenciesProgress[competencyIndex]}
+        competencyProgressData={competencyProgressData}
       />
     </Box>
-    <Box flex={4} mx={1} overflow={"auto"} id={"competencyPageContainer"}>
+    <Box flex={4} mx={1} overflow={'auto'} id={'competencyPageContainer'}>
       <QuestionsList
         questionComponent={props.questionComponent}
         questionsByCompetencyAndSubCompetencies={props.questionsByCompetencyAndSubCompetencies}
@@ -54,22 +53,23 @@ function CompetencyPage (props) {
           {
             competencyIndex > 0 ?
               (<NavigationButton isBack
-                       onClick={props.handlePreviousCompetency}><H5PTranslatedText text='previouscompetencypage'/>
+                                 onClick={props.handlePreviousCompetency}><H5PTranslatedText
+                text='previouscompetencypage'/>
               </NavigationButton>) : ''
           }
         </Box>
-        <Box alignSelf="flex-end" >
+        <Box alignSelf="flex-end">
           {
             competencyIndex >= (props.questionsByCompetencyAndSubCompetencies.length - 1) ?
               (
                 <NavigationButton isNext
-                        onClick={props.handleFinishAndSubmit}>
+                                  onClick={props.handleFinishAndSubmit}>
                   <H5PTranslatedText text='finishquestionnaire'/>
                 </NavigationButton>
               ) :
               (
                 <NavigationButton isNext
-                        onClick={props.handleNextCompetency}>
+                                  onClick={props.handleNextCompetency}>
                   <H5PTranslatedText text='nextcompetencypage'/>
                 </NavigationButton>
               )
@@ -98,7 +98,6 @@ CompetencyPage.propTypes = Object.assign(
 CompetencyPage.defaultProps = Object.assign(
   {
     currentCompetencyIndex: 0,
-    subCompetencyProgressInCompetency: [],
     questionComponent: Question,
     handleEnableQuestion: (qid) => null,
     handleSelectAnswer: (quid, val) => null,

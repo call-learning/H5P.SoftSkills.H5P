@@ -31,25 +31,23 @@ test('getCompetencyImageFromIndex from first competenty', () => {
 
 test('getProgressData Start of questionnaire', () => {
   expect(getProgressData(smallerQuestionnaireData.questionsByCompetencyAndSubCompetencies, sampleAnswerData)).toEqual({
-      "competenciesProgress": [
-        [
-          100
-        ],
-        [
-          100,
-          100,
-          100,
-          100
-        ],
-        [
-          100,
-          100,
-          100,
-          100
-        ]
-      ],
-      "totalAnsweredQuestions": 51
-    });
+    'answeredQuestionsCount': 51,
+    'questionsCount': 51,
+    'competenciesProgress': [
+      {
+        'answeredQuestionsCount': 11,
+        'questionsCount': 11
+      },
+      {
+        'answeredQuestionsCount': 13,
+        'questionsCount': 13
+      },
+      {
+        'answeredQuestionsCount': 27,
+        'questionsCount': 27
+      }
+    ]
+  });
 });
 
 test('getTotalQuestionCount', () => {

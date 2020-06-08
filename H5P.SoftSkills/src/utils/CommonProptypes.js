@@ -174,10 +174,14 @@ export const questionnaireAnsweredQuestionsDefault = {
 export const progressData = {
   progressData: PropTypes.shape(
     {
-      totalAnsweredQuestions: PropTypes.number,
+      answeredQuestionsCount: PropTypes.number,
+      questionsCount: PropTypes.number,
       competenciesProgress: PropTypes.arrayOf(
-        PropTypes.arrayOf(
-          PropTypes.number // Subcompetency progress
+        PropTypes.shape(
+          {
+            answeredQuestionsCount: PropTypes.number,
+            questionsCount: PropTypes.number,
+          }
         )
       )
     }
@@ -186,7 +190,8 @@ export const progressData = {
 };
 export const progressDataDefault = {
   progressData: {
-    totalAnsweredQuestions: 0,
+    answeredQuestionsCount: 0,
+    questionsCount: 1,
     competenciesProgress: []
   }
 };

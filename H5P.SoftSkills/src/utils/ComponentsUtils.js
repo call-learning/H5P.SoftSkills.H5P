@@ -6,6 +6,7 @@
 import socialImage from '../../assets/social.svg';
 import personalImage from '../../assets/personal.svg';
 import methodologicalImage from '../../assets/methodological.svg';
+import PropTypes from 'prop-types';
 
 const DEFAULT_COMPETENCY_IMAGE = [socialImage, personalImage, methodologicalImage];
 
@@ -27,12 +28,13 @@ export function getRealImagePath (filepath, contentId, libraryName) {
   return imagePath;
 }
 
-export function getProgressData(questionsByCompetencyAndSubCompetencies, answeredQuestion) {
-
+export function getProgressData (questionsByCompetencyAndSubCompetencies, answeredQuestion) {
   let allCompetenciesProgress = [];
-  let answeredquestionCount = 0;
+  let answeredQuestionsCount = 0;
+  let questionsCount = 0;
   for (let [competencyIndex, comp] of questionsByCompetencyAndSubCompetencies.entries()) {
-    let currentCompetencyProgress = [];
+    let compAnsweredQuestionsCount = 0;
+    let compQuestionsCount = 0;
     for (let [compSubIndex, compSub] of comp.subCompetencies.entries()) {
       const subCompTotalQuestions = compSub.contexts.reduce((acc, c) => (acc + c.questions.length), 0);
       const minQuestionIndexForSubComp =
@@ -41,13 +43,19 @@ export function getProgressData(questionsByCompetencyAndSubCompetencies, answere
         const qi = a.questionGlobalIndex - minQuestionIndexForSubComp;
         return acc + ((qi >= 0 && qi < subCompTotalQuestions) ? 1 : 0);
       }, 0);
-      answeredquestionCount += subCompAnsweredQuestions;
-      currentCompetencyProgress.push(100 * subCompAnsweredQuestions / subCompTotalQuestions);
+      compAnsweredQuestionsCount += subCompAnsweredQuestions;
+      compQuestionsCount += subCompTotalQuestions;
     }
-    allCompetenciesProgress.push(currentCompetencyProgress);
+    allCompetenciesProgress.push({
+      answeredQuestionsCount: compAnsweredQuestionsCount,
+      questionsCount: compQuestionsCount,
+    });
+    answeredQuestionsCount += compAnsweredQuestionsCount;
+    questionsCount += compQuestionsCount;
   }
   return {
-    totalAnsweredQuestions: answeredquestionCount,
+    answeredQuestionsCount: answeredQuestionsCount,
+    questionsCount: questionsCount,
     competenciesProgress: allCompetenciesProgress
   };
 }

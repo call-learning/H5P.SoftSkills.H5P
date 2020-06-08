@@ -1,5 +1,5 @@
 import React from 'react';
-import QuestionnaireSideNavigation from './QuestionnaireSideNavigation';
+import CompetencySideNavigation from './CompetencySideNavigation';
 import H5P from '../../utils/H5P.mock';
 import { socialImage } from '../../../assets/social.svg';
 import { Grid } from '@material-ui/core';
@@ -13,12 +13,12 @@ window.H5P = H5P;
 
 const subCompetencyProgressData = [100, 50, 0];
 
-export const basicSideNavigation = () => <QuestionnaireSideNavigation competencyIndex={3}
-                                                                      subCompetencyIndex={2}
-                                                                      competencyTitle={'compétences sociales'}
-                                                                      competencyImagePath={socialImage}
-                                                                      maxPages={5}
-                                                                      currentPage={1}/>;
+export const basicSideNavigation = () => <CompetencySideNavigation competencyIndex={3}
+                                                                   subCompetencyIndex={2}
+                                                                   competencyTitle={'compétences sociales'}
+                                                                   competencyImagePath={socialImage}
+                                                                   maxPages={5}
+                                                                   currentPage={1}/>;
 
 export const sideNavigationWithScrollContent = () => {
   let sideContent = [];
@@ -36,12 +36,12 @@ export const sideNavigationWithScrollContent = () => {
   return (
     <Box display="flex" flexDirection="row" maxHeight={"500px"} >
       <Box>
-        <QuestionnaireSideNavigation competencyIndex={1}
-                                     competencyTitle={'compétences sociales'}
-                                     competencyImagePath={socialImage}
-                                     answeredQuestionCount={4}
-                                     totalQuestion={28}
-                                     subCompetencyProgressData={subCompetencyProgressData}
+        <CompetencySideNavigation competencyIndex={1}
+                                  competencyTitle={'compétences sociales'}
+                                  competencyImagePath={socialImage}
+                                  answeredQuestionCount={4}
+                                  totalQuestion={28}
+                                  competencyProgressData={subCompetencyProgressData}
         />
       </Box>
       <Box minWidth="80%" overflow={"auto"} >

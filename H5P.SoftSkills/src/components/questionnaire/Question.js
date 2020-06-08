@@ -22,10 +22,11 @@ const styles = theme => ({
   checkboxLast: {
     display: 'block',
     textAlign: 'center',
+    marginTop: '1.5em'
   },
   labelQuestion: {
     paddingBottom: '1em',
-    textAlign: 'center',
+    textAlign: 'left',
     display: 'block',
     color: theme.palette.text.primary // Back to normal theme color.
   }

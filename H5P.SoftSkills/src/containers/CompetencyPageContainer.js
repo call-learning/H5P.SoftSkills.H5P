@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { getProgressData } from '../utils/ComponentsUtils';
+import { getProgressData, getTotalQuestionCountCompetency } from '../utils/ComponentsUtils';
 import { connect } from 'react-redux';
 import { CompetenciesContext } from '../contexts/CompetenciesContext';
 import CompetencyPage from '../components/questionnaire/CompetencyPage';
@@ -16,7 +16,6 @@ const CompetencyPageContainer = (props) =>{
   const allCompetencies = useContext(CompetenciesContext);
   const progressData = getProgressData(allCompetencies, props.answeredQuestions);
   const h5pcontext = useContext(H5PContext);
-
   return (<CompetencyPage questionsByCompetencyAndSubCompetencies={allCompetencies}
                           progressData={progressData}
                           questionComponent={QuestionWrapper}
