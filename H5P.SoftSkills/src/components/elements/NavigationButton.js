@@ -3,6 +3,7 @@ import { Button } from '@material-ui/core';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import PropTypes from 'prop-types';
+import { shadows } from '@material-ui/system';
 
 const NavigationButton = (props) => {
   const { isNext, isBack, ...otherprops } = props;
@@ -11,7 +12,9 @@ const NavigationButton = (props) => {
             variant="contained"
             color="primary"
             startIcon={isBack ? <ArrowBackIcon/> : ''}
-            endIcon={isNext ? <ArrowForwardIcon/> : ''}>
+            endIcon={isNext ? <ArrowForwardIcon/> : ''}
+            boxShadow={8}
+    >
       {props.children}
     </Button>);
 };

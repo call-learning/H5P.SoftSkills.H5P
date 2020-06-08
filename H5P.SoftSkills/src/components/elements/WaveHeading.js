@@ -44,7 +44,7 @@ const styles = theme => ({
   },
   title: {
     paddingTop:'2em',
-    fontSize: '3em',
+    fontSize: '2em',
     fontStyle: 'italic',
     fontWeight: 600,
     letterSpacing: 0,
@@ -52,21 +52,11 @@ const styles = theme => ({
     whiteSpace: 'pre-wrap',
     color: 'white',
     '&::first-line': {
-      fontSize: '0.8em',
+      fontSize: '0.6em',
       fontStyle: 'normal',
+      lineHeight: 2.5
     }
-  },
-  generalInstructions: {
-    fontSize: '1.2em',
-    fontWeight: 'normal',
-    fontStretch: 'normal',
-    fontStyle: 'normal',
-    fontFamily: 'sans-serif',
-    lineHeight: '1.45',
-    letterSpacing: 'normal',
-    color: '#4a4a4a'
   }
-
 });
 
 const WaveHeading = withStyles(styles)((props) => {
