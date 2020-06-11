@@ -15,7 +15,7 @@ const styles = theme => ({
 
 const BottomRectangle = withStyles(styles)((props) => {
   const { classes } = props;
-  return (<Box className={classes.root}>&nbsp;</Box>)
+  return (<Box className={classes.root} {...props}>&nbsp;</Box>)
 });
 
 export default BottomRectangle;

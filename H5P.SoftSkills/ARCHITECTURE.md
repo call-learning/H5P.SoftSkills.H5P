@@ -32,7 +32,7 @@ There are specifics configurations setup for this project in the nwb.config.js:
    * nwb.config.js : Allowing to create an UMD module bundled with all the SVG files and needed
    material UI Icons.
    * We used storybook to develop components and visual identity for the site
-   * NWB provide us with Karma/Mocha test however Jest is now more and more used as an test tool for react project. Following
+   * NWB provides natively with Karma/Mocha test however Jest is now more and more used as an test tool for react project. Following
    the  indication (https://github.com/how-to-react/nwb-jest and here https://github.com/lewhunt/nwb-react-testing-library)
    we added jest a main test tool for this project. 
    It also has the advantage of having an external configuration that can easily picked up
@@ -57,10 +57,14 @@ especially https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d
  
  * Containers: aware of Redux (and other things like Context for example)
  * Components : only aware of information provided via their props
+ * Elements: are very small and used by components in several instances (like Atoms in
+ Atomic Web Design)
  
-In many ways we avoided to use stateful components and most of the components are
+In many ways we avoided to use stateful component, and most components are
 stateless.
 They use heavily Material UI and styles (components are all with Style) 
+
+To avoid duplications most properties are defined in the utils/CommonProptypes.js.
 
 
 ### React Hooks and contexts
@@ -78,8 +82,6 @@ We then use the React Context to push this information down deep into the compon
 * H5P file management: getLibraryPath needs a context ID which is also sent down to the
 component via context
 
-
-
 ### Redux for global application state
 
 Redux is used to store and manage
@@ -91,3 +93,9 @@ Redux is used to store and manage
 
 We used React Router to create navigation between different pages of the Results pages
 
+### Styling and theming
+
+The global theme definitions are located in questionnaireTheme.js.
+We use Questionnaire.css to import the font definitions.
+If a component overrides styles it is only for a local use and if repeated it should
+be brought up into the theme.

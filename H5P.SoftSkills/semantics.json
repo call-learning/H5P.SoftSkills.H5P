@@ -441,27 +441,51 @@
         "type": "text"
       },
       {
-        "name": "resultFeedBack0",
+        "name": "subCompetencyResultFeedBack0",
         "type": "text"
       },
       {
-        "name": "resultFeedBack25",
+        "name": "subCompetencyResultFeedBack25",
         "type": "text"
       },
       {
-        "name": "resultFeedBack50",
+        "name": "subCompetencyResultFeedBack50",
         "type": "text"
       },
       {
-        "name": "resultFeedBack75",
+        "name": "subCompetencyResultFeedBack75",
         "type": "text"
       },
       {
-        "name": "resultFeedBack100",
+        "name": "subCompetencyResultFeedBack100",
+        "type": "text"
+      },
+      {
+        "name": "globalResultFeedBack0",
+        "type": "text"
+      },
+      {
+        "name": "globalResultFeedBack25",
+        "type": "text"
+      },
+      {
+        "name": "globalResultFeedBack50",
+        "type": "text"
+      },
+      {
+        "name": "globalResultFeedBack75",
+        "type": "text"
+      },
+      {
+        "name": "globalResultFeedBack100",
         "type": "text"
       },
       {
         "name": "reviewquestionnaire",
+        "type": "text"
+      },
+      {
+        "name": "resultScoreLabel",
         "type": "text"
       }
     ]

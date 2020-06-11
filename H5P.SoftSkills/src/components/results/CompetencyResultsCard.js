@@ -3,7 +3,6 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import t from '../../utils/TranlationManager';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
 import HorizontalCardWithAction from '../elements/HorizontalCardWithAction';
@@ -31,31 +30,34 @@ const styles = theme => ({
   }
 });
 
-
-
-const CompetencyResultsCard = withStyles(styles)( (props)  => {
+const CompetencyResultsCard = withStyles(styles)((props) => {
   const { classes } = props;
   const competency = props.questionsByCompetencyAndSubCompetencies[props.competencyIndex];
   const components = [
-    <Box minWidth={250} alignItems="center">
-      {
-        props.questionsByCompetencyAndSubCompetencies.map(
-          (comp, compIndex) => <Box key={compIndex}
-            className={`${classes.smallProgress} ${compIndex === props.competencyIndex ?
-              classes.currentSmallProgress : classes.otherSmallProgress}`}
-            width={props.questionsByCompetencyAndSubCompetencies[compIndex].value}/>
-        )
-      }
+    <Box display="flex" key="description">
+      <Box minWidth={250} alignItems="center" key="leftpart">
+        {
+          props.questionsByCompetencyAndSubCompetencies.map(
+            (comp, compIndex) => <Box key={compIndex}
+                                      className={`${classes.smallProgress} ${compIndex === props.competencyIndex ?
+                                        classes.currentSmallProgress : classes.otherSmallProgress}`}
+                                      width={props.questionsByCompetencyAndSubCompetencies[compIndex].value}/>
+          )
+        }
+      </Box>,
+      <Box flexGrow={1}>
+        <Typography variant="h5">{competency.label}</Typography>
+        <Typography>
+          <H5PTranslatedText text='competencyresultdesc' arguments={
+            {
+              compcount: competency.subCompetencies.length,
+              compPercent: Math.floor(props.results.competenciesResults[props.competencyIndex].value)
+            }}/>
+        </Typography>
+      </Box>
     </Box>,
-    <Container>
-      <Typography variant="h5">{competency.label}</Typography>
-      <Typography>
-        <H5PTranslatedText text='competencyresultdesc' arguments={
-        { compcount: competency.subCompetencies.length,
-          compPercent: Math.floor(props.results[props.competencyIndex].value) }}/>
-      </Typography>
-    </Container>,
-    <ResultRadarChart results={props.results[props.competencyIndex].subCompetenciesResults}/>
+    <ResultRadarChart key="graph"
+                      resultsList={props.results.competenciesResults[props.competencyIndex].subCompetenciesResults}/>
   ];
   return (
     <HorizontalCardWithAction components={components} handleActionClick={props.handleActionClick}/>
@@ -79,6 +81,5 @@ CompetencyResultsCard.defaultProps = Object.assign(
   questionnaireCompetenciesQuestionsDefault,
   questionnaireResultsDefault
 );
-
 
 export default CompetencyResultsCard;

@@ -17,6 +17,8 @@ import {
   questionnaireCompetenciesQuestionsDefault, questionnaireResults, questionnaireResultsDefault
 } from '../../utils/CommonProptypes';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
+import BottomRectangle from '../elements/BottomRectangle';
+import HorizontalCardWithAction from '../elements/HorizontalCardWithAction';
 
 const styles = theme => ({
   cardLike: {
@@ -31,6 +33,8 @@ const styles = theme => ({
 const CompetencyResultsPage = withStyles(styles)((props) => {
     const { classes } = props;
     const currentCompetency = props.questionsByCompetencyAndSubCompetencies[props.competencyIndex];
+    const currentCompetenyResults = props.results.competenciesResults[props.competencyIndex];
+
     return (
       <Container>
         <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" width="90%">
@@ -39,43 +43,24 @@ const CompetencyResultsPage = withStyles(styles)((props) => {
           <Box><img className="SuccessImage" src={getCompetencyImageFromIndex(props.competencyIndex)} alt=""
                     role="presentation"/></Box>
 
-          <Typography variant="h3">{currentCompetency.label}</Typography>
-          <ResultRadarChart results={props.results[props.competencyIndex].subCompetenciesResults} hasLabels
-                            graphSize={100}/>
-          <Grid container>
-            <Grid container spacing={1} className={classes.cardLayout} alignContent="center" alignItems="center">
-              <Grid item xs={6}><Typography variant="h4"><H5PTranslatedText
-                text='detailpercompetency'/></Typography></Grid>
-              <Grid item xs={2}><Typography><H5PTranslatedText text='participation'/></Typography></Grid>
-              <Grid item xs={2}><Typography><H5PTranslatedText text='result'/></Typography></Grid>
-              <Grid item xs={2}>&nbsp;</Grid>
-            </Grid>
-            {
-              (props.results &&
-                props.results[props.competencyIndex] &&
-                props.results[props.competencyIndex].subCompetenciesResults) ?
-                props.results[props.competencyIndex].subCompetenciesResults.map((subC, subCompIndex) => (
-                  <Grid container spacing={1} alignContent="center" alignItems="center"
-                        className={`${classes.cardLike} ${classes.cardLayout}`} key={'resultcontainer' + subCompIndex}>
-                    <Grid item xs={6}><Typography>{subC.label}</Typography></Grid>
-                    <Grid item xs={2}>
-                      <Typography>
-                        <H5PTranslatedText text='over' arguments={
-                          { 'val1': subC.totalAnswered, 'val2': subC.totalQuestions }
-                        }/>
-                      </Typography></Grid>
-                    <Grid item xs={2}><Typography>{Math.floor(subC.value)}%</Typography></Grid>
-                    <Grid item xs={2}><Typography align="right">
-                      <Fab color="primary" onClick={(e) => props.handleViewSubCompetencyClick(props.competencyIndex, subCompIndex)}>
-                        <ArrowForward/>
-                      </Fab>
-                    </Typography>
-                    </Grid>
-                  </Grid>
-                )) : ''
-            }
-          </Grid>
-
+          <Typography variant="h4">{currentCompetency.label}</Typography>
+          <ResultRadarChart resultsList={currentCompetenyResults.subCompetenciesResults} hasLabels
+                            graphSize={300}/>
+          <Box>
+            <Typography variant="h4"><H5PTranslatedText text='detailpercompetency'/></Typography>
+          </Box>
+          {
+            !(props.results &&
+              currentCompetenyResults &&
+              currentCompetenyResults.subCompetenciesResults) ? '' :
+              currentCompetenyResults.subCompetenciesResults.map((subC, subCompIndex) =>
+                (<HorizontalCardWithAction width={"80%"} key={'resultcontainer' + subCompIndex}
+                                           handleActionClick={(e) => props.handleViewSubCompetencyClick(props.competencyIndex, subCompIndex)}
+                                           components={[
+                                             (<Box key="competencydesc"><Typography>{subC.label}</Typography><BottomRectangle mt={1} pt={0.2}/></Box>),
+                                             (<Box><Typography>{Math.floor(subC.value)}%</Typography></Box>)
+                                           ]}/>))
+          }
         </Box>
       </Container>
     );

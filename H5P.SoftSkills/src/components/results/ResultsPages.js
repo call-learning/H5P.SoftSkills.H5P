@@ -44,7 +44,6 @@ function SubCompetencyResultsPageWithRoute (props) {
 
 function ResultsPage (props) {
   let history = useHistory();
-  let { path, url } = useRouteMatch();
   const handleViewCompetencyClick = (compIndex) => {
     history.push(`/competencies/${compIndex}`);
   };

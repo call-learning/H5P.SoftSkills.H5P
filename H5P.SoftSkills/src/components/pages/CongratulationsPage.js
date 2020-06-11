@@ -9,16 +9,19 @@ import NavigationButton from '../elements/NavigationButton';
 function CongratulationsPage (props) {
   return (
     <Container>
-      <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+      <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" height={"100%"}>
 
-        <Box><img className="SuccessImage" src={SuccessImage} alt=""
+        <Box m={2}><img className="SuccessImage" src={SuccessImage} alt=""
                   role="presentation"/></Box>
-        <Typography variant="h3"><H5PTranslatedText text="congratulations"/></Typography>
+        <Typography variant="h4"><H5PTranslatedText text="congratulations"/></Typography>
         <Box my={2}>
-          <Typography align={'center'}><H5PTranslatedText text="congratulationtext"/></Typography>
+          <Typography align={'center'} color="secondary"><H5PTranslatedText text="congratulationtext"/></Typography>
         </Box>
-        <NavigationButton isNext
-                onClick={props.handleViewResultsClick}><H5PTranslatedText text="seeresults"/></NavigationButton>
+        <Box my={2}>
+          <NavigationButton isNext
+                            onClick={props.handleViewResultsClick}><H5PTranslatedText
+            text="seeresults"/></NavigationButton>
+        </Box>
       </Box>
     </Container>);
 }

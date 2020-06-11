@@ -1,9 +1,9 @@
 import React from 'react';
 import { TranslationsContext } from '../src/contexts/TranslationsContext';
-import translations from '../sampleData/translations.json';
+import sampleData from '../sampleData/demotestdata.json';
 
 const translationDecorator = storyFn => (
-  <TranslationsContext.Provider value={translations.l10n}>{storyFn()}</TranslationsContext.Provider>
+  <TranslationsContext.Provider value={sampleData.l10n}>{storyFn()}</TranslationsContext.Provider>
 );
 
 export default translationDecorator;

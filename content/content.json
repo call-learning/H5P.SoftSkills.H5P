@@ -13,8 +13,6 @@
     "over": "sur",
     "competencyresultdesc": ":compcount competences ont été évaluées en moyenne à :compPercent sur 100",
     "detailpercompetency": "Vos résultats par type de compétence",
-    "participation": "Participation",
-    "result": "Résultat",
     "overcompleted": ":val1 sur :val2 complétées",
     "results": "Résultats",
     "resultspercompetency": "Détail par compétence",
@@ -22,12 +20,19 @@
     "startquestionnaire": "Démarrer le test",
     "yourcompetencyresults": "Votre maîtrise de cette compétence",
     "resources": "Ressources",
-    "resultFeedBack0": "Avec un résultat de :compPercent, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
-    "resultFeedBack25": "Avec un résultat de :compPercent, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
-    "resultFeedBack50": "Avec un résultat de :compPercent, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
-    "resultFeedBack75": "Avec un résultat de :compPercent, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
-    "resultFeedBack100": "Avec un résultat de :compPercent, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
-    "reviewquestionnaire": "Revoir les questions"
+    "resultFeedBack0": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
+    "resultFeedBack25": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
+    "resultFeedBack50": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
+    "resultFeedBack75": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
+    "resultFeedBack100": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
+    "competencyResultFeedBack0": "Acquisition en cours !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
+    "globalResultFeedBack0": "Acquisition en cours !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
+    "globalResultFeedBack25": "Acquisition en cours !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
+    "globalResultFeedBack50": "Acquisition en cours !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
+    "globalResultFeedBack75": "Félicitations !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
+    "globalResultFeedBack100": "Félicitations !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
+    "reviewquestionnaire": "Revoir les questions",
+    "resultScoreLabel": "Votre score par type de compétences"
   },
   "resources": [
     {
@@ -101,7 +106,7 @@
         "id": 2
       },
       {
-        "text": "Ne sais pas",
+        "text": "Je ne sais pas",
         "id": 1
       }
     ]

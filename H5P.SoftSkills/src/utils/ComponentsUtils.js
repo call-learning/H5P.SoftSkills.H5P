@@ -150,7 +150,7 @@ export function getComponentIndexesFromGlobalQuestionIndex (questionsByCompetenc
  * @param questionsByCompetencyAndSubCompetencies
  * @param answeredQuestions
  * @param possibleAnswers
- * @return {[]}
+ * @return Object
  */
 export function computeProgressPerCompetency (
   questionsByCompetencyAndSubCompetencies,
@@ -158,6 +158,7 @@ export function computeProgressPerCompetency (
   possibleAnswers
 ) {
   let competenciesResults = [];
+  let globalResult = 0, globalQuestionsCount = 0, globalAnsweredCount = 0;
   const maxPossibleAnswerValue = possibleAnswers.reduce((max, pa) => {
     const realValue = (typeof pa.realValue === 'undefined') ? pa.id : pa.realValue;
     return (realValue > max) ? realValue : max;
@@ -185,7 +186,7 @@ export function computeProgressPerCompetency (
       }
       subCompetenciesResults.push({
         label: SubCompetency.label,
-        value: 100 * currentsubCompetenciesResults / (subCompetencyQuestionsCount * maxPossibleAnswerValue),
+        value: Math.floor(100 * currentsubCompetenciesResults / (subCompetencyQuestionsCount * maxPossibleAnswerValue)),
         totalQuestions: subCompetencyQuestionsCount,
         totalAnswered: subCompetencyAnsweredCount
       });
@@ -195,13 +196,21 @@ export function computeProgressPerCompetency (
     const categoryResults = subCompetenciesResults.reduce((acc, subCompetencyval) => (acc + subCompetencyval.value), 0) / subCompetenciesResults.length;
     competenciesResults.push({
       label: comp.label,
-      value: categoryResults,
+      value: Math.floor(categoryResults),
       subCompetenciesResults: subCompetenciesResults,
       totalQuestions: competencyQuestionsCount,
       totalAnswered: competencyAnsweredCount
     });
+    globalResult += categoryResults;
+    globalQuestionsCount = +competencyQuestionsCount;
+    globalAnsweredCount = +competencyAnsweredCount;
   }
-  return competenciesResults;
+  return {
+    value: globalResult / questionsByCompetencyAndSubCompetencies.length,
+    totalQuestions: globalQuestionsCount,
+    totalAnswered: globalAnsweredCount,
+    competenciesResults: competenciesResults
+  };
 }
 
 export function getRealValueFromPossibleValue (possibleAnswers, answerId) {
@@ -261,7 +270,7 @@ export const stringToHashCode = function (s) {
     hash = hash & hash;
   }
 
-  return (hash>>>0).toString();
+  return (hash >>> 0).toString();
 };
 
 /**
@@ -271,3 +280,12 @@ export const stringToHashCode = function (s) {
 export const resourceCreateMarkup = function (rawHTML) {
   return { __html: rawHTML };
 };
+
+const QUANTILES = [0, 25, 50, 75, 100];
+
+export function getCurrentQuantile (valueToCheck) {
+  return QUANTILES.reduce((quantileVal, quantileValue, index) =>
+      (valueToCheck > quantileValue ? quantileValue : quantileVal),
+    0
+  );
+}

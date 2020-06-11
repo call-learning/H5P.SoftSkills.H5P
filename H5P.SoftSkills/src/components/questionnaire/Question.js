@@ -74,7 +74,8 @@ const Question = withStyles(styles)((props) => {
         <FormControlLabel checked={props.selectedItemId === checkBoxValue.id}
                           className={classes.checkboxLast}
                           value={checkBoxValue.id}
-                          control={<Checkbox color="primary"/>}
+                          control={<Checkbox color="primary"
+                                             className={`${(props.selectedItemId == checkBoxValue.id) ? classes.selectedControl : ''}`}/>}
                           label={checkBoxValue.text}
                           onChange={(e, value) => hSelect(e, checkBoxValue.id)
                           }

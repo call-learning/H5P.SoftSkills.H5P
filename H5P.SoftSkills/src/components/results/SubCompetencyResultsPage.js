@@ -6,7 +6,7 @@ import React, { Fragment } from 'react';
 import Typography from '@material-ui/core/Typography';
 import t from '../../utils/TranlationManager';
 import {
-  getCompetencyImageFromIndex,
+  getCompetencyImageFromIndex, getCurrentQuantile,
   resourcesPerContext
 } from '../../utils/ComponentsUtils';
 import withStyles from '@material-ui/core/styles/withStyles';
@@ -24,6 +24,7 @@ import {
 import ResourcesList from './ResourcesList';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import BottomRectangle from '../elements/BottomRectangle';
+import ResultBarChart from '../elements/ResultBarChart';
 
 const styles = theme => ({
   cardLike: {
@@ -34,19 +35,16 @@ const styles = theme => ({
     marginBottom: theme.spacing(4),
   }
 });
-const QUANTILES = [0, 25, 50, 75, 100];
 
 function SubCompetencyResultsPage (props) {
   const { classes } = props;
   const currentCompetency = props.questionsByCompetencyAndSubCompetencies[props.competencyIndex];
   const currentSubCompetency = currentCompetency.subCompetencies[props.subCompetencyIndex];
+  const competenciesResults = props.results.competenciesResults;
   const currentSubCompetencyResult =
-    props.results[props.competencyIndex] && props.results[props.competencyIndex].subCompetenciesResults &&
-    props.results[props.competencyIndex].subCompetenciesResults[props.subCompetencyIndex];
-  const currentQuantileValue = QUANTILES.reduce((quantileVal, quantileValue, index) =>
-      (currentSubCompetencyResult.value > quantileValue ? quantileValue : quantileVal),
-    0
-  );
+    competenciesResults[props.competencyIndex] && competenciesResults[props.competencyIndex].subCompetenciesResults &&
+    competenciesResults[props.competencyIndex].subCompetenciesResults[props.subCompetencyIndex];
+  const currentQuantileValue = getCurrentQuantile(currentSubCompetencyResult.value);
   const targetedResources =
     resourcesPerContext(props.resources, props.questionsByCompetencyAndSubCompetencies, props.competencyIndex, props.subCompetencyIndex);
 
@@ -58,16 +56,16 @@ function SubCompetencyResultsPage (props) {
                   role="presentation"/></Box>
 
         <Typography variant="h6">{currentCompetency.label}</Typography>
-        <Typography variant="h4">{currentSubCompetency.label}</Typography>
-
+        <Typography variant="h5">{currentSubCompetency.label}</Typography>
+        <ResultBarChart resultsList={[currentSubCompetencyResult]} graphHeight={130}/>
         <Box my={2}>
           <Box>
-            <Typography variant="h4"><H5PTranslatedText text='yourcompetencyresults'/></Typography>
+            <Typography variant="h5"><H5PTranslatedText text='yourcompetencyresults'/></Typography>
             <BottomRectangle/>
           </Box>
           <Typography><H5PTranslatedText text={'resultFeedBack'+currentQuantileValue}
                                          arguments={{
-                                           compPercent: currentSubCompetency.value
+                                           compPercent: currentSubCompetencyResult.value
                                          }}/></Typography>
           <Box my={2}>
             <Typography variant="h4"><H5PTranslatedText text='resources'/></Typography>

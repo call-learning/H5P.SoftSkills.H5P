@@ -17,6 +17,8 @@ import {
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import Paper from '@material-ui/core/Paper';
 import NavigationButton from '../elements/NavigationButton';
+import { getCurrentQuantile } from '../../utils/ComponentsUtils';
+import ResultBarChart from '../elements/ResultBarChart';
 
 const CompetencyLinearProgress = withStyles({
   root: {
@@ -37,30 +39,28 @@ const styles = theme => ({
 
 const QuestionnaireResultsPage = withStyles(styles)((props) => {
   const { classes } = props;
+  const quantileResult = getCurrentQuantile(props.results.value);
   return (
-    <Box display="flex" flexDirection="column" alignItems="center" width="80%">
-      <Box py="2em">
-        <Typography variant="h3"><H5PTranslatedText text='results'/></Typography>
+    <Container>
+    <Box alignContent="center">
+      <Box py={3}>
+        <Typography align="center" variant="h4"><H5PTranslatedText text='results'/></Typography>
       </Box>
-      <Box width="50%">
-          {
-            props.questionsByCompetencyAndSubCompetencies.map((competency, competencyIndex) => (
-              <Box display="flex" flexDirection="row">
-                  <Box flexGrow={1} px={1} py={1}><Typography align="right">{competency.label}</Typography></Box>
-                  <Box minWidth="40%" py={1}>
-                    <CompetencyLinearProgress variant="determinate"
-                                            value={props.results[competencyIndex].value}/>
-                  </Box>
-              </Box>
-            ))
-          }
+      <Box py={3}>
+        <Typography align="center"  color="secondary"><H5PTranslatedText text={`globalResultFeedBack${quantileResult}`} /></Typography>
       </Box>
       <Box>
-        <Typography variant="h3"><H5PTranslatedText text='resultspercompetency'/></Typography>
+        <Typography align="center" variant="h4"><H5PTranslatedText text='resultScoreLabel'/></Typography>
+      </Box>
+      <Container maxWidth="sm" fixed >
+        <ResultBarChart resultsList={props.results.competenciesResults} graphHeight={250} />
+      </Container>
+      <Box>
+        <Typography align="center"  variant="h4"><H5PTranslatedText text='resultspercompetency'/></Typography>
       </Box>
       {
         props.questionsByCompetencyAndSubCompetencies.map((comp, compIndex) => (
-          <Box key={compIndex} maxWidth="80%">
+          <Box key={compIndex} >
             <CompetencyResultsCard
               questionsByCompetencyAndSubCompetencies={props.questionsByCompetencyAndSubCompetencies}
               results={props.results}
@@ -77,6 +77,7 @@ const QuestionnaireResultsPage = withStyles(styles)((props) => {
         </NavigationButton>
       </Box>
     </Box>
+    </Container>
   );
 });
 

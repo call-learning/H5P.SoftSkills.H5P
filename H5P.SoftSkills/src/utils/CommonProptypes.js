@@ -100,26 +100,42 @@ export const questionnaireCompetenciesQuestionsDefault = {
   questionsByCompetencyAndSubCompetencies: []
 };
 
-export const questionnaireResults = {
-  results: PropTypes.arrayOf(
-    PropTypes.shape(
-      {
-        label: PropTypes.string,
-        value: PropTypes.number,
-        subCompetenciesResults: PropTypes.arrayOf(
-          PropTypes.shape({
-              label: PropTypes.string,
-              value: PropTypes.number,
-            }
-          )
-        )
-      }
-    )
+
+export const simpleResultsType = PropTypes.arrayOf(
+  PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.number,
+    }
   )
+);
+
+export const simpleResultsTypeDefault = [];
+
+export const questionnaireResults = {
+  results: PropTypes.shape({
+    value: PropTypes.number,
+    totalQuestions: PropTypes.number,
+    totalAnswered: PropTypes.number,
+    competenciesResult:
+      PropTypes.arrayOf(
+        PropTypes.shape(
+          {
+            label: PropTypes.string,
+            value: PropTypes.number,
+            subCompetenciesResults:simpleResultsType
+          }
+        )
+      )
+  })
 };
 
 export const questionnaireResultsDefault = {
-  results: []
+  results: {
+    value: 0,
+    totalQuestions: 0,
+    totalAnswered: 0,
+    competenciesResults: []
+  }
 };
 
 export const questionnaireSettings = {
@@ -149,8 +165,6 @@ export const questionnaireSettings = {
     }
   )
 };
-
-
 
 export const questionnaireSettingsDefault = {
   settings: {}

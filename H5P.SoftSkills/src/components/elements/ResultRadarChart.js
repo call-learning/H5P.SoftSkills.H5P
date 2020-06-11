@@ -7,67 +7,87 @@ import { withStyles } from '@material-ui/core/styles';
 import PolarAngleAxis from 'recharts/lib/polar/PolarAngleAxis';
 import PropTypes from 'prop-types';
 import {
-  questionnaireResults, questionnaireResultsDefault
+  simpleResultsType, simpleResultsTypeDefault
 } from '../../utils/CommonProptypes';
+import Text from 'recharts/lib/component/Text';
+import LabelList from 'recharts/lib/component/LabelList';
 
 const MIN_ITEM_RADAR = 3;
+
+const MAX_LABEL_CHARACTERS = 30;
+
+function truncateLabel (text) {
+  return (text.length > MAX_LABEL_CHARACTERS) ? text.substring(0, MAX_LABEL_CHARACTERS) + '...' : text;
+}
+
+const CompetencyLabel = (props) => {
+  const { payload, x, y, textAnchor, resultsList, ...otherprops } = props;
+  return (
+    <text x={x} y={y} textAnchor={textAnchor}>
+      <tspan className="label-compname" textAnchor={textAnchor}>{truncateLabel(resultsList[payload.index].label)}
+      </tspan>
+      <tspan className="label-percent" dx={-payload.offset} dy={'1em'}>{resultsList[payload.index].value}%</tspan>
+    </text>
+  );
+};
 
 const styles = theme => ({
   innerRadar: {
     stroke: theme.palette.primary.dark,
-    fill: theme.palette.primary.light
+    fill: theme.palette.primary.main,
+    fillOpacity: 0.5
   },
-  radarGridStyle: {
-    strokeWidth: "3px"
+  root: {
+    strokeWidth: '3px',
+    '& .label-compname': {
+      fill: theme.palette.secondary.main
+    },
+    '& .label-percent': {
+      fill: theme.palette.secondary.dark,
+      fontWeight: 'bold'
+    }
   }
 });
 
-
 function ResultRadarChart (props) {
   const { classes } = props;
-  // Here if there are less than 4 results for this competency, we pad them so to have at least 4
-  let results = props.results;
-  if (results.length < MIN_ITEM_RADAR) {
-    const missingResults = MIN_ITEM_RADAR - results.length;
+  // Here if there are less than 4 competenciesResults for this competency, we pad them so to have at least 4
+  let competenciesResults = props.resultsList;
+  if (competenciesResults.length < MIN_ITEM_RADAR) {
+    const missingResults = MIN_ITEM_RADAR - competenciesResults.length;
     const itemToPush = { label: '', value: 100 };
-    results.splice(results.length / 2, 0, itemToPush);
+    competenciesResults.splice(competenciesResults.length / 2, 0, itemToPush);
     for (let missing = 1; missing < missingResults; missing++) {
       if (missing % 2) {
-        results.push(itemToPush);
+        competenciesResults.push(itemToPush);
       } else {
-        results.unshift(itemToPush);
+        competenciesResults.unshift(itemToPush);
       }
     }
   }
-  return <ResponsiveContainer minHeight={250} minWidth={250} className={classes.radarGridStyle}>
-    <RadarChart outerRadius={props.graphSize} data={results}>
+  return <ResponsiveContainer minHeight={props.graphSize} minWidth={props.graphSize} className={classes.root}>
+    <RadarChart data={competenciesResults}>
       <PolarGrid className={classes.radarGridStyle}/>
       {
-        props.hasLabels ? <PolarAngleAxis dataKey="label" data={results} />
+        props.hasLabels ? <PolarAngleAxis data={competenciesResults}
+                                          tick={<CompetencyLabel resultsList={props.resultsList}/>}/>
           : ''
       }
       <Radar name="Competency" dataKey="value" className={classes.innerRadar}/>
     </RadarChart>
-  </ResponsiveContainer>
+  </ResponsiveContainer>;
 }
 
-ResultRadarChart.propTypes = Object.assign(
-  {
-    graphSize: PropTypes.number,
-    hasLabels:  PropTypes.bool
+ResultRadarChart.propTypes = {
+  graphSize: PropTypes.number,
+  hasLabels: PropTypes.bool,
+  resultsList: simpleResultsType
+};
 
-  },
-  questionnaireResults
-);
-
-ResultRadarChart.defaultProps = Object.assign(
-  {
-    graphSize: 50,
-    hasLabels: false
-  },
-  questionnaireResultsDefault
-);
-
-
+ResultRadarChart.defaultProps = {
+  graphSize: 150,
+  hasLabels: false,
+  resultsList: simpleResultsTypeDefault
+};
 
 export default withStyles(styles)(ResultRadarChart);
