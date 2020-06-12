@@ -115,13 +115,6 @@
       "importance": "high",
       "fields": [
         {
-          "name": "label",
-          "type": "text",
-          "label": "Label",
-          "default": "",
-          "importance": "high"
-        },
-        {
           "name": "content",
           "type": "text",
           "label": "Content",
@@ -140,6 +133,14 @@
           "importance": "high"
         },
         {
+          "name": "image",
+          "type": "library",
+          "optional": true,
+          "options": [
+            "H5P.Image 1.0"
+          ]
+        },
+        {
           "name": "references",
           "type": "text",
           "label": "Reference of a category:subcategory:context",
@@ -149,14 +150,6 @@
           },
           "default": "",
           "importance": "high"
-        },
-        {
-          "name": "image",
-          "type": "library",
-          "optional": true,
-          "options": [
-            "H5P.Image 1.0"
-          ]
         }
       ]
     }
@@ -338,7 +331,15 @@
               "type": "number",
               "label": "Answer Value",
               "importance": "high"
+            },
+            {
+              "name": "isAcquired",
+              "type": "boolean",
+              "label": "Acquired?",
+              "importance": "high",
+              "default": false
             }
+
           ]
         }
       }
@@ -486,6 +487,22 @@
       },
       {
         "name": "resultScoreLabel",
+        "type": "text"
+      },
+      {
+        "name": "yourAnswer",
+        "type": "text"
+      },
+      {
+        "name": "toImprove",
+        "type": "text"
+      },
+      {
+        "name": "mastered",
+        "type": "text"
+      },
+      {
+        "name": "ourAdvice",
         "type": "text"
       }
     ]

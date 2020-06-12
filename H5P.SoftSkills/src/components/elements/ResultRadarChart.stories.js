@@ -22,5 +22,5 @@ export const resultRadarChart = () => (<Box display="flex" flexDirection="column
 
 export const resultRadarChartWithLabels = () => (<Box display="flex" flexDirection="column">
   <ResultRadarChart resultsList={allCompetenciesResults.competenciesResults[1].subCompetenciesResults}
-                    hasLabels graphSize={100}/>
+                    hasLabels graphSize={200}/>
 </Box>);

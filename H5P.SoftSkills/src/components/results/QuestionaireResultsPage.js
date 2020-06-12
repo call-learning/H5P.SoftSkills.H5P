@@ -42,7 +42,7 @@ const QuestionnaireResultsPage = withStyles(styles)((props) => {
   const quantileResult = getCurrentQuantile(props.results.value);
   return (
     <Container>
-    <Box alignContent="center">
+    <Box alignContent="center" display="flex" flexDirection="column">
       <Box py={3}>
         <Typography align="center" variant="h4"><H5PTranslatedText text='results'/></Typography>
       </Box>
@@ -69,7 +69,7 @@ const QuestionnaireResultsPage = withStyles(styles)((props) => {
             />
           </Box>))
       }
-      <Box>
+      <Box mx="auto">
         <NavigationButton onClick={props.handleReviewQuestionnaire}
                           isBack={false}
                           isNext={false}>

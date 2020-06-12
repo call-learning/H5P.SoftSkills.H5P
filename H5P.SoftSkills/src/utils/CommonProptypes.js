@@ -4,7 +4,7 @@ export const aQuestionnaireResource = PropTypes.shape({
   label: PropTypes.string,
   content: PropTypes.string,
   references: PropTypes.string,
-  image: PropTypes.any // TODO check for H5P image data here
+  imageUrl: PropTypes.string // It was converted from H5P image to direct URL.
 });
 
 export const questionnaireResource = {
@@ -27,6 +27,31 @@ export const questionnaireResources = {
 
 export const questionnaireResourcesDefault = {
   resources: []
+};
+
+export const h5pImage = PropTypes.shape({
+  params: PropTypes.shape({
+    file: PropTypes.shape({
+      path: PropTypes.string,
+      mime: PropTypes.string,
+      copyright: PropTypes.shape({
+        license: PropTypes.string
+      }),
+      width: PropTypes.number,
+      height: PropTypes.number
+    })
+  })
+});
+
+export const h5pQuestionnaireResources = {
+  resources: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      content: PropTypes.string,
+      references: PropTypes.string,
+      image:h5pImage
+    })
+  )
 };
 
 export const questionsByCompetencyAndSubCompetencies = {

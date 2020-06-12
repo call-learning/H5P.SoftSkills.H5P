@@ -12,7 +12,6 @@ import {
 } from './utils/CommonProptypes';
 import { questionnaireStore } from './utils/ReduxUtils';
 import { initializeUserData } from './actions/questionnaire';
-import { CompetenciesContext } from './contexts/CompetenciesContext';
 import { H5PContext } from './contexts/H5PContext';
 
 export const QuestionnaireApp = (props) => {

@@ -16,7 +16,8 @@ const allCompetenciesResults = computeProgressPerCompetency(
 
 export const subCompetencyResultsPage = () => <SubCompetencyResultsPage
   questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
-  results={allCompetenciesResults}
+  possibleAnswers={sampleData.settings.possibleAnswers}
+  answeredQuestions={sampleAnswerGenerator(getTotalQuestionCount(sampleData.questionsByCompetencyAndSubCompetencies))}
   subCompetencyIndex={0}
   competencyIndex={1}
   resources={sampleData.resources}

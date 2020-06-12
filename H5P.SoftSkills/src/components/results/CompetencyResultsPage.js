@@ -37,7 +37,7 @@ const CompetencyResultsPage = withStyles(styles)((props) => {
 
     return (
       <Container>
-        <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" width="90%">
+        <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
 
           <Box alignSelf="flex-start">{props.topNavigation}</Box>
           <Box><img className="SuccessImage" src={getCompetencyImageFromIndex(props.competencyIndex)} alt=""

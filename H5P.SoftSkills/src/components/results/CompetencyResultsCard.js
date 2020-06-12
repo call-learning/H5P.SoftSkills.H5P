@@ -34,7 +34,7 @@ const CompetencyResultsCard = withStyles(styles)((props) => {
   const { classes } = props;
   const competency = props.questionsByCompetencyAndSubCompetencies[props.competencyIndex];
   const components = [
-    <Box display="flex" key="description">
+    (<Box display="flex" key="description">
       <Box minWidth={250} alignItems="center" key="leftpart">
         {
           props.questionsByCompetencyAndSubCompetencies.map(
@@ -44,7 +44,7 @@ const CompetencyResultsCard = withStyles(styles)((props) => {
                                       width={props.questionsByCompetencyAndSubCompetencies[compIndex].value}/>
           )
         }
-      </Box>,
+      </Box>
       <Box flexGrow={1}>
         <Typography variant="h5">{competency.label}</Typography>
         <Typography>
@@ -55,9 +55,9 @@ const CompetencyResultsCard = withStyles(styles)((props) => {
             }}/>
         </Typography>
       </Box>
-    </Box>,
-    <ResultRadarChart key="graph"
-                      resultsList={props.results.competenciesResults[props.competencyIndex].subCompetenciesResults}/>
+    </Box>),
+    (<ResultRadarChart key="graph"
+                      resultsList={props.results.competenciesResults[props.competencyIndex].subCompetenciesResults}/>)
   ];
   return (
     <HorizontalCardWithAction components={components} handleActionClick={props.handleActionClick}/>

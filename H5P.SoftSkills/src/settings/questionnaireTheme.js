@@ -18,7 +18,10 @@ export const questionnaireTheme = createMuiTheme({
       main: '#01c3fa'
     },
     success: {
-      main: '#00ca9d'
+      main: '#7ED321'
+    },
+    warning: {
+      main: '#F5A623'
     },
     text: {
       default: '#4A4A4A',
@@ -27,6 +30,6 @@ export const questionnaireTheme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: "'Noto Sans SC', sans-serif"
-  },
+    fontFamily: '\'Noto Sans SC\', sans-serif',
+  }
 });

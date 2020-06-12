@@ -20,7 +20,7 @@ import RoutedResultsPageContainer from './RoutedResultsPageContainer';
 import Container from '@material-ui/core/Container';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { finishQuestionnaireAndSaveData, startQuestionnaireAndPosition } from '../actions/questionnaire';
+import { startQuestionnaireAndPosition } from '../actions/questionnaire';
 
 
 function Questionnaire (props) {

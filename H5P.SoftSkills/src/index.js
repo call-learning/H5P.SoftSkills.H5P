@@ -21,6 +21,8 @@ H5P.SoftSkills = class {
      *
      * @param {jQuery} $wrapper
      */
+
+
     this.attach = function (container) {
       render(
         (

@@ -9,22 +9,16 @@ import PropTypes from 'prop-types';
 import {
   simpleResultsType, simpleResultsTypeDefault
 } from '../../utils/CommonProptypes';
-import Text from 'recharts/lib/component/Text';
-import LabelList from 'recharts/lib/component/LabelList';
+import { truncateLabel } from '../../utils/ComponentsUtils';
 
 const MIN_ITEM_RADAR = 3;
-
 const MAX_LABEL_CHARACTERS = 30;
-
-function truncateLabel (text) {
-  return (text.length > MAX_LABEL_CHARACTERS) ? text.substring(0, MAX_LABEL_CHARACTERS) + '...' : text;
-}
 
 const CompetencyLabel = (props) => {
   const { payload, x, y, textAnchor, resultsList, ...otherprops } = props;
   return (
     <text x={x} y={y} textAnchor={textAnchor}>
-      <tspan className="label-compname" textAnchor={textAnchor}>{truncateLabel(resultsList[payload.index].label)}
+      <tspan className="label-compname" textAnchor={textAnchor}>{truncateLabel(resultsList[payload.index].label, MAX_LABEL_CHARACTERS)}
       </tspan>
       <tspan className="label-percent" dx={-payload.offset} dy={'1em'}>{resultsList[payload.index].value}%</tspan>
     </text>

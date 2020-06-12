@@ -12,7 +12,10 @@ import Bar from 'recharts/lib/cartesian/Bar';
 import Tooltip from 'recharts/lib/component/Tooltip';
 import BarChart from 'recharts/lib/chart/BarChart';
 import Text from 'recharts/lib/component/Text';
+import { truncateLabel } from '../../utils/ComponentsUtils';
 
+
+const MAX_LABEL_CHARACTERS = 30;
 // See https://upload.wikimedia.org/wikipedia/commons/d/de/Caret_right_font_awesome.svg
 // TODO: check Rechart Symbols
 const SmallTriangle = (props) => {
@@ -44,7 +47,7 @@ const BarLabel = (props) => {
 const CompetencyLabel= (props) => {
   const { width, payload ,...otherprops } = props;
   return (
-    <Text {...otherprops} className="competency-labels">{payload.value}</Text>
+    <Text scaleToFit {...otherprops} className="competency-labels">{truncateLabel(payload.value, MAX_LABEL_CHARACTERS)}</Text>
   );
 };
 
@@ -52,23 +55,30 @@ const styles = theme => ({
   barChartStyle: {
     fill: theme.palette.primary.main,
     "& .competency-labels": {
-      fontWeight: "bold"
+      fontWeight: "bold",
     }
   }
 });
 
 function ResultBarChart (props) {
   const { classes } = props;
+  const EM=8;
+  const labelSpace = MAX_LABEL_CHARACTERS * EM;
   return (<ResponsiveContainer height={props.graphHeight}  className={classes.root}>
     <BarChart
       layout="vertical"
       data={props.resultsList}
       barCategoryGap={8}
-      margin={{ top: 20, right: 5, bottom: 30, left: 200 }}
+      margin={{ top: 20, right: 5, bottom: 30, left: props.hasCompetencyLabel? labelSpace:5 }}
       className={classes.barChartStyle}
     >
       <XAxis type="number" domain={[0, 100]}  scale={"linear"} axisLine={false} tickLine={false}/>
-      <YAxis type="category" dataKey="label" tick={<CompetencyLabel/>}/>
+      {
+        props.hasCompetencyLabel?
+          (<YAxis type="category" dataKey="label" tick={<CompetencyLabel/>}/>):
+          (<YAxis type="category" dataKey="label" hide/>)
+      }
+
       <Tooltip/>
       <CartesianGrid horizontal={false}/>
       <Bar dataKey="value" background label={<BarLabel/>} radius={[0, 4, 4, 0]}/>
@@ -80,13 +90,15 @@ function ResultBarChart (props) {
 ResultBarChart.propTypes = {
   graphHeight: PropTypes.number,
   barSize: PropTypes.number,
-  resultsList: simpleResultsType
+  resultsList: simpleResultsType,
+  hasCompetencyLabel: PropTypes.bool
 };
 
 ResultBarChart.defaultProps = {
   graphHeight: 200,
   barSize: 30,
-  resultsList: simpleResultsTypeDefault
+  resultsList: simpleResultsTypeDefault,
+  hasCompetencyLabel: true
 };
 
 export default withStyles(styles)(ResultBarChart);

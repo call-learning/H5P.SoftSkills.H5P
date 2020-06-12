@@ -1,13 +1,11 @@
 import {
-  Box, Button,
-  Grid,
+  Box
 } from '@material-ui/core';
-import React, { Fragment } from 'react';
+import React  from 'react';
 import Typography from '@material-ui/core/Typography';
-import t from '../../utils/TranlationManager';
 import {
-  getCompetencyImageFromIndex, getCurrentQuantile,
-  resourcesPerContext
+  computeProgressPerCompetency,
+  getCompetencyImageFromIndex, getCurrentQuantile
 } from '../../utils/ComponentsUtils';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container';
@@ -18,59 +16,59 @@ import {
   questionnaireCompetenciesQuestionsDefault,
   questionnaireResources,
   questionnaireResourcesDefault,
-  questionnaireResults,
-  questionnaireResultsDefault
+  possibleAnswers,
+  questionnaireAnsweredQuestions,
+  possibleAnswersDefault,
+  questionnaireAnsweredQuestionsDefault
 } from '../../utils/CommonProptypes';
-import ResourcesList from './ResourcesList';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import BottomRectangle from '../elements/BottomRectangle';
 import ResultBarChart from '../elements/ResultBarChart';
+import SubCompetencyResultsList from './SubCompetencyResultsList';
 
 const styles = theme => ({
-  cardLike: {
-    boxShadow: '0 7px 17px 0 rgba(0, 0, 0, 0.2)'
-  },
-  cardLayout: {
-    padding: theme.spacing(3),
-    marginBottom: theme.spacing(4),
-  }
 });
 
 function SubCompetencyResultsPage (props) {
   const { classes } = props;
   const currentCompetency = props.questionsByCompetencyAndSubCompetencies[props.competencyIndex];
   const currentSubCompetency = currentCompetency.subCompetencies[props.subCompetencyIndex];
-  const competenciesResults = props.results.competenciesResults;
+  const globalResults = computeProgressPerCompetency(
+    props.questionsByCompetencyAndSubCompetencies,
+    props.answeredQuestions,
+    props.possibleAnswers
+  );
+  const currentCompetencyResult = globalResults.competenciesResults
+    && globalResults.competenciesResults[props.competencyIndex];
   const currentSubCompetencyResult =
-    competenciesResults[props.competencyIndex] && competenciesResults[props.competencyIndex].subCompetenciesResults &&
-    competenciesResults[props.competencyIndex].subCompetenciesResults[props.subCompetencyIndex];
+    currentCompetencyResult.subCompetenciesResults
+    && currentCompetencyResult.subCompetenciesResults[props.subCompetencyIndex];
   const currentQuantileValue = getCurrentQuantile(currentSubCompetencyResult.value);
-  const targetedResources =
-    resourcesPerContext(props.resources, props.questionsByCompetencyAndSubCompetencies, props.competencyIndex, props.subCompetencyIndex);
 
   return (
     <Container>
       <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" width="90%">
         <Box alignSelf="flex-start">{props.topNavigation}</Box>
         <Box my={2}><img className="SuccessImage" src={getCompetencyImageFromIndex(props.competencyIndex)} alt=""
-                  role="presentation"/></Box>
+                         role="presentation"/></Box>
 
-        <Typography variant="h6">{currentCompetency.label}</Typography>
-        <Typography variant="h5">{currentSubCompetency.label}</Typography>
-        <ResultBarChart resultsList={[currentSubCompetencyResult]} graphHeight={130}/>
+        <Box><Typography variant="h6">{currentCompetency.label}</Typography></Box>
+        <Box><Typography variant="h5">{currentSubCompetency.label}</Typography></Box>
+        <Box width={"50%"}><ResultBarChart hasCompetencyLabel={false}
+                                           resultsList={[currentSubCompetencyResult]} graphHeight={130}/></Box>
         <Box my={2}>
-          <Box>
-            <Typography variant="h5"><H5PTranslatedText text='yourcompetencyresults'/></Typography>
+          <Box my={1}>
+            <Typography variant="h4"><H5PTranslatedText text='yourcompetencyresults'/></Typography>
             <BottomRectangle/>
           </Box>
-          <Typography><H5PTranslatedText text={'resultFeedBack'+currentQuantileValue}
+          <Typography color="secondary"><H5PTranslatedText text={'resultFeedBack' + currentQuantileValue}
                                          arguments={{
                                            compPercent: currentSubCompetencyResult.value
                                          }}/></Typography>
           <Box my={2}>
             <Typography variant="h4"><H5PTranslatedText text='resources'/></Typography>
             <BottomRectangle/>
-          <ResourcesList resourcesByContext={targetedResources}/>
+            <SubCompetencyResultsList {...props}/>
           </Box>
         </Box>
       </Box>
@@ -85,7 +83,8 @@ SubCompetencyResultsPage.propTypes = Object.assign(
     topNavigation: PropTypes.element
   },
   questionsByCompetencyAndSubCompetencies,
-  questionnaireResults,
+  possibleAnswers,
+  questionnaireAnsweredQuestions,
   questionnaireResources
 );
 
@@ -96,7 +95,8 @@ SubCompetencyResultsPage.defaultProps = Object.assign(
     topNavigation: (<div/>)
   },
   questionnaireCompetenciesQuestionsDefault,
-  questionnaireResultsDefault,
+  possibleAnswersDefault,
+  questionnaireAnsweredQuestionsDefault,
   questionnaireResourcesDefault
 );
 

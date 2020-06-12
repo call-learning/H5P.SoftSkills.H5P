@@ -19,7 +19,7 @@
     "back": "Retour",
     "startquestionnaire": "Démarrer le test",
     "yourcompetencyresults": "Votre maîtrise de cette compétence",
-    "resources": "Ressources",
+    "resources": "Les ressources pour aller plus loin",
     "resultFeedBack0": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
     "resultFeedBack25": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
     "resultFeedBack50": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
@@ -32,26 +32,40 @@
     "globalResultFeedBack75": "Félicitations !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
     "globalResultFeedBack100": "Félicitations !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
     "reviewquestionnaire": "Revoir les questions",
-    "resultScoreLabel": "Votre score par type de compétences"
+    "resultScoreLabel": "Votre score par type de compétences",
+    "yourAnswer": "Votre Réponse",
+    "toImprove": "A améliorer",
+    "mastered": "Maitrisé",
+    "ourAdvice": "Nos conseils"
   },
   "resources": [
     {
-      "label": "J'utilise un correcteur orthographique",
-      "content": "<p>My content <a href=\"http:\/\/google.com\" target=\"_blank\">www.google.com<\/a><\/p>\n",
+      "content": "<p>La suite Office dispose de correcteurs orthographiques intégrés qui vous permettent de corriger la plupart des fautes d’orthographe et de grammaire. Voir comment utiliser le correcteur ortographique dans Word, Excel & Powerpoint. <a href=\"http:\/\/microsoft.com\" target=\"_blank\">www.microsoft.com<\/a><\/p>\n",
+      "image": {
+        "params": {
+          "contentName": "Image",
+          "file": {
+            "path": "images\/microsoft-logo.png",
+            "mime": "image\/png",
+            "copyright": {
+              "license": "U"
+            },
+            "width": 864,
+            "height": 1024
+          }
+        }
+      },
       "references": "0:1:1,0:0:2"
     },
     {
-      "label": "Je relis ou je fais relire mes productions pour corriger les fautes d'orthographe",
       "content": "<p>My content <a href=\"http:\/\/google.com\" target=\"_blank\">www.google.com<\/a><\/p>\n",
       "references": "0:1:2,0:1:1"
     },
     {
-      "label": "Lorsque je considère nécessaire",
       "content": "<p>My content <a href=\"http:\/\/google.com\" target=\"_blank\">www.google.com<\/a><\/p>\n",
       "references": "0:1:2,0:1:2"
     },
     {
-      "label": "J'applique les règles",
       "content": "<p>My content <a href=\"http:\/\/google.com\" target=\"_blank\">www.google.com<\/a><\/p>\n",
       "references": "0:1:0,0:1:2"
     }
@@ -73,7 +87,6 @@
         "description": "Par quelles démarches réussissez-vous à organiser vos activités professionnelles ?"
       }
     ],
-
     "instructionsDesc": [
       {
         "icon": "timer",
@@ -91,11 +104,13 @@
     "possibleAnswers": [
       {
         "text": "Toujours",
-        "id": 5
+        "id": 5,
+        "isAcquired": true
       },
       {
         "text": "Souvent",
-        "id": 4
+        "id": 4,
+        "isAcquired": true
       },
       {
         "text": "Parfois",

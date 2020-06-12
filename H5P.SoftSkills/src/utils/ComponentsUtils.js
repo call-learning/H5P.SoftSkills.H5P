@@ -6,10 +6,13 @@
 import socialImage from '../../assets/social.svg';
 import personalImage from '../../assets/personal.svg';
 import methodologicalImage from '../../assets/methodological.svg';
-import PropTypes from 'prop-types';
 
 const DEFAULT_COMPETENCY_IMAGE = [socialImage, personalImage, methodologicalImage];
 
+/**
+ * Get default image for competency (it is modulo the number of expected competencies, i.e. 3)
+ * @param competencyIndex
+ */
 export function getCompetencyImageFromIndex (competencyIndex) {
   return DEFAULT_COMPETENCY_IMAGE[competencyIndex % DEFAULT_COMPETENCY_IMAGE.length]; // DEFAULT image.
 }
@@ -28,7 +31,13 @@ export function getRealImagePath (filepath, contentId, libraryName) {
   return imagePath;
 }
 
-export function getProgressData (questionsByCompetencyAndSubCompetencies, answeredQuestion) {
+/**
+ * Get progress information
+ * @param questionsByCompetencyAndSubCompetencies
+ * @param answeredQuestions
+ * @return {{answeredQuestionsCount: number, questionsCount: number, competenciesProgress: []}}
+ */
+export function getProgressData (questionsByCompetencyAndSubCompetencies, answeredQuestions) {
   let allCompetenciesProgress = [];
   let answeredQuestionsCount = 0;
   let questionsCount = 0;
@@ -39,7 +48,7 @@ export function getProgressData (questionsByCompetencyAndSubCompetencies, answer
       const subCompTotalQuestions = compSub.contexts.reduce((acc, c) => (acc + c.questions.length), 0);
       const minQuestionIndexForSubComp =
         getGlobalQuestionIndex(questionsByCompetencyAndSubCompetencies, competencyIndex, compSubIndex, 0, 0);
-      const subCompAnsweredQuestions = answeredQuestion.reduce((acc, a) => {
+      const subCompAnsweredQuestions = answeredQuestions.reduce((acc, a) => {
         const qi = a.questionGlobalIndex - minQuestionIndexForSubComp;
         return acc + ((qi >= 0 && qi < subCompTotalQuestions) ? 1 : 0);
       }, 0);
@@ -75,8 +84,8 @@ export function getTotalQuestionCount (questionsByCompetencyAndSubCompetencies) 
 
 /**
  * Get the total number of question in the full set
- * @param questionsByCompetencyAndSubCompetencies
  * @return {*}
+ * @param competencyQuestions
  */
 export function getTotalQuestionCountCompetency (competencyQuestions) {
   let totalCount = 0;
@@ -126,6 +135,12 @@ export function getGlobalQuestionIndex (questionsByCompetencyAndSubCompetencies,
   return globalQuestionIndex;
 }
 
+/**
+ * Get index location of a component via its global question index
+ * @param questionsByCompetencyAndSubCompetencies
+ * @param questionGlobalIndex
+ * @return {{}|{competencyIndex: *, questionIndex: *, contextIndex: number, subCompetencyIndex: *}}
+ */
 export function getComponentIndexesFromGlobalQuestionIndex (questionsByCompetencyAndSubCompetencies, questionGlobalIndex) {
   for (let [competencyIndex, comp] of questionsByCompetencyAndSubCompetencies.entries()) {
     for (let [compSubCompetencyIndex, compSub] of comp.subCompetencies.entries()) {
@@ -213,6 +228,12 @@ export function computeProgressPerCompetency (
   };
 }
 
+/**
+ * Get real value (i.e. answer.realValue if provided or just answerId if not)
+ * @param possibleAnswers
+ * @param answerId
+ * @return {Requireable<number>|*}
+ */
 export function getRealValueFromPossibleValue (possibleAnswers, answerId) {
   const answer = possibleAnswers.find((answ) => answ.answerId === answerId);
   if (!answer || typeof answer.realValue === 'undefined') {
@@ -221,46 +242,65 @@ export function getRealValueFromPossibleValue (possibleAnswers, answerId) {
   return answer.realValue;
 }
 
+/**
+ * Get Textual Value from Possible answer Id
+ * @param possibleAnswers
+ * @param answerId
+ * @return {Requireable<number>|*}
+ */
+export function getTextValueFromPossibleValue (possibleAnswers, answerId) {
+  const answer = possibleAnswers.find((answ) => answ.id === answerId);
+  return answer ? answer.text : '';
+}
+
+export function isAcquiredAnswer (possibleAnswers, answerId) {
+  const answer = possibleAnswers.find((answ) => answ.id === answerId);
+  return answer && answer.isAcquired;
+}
+
+/**
+ * Check if the value is "I don't know" or not
+ * @param possibleAnswers
+ * @param answerId
+ * @return {*|boolean}
+ */
 export function isUnknownValue (possibleAnswers, answerId) {
   const answer = possibleAnswers.find((answ) => answ.answerId === answerId);
   return answer && typeof answer.unknown !== 'undefined' && answer.unknown;
 }
 
 /**
- * Get a set of resources sorted by competency
+ * Decompose a reference into subcomponents
+ * @param ref
+ * @return {[]}
  */
-export function resourcesPerContext (resources, questionsByCompetencyAndSubCompetencies, competencyIndex, subCompetencyIndex) {
-  // eslint-disable-next-line no-undef
-  let rPC = new Map();
-  for (let currentResource of resources) {
-    const resourceRefs = currentResource.references.split(','); // Allrefs from this resource.
-    for (let ref of resourceRefs) {
-      const refSplit = ref.split(':');
-      if (refSplit) {
-        const [competencyId, subCompetencyId, contextId] = refSplit;
-        // Add a stable ID
-        const currentResourceWID = Object.assign({ id: stringToHashCode(currentResource.label) }, currentResource);
-        if (rPC.has(contextId)) {
-          let value = rPC.get(contextId);
-          value.resources.push(currentResourceWID);
-        } else {
-          const contextLabel = questionsByCompetencyAndSubCompetencies[competencyId] &&
-            questionsByCompetencyAndSubCompetencies[competencyId].subCompetencies[subCompetencyId] &&
-            questionsByCompetencyAndSubCompetencies[competencyId].subCompetencies[subCompetencyId].contexts[contextId].label;
-          if (contextLabel) {
-            rPC.set(contextId, {
-              id: `${competencyId}-${subCompetencyId}-${contextId}`,
-              label: contextLabel,
-              resources: [currentResourceWID]
-            });
-          }
-        }
+export function getContextFromReference (ref) {
+  let allRefs = [];
+  const resourceRefs = ref.split(','); // Allrefs from this resource.
+  for (let ref of resourceRefs) {
+    const refSplit = ref.split(':');
+    if (refSplit) {
+      let [competencyId, subCompetencyId, contextId] = refSplit;
+      competencyId = parseInt(competencyId);
+      subCompetencyId = parseInt(subCompetencyId);
+      contextId = parseInt(contextId);
+      if (!(isNaN(contextId) || isNaN(subCompetencyId) || isNaN(contextId))) {
+        allRefs.push({
+          competencyId: competencyId,
+          subCompetencyId: subCompetencyId,
+          contextId: contextId
+        });
       }
     }
   }
-  return Array.from(rPC.values());
+  return allRefs;
 }
 
+/**
+ * String to hashcode for unique id
+ * @param s
+ * @return {string|number}
+ */
 export const stringToHashCode = function (s) {
   let hash = 0;
   if (!s.length) return hash;
@@ -283,9 +323,90 @@ export const resourceCreateMarkup = function (rawHTML) {
 
 const QUANTILES = [0, 25, 50, 75, 100];
 
+/**
+ * Get quantile from value (round to the previous quantile value)
+ * @param valueToCheck
+ * @return {number}
+ */
 export function getCurrentQuantile (valueToCheck) {
-  return QUANTILES.reduce((quantileVal, quantileValue, index) =>
-      (valueToCheck > quantileValue ? quantileValue : quantileVal),
+  return QUANTILES.reduce((quantileVal, quantileValue) =>
+      (valueToCheck >= quantileValue ? quantileValue : quantileVal),
     0
   );
 }
+
+/**
+ * Truncate label/string to max char
+ * @param text
+ * @param MAXCHAR
+ * @return {*}
+ */
+export function truncateLabel (text, MAXCHAR) {
+  return (text.length > MAXCHAR) ? text.substring(0, MAXCHAR) + '...' : text;
+}
+
+/**
+ * Get subcompetencies context and attached resources
+ * @param questionsByCompetencyAndSubCompetencies
+ * @param answeredQuestion
+ * @param resources
+ * @param possibleAnswers
+ * @param competencyIndex
+ * @param subCompetencyIndex
+ * @return {[]}
+ */
+export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSubCompetencies,
+                                                     answeredQuestion,
+                                                     resources,
+                                                     possibleAnswers,
+                                                     competencyIndex,
+                                                     subCompetencyIndex) {
+
+  let resultsAndResources = [];
+
+  const subCompetency = questionsByCompetencyAndSubCompetencies[competencyIndex].subCompetencies[subCompetencyIndex];
+  for (let [contextIndex, context] of subCompetency.contexts.entries()) {
+    const minQuestionIndexForContext =
+      getGlobalQuestionIndex(questionsByCompetencyAndSubCompetencies, competencyIndex, subCompetencyIndex, contextIndex, 0);
+    const contextTotalQuestionCount = context.questions.length;
+    const contextTotalScore = answeredQuestion.reduce((acc, answer) => {
+      const qi = answer.questionGlobalIndex - minQuestionIndexForContext;
+      return acc + ((qi >= 0 && qi < contextTotalQuestionCount) ?
+        getRealValueFromPossibleValue(possibleAnswers, answer.answerId) : 0);
+    }, 0);
+    const contextQA = answeredQuestion.reduce((acc, answer) => {
+      const qi = answer.questionGlobalIndex - minQuestionIndexForContext;
+      if (qi >= 0 && qi < contextTotalQuestionCount) {
+        acc.push({
+          label: context.questions[qi],
+          answer: answer.answerId
+        });
+      }
+      return acc;
+    }, []);
+
+    const resourcesList = resources.reduce((acc, resource) => {
+      const allrefs = getContextFromReference(resource.references);
+
+      for (let ref of allrefs) {
+        if (ref.competencyId === competencyIndex
+          && ref.subCompetencyId === subCompetencyIndex
+          && ref.contextId === contextIndex) {
+          const currentResourceWID = Object.assign({ id: stringToHashCode(resource.content) }, resource);
+          acc.set(contextIndex, currentResourceWID);
+        }
+      }
+      return acc;
+      // eslint-disable-next-line no-undef
+    }, new Map());
+    resultsAndResources.push({
+      label: context.label,
+      value: Math.floor(contextTotalScore / contextTotalQuestionCount),
+      questionsAnswers: contextQA,
+      resources: Array.from(resourcesList.values())
+    });
+  }
+
+  return resultsAndResources;
+}
+
