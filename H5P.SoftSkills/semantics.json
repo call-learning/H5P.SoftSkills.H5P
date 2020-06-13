@@ -226,14 +226,6 @@
               "name": "title",
               "type": "text",
               "label": "Title",
-              "widget": "html",
-              "tags": [
-                "p",
-                "br",
-                "strong",
-                "em",
-                "code"
-              ],
               "importance": "high"
             },
             {

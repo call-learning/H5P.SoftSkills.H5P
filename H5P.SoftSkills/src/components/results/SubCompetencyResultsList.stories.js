@@ -4,7 +4,6 @@ import { sampleData } from '../../utils/StoriesUtils';
 import React from 'react';
 import { computeProgressPerCompetency, getTotalQuestionCount } from '../../utils/ComponentsUtils';
 import SubCompetencyResultsList from './SubCompetencyResultsList';
-import { questionnaireResources } from '../../utils/CommonProptypes';
 
 export default { title: 'Results/Widget' };
 

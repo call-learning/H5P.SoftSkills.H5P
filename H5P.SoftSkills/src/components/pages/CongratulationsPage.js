@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Box } from '@material-ui/core';
+import { Container, Box } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import SuccessImage from '../../../assets/success.svg';
 import Typography from '@material-ui/core/Typography';
@@ -13,7 +13,7 @@ function CongratulationsPage (props) {
 
         <Box m={2}><img className="SuccessImage" src={SuccessImage} alt=""
                   role="presentation"/></Box>
-        <Typography variant="h4"><H5PTranslatedText text="congratulations"/></Typography>
+        <Typography variant="h3"><H5PTranslatedText text="congratulations"/></Typography>
         <Box my={2}>
           <Typography align={'center'} color="secondary"><H5PTranslatedText text="congratulationtext"/></Typography>
         </Box>

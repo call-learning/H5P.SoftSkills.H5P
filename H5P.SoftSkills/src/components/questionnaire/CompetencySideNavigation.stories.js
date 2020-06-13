@@ -2,10 +2,7 @@ import React from 'react';
 import CompetencySideNavigation from './CompetencySideNavigation';
 import H5P from '../../utils/H5P.mock';
 import { socialImage } from '../../../assets/social.svg';
-import { Grid } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
-import BottomRectangle from '../elements/BottomRectangle';
 
 export default { title: 'Questionnaire' };
 

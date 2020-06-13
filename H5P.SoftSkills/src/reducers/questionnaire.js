@@ -6,7 +6,6 @@ import {
   QSTEP_STARTED, QSTEP_READY_TO_START
 } from '../constants/QuestionnaireConstants';
 import { getTotalQuestionCount } from '../utils/ComponentsUtils';
-import { initializeUserDataQuestionnaire, startQuestionnaire } from '../actions/questionnaire';
 
 /**
  *

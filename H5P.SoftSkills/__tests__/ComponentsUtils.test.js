@@ -252,12 +252,25 @@ test('getSubCompetencyResultsAndResources', () => {
       ],
       "resources": [
         {
-          "id": "2401563827",
-          "label": "J'utilise un correcteur orthographique",
-          "content": "<p>My content <a href=\"http://google.com\" target=\"_blank\">www.google.com</a></p>\n",
+          "content": "<p>La suite Office dispose de correcteurs orthographiques intégrés qui vous permettent de corriger la plupart des fautes d’orthographe et de grammaire. Voir comment utiliser le correcteur ortographique dans Word, Excel & Powerpoint. <a href=\"http://microsoft.com\" target=\"_blank\">www.microsoft.com</a></p>\n",
+          "id": "1504529667",
+          "image": {
+            "params": {
+              "contentName": "Image",
+              "file": {
+                "copyright": {
+                  "license": "U"
+                },
+                "height": 1024,
+                "mime": "image/png",
+                "path": "images/microsoft-logo.png",
+                "width": 864
+              }
+            }
+          },
           "references": "0:1:1,0:0:2"
         }
-      ]
+      ],
     },
     {
       "label": "En tant que manager d’équipe, je suis amené(e) à gérer des tensions et des conflits.",

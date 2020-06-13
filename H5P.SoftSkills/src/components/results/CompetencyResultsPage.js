@@ -1,15 +1,11 @@
 import {
   Box,
-  Grid,
 } from '@material-ui/core';
-import React, { Fragment } from 'react';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { getCompetencyImageFromIndex } from '../../utils/ComponentsUtils';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container';
-
-import { ArrowForward } from '@material-ui/icons';
-import Fab from '@material-ui/core/Fab';
 import ResultRadarChart from '../elements/ResultRadarChart';
 import PropTypes from 'prop-types';
 import {
@@ -17,7 +13,6 @@ import {
   questionnaireCompetenciesQuestionsDefault, questionnaireResults, questionnaireResultsDefault
 } from '../../utils/CommonProptypes';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
-import BottomRectangle from '../elements/BottomRectangle';
 import HorizontalCardWithAction from '../elements/HorizontalCardWithAction';
 
 const styles = theme => ({
@@ -43,7 +38,7 @@ const CompetencyResultsPage = withStyles(styles)((props) => {
           <Box><img className="SuccessImage" src={getCompetencyImageFromIndex(props.competencyIndex)} alt=""
                     role="presentation"/></Box>
 
-          <Typography variant="h4">{currentCompetency.label}</Typography>
+          <Typography variant="subtitle2">{currentCompetency.label}</Typography>
           <ResultRadarChart resultsList={currentCompetenyResults.subCompetenciesResults} hasLabels
                             graphSize={300}/>
           <Box>
@@ -57,8 +52,12 @@ const CompetencyResultsPage = withStyles(styles)((props) => {
                 (<HorizontalCardWithAction width={"80%"} key={'resultcontainer' + subCompIndex}
                                            handleActionClick={(e) => props.handleViewSubCompetencyClick(props.competencyIndex, subCompIndex)}
                                            components={[
-                                             (<Box key="competencydesc"><Typography>{subC.label}</Typography><BottomRectangle mt={1} pt={0.2}/></Box>),
-                                             (<Box><Typography>{Math.floor(subC.value)}%</Typography></Box>)
+                                             (<Box key="competencydesc">
+                                               <Typography variant="subtitle2">{subC.label}</Typography>
+                                               </Box>),
+                                             (<Box key="compvalue">
+                                               <Typography>{Math.floor(subC.value)}%</Typography>
+                                             </Box>)
                                            ]}/>))
           }
         </Box>

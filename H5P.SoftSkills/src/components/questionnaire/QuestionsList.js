@@ -11,10 +11,6 @@ import { getGlobalQuestionIndex } from '../../utils/ComponentsUtils';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 const styles = theme => ({
-  subCompetencyLabel: {
-    fontSize: 'large',
-    fontWeight: 'bold'
-  },
   contextLabel: {
     fontSize: 'larger'
   },
@@ -58,7 +54,7 @@ const QuestionsList = withStyles(styles)((props) => {
             {
               (subCompetency.isVisible) ?
                 <Typography
-                  className={classes.subCompetencyLabel}>{subCompetency.label}</Typography> : ''
+                  variant="h4">{subCompetency.label}</Typography> : ''
             }
             <ol className={classes.listContainer}>
               {

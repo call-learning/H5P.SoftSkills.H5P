@@ -34,12 +34,6 @@ const styles = theme => ({
   root: {
     width: '100%',
   },
-  contextLabel: {
-    fontWeight: 'bold'
-  },
-  questionLabel: {
-    fontWeight: 'bold'
-  },
   acquiredStyle: {
     color: theme.palette.success.main
   },
@@ -82,7 +76,7 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                 >
                   <Box display="flex" width={'100%'}>
                     <Box flexGrow={1} px={2}>
-                      <Typography className={classes.contextLabel}>{`${index + 1}. ${context.label}`}</Typography>
+                      <Typography variant="body2">{`${index + 1}. ${context.label}`}</Typography>
                     </Box>
                     <Box flexShrink={1} display="flex" alignSelf="right">
                       {
@@ -98,15 +92,18 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                         resultsAndResources[index].questionsAnswers.map((q, index) =>
                           (<Box key={index} display="flex" py={2}>
                             <Box flexGrow={1} mx={4}>
-                              <Typography className={classes.questionLabel}>{q.label}</Typography>
+                              <Typography variant="body2">{q.label}</Typography>
                             </Box>
-                            <Box>
-                              <Typography display="inline"><H5PTranslatedText text='yourAnswer'/>:</Typography>
-                              <Typography display="inline"
-                                          className={isAcquiredAnswer(props.possibleAnswers, q.answer) ? classes.acquiredStyle : classes.inAcquisitionStyle}>
-                                {getTextValueFromPossibleValue(props.possibleAnswers, q.answer)}
-                              </Typography>
-                            </Box>
+                            {
+                              !q.answer? '':
+                                (<Box>
+                                <Typography display="inline"><H5PTranslatedText text='yourAnswer'/>:</Typography>
+                                <Typography display="inline"
+                                            className={isAcquiredAnswer(props.possibleAnswers, q.answer) ? classes.acquiredStyle : classes.inAcquisitionStyle}>
+                                  {getTextValueFromPossibleValue(props.possibleAnswers, q.answer)}
+                                </Typography>
+                              </Box>)
+                            }
                           </Box>)
                         )
                       }

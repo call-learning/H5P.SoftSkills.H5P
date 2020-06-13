@@ -39,7 +39,8 @@ const styles = theme => ({
     '& .label-percent': {
       fill: theme.palette.secondary.dark,
       fontWeight: 'bold'
-    }
+    },
+    fontFamily: theme.typography.fontFamily,
   }
 });
 
@@ -60,10 +61,10 @@ function ResultRadarChart (props) {
     }
   }
   return <ResponsiveContainer minHeight={props.graphSize} minWidth={props.graphSize} className={classes.root}>
-    <RadarChart data={competenciesResults}>
-      <PolarGrid className={classes.radarGridStyle}/>
+    <RadarChart data={competenciesResults} margin={{ top: MAX_LABEL_CHARACTERS, right: MAX_LABEL_CHARACTERS, bottom: MAX_LABEL_CHARACTERS, left: MAX_LABEL_CHARACTERS }}>
+      <PolarGrid/>
       {
-        props.hasLabels ? <PolarAngleAxis data={competenciesResults}
+        props.hasLabels ? <PolarAngleAxis tickLine={{ size: MAX_LABEL_CHARACTERS }} data={competenciesResults}
                                           tick={<CompetencyLabel resultsList={props.resultsList}/>}/>
           : ''
       }

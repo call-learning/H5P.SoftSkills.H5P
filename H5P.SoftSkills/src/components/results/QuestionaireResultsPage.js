@@ -1,9 +1,8 @@
 import {
   Box,
-  Grid,
   LinearProgress,
 } from '@material-ui/core';
-import React, { Fragment } from 'react';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container';
@@ -15,23 +14,10 @@ import {
   questionnaireResults, questionnaireResultsDefault
 } from '../../utils/CommonProptypes';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
-import Paper from '@material-ui/core/Paper';
 import NavigationButton from '../elements/NavigationButton';
 import { getCurrentQuantile } from '../../utils/ComponentsUtils';
 import ResultBarChart from '../elements/ResultBarChart';
 
-const CompetencyLinearProgress = withStyles({
-  root: {
-    height: '2em',
-    borderRadius: 5,
-  },
-  bar: {
-    borderRadius: 5,
-  },
-  colorPrimary: {
-    backgroundColor: '#ddd'
-  },
-})(LinearProgress);
 
 const styles = theme => ({
 

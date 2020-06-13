@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ResponsiveContainer from 'recharts/lib/component/ResponsiveContainer';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
@@ -54,9 +54,11 @@ const CompetencyLabel= (props) => {
 const styles = theme => ({
   barChartStyle: {
     fill: theme.palette.primary.main,
+    fontFamily: theme.typography.fontFamily,
     "& .competency-labels": {
       fontWeight: "bold",
     }
+
   }
 });
 

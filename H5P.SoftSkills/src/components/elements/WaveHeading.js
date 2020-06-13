@@ -44,9 +44,8 @@ const styles = theme => ({
   },
   title: {
     paddingTop:'2em',
-    fontSize: '2em',
     fontStyle: 'italic',
-    fontWeight: 600,
+    fontWeight: 'bolder',
     letterSpacing: 0,
     lineHeight: 1.33,
     whiteSpace: 'pre-wrap',
@@ -63,7 +62,7 @@ const WaveHeading = withStyles(styles)((props) => {
   const { classes } = props;
   return (
     <Container className={classes.waveHeadingBox} maxWidth={false}>
-      <Container ><Typography className={classes.title}>{props.title}</Typography></Container>
+      <Container ><Typography variant="h3" className={classes.title}>{props.title}</Typography></Container>
       <div className={classes.waveDividerWrap}>
         <svg className={classes.waveHeadingShape} xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 1000 ${WAVEBOX_HEIGHT}`} preserveAspectRatio="none">
           <path

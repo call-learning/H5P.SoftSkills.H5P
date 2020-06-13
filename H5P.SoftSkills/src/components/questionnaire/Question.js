@@ -8,6 +8,7 @@ import {
   possibleAnswersDefault,
 } from '../../utils/CommonProptypes';
 import CheckCircle from '@material-ui/icons/CheckCircle';
+import { resourceCreateMarkup } from '../../utils/ComponentsUtils';
 
 const styles = theme => ({
   roundedControl: {
@@ -53,10 +54,13 @@ const Question = withStyles(styles)((props) => {
           }
         }
       }>
-        <FormLabel className={classes.labelQuestion} component="legend">{props.questionText}</FormLabel>
+        <FormLabel className={classes.labelQuestion} component="legend">
+          <span dangerouslySetInnerHTML={resourceCreateMarkup(props.questionText)}/>
+        </FormLabel>
         <RadioGroup row
                     defaultValue="top"
                     value={props.selectedItemId}
+                    name={`${props.questionID}-radio`}
                     onChange={(e, value) => hSelect(e, parseInt(value))
                     }>
           {

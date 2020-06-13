@@ -3,7 +3,6 @@ import {
   MemoryRouter,
   Switch,
   Route,
-  useRouteMatch,
   useHistory,
   useParams
 } from 'react-router-dom';

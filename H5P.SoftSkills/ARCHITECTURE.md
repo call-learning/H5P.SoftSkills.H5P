@@ -99,3 +99,12 @@ The global theme definitions are located in questionnaireTheme.js.
 We use Questionnaire.css to import the font definitions.
 If a component overrides styles it is only for a local use and if repeated it should
 be brought up into the theme.
+
+### Note on mockup and fontsize
+
+* Normal font: 17px, line height 20px : body1
+* Big Title top of the page: 36px, line height 48px : h3
+* Title top of the page: 24, line height 29px: h4
+* Title in the page (not underlined): 24px, line height 29px: subtitle1 
+* Title in the page (underlined): 20px, line height 24px : subtitle2
+* Important information: 20px, semi bold, line height 24px: body2

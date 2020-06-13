@@ -3,7 +3,6 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
 import HorizontalCardWithAction from '../elements/HorizontalCardWithAction';
 import ResultRadarChart from '../elements/ResultRadarChart';
@@ -46,7 +45,7 @@ const CompetencyResultsCard = withStyles(styles)((props) => {
         }
       </Box>
       <Box flexGrow={1}>
-        <Typography variant="h5">{competency.label}</Typography>
+        <Typography variant="subtitle1">{competency.label}</Typography>
         <Typography>
           <H5PTranslatedText text='competencyresultdesc' arguments={
             {

@@ -3,7 +3,6 @@ import React from 'react';
 import { TranslationsContext } from '../contexts/TranslationsContext';
 import PropTypes from 'prop-types';
 import { resourceCreateMarkup } from './ComponentsUtils';
-import Typography from '@material-ui/core/Typography';
 
 /**
  * This is a simple component that uses the context so to get

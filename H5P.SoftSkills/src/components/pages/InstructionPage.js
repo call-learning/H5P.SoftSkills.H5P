@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Button, Container, Box } from '@material-ui/core';
 import { Icon } from '@material-ui/core';
-import { getCompetencyImageFromIndex } from '../../utils/ComponentsUtils';
+import { getCompetencyImageFromIndex, resourceCreateMarkup } from '../../utils/ComponentsUtils';
 import { questionnaireSettings, questionnaireSettingsDefault } from '../../utils/CommonProptypes';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -11,12 +11,10 @@ import BottomRectangle from '../elements/BottomRectangle';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import 'material-design-icons/iconfont/material-icons.css';
 import NavigationButton from '../elements/NavigationButton';
-import CircularProgressWithStep from '../elements/CircularProgressWithStep';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 const styles = () => ({
   competencyTitle: {
-    fontSize: 'larger',
     textTransform: 'lowercase',
     textAlign: "justify"
   }
@@ -30,7 +28,9 @@ const InstructionPage = withStyles(styles)((props) => {
       </Container>
       <Container maxWidth={'md'}>
         <Box xs={6} p={"3em"}>
-          <Typography className={classes.instructionDesc}>{props.generalInstructions}</Typography>
+          <Typography color="textSecondary">
+            <span dangerouslySetInnerHTML={resourceCreateMarkup(props.generalInstructions)}/>
+          </Typography>
         </Box>
 
         <Box>
@@ -46,9 +46,8 @@ const InstructionPage = withStyles(styles)((props) => {
                       <BottomRectangle/>
                     </Box>
                     <Box>
-                    <Box><Typography className={classes.competencyTitle}>{e.title}</Typography></Box>
-                    <Box><Typography className={classes.instructionDesc}
-                                           color='textSecondary'>{e.description}</Typography></Box>
+                    <Box><Typography variant="subtitle1" className={classes.competencyTitle}>{e.title}</Typography></Box>
+                    <Box><Typography color="textSecondary">{e.description}</Typography></Box>
                     </Box>
                   </Box>);
                 }
@@ -66,7 +65,7 @@ const InstructionPage = withStyles(styles)((props) => {
                                display="flex"
                                flexDirection="row">
                     <Icon fontSize="large" color="primary">{e.icon}</Icon>
-                    <Box m={'1em'}><Typography>{e.text}</Typography></Box>
+                    <Box m={'1em'}><Typography variant="body2" color="textSecondary">{e.text}</Typography></Box>
                   </Box>);
                 }
               )

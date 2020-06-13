@@ -22,7 +22,6 @@ import {
   questionnaireAnsweredQuestionsDefault
 } from '../../utils/CommonProptypes';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
-import BottomRectangle from '../elements/BottomRectangle';
 import ResultBarChart from '../elements/ResultBarChart';
 import SubCompetencyResultsList from './SubCompetencyResultsList';
 
@@ -52,22 +51,20 @@ function SubCompetencyResultsPage (props) {
         <Box my={2}><img className="SuccessImage" src={getCompetencyImageFromIndex(props.competencyIndex)} alt=""
                          role="presentation"/></Box>
 
-        <Box><Typography variant="h6">{currentCompetency.label}</Typography></Box>
-        <Box><Typography variant="h5">{currentSubCompetency.label}</Typography></Box>
+        <Box><Typography color="textSecondary">{currentCompetency.label}</Typography></Box>
+        <Box><Typography variant="h4">{currentSubCompetency.label}</Typography></Box>
         <Box width={"50%"}><ResultBarChart hasCompetencyLabel={false}
                                            resultsList={[currentSubCompetencyResult]} graphHeight={130}/></Box>
         <Box my={2}>
           <Box my={1}>
-            <Typography variant="h4"><H5PTranslatedText text='yourcompetencyresults'/></Typography>
-            <BottomRectangle/>
+            <Typography variant="subtitle2"><H5PTranslatedText text='yourcompetencyresults'/></Typography>
           </Box>
           <Typography color="secondary"><H5PTranslatedText text={'resultFeedBack' + currentQuantileValue}
                                          arguments={{
                                            compPercent: currentSubCompetencyResult.value
                                          }}/></Typography>
           <Box my={2}>
-            <Typography variant="h4"><H5PTranslatedText text='resources'/></Typography>
-            <BottomRectangle/>
+            <Typography variant="subtitle2"><H5PTranslatedText text='resources'/></Typography>
             <SubCompetencyResultsList {...props}/>
           </Box>
         </Box>
