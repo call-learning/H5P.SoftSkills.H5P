@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import H5P from '../../src/utils/H5P.mock';
 import { questionnaireStore } from '../../src/utils/ReduxUtils';
 import { initializeUserData } from '../../src/actions/questionnaire';
 import { Provider } from 'react-redux';
-
 import sampleData from '../../sampleData/demotestdata.json';
 import { QuestionnaireApp } from '../../src/QuestionnaireApp';
 import { TranslationsContext } from '../../src/contexts/TranslationsContext';
-import { H5PContext } from '../../src/contexts/H5PContext';
 
 window.H5P = H5P;
 

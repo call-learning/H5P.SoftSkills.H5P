@@ -1,1 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&display=swap');
+
+html, *:fullscreen, *:-webkit-full-screen, *:-moz-full-screen {
+    background-color: white !important;
+    z-index:1;
+}
+
+::backdrop
+{
+    z-index:0;
+    background-color: white !important;
+}

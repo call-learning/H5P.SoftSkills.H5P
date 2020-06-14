@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import { QuestionnaireApp } from './QuestionnaireApp';
 import { TranslationsContext } from './contexts/TranslationsContext';
 import { H5PContext } from './contexts/H5PContext';
+import { computeProgressPerCompetency } from './utils/ComponentsUtils';
 
 H5P.SoftSkills = class {
 
@@ -41,6 +42,11 @@ H5P.SoftSkills = class {
     };
     this.finish = function (state, dataId) {
       this.save(state, dataId);
+      // Set the score.
+      const progress = computeProgressPerCompetency(params.questionsByCompetencyAndSubCompetencies,
+        state.answeredQuestions,
+        params.settings.possibleAnswers);
+      this.trigger('finish', {data: {score: progress.value, maxScore: 100, time: Date.now() }});
     };
     this.save = function (state, dataId) {
       H5P.setUserData(contentId, dataId, state);

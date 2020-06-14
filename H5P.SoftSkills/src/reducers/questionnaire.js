@@ -30,7 +30,7 @@ export function currentStep (state = initialState.currentStep, action) {
       return QSTEP_REVIEWING;
     }
     case types.questionnaire.RESET: {
-      return QSTEP_REVIEWING;
+      return QSTEP_READY_TO_START;
     }
     default:
       return state;

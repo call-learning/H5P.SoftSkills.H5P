@@ -18,51 +18,58 @@ import NavigationButton from '../elements/NavigationButton';
 import { getCurrentQuantile } from '../../utils/ComponentsUtils';
 import ResultBarChart from '../elements/ResultBarChart';
 
-
-const styles = theme => ({
-
-});
+const styles = theme => ({});
 
 const QuestionnaireResultsPage = withStyles(styles)((props) => {
   const { classes } = props;
   const quantileResult = getCurrentQuantile(props.results.value);
   return (
     <Container>
-    <Box alignContent="center" display="flex" flexDirection="column">
-      <Box py={3}>
-        <Typography align="center" variant="h4"><H5PTranslatedText text='results'/></Typography>
+      <Box alignContent="center" display="flex" flexDirection="column">
+        <Box py={3}>
+          <Typography align="center" variant="h4"><H5PTranslatedText text='results'/></Typography>
+        </Box>
+        <Box py={3}>
+          <Typography align="center" color="secondary"><H5PTranslatedText
+            text={`globalResultFeedBack${quantileResult}`}/></Typography>
+        </Box>
+        <Box>
+          <Typography align="center" variant="h4"><H5PTranslatedText text='resultScoreLabel'/></Typography>
+        </Box>
+        <Container maxWidth="sm" fixed>
+          <ResultBarChart resultsList={props.results.competenciesResults} graphHeight={250}/>
+        </Container>
+        <Box>
+          <Typography align="center" variant="h4"><H5PTranslatedText text='resultspercompetency'/></Typography>
+        </Box>
+        {
+          props.questionsByCompetencyAndSubCompetencies.map((comp, compIndex) => (
+            <Box key={compIndex}>
+              <CompetencyResultsCard
+                questionsByCompetencyAndSubCompetencies={props.questionsByCompetencyAndSubCompetencies}
+                results={props.results}
+                competencyIndex={compIndex}
+                handleActionClick={(e) => {props.handleViewCompetencyClick(compIndex);}}
+              />
+            </Box>))
+        }
+        <Box display="flex" flexDirection="row" justifyContent="center">
+          <Box mx={2}>
+            <NavigationButton onClick={props.handleReviewQuestionnaire}
+                              isBack={false}
+                              isNext={false}>
+              <H5PTranslatedText text='reviewquestionnaire'/>
+            </NavigationButton>
+          </Box>
+          <Box mx={2}>
+            <NavigationButton onClick={props.handleRestartQuestionnaire}
+                              isBack={false}
+                              isNext={false}>
+              <H5PTranslatedText text='restartquestionnaire'/>
+            </NavigationButton>
+          </Box>
+        </Box>
       </Box>
-      <Box py={3}>
-        <Typography align="center"  color="secondary"><H5PTranslatedText text={`globalResultFeedBack${quantileResult}`} /></Typography>
-      </Box>
-      <Box>
-        <Typography align="center" variant="h4"><H5PTranslatedText text='resultScoreLabel'/></Typography>
-      </Box>
-      <Container maxWidth="sm" fixed >
-        <ResultBarChart resultsList={props.results.competenciesResults} graphHeight={250} />
-      </Container>
-      <Box>
-        <Typography align="center"  variant="h4"><H5PTranslatedText text='resultspercompetency'/></Typography>
-      </Box>
-      {
-        props.questionsByCompetencyAndSubCompetencies.map((comp, compIndex) => (
-          <Box key={compIndex} >
-            <CompetencyResultsCard
-              questionsByCompetencyAndSubCompetencies={props.questionsByCompetencyAndSubCompetencies}
-              results={props.results}
-              competencyIndex={compIndex}
-              handleActionClick={(e) => {props.handleViewCompetencyClick(compIndex);}}
-            />
-          </Box>))
-      }
-      <Box mx="auto">
-        <NavigationButton onClick={props.handleReviewQuestionnaire}
-                          isBack={false}
-                          isNext={false}>
-          <H5PTranslatedText text='reviewquestionnaire'/>
-        </NavigationButton>
-      </Box>
-    </Box>
     </Container>
   );
 });
@@ -70,7 +77,8 @@ const QuestionnaireResultsPage = withStyles(styles)((props) => {
 QuestionnaireResultsPage.propTypes = Object.assign(
   {
     handleViewCompetencyClick: PropTypes.func,
-    handleReviewQuestionnaire: PropTypes.func
+    handleReviewQuestionnaire: PropTypes.func,
+    handleRestartQuestionnaire: PropTypes.func,
   },
   questionsByCompetencyAndSubCompetencies,
   questionnaireResults
@@ -79,7 +87,8 @@ QuestionnaireResultsPage.propTypes = Object.assign(
 QuestionnaireResultsPage.defaultProps = Object.assign(
   {
     handleViewCompetencyClick: (cid) => null,
-    handleReviewQuestionnaire: (cid) => null
+    handleReviewQuestionnaire: (cid) => null,
+    handleRestartQuestionnaire: (cid) => null
   },
   questionnaireCompetenciesQuestionsDefault,
   questionnaireResultsDefault

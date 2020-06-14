@@ -20,7 +20,7 @@ import RoutedResultsPageContainer from './RoutedResultsPageContainer';
 import Container from '@material-ui/core/Container';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { startQuestionnaireAndPosition } from '../actions/questionnaire';
+import { resetQuestionnaireAndPosition, startQuestionnaireAndPosition } from '../actions/questionnaire';
 
 
 function Questionnaire (props) {
@@ -48,6 +48,8 @@ function Questionnaire (props) {
             <RoutedResultsPageContainer {...props}
                                         handleReviewQuestionnaire={
                                           () => (props.dispatch(startQuestionnaireAndPosition()))}
+                                        handleRestartQuestionnaire={
+                                          () => (props.dispatch(resetQuestionnaireAndPosition()))}
             />
       );
   }

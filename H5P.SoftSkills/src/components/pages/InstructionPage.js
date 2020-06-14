@@ -17,13 +17,17 @@ const styles = () => ({
   competencyTitle: {
     textTransform: 'lowercase',
     textAlign: "justify"
+  },
+  containerNoPadding : {
+    paddingLeft: 0,
+    paddingRight: 0,
   }
 });
 
 const InstructionPage = withStyles(styles)((props) => {
   const { classes } = props;
-  return (<Container maxWidth={false}>
-      <Container maxWidth={false}>
+  return (<Container maxWidth={false} className={props.root} >
+      <Container maxWidth={false} className={props.containerNoPadding}>
         <WaveHeading title={props.welcomeTitle}/>
       </Container>
       <Container maxWidth={'md'}>

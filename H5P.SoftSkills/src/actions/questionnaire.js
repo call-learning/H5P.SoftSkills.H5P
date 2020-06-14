@@ -83,6 +83,15 @@ export function startQuestionnaireAndPosition () {
   };
 }
 
+/** Thunk types of actions */
+export function resetQuestionnaireAndPosition () {
+  return function (dispatch) {
+    return Promise.all([
+      dispatch(resetNavigation()),
+      dispatch(resetQuestionnaire())]);
+  };
+}
+
 export function answerQuestionAndNavigateToNext (questionGlobalIndex, answerId, questionsByCompetencyAndSubCompetencies) {
   return function (dispatch, getState) {
     return Promise.all([dispatch(answerQuestion(questionGlobalIndex, answerId)),

@@ -1,57 +1,72 @@
 {
   "l10n": {
+    "back": "Retour",
+    "competencyresultdesc": ":compcount competences ont été évaluées en moyenne à :compPercent sur 100",
     "congratulations": "Félicitations !",
-    "congratulationtext": "Vous avez répondu à toutes les questions.<br/>Maintenant il est temps pour vous de découvrir votre bilan de compétences soft skills.",
-    "seeresults": "Voir les résultats",
-    "previouscompetencypage": "Compéténce précédente",
-    "nextcompetencypage": "Compétence suivante",
+    "congratulationtext": "Vous avez répondu à toutes les questions.<br>Maintenant il est temps pour vous de découvrir votre bilan de compétences soft skills.",
+    "detailpercompetency": "Vos résultats par type de compétence",
     "finishquestionnaire": "Valider vos réponses",
     "firstpart": "Première Partie",
-    "secondpart": "Seconde Partie",
-    "thirdpart": "Troisième Partie",
     "fourthpart": "Quatrième Partie",
-    "over": "sur",
-    "competencyresultdesc": ":compcount competences ont été évaluées en moyenne à :compPercent sur 100",
-    "detailpercompetency": "Vos résultats par type de compétence",
+    "globalResultFeedBack0": "Continuez !<br/>Vos réponses indiquent que les compétences soft relatives au métier d'ingénieur nécessitent d'être travaillées. Accédez au détail ci-dessous pour une compréhension plus fine des aspects développés et des axes d'amélioration possibles.",
+    "globalResultFeedBack100": "Félicitations !<br/>Vos réponses indiquent que vous avez acquis les compétences soft nécessaires au métier d'ingénieur. Accédez au détail ci-dessous pour une compréhension plus fine des aspects dévéloppés et des axes d'amélioration possible.",
+    "globalResultFeedBack25": "Continuez !<br/>Vos réponses indiquent que certaines compétences soft relatives au métier d'ingénieur sont acquises. Accédez au détail ci-dessous pour une compréhension plus fine des aspects développés et des axes d'amélioration possibles.",
+    "globalResultFeedBack50": "Continuez !<br/>Vos réponses indiquent que les compétences soft nécessaires au métier d'ingénieur sont globalement acquises.Accédez au detail ci-dessous pour une compréhension plus fine des aspects dévéloppés et des axes d'amélioration possibles.",
+    "globalResultFeedBack75": "Félicitations !<br/>Vos réponses indiquent que vous avez acquis les compétences soft nécessaires au métier d'ingénieur. Accédez au détail ci-dessous pour une compréhension plus fine des aspects développés et des axes d'amélioration possibles.",
+    "mastered": "Maitrisé",
+    "nextcompetencypage": "Compétence suivante",
+    "ourAdvice": "Nos conseils",
     "overcompleted": ":val1 sur :val2 complétées",
-    "results": "Résultats",
+    "over": "sur",
+    "previouscompetencypage": "Compéténce précédente",
+    "resources": "Les ressources pour aller plus loin",
+    "restartquestionnaire": "Réinitialiser le questionnaire",
+    "resultFeedBack0": "Avec un résultat de :compPercent%, vous avez besoin de travailler sur cette compétence afin de la maîtriser davantage. Les ressources ci-dessous vous guideront dans la connaissance de cette compétence.",
+    "resultFeedBack0": "Continuez !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
+    "resultFeedBack100": "Avec un résultat de :compPercent%, vous maîtrisez cette compétence. Les ressources ci-dessous vous permettront de travailler les différents aspects de cette compétence.",
+    "resultFeedBack25": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous permettront de travailler les différents aspects de cette compétence.",
+    "resultFeedBack50": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous permettront de travailler les différents aspects de cette compétence.",
+    "resultFeedBack75": "Avec un résultat de :compPercent%, vous maîtrisez cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous permettront de travailler les différents aspects de cette compétence.",
+    "resultScoreLabel": "Votre score par type de compétences",
     "resultspercompetency": "Détail par compétence",
-    "back": "Retour",
+    "results": "Résultats",
+    "reviewquestionnaire": "Revoir mes réponses",
+    "secondpart": "Seconde Partie",
+    "seeresults": "Voir les résultats",
     "startquestionnaire": "Démarrer le test",
-    "yourcompetencyresults": "Votre maîtrise de cette compétence",
-    "resources": "Ressources",
-    "resultFeedBack0": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
-    "resultFeedBack25": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
-    "resultFeedBack50": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
-    "resultFeedBack75": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
-    "resultFeedBack100": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous aideront à acquérir les notions qui vous mèneront à une connaissance plus approfondie de cette compétence.",
-    "competencyResultFeedBack0": "Acquisition en cours !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
-    "globalResultFeedBack0": "Acquisition en cours !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
-    "globalResultFeedBack25": "Acquisition en cours !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
-    "globalResultFeedBack50": "Acquisition en cours !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
-    "globalResultFeedBack75": "Félicitations !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
-    "globalResultFeedBack100": "Félicitations !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
-    "reviewquestionnaire": "Revoir les questions",
-    "resultScoreLabel": "Votre score par type de compétences"
+    "thirdpart": "Troisième Partie",
+    "toImprove": "A améliorer",
+    "yourAnswer": "Votre Réponse",
+    "yourcompetencyresults": "Votre maîtrise de cette compétence"
   },
   "resources": [
     {
-      "label": "J'utilise un correcteur orthographique",
-      "content": "<p>My content <a href=\"http:\/\/google.com\" target=\"_blank\">www.google.com<\/a><\/p>\n",
+      "content": "<p>La suite Office dispose de correcteurs orthographiques intégrés qui vous permettent de corriger la plupart des fautes d’orthographe et de grammaire. Voir comment utiliser le correcteur ortographique dans Word, Excel & Powerpoint.<br> <a href=\"http:\/\/microsoft.com\" target=\"_blank\">www.microsoft.com<\/a><\/p>\n",
+      "image": {
+        "params": {
+          "contentName": "Image",
+          "file": {
+            "path": "images\/microsoft-logo.png",
+            "mime": "image\/png",
+            "copyright": {
+              "license": "U"
+            },
+            "width": 864,
+            "height": 1024
+          }
+        }
+      },
       "references": "0:1:1,0:0:2"
     },
     {
-      "label": "Je relis ou je fais relire mes productions pour corriger les fautes d'orthographe",
       "content": "<p>My content <a href=\"http:\/\/google.com\" target=\"_blank\">www.google.com<\/a><\/p>\n",
       "references": "0:1:2,0:1:1"
     },
     {
-      "label": "Lorsque je considère nécessaire",
       "content": "<p>My content <a href=\"http:\/\/google.com\" target=\"_blank\">www.google.com<\/a><\/p>\n",
       "references": "0:1:2,0:1:2"
     },
     {
-      "label": "J'applique les règles",
       "content": "<p>My content <a href=\"http:\/\/google.com\" target=\"_blank\">www.google.com<\/a><\/p>\n",
       "references": "0:1:0,0:1:2"
     }
@@ -73,7 +88,6 @@
         "description": "Par quelles démarches réussissez-vous à organiser vos activités professionnelles ?"
       }
     ],
-
     "instructionsDesc": [
       {
         "icon": "timer",
@@ -91,11 +105,13 @@
     "possibleAnswers": [
       {
         "text": "Toujours",
-        "id": 5
+        "id": 5,
+        "isAcquired": true
       },
       {
         "text": "Souvent",
-        "id": 4
+        "id": 4,
+        "isAcquired": true
       },
       {
         "text": "Parfois",

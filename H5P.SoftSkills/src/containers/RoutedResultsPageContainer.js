@@ -1,9 +1,6 @@
 import { connect } from 'react-redux';
 import { RoutedResultsPage } from '../components/results/ResultsPages';
 import React, { useContext } from 'react';
-import { CompetenciesContext } from '../contexts/CompetenciesContext';
-import { PossibleAnswersContext } from '../contexts/PossibleAnswersContext';
-import { sampleData } from '../utils/StoriesUtils';
 import PropTypes from 'prop-types';
 import {
   questionnaireCompetenciesQuestionsDefault, questionnaireResourceDefault,
@@ -21,7 +18,8 @@ const RoutedResultsPageContainer = (props) => {
 };
 
 RoutedResultsPageContainer.propTypes = Object.assign({
-    handleReviewQuestionnaire: PropTypes.func
+    handleReviewQuestionnaire: PropTypes.func,
+    handleRestartQuestionnaire: PropTypes.func
   },
   questionsByCompetencyAndSubCompetencies,
   questionnaireSettings,
@@ -29,7 +27,8 @@ RoutedResultsPageContainer.propTypes = Object.assign({
 );
 
 RoutedResultsPageContainer.defaultProps = Object.assign({
-    handleReviewQuestionnaire: () => null
+    handleReviewQuestionnaire: () => null,
+    handleRestartQuestionnaire: () => null
   },
   questionnaireCompetenciesQuestionsDefault,
   questionnaireResourceDefault,

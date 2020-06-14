@@ -1,5 +1,6 @@
 import initialState from '../constants/initialState';
 import * as types from '../constants/actionTypes';
+import { questionnaire } from '../constants/actionTypes';
 
 export function answeredQuestions (state = initialState.answeredQuestions, action) {
   switch (action.type) {
@@ -24,6 +25,8 @@ export function answeredQuestions (state = initialState.answeredQuestions, actio
     }
     case types.questionnaire.INIT_USER_DATA:
       return [...action.answeredQuestions];
+    case types.questionnaire.RESET:
+      return [];
     default:
       return state;
   }

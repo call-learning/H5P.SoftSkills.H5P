@@ -16,11 +16,24 @@ import { H5PContext } from './contexts/H5PContext';
 
 export const QuestionnaireApp = (props) => {
   const h5pContext = useContext(H5PContext);
+  const {resources,...otherprops} =  props;
+
+  // Use the fact we know the context to try and get the absolute path.
+  let resourcesWithAbsoluteURL = resources.map((r)=> {
+    let  newResource = Object.assign({}, r);
+    newResource.imageUrl = '';
+    if (r.image && r.image.path) {
+      // eslint-disable-next-line no-undef
+      newResource.imageUrl = H5P.getPath(r.image.path, h5pContext.contentId);
+    }
+    return newResource;
+  })
   questionnaireStore.dispatch(initializeUserData(h5pContext.contentId));
+
   return (
     <ThemeProvider theme={questionnaireTheme}>
       <Provider store={questionnaireStore}>
-        <Questionnaire {...props} />
+        <Questionnaire resources={resourcesWithAbsoluteURL} {...otherprops} />
       </Provider>
     </ThemeProvider>);
 };

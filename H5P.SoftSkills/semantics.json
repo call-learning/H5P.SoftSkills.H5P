@@ -2,6 +2,12 @@
   {
     "name": "questionsByCompetencyAndSubCompetencies",
     "type": "list",
+    "widgets": [
+      {
+        "name": "VerticalTabs",
+        "label": "Default"
+      }
+    ],
     "label": "Questions sorted by competencies",
     "importance": "high",
     "expanded": false,
@@ -104,6 +110,12 @@
   {
     "name": "resources",
     "type": "list",
+    "widgets": [
+      {
+        "name": "VerticalTabs",
+        "label": "Default"
+      }
+    ],
     "label": "Resources List",
     "importance": "medium",
     "isSubContent": true,
@@ -134,11 +146,9 @@
         },
         {
           "name": "image",
-          "type": "library",
-          "optional": true,
-          "options": [
-            "H5P.Image 1.0"
-          ]
+          "label": "Illustration Image",
+          "type": "image",
+          "optional": true
         },
         {
           "name": "references",
@@ -241,14 +251,6 @@
                 "code"
               ],
               "importance": "high"
-            },
-            {
-              "name": "image",
-              "type": "library",
-              "optional": true,
-              "options": [
-                "H5P.Image 1.0"
-              ]
             }
           ]
         }
@@ -331,7 +333,6 @@
               "importance": "high",
               "default": false
             }
-
           ]
         }
       }
@@ -346,6 +347,14 @@
     "optional": true,
     "fields": [
       {
+        "name": "back",
+        "type": "text"
+      },
+      {
+        "name": "competencyresultdesc",
+        "type": "text"
+      },
+      {
         "name": "congratulations",
         "type": "text"
       },
@@ -354,15 +363,7 @@
         "type": "text"
       },
       {
-        "name": "seeresults",
-        "type": "text"
-      },
-      {
-        "name": "previouscompetencypage",
-        "type": "text"
-      },
-      {
-        "name": "nextcompetencypage",
+        "name": "detailpercompetency",
         "type": "text"
       },
       {
@@ -374,87 +375,15 @@
         "type": "text"
       },
       {
-        "name": "secondpart",
-        "type": "text"
-      },
-      {
-        "name": "thirdpart",
-        "type": "text"
-      },
-      {
         "name": "fourthpart",
         "type": "text"
       },
       {
-        "name": "over",
-        "type": "text"
-      },
-      {
-        "name": "competencyresultdesc",
-        "type": "text"
-      },
-      {
-        "name": "detailpercompetency",
-        "type": "text"
-      },
-      {
-        "name": "participation",
-        "type": "text"
-      },
-      {
-        "name": "result",
-        "type": "text"
-      },
-      {
-        "name": "over",
-        "type": "text"
-      },
-      {
-        "name": "results",
-        "type": "text"
-      },
-      {
-        "name": "resultspercompetency",
-        "type": "text"
-      },
-      {
-        "name": "back",
-        "type": "text"
-      },
-      {
-        "name": "startquestionnaire",
-        "type": "text"
-      },
-      {
-        "name": "yourcompetencyresults",
-        "type": "text"
-      },
-      {
-        "name": "resources",
-        "type": "text"
-      },
-      {
-        "name": "subCompetencyResultFeedBack0",
-        "type": "text"
-      },
-      {
-        "name": "subCompetencyResultFeedBack25",
-        "type": "text"
-      },
-      {
-        "name": "subCompetencyResultFeedBack50",
-        "type": "text"
-      },
-      {
-        "name": "subCompetencyResultFeedBack75",
-        "type": "text"
-      },
-      {
-        "name": "subCompetencyResultFeedBack100",
-        "type": "text"
-      },
-      {
         "name": "globalResultFeedBack0",
+        "type": "text"
+      },
+      {
+        "name": "globalResultFeedBack100",
         "type": "text"
       },
       {
@@ -470,11 +399,59 @@
         "type": "text"
       },
       {
-        "name": "globalResultFeedBack100",
+        "name": "mastered",
         "type": "text"
       },
       {
-        "name": "reviewquestionnaire",
+        "name": "nextcompetencypage",
+        "type": "text"
+      },
+      {
+        "name": "ourAdvice",
+        "type": "text"
+      },
+      {
+        "name": "overcompleted",
+        "type": "text"
+      },
+      {
+        "name": "over",
+        "type": "text"
+      },
+      {
+        "name": "previouscompetencypage",
+        "type": "text"
+      },
+      {
+        "name": "resources",
+        "type": "text"
+      },
+      {
+        "name": "restartquestionnaire",
+        "type": "text"
+      },
+      {
+        "name": "resultFeedBack0",
+        "type": "text"
+      },
+      {
+        "name": "resultFeedBack0",
+        "type": "text"
+      },
+      {
+        "name": "resultFeedBack100",
+        "type": "text"
+      },
+      {
+        "name": "resultFeedBack25",
+        "type": "text"
+      },
+      {
+        "name": "resultFeedBack50",
+        "type": "text"
+      },
+      {
+        "name": "resultFeedBack75",
         "type": "text"
       },
       {
@@ -482,7 +459,31 @@
         "type": "text"
       },
       {
-        "name": "yourAnswer",
+        "name": "resultspercompetency",
+        "type": "text"
+      },
+      {
+        "name": "results",
+        "type": "text"
+      },
+      {
+        "name": "reviewquestionnaire",
+        "type": "text"
+      },
+      {
+        "name": "secondpart",
+        "type": "text"
+      },
+      {
+        "name": "seeresults",
+        "type": "text"
+      },
+      {
+        "name": "startquestionnaire",
+        "type": "text"
+      },
+      {
+        "name": "thirdpart",
         "type": "text"
       },
       {
@@ -490,11 +491,11 @@
         "type": "text"
       },
       {
-        "name": "mastered",
+        "name": "yourAnswer",
         "type": "text"
       },
       {
-        "name": "ourAdvice",
+        "name": "yourcompetencyresults",
         "type": "text"
       }
     ]

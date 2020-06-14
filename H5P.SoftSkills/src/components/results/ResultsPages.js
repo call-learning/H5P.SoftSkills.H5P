@@ -72,6 +72,7 @@ function ResultsPage (props) {
           results={allCompetenciesResults}
           handleViewCompetencyClick={handleViewCompetencyClick}
           handleReviewQuestionnaire={props.handleReviewQuestionnaire}
+          handleRestartQuestionnaire={props.handleRestartQuestionnaire}
         />
       </Route>
     </Switch>
@@ -79,7 +80,8 @@ function ResultsPage (props) {
 }
 
 ResultsPage.propTypes = Object.assign({
-    handleReviewQuestionnaire: PropTypes.func
+    handleReviewQuestionnaire: PropTypes.func,
+    handleRestartQuestionnaire: PropTypes.func
   },
   possibleAnswers,
   questionsByCompetencyAndSubCompetencies,
@@ -88,7 +90,8 @@ ResultsPage.propTypes = Object.assign({
 );
 
 ResultsPage.defaultProps = Object.assign({
-    handleReviewQuestionnaire: () => null
+    handleReviewQuestionnaire: () => null,
+    handleRestartQuestionnaire: () => null
   },
   possibleAnswersDefault,
   questionnaireCompetenciesQuestionsDefault,

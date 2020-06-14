@@ -3,6 +3,7 @@ import React from 'react';
 import { TranslationsContext } from '../contexts/TranslationsContext';
 import PropTypes from 'prop-types';
 import { resourceCreateMarkup } from './ComponentsUtils';
+import {unescape} from 'lodash';
 
 /**
  * This is a simple component that uses the context so to get
@@ -13,6 +14,7 @@ import { resourceCreateMarkup } from './ComponentsUtils';
 function H5PTranslatedText (props) {
   const allTranslations = useContext(TranslationsContext);
   let text = allTranslations && (props.text in allTranslations) ? allTranslations[props.text]: `[${props.text}]`;
+  text = unescape(text);
   if (props.arguments) {
     for(let argname in props.arguments) {
         text = text.replace(`:${argname}`,props.arguments[argname]);

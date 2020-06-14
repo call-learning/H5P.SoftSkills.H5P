@@ -4,7 +4,14 @@ export const aQuestionnaireResource = PropTypes.shape({
   label: PropTypes.string,
   content: PropTypes.string,
   references: PropTypes.string,
-  imageUrl: PropTypes.string // It was converted from H5P image to direct URL.
+  imageUrl: PropTypes.string, // It was converted from H5P image to direct URL.
+  image: PropTypes.shape({
+    path: PropTypes.string,
+    copyright: PropTypes.string,
+    mime: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string
+  })
 });
 
 export const questionnaireResource = {
@@ -27,31 +34,6 @@ export const questionnaireResources = {
 
 export const questionnaireResourcesDefault = {
   resources: []
-};
-
-export const h5pImage = PropTypes.shape({
-  params: PropTypes.shape({
-    file: PropTypes.shape({
-      path: PropTypes.string,
-      mime: PropTypes.string,
-      copyright: PropTypes.shape({
-        license: PropTypes.string
-      }),
-      width: PropTypes.number,
-      height: PropTypes.number
-    })
-  })
-});
-
-export const h5pQuestionnaireResources = {
-  resources: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string,
-      content: PropTypes.string,
-      references: PropTypes.string,
-      image:h5pImage
-    })
-  )
 };
 
 export const questionsByCompetencyAndSubCompetencies = {
@@ -234,3 +216,4 @@ export const progressDataDefault = {
     competenciesProgress: []
   }
 };
+

@@ -108,3 +108,11 @@ be brought up into the theme.
 * Title in the page (not underlined): 24px, line height 29px: subtitle1 
 * Title in the page (underlined): 20px, line height 24px : subtitle2
 * Important information: 20px, semi bold, line height 24px: body2
+
+### Internationalisation
+
+We did not use the H5P tool and just made the translation as we went along using
+a specific React component that will handle i10n string (as per H5P).
+
+
+    sort -u string.json  | cut -f 1 -d ':'  | tr -d '[ ]' | sed 's/\(.*\)/{"name":\1,"type":"text"}/'

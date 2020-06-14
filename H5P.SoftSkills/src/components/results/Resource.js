@@ -12,6 +12,10 @@ const styles = theme => ({
   },
   heading: {
     fontSize: theme.typography.pxToRem(15)
+  },
+  illustrationImage: {
+    maxWidth: "50px",
+    maxHeight: "50px"
   }
 });
 
@@ -20,8 +24,9 @@ function Resource (props) {
   return (
     <Box display="flex" flexDirection="row" >
       <Box width={"20%"} alignSelf={"center"} px={3}>{
-        props.resource.imageUrl ? <img src={props.resource.imageUrl} alt={""} role="presentation"/>:
-          <ContactSupportIcon  style={{ fontSize: 50 }}/>
+        props.resource.imageUrl ?
+          <img className={classes.illustrationImage} src={props.resource.imageUrl} alt={""} role="presentation"/>
+          :<ContactSupportIcon  style={{ fontSize: 50 }}/>
       }</Box>
       <Box flexGrow={1}>
         <Typography>
