@@ -11,9 +11,9 @@ import {
   getCurrentQuantile,
   getGlobalQuestionIndex,
   getProgressData,
-  getRealValueFromPossibleValue, getSubCompetencyResultsAndResources,
+  getRealValueFromPossibleValue, getSubCompetencyResultsAndResources, getTextValueFromPossibleValue,
   getTotalQuestionCount,
-  getTotalQuestionCountCompetency,
+  getTotalQuestionCountCompetency, isAcquiredAnswer,
   isUnknownValue,
   stringToHashCode,
   truncateLabel
@@ -196,96 +196,99 @@ test('isUnknownValue', () => {
 test('getSubCompetencyResultsAndResources', () => {
   const expectedResults = [
     {
-      "label": "Je suis amené(e) à manager une équipe",
-      "value": 2,
-      "questionsAnswers": [
+      'label': 'Je suis amené(e) à manager une équipe',
+      'value': 2,
+      'questionsAnswers': [
         {
-          "label": "Je comprends les enjeux et les principes d’animation d’une équipe dans un contexte professionnel.",
-          "answer": 4
+          'label': 'Je comprends les enjeux et les principes d’animation d’une équipe dans un contexte professionnel.',
+          'answer': 4
         },
         {
-          "label": "Je sais (re)formuler les consignes pour que mes collaborateurs comprennent ce qui est attendu d’eux.",
-          "answer": 3
+          'label': 'Je sais (re)formuler les consignes pour que mes collaborateurs comprennent ce qui est attendu d’eux.',
+          'answer': 3
         },
         {
-          "label": "J’échange avec mes interlocuteurs en appliquant les principes de l’écoute active.",
-          "answer": 1
+          'label': 'J’échange avec mes interlocuteurs en appliquant les principes de l’écoute active.',
+          'answer': 1
         },
         {
-          "label": "Pour accompagner le travail de mes collaborateurs, je fais preuve d’empathie et je favorise l’échange.",
-          "answer": 3
+          'label': 'Pour accompagner le travail de mes collaborateurs, je fais preuve d’empathie et je favorise l’échange.',
+          'answer': 3
         }
       ],
-      "resources": []
+      'resources': []
     },
     {
-      "label": "Manager une équipe, c’est aussi identifier et reconnaître les compétences de ses collaborateurs",
-      "value": 3,
-      "questionsAnswers": [
+      'label': 'Manager une équipe, c’est aussi identifier et reconnaître les compétences de ses collaborateurs',
+      'value': 3,
+      'questionsAnswers': [
         {
-          "label": "Je mets en place des méthodes et des outils d’évaluation des compétences.",
-          "answer": 3
+          'label': 'Je mets en place des méthodes et des outils d’évaluation des compétences.',
+          'answer': 3
         },
         {
-          "label": "Je mets en place des actions de valorisation des activités de mes collaborateurs.",
-          "answer": 3
+          'label': 'Je mets en place des actions de valorisation des activités de mes collaborateurs.',
+          'answer': 3
         },
         {
-          "label": "Je mets en place des actions pour développer les compétences de mes collaborateurs.",
-          "answer": 4
+          'label': 'Je mets en place des actions pour développer les compétences de mes collaborateurs.',
+          'answer': 4
         }
       ],
-      "resources": []
+      'resources': []
     },
     {
-      "label": "En tant que manager d’équipe, une de mes missions est la prévention des tensions et conflits",
-      "value": 3,
-      "questionsAnswers": [
+      'label': 'En tant que manager d’équipe, une de mes missions est la prévention des tensions et conflits',
+      'value': 3,
+      'questionsAnswers': [
         {
-          "label": "Je sais repérer les signaux faibles pour déterminer les situations de malaise.",
-          "answer": 4
+          'label': 'Je sais repérer les signaux faibles pour déterminer les situations de malaise.',
+          'answer': 4
         },
         {
-          "label": "Je sais mettre en place un plan de prévention pour éviter les tensions et les conflits.",
-          "answer": 3
+          'label': 'Je sais mettre en place un plan de prévention pour éviter les tensions et les conflits.',
+          'answer': 3
         }
       ],
-      "resources": [
+      'resources': [
         {
-          "content": "<p>La suite Office dispose de correcteurs orthographiques intégrés qui vous permettent de corriger la plupart des fautes d’orthographe et de grammaire. Voir comment utiliser le correcteur ortographique dans Word, Excel & Powerpoint. <a href=\"http://microsoft.com\" target=\"_blank\">www.microsoft.com</a></p>\n",
-          "id": "1504529667",
-          "image": {
-            "params": {
-              "contentName": "Image",
-              "file": {
-                "copyright": {
-                  "license": "U"
+          'content': '<p>La suite Office dispose de correcteurs orthographiques intégrés qui vous permettent de '
+            + 'corriger la plupart des fautes d’orthographe et de grammaire. Voir comment utiliser le correcteur ' +
+            'ortographique dans Word, Excel & Powerpoint.<br> ' +
+            '<a href="http://microsoft.com" target="_blank">www.microsoft.com</a></p>\n',
+          'id': '3216496693',
+          'image': {
+            'params': {
+              'contentName': 'Image',
+              'file': {
+                'copyright': {
+                  'license': 'U'
                 },
-                "height": 1024,
-                "mime": "image/png",
-                "path": "images/microsoft-logo.png",
-                "width": 864
+                'height': 1024,
+                'mime': 'image/png',
+                'path': 'images/microsoft-logo.png',
+                'width': 864
               }
             }
           },
-          "references": "0:1:1,0:0:2"
+          'references': '0:1:1,0:0:2'
         }
       ],
     },
     {
-      "label": "En tant que manager d’équipe, je suis amené(e) à gérer des tensions et des conflits.",
-      "value": 3,
-      "questionsAnswers": [
+      'label': 'En tant que manager d’équipe, je suis amené(e) à gérer des tensions et des conflits.',
+      'value': 3,
+      'questionsAnswers': [
         {
-          "label": "Je sais me mettre dans une posture d’écoute et de médiation pour désamorcer les tensions et les conflits.",
-          "answer": 3
+          'label': 'Je sais me mettre dans une posture d’écoute et de médiation pour désamorcer les tensions et les conflits.',
+          'answer': 3
         },
         {
-          "label": "Je sais mettre en place des plans d’action et de suivi des solutions.",
-          "answer": 3
+          'label': 'Je sais mettre en place des plans d’action et de suivi des solutions.',
+          'answer': 3
         }
       ],
-      "resources": []
+      'resources': []
     }
   ];
 
@@ -332,5 +335,19 @@ test('getContextFromReference', () => {
       contextId: 5
     }
   ]);
+});
+
+test('getTextValueFromPossibleValue', () => {
+  const possibleAnswers = smallerQuestionnaireData.settings.possibleAnswers;
+  expect(getTextValueFromPossibleValue(possibleAnswers, 3)).toEqual('Parfois');
+  expect(getTextValueFromPossibleValue(possibleAnswers, 2)).toEqual('Jamais');
+  expect(getTextValueFromPossibleValue(possibleAnswers, 50)).toEqual('');
+
+});
+
+test('isAcquiredAnswer', () => {
+  const possibleAnswers = smallerQuestionnaireData.settings.possibleAnswers;
+  expect(isAcquiredAnswer(possibleAnswers, 4)).toEqual(true);
+  expect(isAcquiredAnswer(possibleAnswers, 1)).toEqual(false);
 });
 
