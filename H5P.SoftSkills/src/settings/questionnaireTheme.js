@@ -28,6 +28,7 @@ const palette = {
     secondary: '#888A8B'
   },
 };
+
 export const questionnaireTheme = createMuiTheme({
   palette: palette,
   typography: {

@@ -17,20 +17,6 @@ export function getCompetencyImageFromIndex (competencyIndex) {
   return DEFAULT_COMPETENCY_IMAGE[competencyIndex % DEFAULT_COMPETENCY_IMAGE.length]; // DEFAULT image.
 }
 
-export function getRealImagePath (filepath, contentId, libraryName) {
-  const specialArchivePrefix = 'assets/';
-  let imagePath = filepath;
-  if (typeof H5P !== 'undefined' && H5P.getLibraryPath && H5P.getPath) {
-    if (!imagePath.startsWith(specialArchivePrefix) && contentId) {
-      imagePath = H5P.getPath(imagePath, contentId);
-    } else if (libraryName) {
-      imagePath = H5P.getLibraryPath(libraryName) + '/' + filePath;
-    }
-
-  }
-  return imagePath;
-}
-
 /**
  * Get progress information
  * @param questionsByCompetencyAndSubCompetencies
@@ -255,7 +241,7 @@ export function getTextValueFromPossibleValue (possibleAnswers, answerId) {
 
 export function isAcquiredAnswer (possibleAnswers, answerId) {
   const answer = possibleAnswers.find((answ) => answ.id === answerId);
-  return answer && answer.isAcquired;
+  return Boolean(answer && answer.isAcquired);
 }
 
 /**

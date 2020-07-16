@@ -4,9 +4,19 @@ html, *:fullscreen, *:-webkit-full-screen, *:-moz-full-screen {
     background-color: white !important;
     z-index:1;
 }
+.h5p-semi-fullscreen, .h5p-fullscreen, html.h5p-iframe .h5p-container {
+    overflow-y: scroll;
+}
 
 ::backdrop
 {
     z-index:0;
     background-color: white !important;
+}
+
+/* Reset the CSS here as sometimes it is already defined in the theme (Moodle or Drupal) */
+fieldset.MuiFormControl-root legend {
+    position: initial;
+    background: initial;
+    border: initial;
 }

@@ -55,7 +55,7 @@ function Questionnaire (props) {
       );
   }
 
-  return (<Container maxWidth={false}>{currentPage}</Container>);
+  return (<Container maxWidth={false} disableGutters={true}>{currentPage}</Container>);
 }
 
 Questionnaire.propTypes = Object.assign({

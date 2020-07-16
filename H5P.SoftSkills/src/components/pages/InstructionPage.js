@@ -26,7 +26,7 @@ const styles = () => ({
 
 const InstructionPage = withStyles(styles)((props) => {
   const { classes } = props;
-  return (<Container maxWidth={false} className={props.root} >
+  return (<Container maxWidth={false} disableGutters={true} className={props.root} >
       <Container maxWidth={false} className={props.containerNoPadding}>
         <WaveHeading title={props.welcomeTitle}/>
       </Container>
