@@ -15,7 +15,9 @@ const styles = theme => ({
     borderRadius: '4px',
     border: `solid 2px ${theme.palette.grey['400']}`,
     marginLeft: '2em',
-    padding: '0 30px',
+    marginTop: '0.25em',
+    marginBottom: '0.25em',
+    padding: '0 30px'
   },
   selectedControl: {
     border: `solid 2px ${theme.palette.primary.main}`,
@@ -23,7 +25,7 @@ const styles = theme => ({
   checkboxLast: {
     display: 'block',
     textAlign: 'center',
-    marginTop: '1.5em'
+    marginTop: '0.25em'
   },
   labelQuestion: {
     paddingBottom: '1em',
@@ -36,7 +38,7 @@ const styles = theme => ({
 
 const Question = withStyles(styles)((props) => {
   const { classes } = props;
-  let allRadioButtonsValues = Array.from(props.possibleAnswers);
+  const allRadioButtonsValues = Array.from(props.possibleAnswers);
   const checkBoxValue = allRadioButtonsValues.pop(); // The value for checkbox is the last one.
   const hSelect = (e, value) => {
     e.stopPropagation();
@@ -79,7 +81,7 @@ const Question = withStyles(styles)((props) => {
                           className={classes.checkboxLast}
                           value={checkBoxValue.id}
                           control={<Checkbox color="primary"
-                                             className={`${(props.selectedItemId == checkBoxValue.id) ? classes.selectedControl : ''}`}/>}
+                                             className={`${(props.selectedItemId === checkBoxValue.id) ? classes.selectedControl : ''}`}/>}
                           label={checkBoxValue.text}
                           onChange={(e, value) => hSelect(e, checkBoxValue.id)
                           }
