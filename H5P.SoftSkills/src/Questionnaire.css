@@ -19,4 +19,9 @@ fieldset.MuiFormControl-root legend {
     position: initial;
     background: initial;
     border: initial;
+    height: auto;
+}
+
+fieldset.MuiFormControl-root {
+    top: initial;
 }
