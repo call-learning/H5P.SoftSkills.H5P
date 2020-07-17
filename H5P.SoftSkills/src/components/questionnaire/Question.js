@@ -40,6 +40,12 @@ const Question = withStyles(styles)((props) => {
   const { classes } = props;
   const allRadioButtonsValues = Array.from(props.possibleAnswers);
   const checkBoxValue = allRadioButtonsValues.pop(); // The value for checkbox is the last one.
+
+  const maxTextLength = allRadioButtonsValues.reduce(
+    (maxLength, possibleValue) => (possibleValue.text.length > maxLength ? possibleValue.text.length : maxLength),
+    0
+  );
+
   const hSelect = (e, value) => {
     e.stopPropagation();
     props.handleSelectAnswer(
@@ -67,8 +73,8 @@ const Question = withStyles(styles)((props) => {
                     }>
           {
             allRadioButtonsValues.map((e, index) => (
-              <FormControlLabel key={index}
-                                className={`${classes.roundedControl} ${(props.selectedItemId == e.id) ? classes.selectedControl : ''}`}
+              <FormControlLabel style={{minWidth:`${maxTextLength}em`}} key={index}
+                                className={`${classes.roundedControl} ${(props.selectedItemId === e.id) ? classes.selectedControl : ''}`}
                                 value={e.id}
                                 control={<Radio color="primary"
                                                 checkedIcon={<CheckCircle/>}/>}

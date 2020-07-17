@@ -80,25 +80,26 @@ export const possibleAnswers = {
 export const possibleAnswersDefault = {
   possibleAnswers: [
     {
-      text: 'Option A',
-      id: 5
+      "text": "Toujours",
+      "id": 5,
+      "isAcquired": true
     },
     {
-      text: 'Option B',
-      id: 4
+      "text": "Souvent",
+      "id": 4,
+      "isAcquired": true
     },
     {
-      text: 'Option C',
-      id: 3
+      "text": "Parfois",
+      "id": 3
     },
     {
-      text: 'Option D',
-      id: 2
+      "text": "Jamais",
+      "id": 2
     },
     {
-      text: 'No Choice',
-      id: 1,
-      unknown: true
+      "text": "Je ne sais pas",
+      "id": 1
     }
   ]
 };
