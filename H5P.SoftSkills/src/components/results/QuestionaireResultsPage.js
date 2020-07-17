@@ -24,7 +24,7 @@ const QuestionnaireResultsPage = withStyles(styles)((props) => {
   const { classes } = props;
   const quantileResult = getCurrentQuantile(props.results.value);
   return (
-    <Container>
+    <Container maxWidth={'md'}>
       <Box alignContent="center" display="flex" flexDirection="column">
         <Box py={3}>
           <Typography align="center" variant="h4"><H5PTranslatedText text='results'/></Typography>
@@ -33,12 +33,12 @@ const QuestionnaireResultsPage = withStyles(styles)((props) => {
           <Typography align="center" color="secondary"><H5PTranslatedText
             text={`globalResultFeedBack${quantileResult}`}/></Typography>
         </Box>
-        <Box>
+        <Box display={{ xs: 'none', sm: 'block' }}>
           <Typography align="center" variant="h4"><H5PTranslatedText text='resultScoreLabel'/></Typography>
         </Box>
-        <Container maxWidth="sm" fixed>
+        <Box maxWidth="md" display={{ xs: 'none', sm: 'block' }}>
           <ResultBarChart resultsList={props.results.competenciesResults} graphHeight={250}/>
-        </Container>
+        </Box>
         <Box>
           <Typography align="center" variant="h4"><H5PTranslatedText text='resultspercompetency'/></Typography>
         </Box>

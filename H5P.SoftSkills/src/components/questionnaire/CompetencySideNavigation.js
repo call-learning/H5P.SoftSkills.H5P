@@ -45,8 +45,8 @@ const CompetencySideNavigation = withStyles(styles)((props) => {
   const { classes } = props;
   return (
     <Box display="flex" flexDirection="row" height="100%" position="sticky" top={0}>
-      <Box display="flex" flexDirection="column" alignItems="center" px={3}>
-        <Box display="flex" pt="15%" justifyContent="center">
+      <Box display="flex" flexDirection="column" alignItems="center" px={{xs:0, sm: 3}}>
+        <Box display={{xs:'none', sm: 'flex'}} pt="15%" justifyContent="center">
           <Box>
             <img className="IllustrationImage" src={getCompetencyImageFromIndex(props.competencyIndex)}
                  alt={props.competencyTitle}
@@ -58,7 +58,7 @@ const CompetencySideNavigation = withStyles(styles)((props) => {
             <Typography>{props.competencyTitle}</Typography>
           </Box>
         </Box>
-        <Box mb={2} mt="auto">
+        <Box display={{xs:'none', sm: 'flex'}} mb={2} mt="auto">
           <Box>
             <Typography className={classes.progressBarLegend} color="textSecondary">
               <H5PTranslatedText text='overcompleted' arguments={

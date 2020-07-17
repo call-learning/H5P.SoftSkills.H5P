@@ -34,7 +34,7 @@ const CompetencyResultsCard = withStyles(styles)((props) => {
   const competency = props.questionsByCompetencyAndSubCompetencies[props.competencyIndex];
   const components = [
     (<Box display="flex" key="description">
-      <Box minWidth={250} display={{ sm: 'none' }} alignItems="center" key="leftpart">
+      <Box minWidth={250} display={{ xs: 'none' }} alignItems="center" key="leftpart">
         {
           props.questionsByCompetencyAndSubCompetencies.map(
             (comp, compIndex) => <Box key={compIndex}

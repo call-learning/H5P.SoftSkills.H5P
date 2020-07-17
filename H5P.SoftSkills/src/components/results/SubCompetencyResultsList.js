@@ -63,7 +63,7 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
     const masteredInfo = (
       <Typography><Check className={classes.acquiredStyle}/><H5PTranslatedText text='mastered'/></Typography>);
     return (
-      <Container>
+      <Container disableGutters={true}>
         {
           resultsAndResources.map((context, index) => {
             const panelName = `context-${index}`;
@@ -74,11 +74,11 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                   aria-controls={`${panelName}-content`}
                   id={`${panelName}-header`}
                 >
-                  <Box display="flex" width={'100%'}>
-                    <Box flexGrow={1} px={2}>
+                  <Box display="flex" alignItems="center" flexGrow={1}>
+                    <Box px={2} flexGrow={1}>
                       <Typography variant="body2">{`${index + 1}. ${context.label}`}</Typography>
                     </Box>
-                    <Box flexShrink={1} display="flex" alignSelf="right">
+                    <Box display="flex">
                       {
                         context.value > SUCCESS_THRESHOLD ? masteredInfo : toImproveInfo
                       }
@@ -90,19 +90,22 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                     <Box py={1}>
                       {
                         resultsAndResources[index].questionsAnswers.map((q, index) =>
-                          (<Box key={index} display="flex" py={2}>
-                            <Box flexGrow={1} mx={4}>
+                          (<Box key={index} display="flex" py={2}
+                                flexDirection={{ xs: 'column', sm: 'row' }}
+                                alignItems={{ xs: 'center', sm: 'initial' }}
+                          >
+                            <Box mx={4} maxWidth="80%" flexGrow={1}>
                               <Typography variant="body2">{q.label}</Typography>
                             </Box>
                             {
-                              !q.answer? '':
-                                (<Box>
-                                <Typography display="inline"><H5PTranslatedText text='yourAnswer'/>:</Typography>
-                                <Typography display="inline"
-                                            className={isAcquiredAnswer(props.possibleAnswers, q.answer) ? classes.acquiredStyle : classes.inAcquisitionStyle}>
-                                  {getTextValueFromPossibleValue(props.possibleAnswers, q.answer)}
-                                </Typography>
-                              </Box>)
+                              !q.answer ? '' :
+                                (<Box display="flex" flexDirection="column" alignSelf={'right'} minWidth="20%">
+                                  <Typography display="inline"><H5PTranslatedText text='yourAnswer'/>:</Typography>
+                                  <Typography display="inline"
+                                              className={isAcquiredAnswer(props.possibleAnswers, q.answer) ? classes.acquiredStyle : classes.inAcquisitionStyle}>
+                                    {getTextValueFromPossibleValue(props.possibleAnswers, q.answer)}
+                                  </Typography>
+                                </Box>)
                             }
                           </Box>)
                         )

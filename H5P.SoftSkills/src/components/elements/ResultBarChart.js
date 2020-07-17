@@ -58,15 +58,14 @@ const styles = theme => ({
     "& .competency-labels": {
       fontWeight: "bold",
     }
-
-  }
+  },
 });
 
 function ResultBarChart (props) {
   const { classes } = props;
   const EM=8;
   const labelSpace = MAX_LABEL_CHARACTERS * EM;
-  return (<ResponsiveContainer height={props.graphHeight}  className={classes.root}>
+  return (<ResponsiveContainer height={props.graphHeight}>
     <BarChart
       layout="vertical"
       data={props.resultsList}

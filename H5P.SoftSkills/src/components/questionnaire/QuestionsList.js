@@ -16,7 +16,11 @@ const styles = theme => ({
   },
   listContainer: {
     listStyleType: 'none',
-    margin: "3em auto 3em 1em",
+    marginTop: '3em',
+    marginBottom: '3em',
+    [theme.breakpoints.down('xs')]: {
+      paddingInlineStart: "0px",
+    },
   },
   subCompetencyListItem: {
     counterReset: 'context question'
@@ -35,7 +39,8 @@ const styles = theme => ({
     '& legend::before': {
       content: 'counter(context) "." counter(question, lower-alpha) " "'
     },
-    margin: "1em auto 2em"
+    marginTop: "1em",
+    marginBottom: "2em"
   },
 
 });

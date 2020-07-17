@@ -16,11 +16,11 @@ function HorizontalCardWithAction (props) {
   const { classes, handleActionClick, components, ...otherprops } = props;
   return (
     <Box boxShadow={5} p={3} m={3} {...otherprops}>
-      <Box display="flex" alignItems="center">
+      <Box display="flex" alignItems="center" flexDirection={{ xs: 'column', sm:'row' }}>
         {
           components.map((component, index) => (<Box mx={4} key={index} flexGrow={(index === 0)?1:0} >{component}</Box>))
         }
-        <Box flexShrink={1} ml="auto">
+        <Box flexShrink={1} ml="auto" mr={{ xs: 'auto', sm:'0px' }} pt={{ xs: 'auto', sm:'initial' }}>
           <Fab color="primary"  onClick={handleActionClick} >
             <ArrowForward/>
           </Fab>

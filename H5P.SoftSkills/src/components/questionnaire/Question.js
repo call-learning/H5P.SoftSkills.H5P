@@ -54,7 +54,7 @@ const Question = withStyles(styles)((props) => {
     );
   };
   return (
-    <Container>
+    <Container disableGutters={true}>
       <FormControl component="fieldset" disabled={props.isDisabled} onClick={
         (e) => {
           if (props.isDisabled) {

@@ -20,6 +20,7 @@ const NavigationButton = withStyles(styles)((props) => {
             color="primary"
             startIcon={isBack ? <ArrowBackIcon/> : ''}
             endIcon={isNext ? <ArrowForwardIcon/> : ''}
+            py={1}
     >
       {props.children}
     </Button>);

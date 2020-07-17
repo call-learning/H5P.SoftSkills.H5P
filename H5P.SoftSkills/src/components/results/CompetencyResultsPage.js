@@ -31,7 +31,7 @@ const CompetencyResultsPage = withStyles(styles)((props) => {
     const currentCompetenyResults = props.results.competenciesResults[props.competencyIndex];
 
     return (
-      <Container>
+      <Container  maxWidth={'md'}>
         <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
 
           <Box alignSelf="flex-start">{props.topNavigation}</Box>

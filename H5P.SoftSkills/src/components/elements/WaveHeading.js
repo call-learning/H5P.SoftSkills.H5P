@@ -62,7 +62,7 @@ const WaveHeading = withStyles(styles)((props) => {
   const { classes } = props;
   return (
     <Container className={classes.waveHeadingBox} maxWidth={false}>
-      <Container ><Typography variant="h3" className={classes.title}>{props.title}</Typography></Container>
+      <Container maxWidth={'md'}><Typography variant="h3" className={classes.title}>{props.title}</Typography></Container>
       <div className={classes.waveDividerWrap}>
         <svg className={classes.waveHeadingShape} xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 1000 ${WAVEBOX_HEIGHT}`} preserveAspectRatio="none">
           <path

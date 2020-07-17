@@ -48,8 +48,11 @@ function CompetencyPage (props) {
       />
       <Box display="flex"
            alignItems="flex-start"
-           width="100%">
-        <Box alignSelf="flex-start" mr="auto">
+           width="100%"
+           flexDirection={{xs:'column', sm: 'row'}}
+           pb={3}
+      >
+        <Box alignSelf="flex-start" mr="auto" py={1}>
           {
             competencyIndex > 0 ?
               (<NavigationButton isBack
@@ -58,7 +61,7 @@ function CompetencyPage (props) {
               </NavigationButton>) : ''
           }
         </Box>
-        <Box alignSelf="flex-end" pb={3} mx={1}>
+        <Box alignSelf="flex-end" mx={1} py={1}>
           {
             competencyIndex >= (props.questionsByCompetencyAndSubCompetencies.length - 1) ?
               (

@@ -45,17 +45,17 @@ function SubCompetencyResultsPage (props) {
   const currentQuantileValue = getCurrentQuantile(currentSubCompetencyResult.value);
 
   return (
-    <Container>
-      <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" width="90%">
+    <Container  maxWidth={'md'}>
+      <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
         <Box alignSelf="flex-start">{props.topNavigation}</Box>
         <Box my={2}><img className="SuccessImage" src={getCompetencyImageFromIndex(props.competencyIndex)} alt=""
                          role="presentation"/></Box>
 
         <Box><Typography color="textSecondary">{currentCompetency.label}</Typography></Box>
         <Box><Typography variant="h4">{currentSubCompetency.label}</Typography></Box>
-        <Box width={"50%"}><ResultBarChart hasCompetencyLabel={false}
+        <Box width={{xs:"99%", sm:"50%"}}><ResultBarChart hasCompetencyLabel={false}
                                            resultsList={[currentSubCompetencyResult]} graphHeight={130}/></Box>
-        <Box my={2}>
+        <Container>
           <Box my={1}>
             <Typography variant="subtitle2"><H5PTranslatedText text='yourcompetencyresults'/></Typography>
           </Box>
@@ -67,7 +67,7 @@ function SubCompetencyResultsPage (props) {
             <Typography variant="subtitle2"><H5PTranslatedText text='resources'/></Typography>
             <SubCompetencyResultsList {...props}/>
           </Box>
-        </Box>
+        </Container>
       </Box>
     </Container>
   );

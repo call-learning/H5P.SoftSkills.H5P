@@ -13,24 +13,30 @@ import 'material-design-icons/iconfont/material-icons.css';
 import NavigationButton from '../elements/NavigationButton';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-const styles = () => ({
+const styles = theme => ({
   competencyTitle: {
     textTransform: 'lowercase',
-    textAlign: "justify"
+    textAlign: 'justify'
   },
-  containerNoPadding : {
+  containerNoPadding: {
     paddingLeft: 0,
     paddingRight: 0,
+  },
+  responsiveCompList: {
+    flexDirection: 'row',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+    }
   }
 });
 
 const InstructionPage = withStyles(styles)((props) => {
   const { classes } = props;
-  return (<Container maxWidth={false} disableGutters={true} className={props.root} >
-      <Container maxWidth={false} className={props.containerNoPadding}>
+  return (<Container maxWidth={false} disableGutters={true} className={classes.root} >
+      <Container maxWidth={false} disableGutters={true} className={classes.containerNoPadding}>
         <WaveHeading title={props.welcomeTitle}/>
       </Container>
-      <Container maxWidth={'md'}>
+      <Container maxWidth={'md'} >
         <Box xs={6} p={"3em"}>
           <Typography color="textSecondary">
             <span dangerouslySetInnerHTML={resourceCreateMarkup(props.generalInstructions)}/>
@@ -38,10 +44,16 @@ const InstructionPage = withStyles(styles)((props) => {
         </Box>
 
         <Box>
-          <Box display="flex" justifyContent="center" py={2}>
+          <Box display="flex" justifyContent="center" py={2} className={classes.responsiveCompList}>
             {
               props.competenciesDesc.map((e, index) => {
-                  return (<Box display="flex" flexDirection="column" key={index} width="30%" px={2}>
+                  return (<Box
+                    display="flex"
+                    key={index}
+                    px={2}
+                    flexDirection="column"
+                    alignItems={{xs:"center", sm: "auto"}}
+                  >
                     <Box pb={3}><img
                       src={getCompetencyImageFromIndex(index)}
                       alt={e.title}
