@@ -80,8 +80,6 @@ function ResultBarChart (props) {
           (<YAxis type="category" dataKey="label" tick={<CompetencyLabel/>}/>):
           (<YAxis type="category" dataKey="label" hide/>)
       }
-
-      <Tooltip/>
       <CartesianGrid horizontal={false}/>
       <Bar dataKey="value" background label={<BarLabel/>} radius={[0, 4, 4, 0]}/>
     </BarChart>
