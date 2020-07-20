@@ -61,7 +61,7 @@ function CompetencyPage (props) {
               </NavigationButton>) : ''
           }
         </Box>
-        <Box alignSelf="flex-end" mx={1} py={1}>
+        <Box alignSelf={{xs:'flex-start', sm: 'flex-end'}} px={{ sm: 1}}>
           {
             competencyIndex >= (props.questionsByCompetencyAndSubCompetencies.length - 1) ?
               (

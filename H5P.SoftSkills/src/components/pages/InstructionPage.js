@@ -32,44 +32,43 @@ const styles = theme => ({
 
 const InstructionPage = withStyles(styles)((props) => {
   const { classes } = props;
-  return (<Container maxWidth={false} disableGutters={true} className={classes.root} >
+  return (<Container maxWidth={false} disableGutters={true} className={classes.root}>
       <Container maxWidth={false} disableGutters={true} className={classes.containerNoPadding}>
         <WaveHeading title={props.welcomeTitle}/>
       </Container>
-      <Container maxWidth={'md'} >
-        <Box xs={6} p={"3em"}>
+      <Container maxWidth={'md'}>
+        <Box p={'3em'}>
           <Typography color="textSecondary">
             <span dangerouslySetInnerHTML={resourceCreateMarkup(props.generalInstructions)}/>
           </Typography>
         </Box>
 
-        <Box>
-          <Box display="flex" justifyContent="center" py={2} className={classes.responsiveCompList}>
-            {
-              props.competenciesDesc.map((e, index) => {
-                  return (<Box
-                    display="flex"
-                    key={index}
-                    px={2}
-                    flexDirection="column"
-                    alignItems={{xs:"center", sm: "auto"}}
-                  >
-                    <Box pb={3}><img
-                      src={getCompetencyImageFromIndex(index)}
-                      alt={e.title}
-                      role="presentation"/></Box>
-                    <Box>
-                      <BottomRectangle/>
-                    </Box>
-                    <Box>
+
+        <Box display="flex" justifyContent="center" py={2} className={classes.responsiveCompList}>
+          {
+            props.competenciesDesc.map((e, index) => {
+                return (<Box
+                  display="flex"
+                  key={index}
+                  px={2}
+                  flexDirection="column"
+                  alignItems={{ xs: 'center', sm: 'auto' }}
+                >
+                  <Box pb={3}><img
+                    src={getCompetencyImageFromIndex(index)}
+                    alt={e.title}
+                    role="presentation"/></Box>
+                  <Box>
+                    <BottomRectangle/>
+                  </Box>
+                  <Box>
                     <Box><Typography variant="subtitle1" className={classes.competencyTitle}>{e.title}</Typography></Box>
                     <Box><Typography color="textSecondary">{e.description}</Typography></Box>
-                    </Box>
-                  </Box>);
-                }
-              )
-            }
-          </Box>
+                  </Box>
+                </Box>);
+              }
+            )
+          }
         </Box>
         <Box display="flex" justifyContent="center" py={2}>
           <Box display="flex" flexDirection="column">

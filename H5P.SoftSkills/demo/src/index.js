@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import sampleData from '../../sampleData/demotestdata.json';
 import { QuestionnaireApp } from '../../src/QuestionnaireApp';
 import { TranslationsContext } from '../../src/contexts/TranslationsContext';
+import H5P from '../../src/utils/H5P.mock';
 
 window.H5P = H5P;
 

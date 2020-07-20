@@ -29,12 +29,26 @@ class QuestionWrapper extends React.Component {
 
   componentDidUpdate (prevProps, prevState, snapshot) {
     if (prevProps.isDisabled && !this.props.isDisabled) {
-      scroller.scrollTo(`question-${this.props.questionID}`, {
-         duration: 800,
-         delay: 3,
-        containerId:'competencyPageContainer',
-        smooth: 'easeInOutQuart'
-      });
+      const questionID = `question-${this.props.questionID}`;
+      const containerID = 'competencyPageContainer';
+
+      const questionElem = scroller.get(questionID);
+
+      const rect = questionElem.getBoundingClientRect();
+
+      const needsScroll = (
+        rect.top < 0 ||
+        rect.bottom > (window.innerHeight || document.documentElement.clientHeight)
+      );
+
+      if (needsScroll) {
+        scroller.scrollTo(questionID, {
+          duration: 800,
+          delay: 3,
+          containerId: containerID,
+          smooth: 'easeInOutQuart'
+        });
+      }
     }
   }
 
