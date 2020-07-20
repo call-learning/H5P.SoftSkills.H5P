@@ -35,7 +35,7 @@
     "reduce-reducers": "^1.0.4",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   },
   "peerDependencies": {},
   "devDependencies": {

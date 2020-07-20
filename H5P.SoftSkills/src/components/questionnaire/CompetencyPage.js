@@ -47,12 +47,12 @@ function CompetencyPage (props) {
         handleSelectAnswer={props.handleSelectAnswer}
       />
       <Box display="flex"
-           alignItems="flex-start"
            width="100%"
+           justifyContent={"space-between"}
            flexDirection={{xs:'column', sm: 'row'}}
            pb={3}
       >
-        <Box alignSelf="flex-start" mr="auto" py={1}>
+        <Box alignSelf={"flex-start"} my={1}>
           {
             competencyIndex > 0 ?
               (<NavigationButton isBack
@@ -61,7 +61,7 @@ function CompetencyPage (props) {
               </NavigationButton>) : ''
           }
         </Box>
-        <Box alignSelf={{xs:'flex-start', sm: 'flex-end'}} px={{ sm: 1}}>
+        <Box alignSelf={{xs:'flex-start', sm: 'flex-end'}} my={1}>
           {
             competencyIndex >= (props.questionsByCompetencyAndSubCompetencies.length - 1) ?
               (
