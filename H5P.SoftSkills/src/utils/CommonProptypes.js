@@ -70,8 +70,6 @@ export const possibleAnswers = {
       {
         text: PropTypes.string.isRequired,
         id: PropTypes.number.isRequired,
-        unknown: PropTypes.bool,
-        realValue: PropTypes.number,
       }
     )
   )
@@ -82,12 +80,10 @@ export const possibleAnswersDefault = {
     {
       "text": "Toujours",
       "id": 5,
-      "isAcquired": true
     },
     {
       "text": "Souvent",
       "id": 4,
-      "isAcquired": true
     },
     {
       "text": "Parfois",

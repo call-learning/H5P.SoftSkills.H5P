@@ -19,7 +19,7 @@ const styles = theme => ({
     marginTop: '3em',
     marginBottom: '3em',
     [theme.breakpoints.down('xs')]: {
-      paddingInlineStart: "0px",
+      paddingInlineStart: '0px',
     },
   },
   subCompetencyListItem: {
@@ -39,8 +39,8 @@ const styles = theme => ({
     '& legend::before': {
       content: 'counter(context) "." counter(question, lower-alpha) " "'
     },
-    marginTop: "1em",
-    marginBottom: "2em"
+    marginTop: '1em',
+    marginBottom: '2em'
   },
 
 });
@@ -70,12 +70,12 @@ const QuestionsList = withStyles(styles)((props) => {
                           key={`context-${contextIndex}-${subCompetencyIndex}-${compIndex}`}>
                         {
                           (context.isVisible) ? <Typography
-                            className={classes.contextLabel}>{context.label}</Typography>: ''
+                            className={classes.contextLabel}>{context.label}</Typography> : ''
                         }
                         <ol className={classes.listContainer}>
                           {
                             context.questions.map(
-                              (questionLabel, questionIndex) => (
+                              (question, questionIndex) => (
                                 <li
                                   className={`${classes.questionListItem} ${context.isVisible ? 'contextVisible' : ''}`}
                                   key={`question-${contextIndex}-${subCompetencyIndex}-${compIndex}-${questionIndex}`}>
@@ -89,7 +89,9 @@ const QuestionsList = withStyles(styles)((props) => {
                                       contextIndex,
                                       questionIndex
                                     ).toString()}
-                                    questionText={questionLabel}
+                                    questionText={question.label}
+                                    answerLabelsOverride={typeof question.answerLabelsOverride == 'undefined' ?
+                                      undefined : question.answerLabelsOverride}
                                     handleEnableQuestion={props.handleEnableQuestion}
                                     handleSelectAnswer={props.handleSelectAnswer}
                                   /></li>))
@@ -109,6 +111,9 @@ QuestionsList.propTypes = Object.assign(
   {
     questionComponent: PropTypes.elementType,
     competencyIndex: PropTypes.number,
+    answerLabelsOverride: PropTypes.arrayOf(
+      PropTypes.string
+    ),
     handleEnableQuestion: PropTypes.func,
     handleSelectAnswer: PropTypes.func,
   },
@@ -119,8 +124,9 @@ QuestionsList.defaultProps = Object.assign(
   {
     questionComponent: Question,
     competencyIndex: 0,
+    answerLabelsOverride: null,
     handleEnableQuestion: (qid) => null,
-    handleSelectAnswer: (quid, val) => null,
+    handleSelectAnswer: (quid, val) => null
   },
   questionnaireCompetenciesQuestionsDefault,
 );

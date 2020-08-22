@@ -8,13 +8,11 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Resource from './Resource';
 import {
-  possibleAnswers,
-  possibleAnswersDefault,
   questionnaireAnsweredQuestions,
   questionnaireAnsweredQuestionsDefault,
   questionnaireCompetenciesQuestionsDefault,
   questionnaireResources,
-  questionnaireResourcesDefault,
+  questionnaireResourcesDefault, questionnaireSettings, questionnaireSettingsDefault,
   questionsByCompetencyAndSubCompetencies
 } from '../../utils/CommonProptypes';
 import Box from '@material-ui/core/Box';
@@ -50,7 +48,7 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
       props.questionsByCompetencyAndSubCompetencies,
       props.answeredQuestions,
       props.resources,
-      props.possibleAnswers,
+      props.settings,
       0,
       0);
 
@@ -95,15 +93,17 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                                 alignItems={{ xs: 'center', sm: 'initial' }}
                           >
                             <Box mx={4} maxWidth="80%" flexGrow={1}>
-                              <Typography variant="body2">{q.label}</Typography>
+                              <Typography variant="body2">{q.questionData.label}</Typography>
                             </Box>
                             {
                               !q.answer ? '' :
                                 (<Box display="flex" flexDirection="column" alignSelf={'right'} minWidth="20%">
                                   <Typography display="inline"><H5PTranslatedText text='yourAnswer'/>:</Typography>
                                   <Typography display="inline"
-                                              className={isAcquiredAnswer(props.possibleAnswers, q.answer) ? classes.acquiredStyle : classes.inAcquisitionStyle}>
-                                    {getTextValueFromPossibleValue(props.possibleAnswers, q.answer)}
+                                              className={isAcquiredAnswer(props.settings,
+                                                q.questionData,
+                                                q.answer) ? classes.acquiredStyle : classes.inAcquisitionStyle}>
+                                    {getTextValueFromPossibleValue(props.settings, q.questionData, q.answer)}
                                   </Typography>
                                 </Box>)
                             }
@@ -143,7 +143,7 @@ SubCompetencyResultsList.propTypes = Object.assign(
     subCompetencyIndex: PropTypes.number
   },
   questionsByCompetencyAndSubCompetencies,
-  possibleAnswers,
+  questionnaireSettings,
   questionnaireAnsweredQuestions,
   questionnaireResources
 );
@@ -154,7 +154,7 @@ SubCompetencyResultsList.defaultProps = Object.assign(
     subCompetencyIndex: 0,
   },
   questionnaireCompetenciesQuestionsDefault,
-  possibleAnswersDefault,
+  questionnaireSettingsDefault,
   questionnaireAnsweredQuestionsDefault,
   questionnaireResourcesDefault
 );

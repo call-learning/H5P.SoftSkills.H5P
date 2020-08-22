@@ -62,7 +62,8 @@ class QuestionWrapper extends React.Component {
         <PossibleAnswersContext.Consumer>
           {allPossibleAnswers =>
             (<Question possibleAnswers={allPossibleAnswers}
-                       {...otherprops} isDisabled={isDisabled}
+                       {...otherprops}
+                       isDisabled={isDisabled}
                        handleSelectAnswer={(questionID,value) => {
                          this.setState((state, props) => ({ forceEnabled: false }));
                          this.props.handleSelectAnswer(questionID, value);
@@ -78,7 +79,7 @@ class QuestionWrapper extends React.Component {
 const mapStateToProps = (state, ownProps) => {
 
   const { navigation, answeredQuestions } = state;
-  const { questionText, questionID } = ownProps;
+  const { questionText, answerLabelsOverride,  questionID } = ownProps;
 
   // Compare the position in the state (current position) and the one of the question if provided
   // This will enable the questions that are in the current position

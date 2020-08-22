@@ -45,8 +45,7 @@ function Questionnaire (props) {
       break;
     case QSTEP_REVIEWING:
       currentPage = (
-            <RoutedResultsPageContainer possibleAnswers={props.settings.possibleAnswers}
-                                        {...props}
+            <RoutedResultsPageContainer {...props}
                                         handleReviewQuestionnaire={
                                           () => (props.dispatch(startQuestionnaireAndPosition()))}
                                         handleRestartQuestionnaire={

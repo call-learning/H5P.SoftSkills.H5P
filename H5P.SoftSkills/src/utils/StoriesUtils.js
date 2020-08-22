@@ -36,6 +36,7 @@ export class SampleQuestionHandler extends React.Component {
     return (<Question
       questionID={this.props.questionID}
       questionText={this.props.questionText}
+      answerLabelsOverride={this.props.answerLabelsOverride}
       selectedItemId={this.state.selectedItemId}
       isDisabled={this.state.isDisabled}
       handleSelectAnswer={this.handleSelectAnswer}

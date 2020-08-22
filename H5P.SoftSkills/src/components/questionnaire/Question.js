@@ -38,7 +38,14 @@ const styles = theme => ({
 
 const Question = withStyles(styles)((props) => {
   const { classes } = props;
-  const allRadioButtonsValues = Array.from(props.possibleAnswers);
+
+  // Deal with possible text override.
+  const possibleAnswerArray = Array.from(props.possibleAnswers);
+  const allRadioButtonsValues = props.answerLabelsOverride ?
+    possibleAnswerArray.map(
+      (val, index) => ({ text: props.answerLabelsOverride[index], id: val.id })
+    ) : possibleAnswerArray;
+
   const checkBoxValue = allRadioButtonsValues.pop(); // The value for checkbox is the last one.
 
   const maxTextLength = allRadioButtonsValues.reduce(
@@ -58,7 +65,7 @@ const Question = withStyles(styles)((props) => {
       <FormControl component="fieldset" disabled={props.isDisabled} onClick={
         (e) => {
           if (props.isDisabled) {
-            props.handleEnableQuestion(props.questionID)
+            props.handleEnableQuestion(props.questionID);
           }
         }
       }>
@@ -73,7 +80,7 @@ const Question = withStyles(styles)((props) => {
                     }>
           {
             allRadioButtonsValues.map((e, index) => (
-              <FormControlLabel style={{minWidth:`${maxTextLength}em`}} key={index}
+              <FormControlLabel style={{ minWidth: `${maxTextLength}em` }} key={index}
                                 className={`${classes.roundedControl} ${(props.selectedItemId === e.id) ? classes.selectedControl : ''}`}
                                 value={e.id}
                                 control={<Radio color="primary"
@@ -101,6 +108,9 @@ Question.propTypes = Object.assign({
     questionID: PropTypes.string, // Question identifier. Provided in the event as a unique id.
     selectedItemId: PropTypes.number,
     questionText: PropTypes.string,
+    answerLabelsOverride: PropTypes.arrayOf(
+      PropTypes.string
+    ),
     isDisabled: PropTypes.bool,
     handleEnableQuestion: PropTypes.func,
     handleSelectAnswer: PropTypes.func
@@ -112,6 +122,7 @@ Question.defaultProps = Object.assign({
     questionID: '', // Question identifier is empty.
     selectedItemId: 0,
     questionText: '',
+    answerLabelsOverride: null,
     isDisabled: false,
     handleEnableQuestion: (qid) => null,
     handleSelectAnswer: (quid, val) => null,

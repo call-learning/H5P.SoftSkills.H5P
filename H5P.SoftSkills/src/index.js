@@ -45,7 +45,7 @@ H5P.SoftSkills = class {
       // Set the score.
       const progress = computeProgressPerCompetency(params.questionsByCompetencyAndSubCompetencies,
         state.answeredQuestions,
-        params.settings.possibleAnswers);
+        params.settings);
       this.trigger('finish', {score: progress.value, maxScore: 100, time: Date.now() });
     };
     this.save = function (state, dataId) {

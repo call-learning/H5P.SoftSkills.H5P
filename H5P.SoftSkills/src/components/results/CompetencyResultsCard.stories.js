@@ -11,7 +11,7 @@ export default { title: 'Results/Widget' };
 const allCompetenciesResults = computeProgressPerCompetency(
   sampleData.questionsByCompetencyAndSubCompetencies,
   sampleAnswerGenerator(getTotalQuestionCount(sampleData.questionsByCompetencyAndSubCompetencies)),
-  sampleData.settings.possibleAnswers
+  sampleData.settings
 );
 
 export const competencyResultsWidget = () => <CompetencyResultsCard

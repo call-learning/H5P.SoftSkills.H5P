@@ -16,10 +16,8 @@ import {
   questionnaireCompetenciesQuestionsDefault,
   questionnaireResources,
   questionnaireResourcesDefault,
-  possibleAnswers,
   questionnaireAnsweredQuestions,
-  possibleAnswersDefault,
-  questionnaireAnsweredQuestionsDefault
+  questionnaireAnsweredQuestionsDefault, questionnaireSettings, questionnaireSettingsDefault
 } from '../../utils/CommonProptypes';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import ResultBarChart from '../elements/ResultBarChart';
@@ -35,7 +33,7 @@ function SubCompetencyResultsPage (props) {
   const globalResults = computeProgressPerCompetency(
     props.questionsByCompetencyAndSubCompetencies,
     props.answeredQuestions,
-    props.possibleAnswers
+    props.settings
   );
   const currentCompetencyResult = globalResults.competenciesResults
     && globalResults.competenciesResults[props.competencyIndex];
@@ -80,7 +78,7 @@ SubCompetencyResultsPage.propTypes = Object.assign(
     topNavigation: PropTypes.element
   },
   questionsByCompetencyAndSubCompetencies,
-  possibleAnswers,
+  questionnaireSettings,
   questionnaireAnsweredQuestions,
   questionnaireResources
 );
@@ -92,7 +90,7 @@ SubCompetencyResultsPage.defaultProps = Object.assign(
     topNavigation: (<div/>)
   },
   questionnaireCompetenciesQuestionsDefault,
-  possibleAnswersDefault,
+  questionnaireSettingsDefault,
   questionnaireAnsweredQuestionsDefault,
   questionnaireResourcesDefault
 );

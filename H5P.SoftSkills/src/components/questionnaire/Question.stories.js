@@ -12,3 +12,12 @@ export const disabledWithLabelQuestion = () => <SampleQuestionHandler possibleAn
                                                                       questionText={sampleQuestionText}
                                                                         isDisabled/>;
 
+export const questionOverrideAnswerLabels = () => <SampleQuestionHandler possibleAnswers={samplePossibleAnswers}
+                                                                      questionText={sampleQuestionText}
+                                                                      answerLabelsOverride = {[
+                                                                        "Tout à fait d'accord",
+                                                                        "Plutôt d'accord",
+                                                                        "D'accord",
+                                                                        "Plutôt pas d'accord",
+                                                                        "Pas d'accord"
+                                                                      ]}/>;

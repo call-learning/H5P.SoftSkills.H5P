@@ -10,13 +10,11 @@ import SubCompetencyResultsPage from './SubCompetencyResultsPage';
 import CompetencyResultsPage from './CompetencyResultsPage';
 import {
   questionnaireAnsweredQuestionsDefault,
-  possibleAnswers,
-  possibleAnswersDefault,
   questionsByCompetencyAndSubCompetencies,
   questionnaireCompetenciesQuestionsDefault,
   questionnaireAnsweredQuestions,
   questionnaireResources,
-  questionnaireResourcesDefault
+  questionnaireResourcesDefault, questionnaireSettings, questionnaireSettingsDefault
 } from '../../utils/CommonProptypes';
 import { computeProgressPerCompetency } from '../../utils/ComponentsUtils';
 import QuestionnaireResultsPage from './QuestionaireResultsPage';
@@ -52,7 +50,7 @@ function ResultsPage (props) {
   const allCompetenciesResults = computeProgressPerCompetency(
     props.questionsByCompetencyAndSubCompetencies,
     props.answeredQuestions,
-    props.possibleAnswers
+    props.settings
   );
   return (
     <Switch>
@@ -83,7 +81,7 @@ ResultsPage.propTypes = Object.assign({
     handleReviewQuestionnaire: PropTypes.func,
     handleRestartQuestionnaire: PropTypes.func
   },
-  possibleAnswers,
+  questionnaireSettings,
   questionsByCompetencyAndSubCompetencies,
   questionnaireAnsweredQuestions,
   questionnaireResources
@@ -93,13 +91,14 @@ ResultsPage.defaultProps = Object.assign({
     handleReviewQuestionnaire: () => null,
     handleRestartQuestionnaire: () => null
   },
-  possibleAnswersDefault,
+  questionnaireSettingsDefault,
   questionnaireCompetenciesQuestionsDefault,
   questionnaireAnsweredQuestionsDefault,
   questionnaireResourcesDefault
 );
 
 export default ResultsPage;
+
 export const RoutedResultsPage = (props) => (
   <MemoryRouter>
     <ResultsPage {...props} />

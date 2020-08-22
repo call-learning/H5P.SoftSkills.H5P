@@ -120,7 +120,7 @@ test('computeProgressPerCompetency', () => {
   expect(computeProgressPerCompetency(
     smallerQuestionnaireData.questionsByCompetencyAndSubCompetencies,
     sampleAnswerData,
-    smallerQuestionnaireData.settings.possibleAnswers)).toEqual(
+    smallerQuestionnaireData.settings)).toEqual(
     {
       'competenciesResults': [{
         'label': 'Compétences sociales',
@@ -134,14 +134,14 @@ test('computeProgressPerCompetency', () => {
         'totalQuestions': 11,
         'value': 61
       }, {
-        'label': 'Compétences personnelles',
+        'label': 'Compétences Personnelles',
         'subCompetenciesResults': [{
           'label': 'Adaptabilité',
           'totalAnswered': 2,
           'totalQuestions': 2,
           'value': 70
         }, {
-          'label': 'Le leadership : un des leviers pour mener et conduire des individus ou des organisations',
+          'label': 'Le leadership: un des leviers pour mener et conduire des individus ou des organisations',
           'totalAnswered': 3,
           'totalQuestions': 3,
           'value': 53
@@ -190,72 +190,109 @@ test('getRealValueFromPossibleValue', () => {
 });
 
 test('isUnknownValue', () => {
-  expect(isUnknownValue(smallerQuestionnaireData.settings.possibleAnswers, 1)).toBeFalsy();
+  expect(isUnknownValue(smallerQuestionnaireData.settings, 1)).toBeTruthy()
+  expect(isUnknownValue(smallerQuestionnaireData.settings, 2)).toBeFalsy();
+  expect(isUnknownValue(smallerQuestionnaireData.settings, 60)).toBeFalsy();
 });
 
 test('getSubCompetencyResultsAndResources', () => {
   const expectedResults = [
     {
       'label': 'Je suis amené(e) à manager une équipe',
-      'value': 2,
       'questionsAnswers': [
         {
-          'label': 'Je comprends les enjeux et les principes d’animation d’une équipe dans un contexte professionnel.',
-          'answer': 4
+          'answer': 4,
+          'questionData': {
+            'answerLabelsOverride': [
+              'Tout à fait d\'accord',
+              'Plutôt d\'accord',
+              'D\'accord',
+              'Plutôt pas d\'accord',
+              'Pas d\'accord'
+            ],
+            'label': 'Je comprends les enjeux et les principes d’animation d’une équipe dans un contexte professionnel.'
+          }
         },
         {
-          'label': 'Je sais (re)formuler les consignes pour que mes collaborateurs comprennent ce qui est attendu d’eux.',
-          'answer': 3
+          'answer': 3,
+          'questionData': {
+            'answerLabelsOverride': [
+              'Tout à fait d\'accord',
+              'Plutôt d\'accord',
+              'D\'accord',
+              'Plutôt pas d\'accord',
+              'Pas d\'accord'
+            ],
+            'label': 'Je sais (re)formuler les consignes pour que mes collaborateurs comprennent ce qui est attendu d’eux.'
+          }
         },
         {
-          'label': 'J’échange avec mes interlocuteurs en appliquant les principes de l’écoute active.',
-          'answer': 1
+          'answer': 1,
+          'questionData': {
+            'label': 'J’échange avec mes interlocuteurs en appliquant les principes de l’écoute active.'
+          }
         },
         {
-          'label': 'Pour accompagner le travail de mes collaborateurs, je fais preuve d’empathie et je favorise l’échange.',
-          'answer': 3
+          'answer': 3,
+          'questionData': {
+            'label': 'Pour accompagner le travail de mes collaborateurs, je fais preuve d’empathie et je favorise l’échange.'
+          }
         }
       ],
-      'resources': []
+      'resources': [],
+      'value': 2
     },
     {
       'label': 'Manager une équipe, c’est aussi identifier et reconnaître les compétences de ses collaborateurs',
-      'value': 3,
       'questionsAnswers': [
         {
-          'label': 'Je mets en place des méthodes et des outils d’évaluation des compétences.',
-          'answer': 3
+          'answer': 3,
+          'questionData': {
+            'label': 'Je mets en place des méthodes et des outils d’évaluation des compétences.'
+          }
         },
         {
-          'label': 'Je mets en place des actions de valorisation des activités de mes collaborateurs.',
-          'answer': 3
+          'answer': 3,
+          'questionData': {
+            'label': 'Je mets en place des actions de valorisation des activités de mes collaborateurs.'
+          }
         },
         {
-          'label': 'Je mets en place des actions pour développer les compétences de mes collaborateurs.',
-          'answer': 4
+          'answer': 4,
+          'questionData': {
+            'label': 'Je mets en place des actions pour développer les compétences de mes collaborateurs.'
+          }
         }
       ],
-      'resources': []
+      'resources': [],
+      'value': 3
     },
     {
       'label': 'En tant que manager d’équipe, une de mes missions est la prévention des tensions et conflits',
-      'value': 3,
       'questionsAnswers': [
         {
-          'label': 'Je sais repérer les signaux faibles pour déterminer les situations de malaise.',
-          'answer': 4
+          'answer': 4,
+          'questionData': {
+            'label': 'Je sais repérer les signaux faibles pour déterminer les situations de malaise.'
+          }
         },
         {
-          'label': 'Je sais mettre en place un plan de prévention pour éviter les tensions et les conflits.',
-          'answer': 3
+          'answer': 3,
+          'questionData': {
+            'answerLabelsOverride': [
+              'Tout à fait d\'accord',
+              'Plutôt d\'accord',
+              'D\'accord',
+              'Plutôt pas d\'accord',
+              'Pas d\'accord'
+            ],
+            'label': 'Je sais mettre en place un plan de prévention pour éviter les tensions et les conflits.'
+          }
         }
       ],
       'resources': [
         {
-          'content': '<p>La suite Office dispose de correcteurs orthographiques intégrés qui vous permettent de '
-            + 'corriger la plupart des fautes d’orthographe et de grammaire. Voir comment utiliser le correcteur ' +
-            'ortographique dans Word, Excel & Powerpoint.<br> ' +
-            '<a href="http://microsoft.com" target="_blank">www.microsoft.com</a></p>\n',
+          'content': '<p>La suite Office dispose de correcteurs orthographiques intégrés qui vous permettent de corriger la plupart des fautes d’orthographe et de grammaire. Voir comment utiliser le correcteur ortographique dans Word, Excel & Powerpoint.<br> <a href="http://microsoft.com" target="_blank">www.microsoft.com</a></p>\n',
           'id': '3216496693',
           'image': {
             'params': {
@@ -274,21 +311,40 @@ test('getSubCompetencyResultsAndResources', () => {
           'references': '0:1:1,0:0:2'
         }
       ],
+      'value': 3
     },
     {
       'label': 'En tant que manager d’équipe, je suis amené(e) à gérer des tensions et des conflits.',
-      'value': 3,
       'questionsAnswers': [
         {
-          'label': 'Je sais me mettre dans une posture d’écoute et de médiation pour désamorcer les tensions et les conflits.',
-          'answer': 3
+          'answer': 3,
+          'questionData': {
+            'answerLabelsOverride': [
+              'Tout à fait d\'accord',
+              'Plutôt d\'accord',
+              'D\'accord',
+              'Plutôt pas d\'accord',
+              'Pas d\'accord'
+            ],
+            'label': 'Je sais me mettre dans une posture d’écoute et de médiation pour désamorcer les tensions et les conflits.'
+          }
         },
         {
-          'label': 'Je sais mettre en place des plans d’action et de suivi des solutions.',
-          'answer': 3
+          'answer': 3,
+          'questionData': {
+            'answerLabelsOverride': [
+              'Tout à fait d\'accord',
+              'Plutôt d\'accord',
+              'D\'accord',
+              'Plutôt pas d\'accord',
+              'Pas d\'accord'
+            ],
+            'label': 'Je sais mettre en place des plans d’action et de suivi des solutions.'
+          }
         }
       ],
-      'resources': []
+      'resources': [],
+      'value': 3
     }
   ];
 
@@ -296,7 +352,7 @@ test('getSubCompetencyResultsAndResources', () => {
     smallerQuestionnaireData.questionsByCompetencyAndSubCompetencies,
     sampleAnswerData,
     smallerQuestionnaireData.resources,
-    smallerQuestionnaireData.settings.possibleAnswers,
+    smallerQuestionnaireData.settings,
     0,
     0)).toEqual(expectedResults);
 });
@@ -338,16 +394,33 @@ test('getContextFromReference', () => {
 });
 
 test('getTextValueFromPossibleValue', () => {
-  const possibleAnswers = smallerQuestionnaireData.settings.possibleAnswers;
-  expect(getTextValueFromPossibleValue(possibleAnswers, 3)).toEqual('Parfois');
-  expect(getTextValueFromPossibleValue(possibleAnswers, 2)).toEqual('Jamais');
-  expect(getTextValueFromPossibleValue(possibleAnswers, 50)).toEqual('');
+  const answerOverride = [
+    'Tout à fait d\'accord',
+    'Plutôt d\'accord',
+    'D\'accord',
+    'Plutôt pas d\'accord',
+    'Pas d\'accord'
+  ];
+  const sampleQuestionData = { 'label': 'Test question' };
 
+  expect(getTextValueFromPossibleValue(smallerQuestionnaireData.settings, sampleQuestionData, 3)).toEqual('Parfois');
+  expect(getTextValueFromPossibleValue(smallerQuestionnaireData.settings, sampleQuestionData, 2)).toEqual('Jamais');
+  expect(getTextValueFromPossibleValue(smallerQuestionnaireData.settings, sampleQuestionData, 50)).toEqual('');
+  expect(getTextValueFromPossibleValue(smallerQuestionnaireData.settings,
+    { 'label': 'Test question', 'answerLabelsOverride': answerOverride }, 1)).toEqual('Pas d\'accord');
+  expect(getTextValueFromPossibleValue(smallerQuestionnaireData.settings,
+    { 'label': 'Test question', 'answerLabelsOverride': answerOverride }, 5)).toEqual('Tout à fait d\'accord');
 });
 
 test('isAcquiredAnswer', () => {
-  const possibleAnswers = smallerQuestionnaireData.settings.possibleAnswers;
-  expect(isAcquiredAnswer(possibleAnswers, 4)).toEqual(true);
-  expect(isAcquiredAnswer(possibleAnswers, 1)).toEqual(false);
+  const sampleQuestionData = { 'label': 'Test question' };
+  const modifiedQuestionData = { 'label': 'Test question', 'acquisitionThreshold': 2 };
+  expect(isAcquiredAnswer(smallerQuestionnaireData.settings, sampleQuestionData, 5)).toEqual(true);
+  expect(isAcquiredAnswer(smallerQuestionnaireData.settings, sampleQuestionData, 4)).toEqual(true);
+  expect(isAcquiredAnswer(smallerQuestionnaireData.settings, sampleQuestionData, 3)).toEqual(false);
+  expect(isAcquiredAnswer(smallerQuestionnaireData.settings, modifiedQuestionData, 3)).toEqual(true);
+  expect(isAcquiredAnswer(smallerQuestionnaireData.settings, modifiedQuestionData, 2)).toEqual(true);
+  expect(isAcquiredAnswer(smallerQuestionnaireData.settings, modifiedQuestionData, 1)).toEqual(false);
+
 });
 

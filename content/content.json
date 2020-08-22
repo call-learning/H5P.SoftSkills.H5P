@@ -18,7 +18,7 @@
     "ourAdvice": "Nos conseils",
     "overcompleted": ":val1 sur :val2 complétées",
     "over": "sur",
-    "previouscompetencypage": "Compétence précédente",
+    "previouscompetencypage": "Compéténce précédente",
     "resources": "Les ressources pour aller plus loin",
     "restartquestionnaire": "Réinitialiser le questionnaire",
     "resultFeedBack0": "Avec un résultat de :compPercent%, vous avez besoin de travailler sur cette compétence afin de la maîtriser davantage. Les ressources ci-dessous vous guideront dans la connaissance de cette compétence.",
@@ -105,13 +105,11 @@
     "possibleAnswers": [
       {
         "text": "Toujours",
-        "id": 5,
-        "isAcquired": true
+        "id": 5
       },
       {
         "text": "Souvent",
-        "id": 4,
-        "isAcquired": true
+        "id": 4
       },
       {
         "text": "Parfois",
@@ -125,7 +123,11 @@
         "text": "Je ne sais pas",
         "id": 1
       }
-    ]
+    ],
+    "acquisitionThreshold": 4,
+    "badgeThreshold": 4,
+    "unknownValueId": 1
+
   },
   "questionsByCompetencyAndSubCompetencies": [
     {
@@ -138,29 +140,51 @@
               "label": "Je suis amené(e) à rédiger un document écrit dans une situation professionnelle précise:",
               "isVisible": true,
               "questions": [
-                "Lors de la rédaction, je prends en considération mon public cible et j’adapte mon langage.",
-                "Je choisis le format et j’adapte mon registre à la situation (rapport, power point, mail, lettre interne, note de service, réseau social interne)."
+                {
+                  "label": "Lors de la rédaction, je prends en considération mon public cible et j’adapte mon langage."
+                },
+                {
+                  "label": "Je choisis le format et j’adapte mon registre à la situation (rapport, power point, mail, lettre interne, note de service, réseau social interne)."
+                }
               ]
             },
             {
               "label": "Lors de la production écrite:",
               "isVisible": true,
               "questions": [
-                "J’utilise un correcteur orthographique",
-                "Je relis et/ou fais relire mes productions pour corriger les fautes d’orthographe et pour vérifier la clarté du contenu.",
-                "Lorsque je le considère nécessaire, je fais valider le contenu de mes productions par un expert métier.",
-                "J’applique les règles de mise en forme en fonction du format (lettre, rapport…).",
-                "J’applique les règles permettant la réalisation d’une synthèse.",
-                "J’applique les règles permettant la production d’un discours argumenté. "
+                {
+                  "label": "J’utilise un correcteur orthographique"
+                },
+                {
+                  "label": "Je relis et/ou fais relire mes productions pour corriger les fautes d’orthographe et pour vérifier la clarté du contenu."
+                },
+                {
+                  "label": "Lorsque je le considère nécessaire, je fais valider le contenu de mes productions par un expert métier."
+                },
+                {
+                  "label": "J’applique les règles de mise en forme en fonction du format (lettre, rapport…)."
+                },
+                {
+                  "label": "J’applique les règles permettant la réalisation d’une synthèse."
+                },
+                {
+                  "label": "J’applique les règles permettant la production d’un discours argumenté."
+                }
               ]
             },
             {
               "label": "Je suis amené(e) à faire une présentation orale dans une situation professionnelle précise:",
               "isVisible": true,
               "questions": [
-                "Au cours de la présentation j’adapte mon discours au public cible.",
-                "Je choisis des supports adaptés (vidéo, ppt, …) à la situation (discours, pitch, entretien, conférence, réunion), au contenu à transmettre et à mon objectif.",
-                "Je pense à mon comportement gestuel."
+                {
+                  "label": "Au cours de la présentation j’adapte mon discours au public cible."
+                },
+                {
+                  "label": "Je choisis des supports adaptés (vidéo, ppt, …) à la situation (discours, pitch, entretien, conférence, réunion), au contenu à transmettre et à mon objectif."
+                },
+                {
+                  "label": "Je pense à mon comportement gestuel."
+                }
               ]
             }
           ]
@@ -173,41 +197,98 @@
               "label": "Je suis amené(e) à manager une équipe",
               "isVisible": true,
               "questions": [
-                "Je comprends les enjeux et les principes d’animation d’une équipe dans un contexte professionnel.",
-                "Je sais (re)formuler les consignes pour que mes collaborateurs comprennent ce qui est attendu d’eux.",
-                "J’échange avec mes interlocuteurs en appliquant les principes de l’écoute active.",
-                "Pour accompagner le travail de mes collaborateurs, je fais preuve d’empathie et je favorise l’échange."
+                {
+                  "label": "Je comprends les enjeux et les principes d’animation d’une équipe dans un contexte professionnel.",
+                  "answerLabelsOverride":[
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                },
+                {
+                  "label": "Je sais (re)formuler les consignes pour que mes collaborateurs comprennent ce qui est attendu d’eux.",
+                  "answerLabelsOverride": [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                },
+                {
+                  "label": "J’échange avec mes interlocuteurs en appliquant les principes de l’écoute active."
+                },
+                {
+                  "label": "Pour accompagner le travail de mes collaborateurs, je fais preuve d’empathie et je favorise l’échange."
+                }
               ]
             },
             {
               "label": "Manager une équipe, c’est aussi identifier et reconnaître les compétences de ses collaborateurs",
               "isVisible": true,
               "questions": [
-                "Je mets en place des méthodes et des outils d’évaluation des compétences.",
-                "Je mets en place des actions de valorisation des activités de mes collaborateurs.",
-                "Je mets en place des actions pour développer les compétences de mes collaborateurs."
+                {
+                  "label": "Je mets en place des méthodes et des outils d’évaluation des compétences."
+                },
+                {
+                  "label": "Je mets en place des actions de valorisation des activités de mes collaborateurs."
+                },
+                {
+                  "label": "Je mets en place des actions pour développer les compétences de mes collaborateurs."
+                }
               ]
             },
             {
               "label": "En tant que manager d’équipe, une de mes missions est la prévention des tensions et conflits",
               "isVisible": true,
               "questions": [
-                "Je sais repérer les signaux faibles pour déterminer les situations de malaise.",
-                "Je sais mettre en place un plan de prévention pour éviter les tensions et les conflits."
+                {
+                  "label": "Je sais repérer les signaux faibles pour déterminer les situations de malaise."
+                },
+                {
+                  "label": "Je sais mettre en place un plan de prévention pour éviter les tensions et les conflits.",
+                  "answerLabelsOverride": [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                }
               ]
             },
             {
               "label": "En tant que manager d’équipe, je suis amené(e) à gérer des tensions et des conflits.",
               "isVisible": true,
               "questions": [
-                "Je sais me mettre dans une posture d’écoute et de médiation pour désamorcer les tensions et les conflits.",
-                "Je sais mettre en place des plans d’action et de suivi des solutions."
+                {
+                  "label": "Je sais me mettre dans une posture d’écoute et de médiation pour désamorcer les tensions et les conflits.",
+                  "answerLabelsOverride": [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                },
+                {
+                  "label": "Je sais mettre en place des plans d’action et de suivi des solutions.",
+                  "answerLabelsOverride": [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                }
               ]
             }
           ]
         }
       ],
-      "label": "Compétences sociales"
+      "label": "Compétences Sociales"
     },
     {
       "subCompetencies": [
@@ -219,9 +300,22 @@
               "label": "",
               "isVisible": false,
               "questions": [
-                "Au démarrage des projets, j’identifie mes besoins en termes de connaissances et de compétences.",
-                "A l’issue de mes projets, j’identifie mes acquis en termes de connaissances et de compétences.",
-                "Je suis capable d’expliciter mes acquis en termes de connaissances et de compétences pour les valoriser dans d’autres contextes."
+                {
+                  "label": "Au démarrage des projets, j’identifie mes besoins en termes de connaissances et de compétences."
+                },
+                {
+                  "label": "A l’issue de mes projets, j’identifie mes acquis en termes de connaissances et de compétences."
+                },
+                {
+                  "label": "Je suis capable d’expliciter mes acquis en termes de connaissances et de compétences pour les valoriser dans d’autres contextes.",
+                  "answerLabelsOverride":  [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                }
               ]
             }
           ]
@@ -234,23 +328,40 @@
               "label": "",
               "isVisible": false,
               "questions": [
-                "Lorsque je le considère nécessaire, je suis capable de m’adapter aux codes des environnements dans lesquels j’évolue.",
-                "Je modifie mon action afin de m’adapter à des aléas."
+                {
+                  "label": "Lorsque je le considère nécessaire, je suis capable de m’adapter aux codes des environnements dans lesquels j’évolue.",
+                  "answerLabelsOverride":  [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                },
+                {
+                  "label": "Je modifie mon action afin de m’adapter à des aléas."
+                }
               ]
             }
           ]
         },
         {
-          "label": "Le leadership : un des leviers pour mener et conduire des individus ou des organisations",
+          "label": "Le leadership: un des leviers pour mener et conduire des individus ou des organisations",
           "isVisible": true,
           "contexts": [
             {
               "label": "",
               "isVisible": false,
               "questions": [
-                "Je stimule et valorise l’apport de chacun dans l’atteinte des objectifs.",
-                "Je fais en sorte que mes actions et mes attitudes soient cohérentes avec mon discours.",
-                "Je sais communiquer et faire accepter une décision."
+                {
+                  "label": "Je stimule et valorise l’apport de chacun dans l’atteinte des objectifs."
+                },
+                {
+                  "label": "Je fais en sorte que mes actions et mes attitudes soient cohérentes avec mon discours."
+                },
+                {
+                  "label": "Je sais communiquer et faire accepter une décision."
+                }
               ]
             }
           ]
@@ -263,10 +374,18 @@
               "label": "",
               "isVisible": false,
               "questions": [
-                "Dans le contexte professionnel, mes actions visent le bien commun.",
-                "J’agis systématiquement dans le respect de la culture et des valeurs de mon entourage.",
-                "Je me comporte systématiquement vis-à-vis d’autrui avec loyauté, équité et sans discriminer.",
-                "Je respecte les contraintes relevant de la santé, de la sécurité et de l’environnement."
+                {
+                  "label": "Dans le contexte professionnel, mes actions visent le bien commun."
+                },
+                {
+                  "label": "J’agis systématiquement dans le respect de la culture et des valeurs de mon entourage."
+                },
+                {
+                  "label": "Je me comporte systématiquement vis-à-vis d’autrui avec loyauté, équité et sans discriminer."
+                },
+                {
+                  "label": "Je respecte les contraintes relevant de la santé, de la sécurité et de l’environnement."
+                }
               ]
             }
           ]
@@ -279,16 +398,24 @@
               "label": "",
               "isVisible": false,
               "questions": [
-                "J’intègre les remarques de mes pairs.",
-                "J’intègre les remarques des experts.",
-                "Je suis capable de me remettre en question.",
-                "Je défends mon point de vue de manière constructive."
+                {
+                  "label": "J’intègre les remarques de mes pairs."
+                },
+                {
+                  "label": "J’intègre les remarques des experts."
+                },
+                {
+                  "label": "Je suis capable de me remettre en question."
+                },
+                {
+                  "label": "Je défends mon point de vue de manière constructive."
+                }
               ]
             }
           ]
         }
       ],
-      "label": "Compétences personnelles"
+      "label": "Compétences Personnelles"
     },
     {
       "subCompetencies": [
@@ -300,8 +427,12 @@
               "label": "",
               "isVisible": false,
               "questions": [
-                "Je mets en place des techniques de veille scientifique, technique et technologique.",
-                "Je documente mes activités et les travaux réalisés."
+                {
+                  "label": "Je mets en place des techniques de veille scientifique, technique et technologique."
+                },
+                {
+                  "label": "Je documente mes activités et les travaux réalisés."
+                }
               ]
             }
           ]
@@ -314,11 +445,21 @@
               "label": "",
               "isVisible": false,
               "questions": [
-                "Je prends en compte les éléments de contexte de mon environnement pour initier la négociation (supérieur hiérarchique, collaborateur, client, fournisseur…).",
-                "Je comprends les rapports de force et j’identifie les concessions possibles.",
-                "J’identifie les arguments servant à convaincre mes interlocuteurs.",
-                "Je mets en place les leviers d’action de la négociation : accords, compromis, personnes ressources.",
-                "Je formalise l’accord de chaque négociation par une contractualisation."
+                {
+                  "label": "Je prends en compte les éléments de contexte de mon environnement pour initier la négociation (supérieur hiérarchique, collaborateur, client, fournisseur…)."
+                },
+                {
+                  "label": "Je comprends les rapports de force et j’identifie les concessions possibles."
+                },
+                {
+                  "label": "J’identifie les arguments servant à convaincre mes interlocuteurs."
+                },
+                {
+                  "label": "Je mets en place les leviers d’action de la négociation: accords, compromis, personnes ressources."
+                },
+                {
+                  "label": "Je formalise l’accord de chaque négociation par une contractualisation."
+                }
               ]
             }
           ]
@@ -331,31 +472,71 @@
               "label": "Recherche et organisation des informations",
               "isVisible": true,
               "questions": [
-                "J’applique les techniques et les étapes de recherche d’information.",
-                "J’applique les techniques d’organisation de l’information collectée.",
-                "Dans le cadre d’un projet scientifique et/ou technique, j’établis un état de l’art.",
-                "J’applique les techniques d’analyse de l’information collectée.",
-                "J’applique les techniques de synthèse écrite."
+                {
+                  "label": "J’applique les techniques et les étapes de recherche d’information."
+                },
+                {
+                  "label": "J’applique les techniques d’organisation de l’information collectée."
+                },
+                {
+                  "label": "Dans le cadre d’un projet scientifique et/ou technique, j’établis un état de l’art."
+                },
+                {
+                  "label": "J’applique les techniques d’analyse de l’information collectée."
+                },
+                {
+                  "label": "J’applique les techniques de synthèse écrite."
+                }
               ]
             },
             {
               "label": "Savoir délimiter et monter un projet",
               "isVisible": true,
               "questions": [
-                "Je définis les objectifs du projet.",
-                "Je définis les différents actions et étapes associées.",
-                "J’identifie les ressources (humaine, matérielle, financière) nécessaires et adaptées aux actions.",
-                "Je connais les règles de rédaction d’un cahier des charges fonctionnel.",
-                "Je connais les règles de rédaction d’un cahier des charges technique."
+                {
+                  "label": "Je définis les objectifs du projet."
+                },
+                {
+                  "label": "Je définis les différents actions et étapes associées."
+                },
+                {
+                  "label": "J’identifie les ressources (humaine, matérielle, financière) nécessaires et adaptées aux actions."
+                },
+                {
+                  "label": "Je connais les règles de rédaction d’un cahier des charges fonctionnel.",
+                  "answerLabelsOverride":  [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                },
+                {
+                  "label": "Je connais les règles de rédaction d’un cahier des charges technique.",
+                  "answerLabelsOverride":  [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                }
               ]
             },
             {
               "label": "Savoir piloter un projet",
               "isVisible": true,
               "questions": [
-                "En tant que chef de projet, je mets en place des règles d’animation et de coordination de l’équipe du projet.",
-                "En tant que chef de projet, j’applique les méthodes de suivi du projet.",
-                "En tant que chef de projet, je rends compte systématiquement à ma hiérarchie de l’état d’avancement du projet."
+                {
+                  "label": "En tant que chef de projet, je mets en place des règles d’animation et de coordination de l’équipe du projet."
+                },
+                {
+                  "label": "En tant que chef de projet, j’applique les méthodes de suivi du projet."
+                },
+                {
+                  "label": "En tant que chef de projet, je rends compte systématiquement à ma hiérarchie de l’état d’avancement du projet."
+                }
               ]
             }
           ]
@@ -368,11 +549,42 @@
               "label": "Dans une situation problème, ",
               "isVisible": true,
               "questions": [
-                "Je pense systématiquement le problème dans un système global.",
-                "Je m’appuie sur des méthodes pour comprendre le problème.",
-                "Je m’appuie sur des méthodes pour déterminer les causes du problème.",
-                "Je mets en œuvre les ressources scientifiques et techniques nécessaires à la résolution du problème.",
-                "Je surveille la mise en œuvre de la solution."
+                {
+                  "label": "Je pense systématiquement le problème dans un système global."
+                },
+                {
+                  "label": "Je m’appuie sur des méthodes pour comprendre le problème.",
+                  "answerLabelsOverride":  [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                },
+                {
+                  "label": "Je m’appuie sur des méthodes pour déterminer les causes du problème.",
+                  "answerLabelsOverride": [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                },
+                {
+                  "label": "Je mets en œuvre les ressources scientifiques et techniques nécessaires à la résolution du problème.",
+                  "answerLabelsOverride":  [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                },
+                {
+                  "label": "Je surveille la mise en œuvre de la solution."
+                }
               ]
             }
           ]
@@ -385,10 +597,32 @@
               "label": "Dans le cadre de mes activités,",
               "isVisible": true,
               "questions": [
-                "J’utilise les méthodes de créativité. ",
-                "Je m’appuie sur la typologie des innovations pour concevoir des solutions adaptées.",
-                "Je mets en œuvre des processus d’innovation.",
-                "Je pense à transformer mes idées en activités rentables. "
+                {
+                  "label": "J’utilise les méthodes de créativité. "
+                },
+                {
+                  "label": "Je m’appuie sur la typologie des innovations pour concevoir des solutions adaptées."
+                },
+                {
+                  "label": "Je mets en œuvre des processus d’innovation.",
+                  "answerLabelsOverride":  [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                },
+                {
+                  "label": "Je pense à transformer mes idées en activités rentables. ",
+                  "answerLabelsOverride":  [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
+                }
               ]
             }
           ]

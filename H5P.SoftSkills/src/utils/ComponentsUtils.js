@@ -146,18 +146,21 @@ export function getComponentIndexesFromGlobalQuestionIndex (questionsByCompetenc
   return {};
 }
 
+// TODO CHANGE PossibleAnswer to settings
+
 /**
  * Compute the progress per competency and subcompetency to display on the results page
  * @param questionsByCompetencyAndSubCompetencies
  * @param answeredQuestions
- * @param possibleAnswers
+ * @param settings
  * @return Object
  */
 export function computeProgressPerCompetency (
   questionsByCompetencyAndSubCompetencies,
   answeredQuestions,
-  possibleAnswers
+  settings
 ) {
+  const possibleAnswers = settings.possibleAnswers;
   let competenciesResults = [];
   let globalResult = 0, globalQuestionsCount = 0, globalAnsweredCount = 0;
   const maxPossibleAnswerValue = possibleAnswers.reduce((max, pa) => {
@@ -179,7 +182,7 @@ export function computeProgressPerCompetency (
         for (let answer of answeredQuestions) {
           if (answer.questionGlobalIndex < maxGlobalIndex && answer.questionGlobalIndex >= currentGlobalIndex) {
             currentsubCompetenciesResults += getRealValueFromPossibleValue(possibleAnswers, answer.answerId);
-            subCompetencyAnsweredCount += isUnknownValue(possibleAnswers, answer.answerId) ? 0 : 1;
+            subCompetencyAnsweredCount += isUnknownValue(settings, answer.answerId) ? 0 : 1;
           }
         }
         currentGlobalIndex += compContext.questions.length;
@@ -214,6 +217,8 @@ export function computeProgressPerCompetency (
   };
 }
 
+// TODO ; clarify this: do we need a real value ???
+
 /**
  * Get real value (i.e. answer.realValue if provided or just answerId if not)
  * @param possibleAnswers
@@ -234,25 +239,38 @@ export function getRealValueFromPossibleValue (possibleAnswers, answerId) {
  * @param answerId
  * @return {Requireable<number>|*}
  */
-export function getTextValueFromPossibleValue (possibleAnswers, answerId) {
-  const answer = possibleAnswers.find((answ) => answ.id === answerId);
-  return answer ? answer.text : '';
+export function getTextValueFromPossibleValue (settings, questionData, answerId) {
+  const answer = settings.possibleAnswers.find((answ) => answ.id === answerId);
+  if (answer === undefined) {
+    return '';
+  }
+  const answerIndex = settings.possibleAnswers.findIndex((answ) => answ.id === answerId);
+  return typeof questionData.answerLabelsOverride != 'undefined' ?
+    questionData.answerLabelsOverride[answerIndex] : answer.text;
 }
 
-export function isAcquiredAnswer (possibleAnswers, answerId) {
-  const answer = possibleAnswers.find((answ) => answ.id === answerId);
-  return Boolean(answer && answer.isAcquired);
+export function isAcquiredAnswer (settings, questionData, answerId) {
+  // First find the identifier in the list of possible answers
+  const answer = settings.possibleAnswers.find((answ) => answ.id === answerId);
+  // Then check for the level of acquisition
+  if (answer === undefined) {
+    return false;
+  }
+  const levelOfAcquisition = typeof questionData.acquisitionThreshold != 'undefined' ?
+    questionData.acquisitionThreshold : settings.acquisitionThreshold;
+  return answerId >= levelOfAcquisition;
 }
 
+// TODO Change from possibleAnswer to settings
 /**
  * Check if the value is "I don't know" or not
  * @param possibleAnswers
  * @param answerId
  * @return {*|boolean}
  */
-export function isUnknownValue (possibleAnswers, answerId) {
-  const answer = possibleAnswers.find((answ) => answ.answerId === answerId);
-  return answer && typeof answer.unknown !== 'undefined' && answer.unknown;
+export function isUnknownValue (settings, answerId) {
+  const answer = settings.possibleAnswers.find((answ) => answ.id === answerId);
+  return Boolean(answer && (settings.unknownValueId === answerId)) ;
 }
 
 /**
@@ -344,7 +362,7 @@ export function truncateLabel (text, MAXCHAR) {
 export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSubCompetencies,
                                                      answeredQuestion,
                                                      resources,
-                                                     possibleAnswers,
+                                                     settings,
                                                      competencyIndex,
                                                      subCompetencyIndex) {
 
@@ -358,13 +376,13 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
     const contextTotalScore = answeredQuestion.reduce((acc, answer) => {
       const qi = answer.questionGlobalIndex - minQuestionIndexForContext;
       return acc + ((qi >= 0 && qi < contextTotalQuestionCount) ?
-        getRealValueFromPossibleValue(possibleAnswers, answer.answerId) : 0);
+        getRealValueFromPossibleValue(settings.possibleAnswers, answer.answerId) : 0);
     }, 0);
     const contextQA = answeredQuestion.reduce((acc, answer) => {
       const qi = answer.questionGlobalIndex - minQuestionIndexForContext;
       if (qi >= 0 && qi < contextTotalQuestionCount) {
         acc.push({
-          label: context.questions[qi],
+          questionData: context.questions[qi],
           answer: answer.answerId
         });
       }

@@ -9,14 +9,14 @@ export default { title: 'Results' };
 
 export const resultsPage = () => <RoutedResultsPage
   questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
-  possibleAnswers={sampleData.settings.possibleAnswers}
+  settings={sampleData.settings}
   answeredQuestions={sampleAnswerData}
   resources={sampleData.resources}
 />;
 
 export const resultsPageRandom = () => <RoutedResultsPage
   questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
-  possibleAnswers={sampleData.settings.possibleAnswers}
+  settings={sampleData.settings}
   answeredQuestions={sampleAnswerGenerator(getTotalQuestionCount(sampleData.questionsByCompetencyAndSubCompetencies))}
   resources={sampleData.resources}
 />;

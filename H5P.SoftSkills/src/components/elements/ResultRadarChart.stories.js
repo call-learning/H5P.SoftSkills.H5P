@@ -12,7 +12,7 @@ window.H5P = H5P;
 const allCompetenciesResults = computeProgressPerCompetency(
   sampleData.questionsByCompetencyAndSubCompetencies,
   sampleAnswerGenerator(getTotalQuestionCount(sampleData.questionsByCompetencyAndSubCompetencies)),
-  sampleData.settings.possibleAnswers
+  sampleData.settings
 );
 
 

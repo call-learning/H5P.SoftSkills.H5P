@@ -12,7 +12,7 @@ export default { title: 'Results' };
 const allCompetenciesResults = computeProgressPerCompetency(
   sampleData.questionsByCompetencyAndSubCompetencies,
   sampleAnswerGenerator(getTotalQuestionCount(sampleData.questionsByCompetencyAndSubCompetencies)),
-  sampleData.settings.possibleAnswers
+  sampleData.settings
 );
 
 export const competencyResultsPage = () => <CompetencyResultsPage

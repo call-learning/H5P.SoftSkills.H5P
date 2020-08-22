@@ -86,15 +86,50 @@
                       "expanded": false,
                       "min": 1,
                       "defaultNum": 1,
-                      "isSubContent": true,
                       "field": {
                         "name": "question",
-                        "type": "text",
-                        "label": "Question Text",
-                        "widget": "html",
-                        "tags": [
-                          "strong",
-                          "em"
+                        "type": "group",
+                        "label": "Question",
+                        "importance": "high",
+                        "fields": [
+                          {
+                            "name": "label",
+                            "type": "text",
+                            "label": "Question Text",
+                            "widget": "html",
+                            "tags": [
+                              "strong",
+                              "em"
+                            ]
+                          },
+                          {
+                            "name": "answerLabelsOverride",
+                            "type": "list",
+                            "label": "Answer Label Override",
+                            "importance": "low",
+                            "expanded": false,
+                            "optional": true,
+                            "field": {
+                              "name": "text",
+                              "type": "text",
+                              "label": "Answer Text",
+                              "widget": "text"
+                            }
+                          },
+                          {
+                            "name": "acquiredThreshold",
+                            "type": "number",
+                            "optional": true,
+                            "label": "Threshold for Acquired Value",
+                            "importance": "low"
+                          },
+                          {
+                            "name": "badgeThreshold",
+                            "type": "number",
+                            "optional": true,
+                            "label": "Threshold for Badge Value",
+                            "importance": "low"
+                          }
                         ]
                       }
                     }
@@ -325,18 +360,30 @@
               "type": "number",
               "label": "Answer Value",
               "importance": "high"
-            },
-            {
-              "name": "isAcquired",
-              "type": "boolean",
-              "label": "Acquired?",
-              "importance": "high",
-              "default": false
             }
           ]
         }
+      },
+      {
+        "name": "acquiredThreshold",
+        "type": "number",
+        "label": "Threshold for Acquired Value",
+        "importance": "low"
+      },
+      {
+        "name": "badgeThreshold",
+        "type": "number",
+        "label": "Threshold for Badge Value",
+        "importance": "low"
+      },
+      {
+        "name": "unknownValueId",
+        "type": "number",
+        "label": "Id of the answer for Unknown value",
+        "importance": "low"
       }
     ]
+
   },
   {
     "name": "l10n",
