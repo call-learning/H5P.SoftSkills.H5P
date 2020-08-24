@@ -11,7 +11,6 @@ Réalisé pour l'[HESAM](https://www.hesam.eu/article-soka-un-projet-de-valorisa
 
 # TODO
 
-* Changer la barre de progression pour refleter la compétence et non pas la sous-compétence
 * Associer la resource à la question
 * Ajouter la mention de la licence
 * Ajouter la dépendence (bug sur le plugin moodle) :

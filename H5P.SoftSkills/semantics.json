@@ -371,7 +371,7 @@
         "importance": "low"
       },
       {
-        "name": "badgeThreshold",
+        "name": "hideResourceThreshold",
         "type": "number",
         "label": "Threshold for Badge Value",
         "importance": "low"

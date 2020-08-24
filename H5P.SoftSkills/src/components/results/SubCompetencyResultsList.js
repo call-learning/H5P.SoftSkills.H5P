@@ -112,20 +112,16 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                       }
                     </Box>
 
-                    {
-                      context.value > SUCCESS_THRESHOLD ? '' : (
-                        <Box>
-                          <Box>
-                            <Typography variant="h4"><H5PTranslatedText text='ourAdvice'/></Typography>
-                          </Box>
-                          <Box display="flex" flexDirection="row" width="100%">
-                            {
-                              context.resources.map((resource) => <Resource key={resource.id} resource={resource}/>)
-                            }
-                          </Box>
-                        </Box>
-                      )
-                    }
+                    <Box>
+                      <Box>
+                        <Typography variant="h4"><H5PTranslatedText text='ourAdvice'/></Typography>
+                      </Box>
+                      <Box display="flex" flexDirection="row" width="100%">
+                        {
+                          context.resources.map((resource) => <Resource key={resource.id} resource={resource}/>)
+                        }
+                      </Box>
+                    </Box>
                   </Box>
                 </ExpansionPanelDetails>
               </ExpansionPanel>

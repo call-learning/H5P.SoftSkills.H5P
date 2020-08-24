@@ -5,7 +5,7 @@
 The base directory contains just a makefile that will collect all assets (the 
 javascript module and attached files) and zip it into a h5p file.
 
-The real H5P application is in the H5P.SoftSkills subfolder and you will find the
+The real H5P application is in the H5P.SoftSkills sub-folder and you will find the
 usual semantics.json, library.json...
  
 ## Dependencies
@@ -47,7 +47,7 @@ There are specifics configurations setup for this project in the nwb.config.js:
 
 ## Global Architecture
 
-Here are few notes on some decision and ways we architectured the application.
+Here are few notes on some decision and ways we architected the application.
 
 ### Global architecture
 
@@ -71,9 +71,10 @@ To avoid duplications most properties are defined in the utils/CommonProptypes.j
 
 To avoid passing down information such as translation string, questionnaire content, 
 context id, we are using the new Context feature from React (https://fr.reactjs.org/docs/context.html)
-In many way we did not want "Dumb" components to be aware of the context so we wrapped it in 
+In many ways we did not want "Dumb" components to be aware of the context, so we wrapped it in 
 entities such as Containers or H5PTranslatedText entity.
 
+ 
 ### H5P specifics
 
 * Translation could be managed otherwise but to be consistent with other H5P applications
@@ -89,6 +90,20 @@ Redux is used to store and manage
 * Store answers to questions
 * Store position of the current page in the questionnaire 
 
+#### Redux and Thunk
+
+We use the traditional reducers so to keep the state of the application, and the question that
+the user answered. We use the answers to then calculate the user's progress and display the graphs.
+
+The reducers are in the "reducer" folder, actions are in the "actions" folder and action Types in
+the constant/actionTypes.js file.
+
+Thunk is used so to help with potentially chained actions (such as starting the questionnaire AND
+reinitialising the questionnaire position). As states are managed in an independent manner (for example
+currentStep is not aware of the values of navigation), thunk was a great way to reconcile and orchestrate
+actions and maintain a consistent state across different subsections of the global state (see 
+constants/initialState.js) whilst avoiding repetitive code.
+
 ### React Router for navigating into results
 
 We used React Router to create navigation between different pages of the Results pages
@@ -100,9 +115,9 @@ We use Questionnaire.css to import the font definitions.
 If a component overrides styles it is only for a local use and if repeated it should
 be brought up into the theme.
 
-### Note on mockup and fontsize
+### Note on the mockup and fontsize
 
-* Normal font: 17px, line height 20px : body1
+* The normal font: 17px, line height 20px : body1
 * Big Title top of the page: 36px, line height 48px : h3
 * Title top of the page: 24, line height 29px: h4
 * Title in the page (not underlined): 24px, line height 29px: subtitle1 

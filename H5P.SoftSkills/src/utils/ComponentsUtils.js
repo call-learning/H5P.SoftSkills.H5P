@@ -182,7 +182,7 @@ export function computeProgressPerCompetency (
         for (let answer of answeredQuestions) {
           if (answer.questionGlobalIndex < maxGlobalIndex && answer.questionGlobalIndex >= currentGlobalIndex) {
             currentsubCompetenciesResults += getRealValueFromPossibleValue(possibleAnswers, answer.answerId);
-            subCompetencyAnsweredCount += isUnknownValue(settings, answer.answerId) ? 0 : 1;
+            subCompetencyAnsweredCount += 1;
           }
         }
         currentGlobalIndex += compContext.questions.length;
@@ -354,7 +354,7 @@ export function truncateLabel (text, MAXCHAR) {
  * @param questionsByCompetencyAndSubCompetencies
  * @param answeredQuestion
  * @param resources
- * @param possibleAnswers
+ * @param settings
  * @param competencyIndex
  * @param subCompetencyIndex
  * @return {[]}
@@ -383,6 +383,7 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
       if (qi >= 0 && qi < contextTotalQuestionCount) {
         acc.push({
           questionData: context.questions[qi],
+          questionGlobalIndex: answer.questionGlobalIndex,
           answer: answer.answerId
         });
       }
@@ -396,6 +397,28 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
         if (ref.competencyId === competencyIndex
           && ref.subCompetencyId === subCompetencyIndex
           && ref.contextId === contextIndex) {
+          if (typeof ref.questionIndex != 'undefined') {
+            // If resource is up to index we only display the resource if question has an answer greater than the
+            // threshold.
+            if ((context.questions.length > ref.questionIndex)){
+              const question  = context.questions[ref.questionIndex];
+              const hideResourceThreshold = typeof question.hideResourceThreshold === 'undefined' ?
+                settings.hideResourceThreshold :  question.hideResourceThreshold;
+
+              const questionGlobalIndex = getGlobalQuestionIndex(
+                questionsByCompetencyAndSubCompetencies,
+                competencyIndex,
+                subCompetencyIndex,
+                contextIndex,
+                ref.questionIndex);
+              const answeredQuestion = contextQA.find(
+                (element) => (element.questionGlobalIndex === questionGlobalIndex)
+              )
+              if (answeredQuestion.answer > hideResourceThreshold) {
+                continue; // We don't add the resource to the list as the user has answer correctly.
+              }
+            }
+          }
           const currentResourceWID = Object.assign({ id: stringToHashCode(resource.content) }, resource);
           acc.set(contextIndex, currentResourceWID);
         }

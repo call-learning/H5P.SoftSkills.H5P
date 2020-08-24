@@ -1,8 +1,7 @@
 import React from 'react';
-import H5P from '../src/utils/H5P.mock';
 import { sampleData, sampleAnswerData } from '../src/utils/StoriesUtils';
 import { afterEach } from '@jest/globals';
-import { cleanup, render } from '@testing-library/react';
+import { cleanup } from '@testing-library/react';
 import {
   computeProgressPerCompetency,
   getCompetencyImageFromIndex,
@@ -123,7 +122,7 @@ test('computeProgressPerCompetency', () => {
     smallerQuestionnaireData.settings)).toEqual(
     {
       'competenciesResults': [{
-        'label': 'Compétences sociales',
+        'label': 'Compétences Sociales',
         'subCompetenciesResults': [{
           'label': 'Manager une équipe',
           'totalAnswered': 11,
