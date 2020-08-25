@@ -18,15 +18,6 @@ import {
   truncateLabel
 } from '../src/utils/ComponentsUtils';
 
-const smallerQuestionnaireData = {
-  questionsByCompetencyAndSubCompetencies:
-    sampleData.questionsByCompetencyAndSubCompetencies.map(
-      (competency) => ({ ...competency, ...{ subCompetencies: competency.subCompetencies.splice(1) } })
-    ),
-  settings: sampleData.settings,
-  resources: sampleData.resources,
-};
-
 afterEach(cleanup);
 
 test('getCompetencyImageFromIndex from first competenty', () => {
@@ -37,67 +28,67 @@ test('getCompetencyImageFromIndex from first competenty', () => {
 });
 
 test('getProgressData Start of questionnaire', () => {
-  expect(getProgressData(smallerQuestionnaireData.questionsByCompetencyAndSubCompetencies, sampleAnswerData)).toEqual({
-    'answeredQuestionsCount': 51,
-    'questionsCount': 51,
-    'competenciesProgress': [
+  expect(getProgressData(sampleData.questionsByCompetencyAndSubCompetencies, sampleAnswerData)).toEqual({
+    "answeredQuestionsCount": 67,
+    "competenciesProgress": [
       {
-        'answeredQuestionsCount': 11,
-        'questionsCount': 11
+        "answeredQuestionsCount": 27,
+        "questionsCount": 27
       },
       {
-        'answeredQuestionsCount': 13,
-        'questionsCount': 13
+        "answeredQuestionsCount": 11,
+        "questionsCount": 11
       },
       {
-        'answeredQuestionsCount': 27,
-        'questionsCount': 27
+        "answeredQuestionsCount": 29,
+        "questionsCount": 29
       }
-    ]
+    ],
+    "questionsCount": 67
   });
 });
 
 test('getTotalQuestionCount', () => {
-  expect(getTotalQuestionCount(smallerQuestionnaireData.questionsByCompetencyAndSubCompetencies)).toEqual(51);
+  expect(getTotalQuestionCount(sampleData.questionsByCompetencyAndSubCompetencies)).toEqual(67);
 });
 
 test('getTotalQuestionCountCompetency', () => {
-  expect(getTotalQuestionCountCompetency(smallerQuestionnaireData.questionsByCompetencyAndSubCompetencies[0])).toEqual(11);
+  expect(getTotalQuestionCountCompetency(sampleData.questionsByCompetencyAndSubCompetencies[0])).toEqual(27);
 });
 
 test('getGlobalQuestionIndex simple', () => {
   expect(getGlobalQuestionIndex(
-    smallerQuestionnaireData.questionsByCompetencyAndSubCompetencies,
+    sampleData.questionsByCompetencyAndSubCompetencies,
     1,
     0,
     0,
     0
-  )).toEqual(11);
+  )).toEqual(27);
 });
 
 test('getGlobalQuestionIndex next competency', () => {
   expect(getGlobalQuestionIndex(
-    smallerQuestionnaireData.questionsByCompetencyAndSubCompetencies,
+    sampleData.questionsByCompetencyAndSubCompetencies,
     1,
     1,
     0,
     0
-  )).toEqual(13);
+  )).toEqual(30);
 });
 
 test('getGlobalQuestionIndex wrong question index', () => {
   expect(getGlobalQuestionIndex(
-    smallerQuestionnaireData.questionsByCompetencyAndSubCompetencies,
+    sampleData.questionsByCompetencyAndSubCompetencies,
     1,
     1,
     0,
     156
-  )).toEqual(16);
+  )).toEqual(34);
 });
 
 test('getComponentIndexesFromGlobalQuestionIndex first question', () => {
   expect(getComponentIndexesFromGlobalQuestionIndex(
-    smallerQuestionnaireData.questionsByCompetencyAndSubCompetencies, 1)).toEqual({
+    sampleData.questionsByCompetencyAndSubCompetencies, 1)).toEqual({
     competencyIndex: 0,
     subCompetencyIndex: 0,
     contextIndex: 0,
@@ -107,7 +98,7 @@ test('getComponentIndexesFromGlobalQuestionIndex first question', () => {
 
 test('getComponentIndexesFromGlobalQuestionIndex first competency', () => {
   expect(getComponentIndexesFromGlobalQuestionIndex(
-    smallerQuestionnaireData.questionsByCompetencyAndSubCompetencies, 13)).toEqual({
+    sampleData.questionsByCompetencyAndSubCompetencies, 30)).toEqual({
     competencyIndex: 1,
     subCompetencyIndex: 1,
     contextIndex: 0,
@@ -117,243 +108,166 @@ test('getComponentIndexesFromGlobalQuestionIndex first competency', () => {
 
 test('computeProgressPerCompetency', () => {
   expect(computeProgressPerCompetency(
-    smallerQuestionnaireData.questionsByCompetencyAndSubCompetencies,
+    sampleData.questionsByCompetencyAndSubCompetencies,
     sampleAnswerData,
-    smallerQuestionnaireData.settings)).toEqual(
+    sampleData.settings)).toEqual(
     {
-      'competenciesResults': [{
-        'label': 'Compétences Sociales',
-        'subCompetenciesResults': [{
-          'label': 'Manager une équipe',
-          'totalAnswered': 11,
-          'totalQuestions': 11,
-          'value': 61
-        }],
-        'totalAnswered': 11,
-        'totalQuestions': 11,
-        'value': 61
-      }, {
-        'label': 'Compétences Personnelles',
-        'subCompetenciesResults': [{
-          'label': 'Adaptabilité',
-          'totalAnswered': 2,
-          'totalQuestions': 2,
-          'value': 70
-        }, {
-          'label': 'Le leadership: un des leviers pour mener et conduire des individus ou des organisations',
-          'totalAnswered': 3,
-          'totalQuestions': 3,
-          'value': 53
-        }, {
-          'label': 'L’éthique',
-          'totalAnswered': 4,
-          'totalQuestions': 4,
-          'value': 60
-        }, { 'label': 'L’esprit critique', 'totalAnswered': 4, 'totalQuestions': 4, 'value': 70 }],
-        'totalAnswered': 13,
-        'totalQuestions': 13,
-        'value': 63
-      }, {
-        'label': 'Compétences Méthodologiques',
-        'subCompetenciesResults': [{
-          'label': 'Négocier',
-          'totalAnswered': 5,
-          'totalQuestions': 5,
-          'value': 60
-        }, {
-          'label': 'Conduire un projet',
-          'totalAnswered': 13,
-          'totalQuestions': 13,
-          'value': 64
-        }, {
-          'label': 'Résoudre un problème',
-          'totalAnswered': 5,
-          'totalQuestions': 5,
-          'value': 56
-        }, {
-          'label': 'Faire preuve de créativité, chercher à innover et à entreprendre',
-          'totalAnswered': 4,
-          'totalQuestions': 4,
-          'value': 55
-        }],
-        'totalAnswered': 27,
-        'totalQuestions': 27,
-        'value': 58
-      }], 'totalAnswered': 27, 'totalQuestions': 27, 'value': 61
+      "competenciesResults": [
+        {
+          "label": "Compétences Sociales",
+          "subCompetenciesResults": [
+            {
+              "label": "Communiquer pour transmettre des idées et des informations nécessaires au travail",
+              "totalAnswered": 11,
+              "totalQuestions": 11,
+              "value": 70
+            },
+            {
+              "label": "Manager une équipe",
+              "totalAnswered": 11,
+              "totalQuestions": 11,
+              "value": 61
+            },
+            {
+              "label": "Le leadership: un des leviers pour mener et conduire des individus ou des organisations",
+              "totalAnswered": 3,
+              "totalQuestions": 3,
+              "value": 66
+            },
+            {
+              "label": "S'adapter",
+              "totalAnswered": 2,
+              "totalQuestions": 2,
+              "value": 80
+            }
+          ],
+          "totalAnswered": 27,
+          "totalQuestions": 27,
+          "value": 69
+        },
+        {
+          "label": "Compétences Personnelles",
+          "subCompetenciesResults": [
+            {
+              "label": "Identification des apprentissages liés à mon activité professionnelle",
+              "totalAnswered": 3,
+              "totalQuestions": 3,
+              "value": 80
+            },
+            {
+              "label": "L’éthique",
+              "totalAnswered": 4,
+              "totalQuestions": 4,
+              "value": 60
+            },
+            {
+              "label": "L’esprit critique",
+              "totalAnswered": 4,
+              "totalQuestions": 4,
+              "value": 60
+            }
+          ],
+          "totalAnswered": 11,
+          "totalQuestions": 11,
+          "value": 66
+        },
+        {
+          "label": "Compétences Méthodologiques",
+          "subCompetenciesResults": [
+            {
+              "label": "Se tenir au courant des nouvelles technologies et de nouveaux développements",
+              "totalAnswered": 2,
+              "totalQuestions": 2,
+              "value": 80
+            },
+            {
+              "label": "Négocier",
+              "totalAnswered": 5,
+              "totalQuestions": 5,
+              "value": 72
+            },
+            {
+              "label": "Conduire un projet",
+              "totalAnswered": 13,
+              "totalQuestions": 13,
+              "value": 63
+            },
+            {
+              "label": "Résoudre un problème",
+              "totalAnswered": 5,
+              "totalQuestions": 5,
+              "value": 72
+            },
+            {
+              "label": "Faire preuve de créativité, chercher à innover et à entreprendre",
+              "totalAnswered": 4,
+              "totalQuestions": 4,
+              "value": 70
+            }
+          ],
+          "totalAnswered": 29,
+          "totalQuestions": 29,
+          "value": 71
+        }
+      ],
+      "totalAnswered": 67,
+      "totalQuestions": 67,
+      "value": 69.10555555555557
     }
-  );
-});
+  )
+  ;
+})
+;
 
 test('getRealValueFromPossibleValue', () => {
-  expect(getRealValueFromPossibleValue(smallerQuestionnaireData.settings.possibleAnswers, 1)).toEqual(1);
+  expect(getRealValueFromPossibleValue(sampleData.settings.possibleAnswers, 1)).toEqual(1);
 });
 
 test('isUnknownValue', () => {
-  expect(isUnknownValue(smallerQuestionnaireData.settings, 1)).toBeTruthy()
-  expect(isUnknownValue(smallerQuestionnaireData.settings, 2)).toBeFalsy();
-  expect(isUnknownValue(smallerQuestionnaireData.settings, 60)).toBeFalsy();
+  expect(isUnknownValue(sampleData.settings, 1)).toBeTruthy();
+  expect(isUnknownValue(sampleData.settings, 2)).toBeFalsy();
+  expect(isUnknownValue(sampleData.settings, 60)).toBeFalsy();
 });
 
 test('getSubCompetencyResultsAndResources', () => {
-  const expectedResults = [
+  const expectedResults =
     {
-      'label': 'Je suis amené(e) à manager une équipe',
-      'questionsAnswers': [
+      "label": "Je suis amené(e) à rédiger un document écrit dans une situation professionnelle précise:",
+      "questionsAnswers": [
         {
-          'answer': 4,
-          'questionData': {
-            'answerLabelsOverride': [
-              'Tout à fait d\'accord',
-              'Plutôt d\'accord',
-              'D\'accord',
-              'Plutôt pas d\'accord',
-              'Pas d\'accord'
-            ],
-            'label': 'Je comprends les enjeux et les principes d’animation d’une équipe dans un contexte professionnel.'
-          }
-        },
-        {
-          'answer': 3,
-          'questionData': {
-            'answerLabelsOverride': [
-              'Tout à fait d\'accord',
-              'Plutôt d\'accord',
-              'D\'accord',
-              'Plutôt pas d\'accord',
-              'Pas d\'accord'
-            ],
-            'label': 'Je sais (re)formuler les consignes pour que mes collaborateurs comprennent ce qui est attendu d’eux.'
-          }
-        },
-        {
-          'answer': 1,
-          'questionData': {
-            'label': 'J’échange avec mes interlocuteurs en appliquant les principes de l’écoute active.'
-          }
-        },
-        {
-          'answer': 3,
-          'questionData': {
-            'label': 'Pour accompagner le travail de mes collaborateurs, je fais preuve d’empathie et je favorise l’échange.'
-          }
-        }
-      ],
-      'resources': [],
-      'value': 2
-    },
-    {
-      'label': 'Manager une équipe, c’est aussi identifier et reconnaître les compétences de ses collaborateurs',
-      'questionsAnswers': [
-        {
-          'answer': 3,
-          'questionData': {
-            'label': 'Je mets en place des méthodes et des outils d’évaluation des compétences.'
-          }
-        },
-        {
-          'answer': 3,
-          'questionData': {
-            'label': 'Je mets en place des actions de valorisation des activités de mes collaborateurs.'
-          }
-        },
-        {
-          'answer': 4,
-          'questionData': {
-            'label': 'Je mets en place des actions pour développer les compétences de mes collaborateurs.'
-          }
-        }
-      ],
-      'resources': [],
-      'value': 3
-    },
-    {
-      'label': 'En tant que manager d’équipe, une de mes missions est la prévention des tensions et conflits',
-      'questionsAnswers': [
-        {
-          'answer': 4,
-          'questionData': {
-            'label': 'Je sais repérer les signaux faibles pour déterminer les situations de malaise.'
-          }
-        },
-        {
-          'answer': 3,
-          'questionData': {
-            'answerLabelsOverride': [
-              'Tout à fait d\'accord',
-              'Plutôt d\'accord',
-              'D\'accord',
-              'Plutôt pas d\'accord',
-              'Pas d\'accord'
-            ],
-            'label': 'Je sais mettre en place un plan de prévention pour éviter les tensions et les conflits.'
-          }
-        }
-      ],
-      'resources': [
-        {
-          'content': '<p>La suite Office dispose de correcteurs orthographiques intégrés qui vous permettent de corriger la plupart des fautes d’orthographe et de grammaire. Voir comment utiliser le correcteur ortographique dans Word, Excel & Powerpoint.<br> <a href="http://microsoft.com" target="_blank">www.microsoft.com</a></p>\n',
-          'id': '3216496693',
-          'image': {
-            'params': {
-              'contentName': 'Image',
-              'file': {
-                'copyright': {
-                  'license': 'U'
-                },
-                'height': 1024,
-                'mime': 'image/png',
-                'path': 'images/microsoft-logo.png',
-                'width': 864
-              }
-            }
+          "answer": 5,
+          "questionData": {
+            "acquisitionThreshold": 5,
+            "label": "Lors de la rédaction, je prends en considération mon public cible et j’adapte mon langage."
           },
-          'references': '0:1:1,0:0:2'
-        }
-      ],
-      'value': 3
-    },
-    {
-      'label': 'En tant que manager d’équipe, je suis amené(e) à gérer des tensions et des conflits.',
-      'questionsAnswers': [
-        {
-          'answer': 3,
-          'questionData': {
-            'answerLabelsOverride': [
-              'Tout à fait d\'accord',
-              'Plutôt d\'accord',
-              'D\'accord',
-              'Plutôt pas d\'accord',
-              'Pas d\'accord'
-            ],
-            'label': 'Je sais me mettre dans une posture d’écoute et de médiation pour désamorcer les tensions et les conflits.'
-          }
+          "questionGlobalIndex": 0
         },
         {
-          'answer': 3,
-          'questionData': {
-            'answerLabelsOverride': [
-              'Tout à fait d\'accord',
-              'Plutôt d\'accord',
-              'D\'accord',
-              'Plutôt pas d\'accord',
-              'Pas d\'accord'
-            ],
-            'label': 'Je sais mettre en place des plans d’action et de suivi des solutions.'
-          }
+          "answer": 3,
+          "questionData": {
+            "label": "Je choisis le format et j’adapte mon registre à la situation (rapport, power point, mail, lettre interne, note de service, réseau social interne)."
+          },
+          "questionGlobalIndex": 1
         }
       ],
-      'resources': [],
-      'value': 3
-    }
-  ];
+      "resources": [
+        {
+          "content": "<p>Bref récapitulatif des règles de caractéristique de l’écrit professionnel par un enseignant du CNED, Claude Terrier.  \nVoir spécifiquement la partie D5 «Communication» point 1 «Enjeux et concepts de base». Le site propose des exercices avec leurs corrigés.<a href=\"http://www.bts-g-pme.com/\" target=\"_blank\">http://www.bts-g-pme.com/</a></p>",
+          "id": "2315897904",
+          "references": "0:0:0:1",
+          "type": "document"
+        }
+      ],
+      "value": 4
+    };
 
   expect(getSubCompetencyResultsAndResources(
-    smallerQuestionnaireData.questionsByCompetencyAndSubCompetencies,
+    sampleData.questionsByCompetencyAndSubCompetencies,
     sampleAnswerData,
-    smallerQuestionnaireData.resources,
-    smallerQuestionnaireData.settings,
+    sampleData.resources,
+    sampleData.settings,
     0,
-    0)).toEqual(expectedResults);
+    0)).toContainEqual(expectedResults);
 });
 
 test('stringToHashCode', () => {
@@ -402,24 +316,24 @@ test('getTextValueFromPossibleValue', () => {
   ];
   const sampleQuestionData = { 'label': 'Test question' };
 
-  expect(getTextValueFromPossibleValue(smallerQuestionnaireData.settings, sampleQuestionData, 3)).toEqual('Parfois');
-  expect(getTextValueFromPossibleValue(smallerQuestionnaireData.settings, sampleQuestionData, 2)).toEqual('Jamais');
-  expect(getTextValueFromPossibleValue(smallerQuestionnaireData.settings, sampleQuestionData, 50)).toEqual('');
-  expect(getTextValueFromPossibleValue(smallerQuestionnaireData.settings,
+  expect(getTextValueFromPossibleValue(sampleData.settings, sampleQuestionData, 3)).toEqual('Parfois');
+  expect(getTextValueFromPossibleValue(sampleData.settings, sampleQuestionData, 2)).toEqual('Jamais');
+  expect(getTextValueFromPossibleValue(sampleData.settings, sampleQuestionData, 50)).toEqual('');
+  expect(getTextValueFromPossibleValue(sampleData.settings,
     { 'label': 'Test question', 'answerLabelsOverride': answerOverride }, 1)).toEqual('Pas d\'accord');
-  expect(getTextValueFromPossibleValue(smallerQuestionnaireData.settings,
+  expect(getTextValueFromPossibleValue(sampleData.settings,
     { 'label': 'Test question', 'answerLabelsOverride': answerOverride }, 5)).toEqual('Tout à fait d\'accord');
 });
 
 test('isAcquiredAnswer', () => {
   const sampleQuestionData = { 'label': 'Test question' };
   const modifiedQuestionData = { 'label': 'Test question', 'acquisitionThreshold': 2 };
-  expect(isAcquiredAnswer(smallerQuestionnaireData.settings, sampleQuestionData, 5)).toEqual(true);
-  expect(isAcquiredAnswer(smallerQuestionnaireData.settings, sampleQuestionData, 4)).toEqual(true);
-  expect(isAcquiredAnswer(smallerQuestionnaireData.settings, sampleQuestionData, 3)).toEqual(false);
-  expect(isAcquiredAnswer(smallerQuestionnaireData.settings, modifiedQuestionData, 3)).toEqual(true);
-  expect(isAcquiredAnswer(smallerQuestionnaireData.settings, modifiedQuestionData, 2)).toEqual(true);
-  expect(isAcquiredAnswer(smallerQuestionnaireData.settings, modifiedQuestionData, 1)).toEqual(false);
+  expect(isAcquiredAnswer(sampleData.settings, sampleQuestionData, 5)).toEqual(true);
+  expect(isAcquiredAnswer(sampleData.settings, sampleQuestionData, 4)).toEqual(true);
+  expect(isAcquiredAnswer(sampleData.settings, sampleQuestionData, 3)).toEqual(false);
+  expect(isAcquiredAnswer(sampleData.settings, modifiedQuestionData, 3)).toEqual(true);
+  expect(isAcquiredAnswer(sampleData.settings, modifiedQuestionData, 2)).toEqual(true);
+  expect(isAcquiredAnswer(sampleData.settings, modifiedQuestionData, 1)).toEqual(false);
 
 });
 

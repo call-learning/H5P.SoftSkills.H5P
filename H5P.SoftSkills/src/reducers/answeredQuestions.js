@@ -1,6 +1,5 @@
 import initialState from '../constants/initialState';
 import * as types from '../constants/actionTypes';
-import { questionnaire } from '../constants/actionTypes';
 
 export function answeredQuestions (state = initialState.answeredQuestions, action) {
   switch (action.type) {
@@ -8,7 +7,7 @@ export function answeredQuestions (state = initialState.answeredQuestions, actio
       const { questionGlobalIndex, answerId } = action;
       let nextState = [...state];
       const answerIndex= nextState.findIndex(
-        answer => (answer.questionGlobalIndex === questionGlobalIndex)
+        answer => (answer.questionGlobalIndex === Number(questionGlobalIndex))
       )
       if (answerIndex === -1) {
         nextState.push({

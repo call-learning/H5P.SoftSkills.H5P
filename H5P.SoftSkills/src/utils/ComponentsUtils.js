@@ -206,8 +206,8 @@ export function computeProgressPerCompetency (
       totalAnswered: competencyAnsweredCount
     });
     globalResult += categoryResults;
-    globalQuestionsCount = +competencyQuestionsCount;
-    globalAnsweredCount = +competencyAnsweredCount;
+    globalQuestionsCount +=competencyQuestionsCount;
+    globalAnsweredCount +=competencyAnsweredCount;
   }
   return {
     value: globalResult / questionsByCompetencyAndSubCompetencies.length,

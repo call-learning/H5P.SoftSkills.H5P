@@ -435,6 +435,58 @@
               ]
             }
           ]
+        },
+        {
+          "label": "Le leadership: un des leviers pour mener et conduire des individus ou des organisations",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "",
+              "isVisible": false,
+              "questions": [
+                {
+                  "label": "Je stimule et valorise l’apport de chacun dans l’atteinte des objectifs.",
+                  "hideResourceThreshold": 9999
+                },
+                {
+                  "label": "Je fais en sorte que mes actions et mes attitudes soient cohérentes avec mon discours.",
+                  "hideResourceThreshold": 9999
+                },
+                {
+                  "label": "Je sais communiquer et faire accepter une décision.",
+                  "hideResourceThreshold": 9999
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "S'adapter",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "",
+              "isVisible": false,
+              "questions": [
+                {
+                  "label": "Lorsque je le considère nécessaire, je suis capable de m’adapter aux codes des environnements dans lesquels j’évolue.",
+                  "answerLabelsOverride":  [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
+                  "acquisitionThreshold": 5,
+                  "hideResourceThreshold": 9999
+                },
+                {
+                  "label": "Je modifie mon action afin de m’adapter à des aléas.",
+                  "acquisitionThreshold": 5
+                }
+              ]
+            }
+          ]
         }
       ],
       "label": "Compétences Sociales"
@@ -469,58 +521,6 @@
                       "Pas d'accord"
                     ],
                   "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Adaptabilité",
-          "isVisible": true,
-          "contexts": [
-            {
-              "label": "",
-              "isVisible": false,
-              "questions": [
-                {
-                  "label": "Lorsque je le considère nécessaire, je suis capable de m’adapter aux codes des environnements dans lesquels j’évolue.",
-                  "answerLabelsOverride":  [
-                      "Tout à fait d'accord",
-                      "Plutôt d'accord",
-                      "D'accord",
-                      "Plutôt pas d'accord",
-                      "Pas d'accord"
-                    ],
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
-                },
-                {
-                  "label": "Je modifie mon action afin de m’adapter à des aléas.",
-                  "acquisitionThreshold": 5
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Le leadership: un des leviers pour mener et conduire des individus ou des organisations",
-          "isVisible": true,
-          "contexts": [
-            {
-              "label": "",
-              "isVisible": false,
-              "questions": [
-                {
-                  "label": "Je stimule et valorise l’apport de chacun dans l’atteinte des objectifs.",
-                  "hideResourceThreshold": 9999
-                },
-                {
-                  "label": "Je fais en sorte que mes actions et mes attitudes soient cohérentes avec mon discours.",
-                  "hideResourceThreshold": 9999
-                },
-                {
-                  "label": "Je sais communiquer et faire accepter une décision.",
                   "hideResourceThreshold": 9999
                 }
               ]

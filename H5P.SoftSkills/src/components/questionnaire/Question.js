@@ -17,7 +17,7 @@ const styles = theme => ({
     marginLeft: '2em',
     marginTop: '0.25em',
     marginBottom: '0.25em',
-    padding: '0 30px'
+    padding: '0 1em'
   },
   selectedControl: {
     border: `solid 2px ${theme.palette.primary.main}`,
@@ -80,7 +80,7 @@ const Question = withStyles(styles)((props) => {
                     }>
           {
             allRadioButtonsValues.map((e, index) => (
-              <FormControlLabel style={{ minWidth: `${maxTextLength}em` }} key={index}
+              <FormControlLabel style={{ minWidth: `${maxTextLength*1.75}ex` }} key={index}
                                 className={`${classes.roundedControl} ${(props.selectedItemId === e.id) ? classes.selectedControl : ''}`}
                                 value={e.id}
                                 control={<Radio color="primary"

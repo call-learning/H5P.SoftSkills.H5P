@@ -1,6 +1,6 @@
 [
   {
-    "answerId": 4,
+    "answerId": 5,
     "questionGlobalIndex": 0
   },
   {
@@ -8,15 +8,15 @@
     "questionGlobalIndex": 1
   },
   {
-    "answerId": 1,
+    "answerId": 4,
     "questionGlobalIndex": 2
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 3
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 4
   },
   {
@@ -24,7 +24,7 @@
     "questionGlobalIndex": 5
   },
   {
-    "answerId": 4,
+    "answerId": 3,
     "questionGlobalIndex": 6
   },
   {
@@ -44,11 +44,11 @@
     "questionGlobalIndex": 10
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 11
   },
   {
-    "answerId": 4,
+    "answerId": 2,
     "questionGlobalIndex": 12
   },
   {
@@ -60,7 +60,7 @@
     "questionGlobalIndex": 14
   },
   {
-    "answerId": 1,
+    "answerId": 3,
     "questionGlobalIndex": 15
   },
   {
@@ -76,23 +76,23 @@
     "questionGlobalIndex": 18
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 19
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 20
   },
   {
-    "answerId": 4,
+    "answerId": 1,
     "questionGlobalIndex": 21
   },
   {
-    "answerId": 4,
+    "answerId": 3,
     "questionGlobalIndex": 22
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 23
   },
   {
@@ -100,23 +100,23 @@
     "questionGlobalIndex": 24
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 25
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 26
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 27
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 28
   },
   {
-    "answerId": 5,
+    "answerId": 4,
     "questionGlobalIndex": 29
   },
   {
@@ -124,11 +124,11 @@
     "questionGlobalIndex": 30
   },
   {
-    "answerId": 1,
+    "answerId": 3,
     "questionGlobalIndex": 31
   },
   {
-    "answerId": 4,
+    "answerId": 3,
     "questionGlobalIndex": 32
   },
   {
@@ -140,7 +140,7 @@
     "questionGlobalIndex": 34
   },
   {
-    "answerId": 4,
+    "answerId": 3,
     "questionGlobalIndex": 35
   },
   {
@@ -156,7 +156,7 @@
     "questionGlobalIndex": 38
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 39
   },
   {
@@ -164,15 +164,15 @@
     "questionGlobalIndex": 40
   },
   {
-    "answerId": 3,
-    "questionGlobalIndex": 41
-  },
-  {
-    "answerId": 1,
+    "answerId": 4,
     "questionGlobalIndex": 42
   },
   {
-    "answerId": 3,
+    "answerId": 4,
+    "questionGlobalIndex": 41
+  },
+  {
+    "answerId": 4,
     "questionGlobalIndex": 43
   },
   {
@@ -192,11 +192,11 @@
     "questionGlobalIndex": 47
   },
   {
-    "answerId": 4,
+    "answerId": 3,
     "questionGlobalIndex": 48
   },
   {
-    "answerId": 1,
+    "answerId": 3,
     "questionGlobalIndex": 49
   },
   {
@@ -208,11 +208,11 @@
     "questionGlobalIndex": 51
   },
   {
-    "answerId": 4,
+    "answerId": 3,
     "questionGlobalIndex": 52
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 53
   },
   {
@@ -220,27 +220,27 @@
     "questionGlobalIndex": 54
   },
   {
-    "answerId": 2,
+    "answerId": 4,
     "questionGlobalIndex": 55
   },
   {
-    "answerId": 5,
+    "answerId": 3,
     "questionGlobalIndex": 56
   },
   {
-    "answerId": 2,
+    "answerId": 3,
     "questionGlobalIndex": 57
   },
   {
-    "answerId": 4,
+    "answerId": 3,
     "questionGlobalIndex": 58
   },
   {
-    "answerId": 1,
+    "answerId": 4,
     "questionGlobalIndex": 59
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 60
   },
   {
@@ -248,7 +248,7 @@
     "questionGlobalIndex": 61
   },
   {
-    "answerId": 4,
+    "answerId": 3,
     "questionGlobalIndex": 62
   },
   {
@@ -260,7 +260,7 @@
     "questionGlobalIndex": 64
   },
   {
-    "answerId": 3,
+    "answerId": 4,
     "questionGlobalIndex": 65
   },
   {

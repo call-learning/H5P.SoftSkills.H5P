@@ -56,7 +56,7 @@
       "references": "0:0:0:1"
     },
     {
-      "content": "<p>Bref récapitulatif des règles de caractéristique de l’écrit professionnel par un enseignant du CNED, Claude Terrier.  \nVoir spécifiquement la partie D5 « Communication » point 2 « Communication écrite opérationnelle en langue nationale ou étrangère ». Le site propose des exercices avec leurs corrigés.<a href=\"http://www.bts-g-pme.com/\" target=\"_blank\">http://www.bts-g-pme.com/</a><\/p>",
+      "content": "<p>Bref récapitulatif des règles de caractéristique de l’écrit professionnel par un enseignant du CNED, Claude Terrier.  \nVoir spécifiquement la partie D5 «Communication» point 2 «ommunication écrite opérationnelle en langue nationale ou étrangère». Le site propose des exercices avec leurs corrigés.<a href=\"http://www.bts-g-pme.com/\" target=\"_blank\">http://www.bts-g-pme.com/</a><\/p>",
       "type": "module",
       "references": "0:0:0:1"
     },
@@ -71,7 +71,7 @@
       "references": "0:0:0:1"
     },
     {
-      "content": "<p>Bref récapitulatif des règles de caractéristique de l’écrit professionnel par un enseignant du CNED, Claude Terrier.  \nVoir spécifiquement la partie D5 « Communication » point 1 « Enjeux et concepts de base ». Le site propose des exercices avec leurs corrigés.<a href=\"http://www.bts-g-pme.com/\" target=\"_blank\">http://www.bts-g-pme.com/</a><\/p>",
+      "content": "<p>Bref récapitulatif des règles de caractéristique de l’écrit professionnel par un enseignant du CNED, Claude Terrier.  \nVoir spécifiquement la partie D5 «Communication» point 1 «Enjeux et concepts de base». Le site propose des exercices avec leurs corrigés.<a href=\"http://www.bts-g-pme.com/\" target=\"_blank\">http://www.bts-g-pme.com/</a><\/p>",
       "type": "document",
       "references": "0:0:0:1"
     },
@@ -84,6 +84,111 @@
       "content": "<p>Pour l’anglais : Grammarly, extension pour Chrome ou Mozilla et application installable sur ordinateur.<a href=\"https://www.grammarly.com/\" target=\"_blank\">https://www.grammarly.com/</a><\/p>",
       "type": "document",
       "references": "0:0:1:0"
+    },
+    {
+      "content": "<p>Pour rédiger un document scientifique <a href=\"https://coop-ist.cirad.fr/rediger/article-scientifique\" target=\"_blank\">https://coop-ist.cirad.fr/rediger/article-scientifique</a><\/p>",
+      "type": "document",
+      "references": "0:0:1:1"
+    },
+    {
+      "content": "<p>Article académique avec des exemples pour donner des points de repères \n“Préparer à communiquer par écrit dans l’entreprise : courrier traditionnel vs courrier électronique” <a href=\"https://journals.openedition.org/pratiques/3231\" target=\"_blank\">https://journals.openedition.org/pratiques/3231</a><\/p>",
+      "type": "document",
+      "references": "0:0:1:1"
+    },
+    {
+      "content": "<p>Collection «savoir dire pour savoir penser», modules : vulgariser – informer.<br><a href=\"http://www.iutenligne.net/ressources/collection-savoir-dire-pour-savoir-penser-vulgariser.html\" target=\"_blank\">http://www.iutenligne.net/ressources/collection-savoir-dire-pour-savoir-penser-vulgariser.html</a><br><a href=\"http://www.iutenligne.net/ressources/collection-savoir-dire-pour-savoir-penser-informer.html\" target=\"_blank\">http://www.iutenligne.net/ressources/collection-savoir-dire-pour-savoir-penser-informer.html</a>",
+      "type": "document",
+      "references": "0:0:1:1"
+    },
+    {
+      "content": "<p>Sur les règles et caractéristiques des écrits professionnels, par Claude Terrier partie D5, Communication, «Construire un message professionnel», et différents diaporamas sur les spécificités de la communication écrite.<a href=\"http://www.bts-g-pme.com/\" target=\"_blank\">http://www.bts-g-pme.com/</a><\/p>",
+      "type": "document",
+      "references": "0:0:1:1"
+    },
+    {
+      "content": "<p>Dix conseils pour la relecture d’un texte<a href=\"https://www.redacteur.com/blog/conseils-relecture-texte/\" target=\"_blank\">https://www.redacteur.com/blog/conseils-relecture-texte/</a><\/p>",
+      "type": "document",
+      "references": "0:0:1:2"
+    },
+    {
+      "content": "<p>Guide portant sur la mise en forme d’un document<a href=\"http://ufr3.univ-montp3.fr/IMG/pdf/Regle_d_or_edition_memoire_version_juin_2013_-_Masters_MOBILITES_Transport_cle81b1f6.pdf\" target=\"_blank\">http://ufr3.univ-montp3.fr/IMG/pdf/Regle_d_or_edition_memoire_version_juin_2013_-_Masters_MOBILITES_Transport_cle81b1f6.pdf</a><\/p>",
+      "type": "document",
+      "references": "0:0:1:3"
+    },
+    {
+      "content": "<p>Règles de typographie et de mise en page d’un texte <a href=\"https://www.biblio.univ-evry.fr/assets/files/formations/autoformation/guide-typographie-miseenpage_BUEvry.pdf\" target=\"_blank\">https://www.biblio.univ-evry.fr/assets/files/formations/autoformation/guide-typographie-miseenpage_BUEvry.pdf</a><\/p>",
+      "type": "document",
+      "references": "0:0:1:3"
+    },
+    {
+      "content": "<p>Normes APA pour les citations bibliographiques<a href=\"http://bu.univ-lorraine.fr/sites/default/files/users/user781/Guide%20biblio%20APA%202019-2020.pdf\" target=\"_blank\">http://bu.univ-lorraine.fr/sites/default/files/users/user781/Guide%20biblio%20APA%202019-2020.pdf</a><\/p>",
+      "type": "document",
+      "references": "0:0:1:3"
+    },
+    {
+      "content": "<p>Les règles pour rédiger une synthèse<a href=\"https://www.culture-expression.fr/accueil/comment-faire-une-synth%C3%A8se-de-documents-m%C3%A9thode-pour-la-note-de-synth%C3%A8se/\" target=\"_blank\">https://www.culture-expression.fr/accueil/comment-faire-une-synth%C3%A8se-de-documents-m%C3%A9thode-pour-la-note-de-synth%C3%A8se/</a><\/p>",
+      "type": "document",
+      "references": "0:0:1:4"
+    },
+    {
+      "content": "<p>Collection «savoir dire pour savoir penser» développée par l’IUT en ligne. Module «Analyser pour communiquer». Voir surtout la 3e séquence : élaborer la synthèse d’un ensemble documentaire<a href=\"http://public.iutenligne.net/expression/lecomte/analyse_com/general/index.html\" target=\"_blank\">http://public.iutenligne.net/expression/lecomte/analyse_com/general/index.html</a><\/p>",
+      "type": "document",
+      "references": "0:0:1:4"
+    },
+    {
+      "content": "<p>Une présentation succincte des stratégies du discours argumentatif<a href=\"https://www.espacefrancais.com/les-strategies-du-discours-argumentatif/\" target=\"_blank\">https://www.espacefrancais.com/les-strategies-du-discours-argumentatif/</a><\/p>",
+      "type": "document",
+      "references": "0:0:1:5"
+    },
+    {
+      "content": "<p>Collection «savoir dire pour savoir penser» de l’IUT en ligne, modules : raisonner – convaincre – persuader.<br><a href=\"http://www.iutenligne.net/catalog/thematique/expression\" target=\"_blank\">http://www.iutenligne.net/catalog/thematique/expression</a><a href=\"http://public.iutenligne.net/expression/parouty_prevot/raisonner/index.html\" target=\"_blank\">http://public.iutenligne.net/expression/parouty_prevot/raisonner/index.html</a><a href=\"http://public.iutenligne.net/expression/poveda_prevot/convaincre/index.html\" target=\"_blank\">http://public.iutenligne.net/expression/poveda_prevot/convaincre/index.html</a><a href=\"http://public.iutenligne.net/expression/poveda_prevot/persuader/index.html\" target=\"_blank\">http://public.iutenligne.net/expression/poveda_prevot/persuader/index.html</a><\/p>",
+      "type": "document",
+      "references": "0:0:1:5"
+    },
+    {
+      "content": "<p>Collection «savoir dire pour savoir penser». Modules : introduire, conclure et relier; faire un plan; parler ou écrire; vulgariser; informer; se documenter<a href=\"http://www.iutenligne.net/catalog/thematique/expression\" target=\"_blank\">http://www.iutenligne.net/catalog/thematique/expression</a><\/p>",
+      "type": "document",
+      "references": "0:0:2:0"
+    },
+    {
+      "content": "<p>Brève fiche sur les caractéristiques des trois registres de langage: soutenu, familier, courant. <a href=\"https://www.cap-concours.fr/enseignement/preparer-les-concours/les-epreuves-du-crpe/les-registres-de-langue-mas_fra_26\" target=\"_blank\">https://www.cap-concours.fr/enseignement/preparer-les-concours/les-epreuves-du-crpe/les-registres-de-langue-mas_fra_26</a><\/p>",
+      "type": "document",
+      "references": "0:0:2:0"
+    },
+    {
+      "content": "<p>Par l’université d’Hawaï. En anglais mais simple, propose un questionnaire à administrer au public ou qu’on peut utiliser en se posant les questions soi-même au sujet du public : <br><a href=\"http://www.hawaii.edu/mauispeech/html/analyzing_your_audience.html\" target=\"_blank\">http://www.hawaii.edu/mauispeech/html/analyzing_your_audience.html</a><\/p>",
+      "type": "document",
+      "references": "0:0:2:0"
+    },
+    {
+      "content": "<p>Quelques conseils pour concevoir un diaporama : <br><a href=\"https://www.april.org/realiser-une-presentation-attractive#Realiser_une_presentation_attractive\" target=\"_blank\">https://www.april.org/realiser-une-presentation-attractive#Realiser_une_presentation_attractive</a><\/p>",
+      "type": "document",
+      "references": "0:0:2:0"
+    },
+    {
+      "content": "<p>Des conseils pour organiser sa présentation orale<a href=\"http://public.iutenligne.net/expression/depoorter/parler_en_public/\" target=\"_blank\">http://public.iutenligne.net/expression/depoorter/parler_en_public/</a><a href=\"http://www.iutenligne.net/ressources/la-prise-de-parole-en-public-exposes-soutenances.html\" target=\"_blank\">http://www.iutenligne.net/ressources/la-prise-de-parole-en-public-exposes-soutenances.html</a><\/p>",
+      "type": "document",
+      "references": "0:0:2:1"
+    },
+    {
+      "content": "<p>Conseils pour un exposé oral face à un jury<a href=\"https://www.canal-u.tv/video/canal_aunege/face_a_un_jury.12408\" target=\"_blank\">https://www.canal-u.tv/video/canal_aunege/face_a_un_jury.12408</a><\/p>",
+      "type": "video",
+      "references": "0:0:2:1"
+    },
+    {
+      "content": "<p>S’organiser pour communiquer, vidéo explicative par Régine Acquier, Université de Montpellier 1:<a href=\"https://www.canal-u.tv/video/les_amphis_de_france_5/s_organiser_pour_communiquer.280\" target=\"_blank\">https://www.canal-u.tv/video/les_amphis_de_france_5/s_organiser_pour_communiquer.280</a><\/p>",
+      "type": "document",
+      "references": "0:0:2:1"
+    },
+    {
+      "content": "<p>La communication non verbale, regarder spécifiquement le chapitre 3: Mettre en scène son discours<a href=\"http://public.iutenligne.net/expression/depoorter/parler_en_public/index.html\" target=\"_blank\">http://public.iutenligne.net/expression/depoorter/parler_en_public/index.html</a><\/p>",
+      "type": "document",
+      "references": "0:0:2:0"
+    },
+    {
+      "content": "<p><a href=\"\" target=\"_blank\"></a><\/p>",
+      "type": "document",
+      "references": "1:0:0:0"
     }
   ],
   "settings": {
@@ -330,6 +435,58 @@
               ]
             }
           ]
+        },
+        {
+          "label": "Le leadership: un des leviers pour mener et conduire des individus ou des organisations",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "",
+              "isVisible": false,
+              "questions": [
+                {
+                  "label": "Je stimule et valorise l’apport de chacun dans l’atteinte des objectifs.",
+                  "hideResourceThreshold": 9999
+                },
+                {
+                  "label": "Je fais en sorte que mes actions et mes attitudes soient cohérentes avec mon discours.",
+                  "hideResourceThreshold": 9999
+                },
+                {
+                  "label": "Je sais communiquer et faire accepter une décision.",
+                  "hideResourceThreshold": 9999
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "S'adapter",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "",
+              "isVisible": false,
+              "questions": [
+                {
+                  "label": "Lorsque je le considère nécessaire, je suis capable de m’adapter aux codes des environnements dans lesquels j’évolue.",
+                  "answerLabelsOverride":  [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
+                  "acquisitionThreshold": 5,
+                  "hideResourceThreshold": 9999
+                },
+                {
+                  "label": "Je modifie mon action afin de m’adapter à des aléas.",
+                  "acquisitionThreshold": 5
+                }
+              ]
+            }
+          ]
         }
       ],
       "label": "Compétences Sociales"
@@ -364,58 +521,6 @@
                     "Pas d'accord"
                   ],
                   "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Adaptabilité",
-          "isVisible": true,
-          "contexts": [
-            {
-              "label": "",
-              "isVisible": false,
-              "questions": [
-                {
-                  "label": "Lorsque je le considère nécessaire, je suis capable de m’adapter aux codes des environnements dans lesquels j’évolue.",
-                  "answerLabelsOverride":  [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
-                },
-                {
-                  "label": "Je modifie mon action afin de m’adapter à des aléas.",
-                  "acquisitionThreshold": 5
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Le leadership: un des leviers pour mener et conduire des individus ou des organisations",
-          "isVisible": true,
-          "contexts": [
-            {
-              "label": "",
-              "isVisible": false,
-              "questions": [
-                {
-                  "label": "Je stimule et valorise l’apport de chacun dans l’atteinte des objectifs.",
-                  "hideResourceThreshold": 9999
-                },
-                {
-                  "label": "Je fais en sorte que mes actions et mes attitudes soient cohérentes avec mon discours.",
-                  "hideResourceThreshold": 9999
-                },
-                {
-                  "label": "Je sais communiquer et faire accepter une décision.",
                   "hideResourceThreshold": 9999
                 }
               ]
