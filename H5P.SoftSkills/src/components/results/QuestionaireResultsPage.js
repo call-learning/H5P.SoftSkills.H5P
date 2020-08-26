@@ -36,7 +36,7 @@ const QuestionnaireResultsPage = withStyles(styles)((props) => {
         <Box display={{ xs: 'none', sm: 'block' }}>
           <Typography align="center" variant="h4"><H5PTranslatedText text='resultScoreLabel'/></Typography>
         </Box>
-        <Box maxWidth="md" display={{ xs: 'none', sm: 'block' }}>
+        <Box maxWidth="md" display={{ xs: 'none', sm: 'block' }} p={2} m={2}>
           <ResultBarChart resultsList={props.results.competenciesResults} graphHeight={250}/>
         </Box>
         <Box>

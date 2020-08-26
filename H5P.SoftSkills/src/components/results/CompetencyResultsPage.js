@@ -79,7 +79,7 @@ CompetencyResultsPage.propTypes = Object.assign(
 CompetencyResultsPage.defaultProps = Object.assign(
   {
     competencyIndex: 0,
-    handleViewSubCompetencyClick: PropTypes.func,
+    handleViewSubCompetencyClick: null,
     topNavigation: (<div/>)
   },
   questionnaireCompetenciesQuestionsDefault,

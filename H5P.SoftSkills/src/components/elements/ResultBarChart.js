@@ -9,7 +9,6 @@ import XAxis from 'recharts/lib/cartesian/XAxis';
 import YAxis from 'recharts/lib/cartesian/YAxis';
 import CartesianGrid from 'recharts/lib/cartesian/CartesianGrid';
 import Bar from 'recharts/lib/cartesian/Bar';
-import Tooltip from 'recharts/lib/component/Tooltip';
 import BarChart from 'recharts/lib/chart/BarChart';
 import Text from 'recharts/lib/component/Text';
 import { truncateLabel } from '../../utils/ComponentsUtils';
@@ -47,7 +46,7 @@ const BarLabel = (props) => {
 const CompetencyLabel= (props) => {
   const { width, payload ,...otherprops } = props;
   return (
-    <Text scaleToFit {...otherprops} className="competency-labels">{truncateLabel(payload.value, MAX_LABEL_CHARACTERS)}</Text>
+    <Text {...otherprops} className="competency-labels">{truncateLabel(payload.value, MAX_LABEL_CHARACTERS)}</Text>
   );
 };
 

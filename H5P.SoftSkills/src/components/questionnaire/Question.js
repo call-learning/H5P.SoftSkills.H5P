@@ -9,6 +9,7 @@ import {
 } from '../../utils/CommonProptypes';
 import CheckCircle from '@material-ui/icons/CheckCircle';
 import { resourceCreateMarkup } from '../../utils/ComponentsUtils';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const styles = theme => ({
   roundedControl: {
@@ -17,7 +18,10 @@ const styles = theme => ({
     marginLeft: '2em',
     marginTop: '0.25em',
     marginBottom: '0.25em',
-    padding: '0 1em'
+    padding: '0 1em',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%'
+    },
   },
   selectedControl: {
     border: `solid 2px ${theme.palette.primary.main}`,
@@ -60,6 +64,7 @@ const Question = withStyles(styles)((props) => {
       value
     );
   };
+
   return (
     <Container disableGutters={true}>
       <FormControl component="fieldset" disabled={props.isDisabled} onClick={
@@ -80,7 +85,7 @@ const Question = withStyles(styles)((props) => {
                     }>
           {
             allRadioButtonsValues.map((e, index) => (
-              <FormControlLabel style={{ minWidth: `${maxTextLength*1.75}ex` }} key={index}
+              <FormControlLabel style={{ minWidth: `${maxTextLength}ex` }} key={index}
                                 className={`${classes.roundedControl} ${(props.selectedItemId === e.id) ? classes.selectedControl : ''}`}
                                 value={e.id}
                                 control={<Radio color="primary"

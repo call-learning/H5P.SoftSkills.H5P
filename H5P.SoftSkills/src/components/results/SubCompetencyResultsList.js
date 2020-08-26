@@ -26,8 +26,6 @@ import { CallMade, Check, ExpandMore } from '@material-ui/icons';
 import Fab from '@material-ui/core/Fab';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 
-const SUCCESS_THRESHOLD = 50;
-
 const styles = theme => ({
   root: {
     width: '100%',
@@ -49,8 +47,8 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
       props.answeredQuestions,
       props.resources,
       props.settings,
-      0,
-      0);
+      props.competencyIndex,
+      props.subCompetencyIndex);
 
     const handleChange = (panel) => (event, isExpanded) => {
       setExpanded(isExpanded ? panel : false);
@@ -63,10 +61,10 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
     return (
       <Container disableGutters={true}>
         {
-          resultsAndResources.map((context, index) => {
-            const panelName = `context-${index}`;
+          resultsAndResources.map((context, cindex) => {
+            const panelName = `context-${cindex}`;
             return (
-              <ExpansionPanel key={index} expanded={expanded === panelName} onChange={handleChange(panelName)}>
+              <ExpansionPanel key={cindex} expanded={expanded === panelName} onChange={handleChange(panelName)}>
                 <ExpansionPanelSummary
                   expandIcon={<Fab color="primary"><ExpandMore/></Fab>}
                   aria-controls={`${panelName}-content`}
@@ -74,21 +72,21 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                 >
                   <Box display="flex" alignItems="center" flexGrow={1}>
                     <Box px={2} flexGrow={1}>
-                      <Typography variant="body2">{`${index + 1}. ${context.label}`}</Typography>
+                      <Typography variant="body2">{`${cindex + 1}. ${context.label}`}</Typography>
                     </Box>
                     <Box display="flex">
                       {
-                        context.value > SUCCESS_THRESHOLD ? masteredInfo : toImproveInfo
+                        context.rawValue > context.contextAcquisitionThreshold ? masteredInfo : toImproveInfo
                       }
                     </Box>
                   </Box>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
-                  <Box>
-                    <Box py={1}>
+                  <Container>
+                    <Container py={1}>
                       {
-                        resultsAndResources[index].questionsAnswers.map((q, index) =>
-                          (<Box key={index} display="flex" py={2}
+                        context.questionsAnswers.map((q, qindex) =>
+                          (<Box key={qindex} display="flex" py={2}
                                 flexDirection={{ xs: 'column', sm: 'row' }}
                                 alignItems={{ xs: 'center', sm: 'initial' }}
                           >
@@ -110,19 +108,19 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                           </Box>)
                         )
                       }
-                    </Box>
+                    </Container>
 
-                    <Box>
-                      <Box>
+                    <Container>
+                      <Container>
                         <Typography variant="h4"><H5PTranslatedText text='ourAdvice'/></Typography>
-                      </Box>
-                      <Box display="flex" flexDirection="row" width="100%">
+                      </Container>
+                      <Container maxWidth={"100%"}>
                         {
                           context.resources.map((resource) => <Resource key={resource.id} resource={resource}/>)
                         }
-                      </Box>
-                    </Box>
-                  </Box>
+                      </Container>
+                    </Container>
+                  </Container>
                 </ExpansionPanelDetails>
               </ExpansionPanel>
             );

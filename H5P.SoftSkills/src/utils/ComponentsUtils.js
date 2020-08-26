@@ -256,10 +256,17 @@ export function isAcquiredAnswer (settings, questionData, answerId) {
   if (answer === undefined) {
     return false;
   }
-  const levelOfAcquisition = typeof questionData.acquisitionThreshold != 'undefined' ?
-    questionData.acquisitionThreshold : settings.acquisitionThreshold;
+
+  const levelOfAcquisition = acquisitionThreshold(settings, questionData)
   return answerId >= levelOfAcquisition;
 }
+
+export function acquisitionThreshold (settings, questionData) {
+  // First find the identifier in the list of possible answers
+  return typeof questionData.acquisitionThreshold != 'undefined' ?
+    questionData.acquisitionThreshold : settings.acquisitionThreshold;
+}
+
 
 // TODO Change from possibleAnswer to settings
 /**
@@ -378,6 +385,9 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
       return acc + ((qi >= 0 && qi < contextTotalQuestionCount) ?
         getRealValueFromPossibleValue(settings.possibleAnswers, answer.answerId) : 0);
     }, 0);
+    // Get cumulative acquisition Threshold
+    const contextAcquiredValue =
+      context.questions.reduce((acc, question) => (acc + acquisitionThreshold(settings, question)),0);
     const contextQA = answeredQuestion.reduce((acc, answer) => {
       const qi = answer.questionGlobalIndex - minQuestionIndexForContext;
       if (qi >= 0 && qi < contextTotalQuestionCount) {
@@ -426,9 +436,12 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
       return acc;
       // eslint-disable-next-line no-undef
     }, new Map());
+    const resultValue = Math.floor(contextTotalScore / contextTotalQuestionCount);
     resultsAndResources.push({
       label: context.label,
-      value: Math.floor(contextTotalScore / contextTotalQuestionCount),
+      value: resultValue,
+      contextAcquisitionThreshold: contextAcquiredValue,
+      rawValue: contextTotalScore,
       questionsAnswers: contextQA,
       resources: Array.from(resourcesList.values())
     });
