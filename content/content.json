@@ -333,22 +333,22 @@
                 {
                   "label": "Je comprends les enjeux et les principes d’animation d’une équipe dans un contexte professionnel.",
                   "answerLabelsOverride":[
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ],
                   "acquisitionThreshold": 5
                 },
                 {
                   "label": "Je sais (re)formuler les consignes pour que mes collaborateurs comprennent ce qui est attendu d’eux.",
                   "answerLabelsOverride": [
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ]
                 },
                 {
@@ -396,11 +396,11 @@
                 {
                   "label": "Je sais mettre en place un plan de prévention pour éviter les tensions et les conflits.",
                   "answerLabelsOverride": [
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ],
                   "hideResourceThreshold": 9999
                 }
@@ -413,22 +413,22 @@
                 {
                   "label": "Je sais me mettre dans une posture d’écoute et de médiation pour désamorcer les tensions et les conflits.",
                   "answerLabelsOverride": [
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ],
                   "hideResourceThreshold": 9999
                 },
                 {
                   "label": "Je sais mettre en place des plans d’action et de suivi des solutions.",
                   "answerLabelsOverride": [
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ],
                   "hideResourceThreshold": 9999
                 }
@@ -461,21 +461,21 @@
           ]
         },
         {
-          "label": "S\u0027adapter",
+          "label": "S'adapter",
           "isVisible": true,
           "contexts": [
             {
-              "label": "S\u0027adapter",
+              "label": "S'adapter",
               "isVisible": false,
               "questions": [
                 {
                   "label": "Lorsque je le considère nécessaire, je suis capable de m’adapter aux codes des environnements dans lesquels j’évolue.",
                   "answerLabelsOverride":  [
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ],
                   "acquisitionThreshold": 5,
                   "hideResourceThreshold": 9999
@@ -514,11 +514,11 @@
                 {
                   "label": "Je suis capable d’expliciter mes acquis en termes de connaissances et de compétences pour les valoriser dans d’autres contextes.",
                   "answerLabelsOverride":  [
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ],
                   "acquisitionThreshold": 5,
                   "hideResourceThreshold": 9999
@@ -696,11 +696,11 @@
                 {
                   "label": "Je connais les règles de rédaction d’un cahier des charges fonctionnel.",
                   "answerLabelsOverride":  [
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ],
                   "acquisitionThreshold": 5,
                   "hideResourceThreshold": 9999
@@ -708,11 +708,11 @@
                 {
                   "label": "Je connais les règles de rédaction d’un cahier des charges technique.",
                   "answerLabelsOverride":  [
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ],
                   "acquisitionThreshold": 5,
                   "hideResourceThreshold": 9999
@@ -757,33 +757,33 @@
                 {
                   "label": "Je m’appuie sur des méthodes pour comprendre le problème.",
                   "answerLabelsOverride":  [
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ],
                   "hideResourceThreshold": 9999
                 },
                 {
                   "label": "Je m’appuie sur des méthodes pour déterminer les causes du problème.",
                   "answerLabelsOverride": [
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ],
                   "hideResourceThreshold": 5
                 },
                 {
                   "label": "Je mets en œuvre les ressources scientifiques et techniques nécessaires à la résolution du problème.",
                   "answerLabelsOverride":  [
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ],
                   "acquisitionThreshold": 5,
                   "hideResourceThreshold": 9999
@@ -815,22 +815,22 @@
                 {
                   "label": "Je mets en œuvre des processus d’innovation.",
                   "answerLabelsOverride":  [
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ],
                   "hideResourceThreshold": 9999
                 },
                 {
                   "label": "Je pense à transformer mes idées en activités rentables. ",
                   "answerLabelsOverride":  [
-                    "Tout à fait d\u0027accord",
-                    "Plutôt d\u0027accord",
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
                     "D'accord",
-                    "Plutôt pas d\u0027accord",
-                    "Pas d\u0027accord"
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
                   ],
                   "hideResourceThreshold": 9999
                 }

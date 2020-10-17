@@ -38,7 +38,7 @@ function CompetencyPage (props) {
         competencyProgressData={competencyProgressData}
       />
     </Box>
-    <Box flex={4} mx={1} overflow={'auto'} id={'competencyPageContainer'}>
+    <Box flex={4} mx={1} px={1} overflow={'auto'} id={'competencyPageContainer'}>
       <QuestionsList
         questionComponent={props.questionComponent}
         questionsByCompetencyAndSubCompetencies={props.questionsByCompetencyAndSubCompetencies}

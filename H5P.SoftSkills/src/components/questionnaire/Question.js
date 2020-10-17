@@ -90,7 +90,7 @@ const Question = withStyles(styles)((props) => {
                                 value={e.id}
                                 control={<Radio color="primary"
                                                 checkedIcon={<CheckCircle/>}/>}
-                                label={e.text}
+                                label={<span dangerouslySetInnerHTML={{__html: e.text}}/>}
               />)
             )
           }
@@ -100,7 +100,7 @@ const Question = withStyles(styles)((props) => {
                           value={checkBoxValue.id}
                           control={<Checkbox color="primary"
                                              className={`${(props.selectedItemId === checkBoxValue.id) ? classes.selectedControl : ''}`}/>}
-                          label={checkBoxValue.text}
+                          label={<span dangerouslySetInnerHTML={{__html:checkBoxValue.text}}/>}
                           onChange={(e, value) => hSelect(e, checkBoxValue.id)
                           }
         />

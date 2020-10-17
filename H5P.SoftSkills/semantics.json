@@ -81,7 +81,7 @@
                     {
                       "name": "questions",
                       "type": "list",
-                      "label": "Themes",
+                      "label": "Questions",
                       "importance": "low",
                       "expanded": false,
                       "min": 1,
@@ -112,8 +112,7 @@
                             "field": {
                               "name": "text",
                               "type": "text",
-                              "label": "Answer Text",
-                              "widget": "text"
+                              "label": "Answer Text"
                             }
                           },
                           {
@@ -315,7 +314,6 @@
               "name": "icon",
               "type": "text",
               "label": "Title",
-              "widget": "text",
               "default": "timer",
               "importance": "high"
             },
@@ -352,8 +350,7 @@
             {
               "name": "text",
               "type": "text",
-              "label": "Answer Text",
-              "widget": "text"
+              "label": "Answer Text"
             },
             {
               "name": "id",
