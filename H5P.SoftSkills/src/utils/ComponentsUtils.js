@@ -167,6 +167,7 @@ export function computeProgressPerCompetency (
     const realValue = (typeof pa.realValue === 'undefined') ? pa.id : pa.realValue;
     return (realValue > max) ? realValue : max;
   }, 0);
+  const indexedAnswers = getGloballyIndexedAnswerArray(answeredQuestions);
 
   let currentGlobalIndex = 0;
   for (let comp of questionsByCompetencyAndSubCompetencies) {
@@ -178,15 +179,15 @@ export function computeProgressPerCompetency (
       let subCompetencyQuestionsCount = 0;
       let subCompetencyAnsweredCount = 0;
       for (let compContext of SubCompetency.contexts) {
-        const maxGlobalIndex = currentGlobalIndex + compContext.questions.length;
-        for (let answer of answeredQuestions) {
-          if (answer.questionGlobalIndex < maxGlobalIndex && answer.questionGlobalIndex >= currentGlobalIndex) {
-            currentsubCompetenciesResults += getRealValueFromPossibleValue(possibleAnswers, answer.answerId);
+        for (let question of compContext.questions)  {
+          if (typeof indexedAnswers[currentGlobalIndex] !== 'undefined') {
+            currentsubCompetenciesResults += getRealValueFromPossibleValue(possibleAnswers,
+              indexedAnswers[currentGlobalIndex].answerId);
             subCompetencyAnsweredCount += 1;
           }
+          currentGlobalIndex += 1;
+          subCompetencyQuestionsCount += 1;
         }
-        currentGlobalIndex += compContext.questions.length;
-        subCompetencyQuestionsCount += compContext.questions.length;
       }
       subCompetenciesResults.push({
         label: SubCompetency.label,
@@ -249,6 +250,14 @@ export function getTextValueFromPossibleValue (settings, questionData, answerId)
     questionData.answerLabelsOverride[answerIndex] : answer.text;
 }
 
+/**
+ * Check if an answer is acquired (in the sense that the user would deserve a badge)
+ *
+ * @param settings
+ * @param questionData
+ * @param answerId
+ * @return {boolean}
+ */
 export function isAcquiredAnswer (settings, questionData, answerId) {
   // First find the identifier in the list of possible answers
   const answer = settings.possibleAnswers.find((answ) => answ.id === answerId);
@@ -261,12 +270,68 @@ export function isAcquiredAnswer (settings, questionData, answerId) {
   return answerId >= levelOfAcquisition;
 }
 
+/**
+ * Check the acquisition threshold, i.e. the id of the answer that is considered
+ * as acquired for the user. This can be set globally or at the individual question
+ * level
+ *
+ * @param settings
+ * @param questionData
+ * @return {number|Requireable<number>}
+ */
 export function acquisitionThreshold (settings, questionData) {
   // First find the identifier in the list of possible answers
   return typeof questionData.acquisitionThreshold != 'undefined' ?
     questionData.acquisitionThreshold : settings.acquisitionThreshold;
 }
 
+/**
+ * Are we considering that the user has fully acquired all competencies
+ *
+ * In order for this to be true:
+ * * The user has to fill all the answers
+ * * The answer must be in the "acquired" threshold
+ *
+ * @param questionsByCompetencyAndSubCompetencies
+ * @param answeredQuestions
+ * @param settings
+ */
+export function isFullyAcquired (questionsByCompetencyAndSubCompetencies,
+                                 answeredQuestions,
+                                 settings) {
+  let currentGlobalIndex = 0;
+  const indexedAnswers = getGloballyIndexedAnswerArray(answeredQuestions);
+  for (let comp of questionsByCompetencyAndSubCompetencies) {
+    for (let SubCompetency of comp.subCompetencies) {
+      for (let compContext of SubCompetency.contexts) {
+        for (let question of compContext.questions) {
+          if (typeof indexedAnswers[currentGlobalIndex] === 'undefined') {
+            return false; // No matching answer. Questionnaire is not finished.
+          }
+          if (!isAcquiredAnswer(settings, question, indexedAnswers[currentGlobalIndex].answerId)) {
+            return false;  // The answer is not sufficient to mark it as acquired.
+          }
+          currentGlobalIndex += 1;
+        }
+      }
+    }
+  }
+  return true;
+}
+
+/**
+ * Reverse the array of answered questions so we can access them through the questionGlobalIndex
+ *
+ * @param answeredQuestions
+ * @return {[]}
+ */
+export function getGloballyIndexedAnswerArray (answeredQuestions) {
+  let answerIndexedArray = [];
+  for (let answer of answeredQuestions) {
+    answerIndexedArray[answer.questionGlobalIndex] = answer;
+  }
+  return answerIndexedArray;
+}
 
 // TODO Change from possibleAnswer to settings
 /**

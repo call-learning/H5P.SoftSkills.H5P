@@ -12,7 +12,7 @@ import {
   getProgressData,
   getRealValueFromPossibleValue, getSubCompetencyResultsAndResources, getTextValueFromPossibleValue,
   getTotalQuestionCount,
-  getTotalQuestionCountCompetency, isAcquiredAnswer,
+  getTotalQuestionCountCompetency, isAcquiredAnswer, isFullyAcquired,
   isUnknownValue,
   stringToHashCode,
   truncateLabel
@@ -29,22 +29,22 @@ test('getCompetencyImageFromIndex from first competenty', () => {
 
 test('getProgressData Start of questionnaire', () => {
   expect(getProgressData(sampleData.questionsByCompetencyAndSubCompetencies, sampleAnswerData)).toEqual({
-    "answeredQuestionsCount": 67,
-    "competenciesProgress": [
+    'answeredQuestionsCount': 67,
+    'competenciesProgress': [
       {
-        "answeredQuestionsCount": 27,
-        "questionsCount": 27
+        'answeredQuestionsCount': 27,
+        'questionsCount': 27
       },
       {
-        "answeredQuestionsCount": 11,
-        "questionsCount": 11
+        'answeredQuestionsCount': 11,
+        'questionsCount': 11
       },
       {
-        "answeredQuestionsCount": 29,
-        "questionsCount": 29
+        'answeredQuestionsCount': 29,
+        'questionsCount': 29
       }
     ],
-    "questionsCount": 67
+    'questionsCount': 67
   });
 });
 
@@ -112,107 +112,107 @@ test('computeProgressPerCompetency', () => {
     sampleAnswerData,
     sampleData.settings)).toEqual(
     {
-      "competenciesResults": [
+      'competenciesResults': [
         {
-          "label": "Compétences Sociales",
-          "subCompetenciesResults": [
+          'label': 'Compétences Sociales',
+          'subCompetenciesResults': [
             {
-              "label": "Communiquer pour transmettre des idées et des informations nécessaires au travail",
-              "totalAnswered": 11,
-              "totalQuestions": 11,
-              "value": 70
+              'label': 'Communiquer pour transmettre des idées et des informations nécessaires au travail',
+              'totalAnswered': 11,
+              'totalQuestions': 11,
+              'value': 74
             },
             {
-              "label": "Manager une équipe",
-              "totalAnswered": 11,
-              "totalQuestions": 11,
-              "value": 61
+              'label': 'Manager une équipe',
+              'totalAnswered': 11,
+              'totalQuestions': 11,
+              'value': 61
             },
             {
-              "label": "Le leadership: un des leviers pour mener et conduire des individus ou des organisations",
-              "totalAnswered": 3,
-              "totalQuestions": 3,
-              "value": 66
+              'label': 'Le leadership: un des leviers pour mener et conduire des individus ou des organisations',
+              'totalAnswered': 3,
+              'totalQuestions': 3,
+              'value': 66
             },
             {
-              "label": "S'adapter",
-              "totalAnswered": 2,
-              "totalQuestions": 2,
-              "value": 80
+              'label': 'S\'adapter',
+              'totalAnswered': 2,
+              'totalQuestions': 2,
+              'value': 80
             }
           ],
-          "totalAnswered": 27,
-          "totalQuestions": 27,
-          "value": 69
+          'totalAnswered': 27,
+          'totalQuestions': 27,
+          'value': 70
         },
         {
-          "label": "Compétences Personnelles",
-          "subCompetenciesResults": [
+          'label': 'Compétences Personnelles',
+          'subCompetenciesResults': [
             {
-              "label": "Identification des apprentissages liés à mon activité professionnelle",
-              "totalAnswered": 3,
-              "totalQuestions": 3,
-              "value": 80
+              'label': 'Identification des apprentissages liés à mon activité professionnelle',
+              'totalAnswered': 3,
+              'totalQuestions': 3,
+              'value': 80
             },
             {
-              "label": "L’éthique",
-              "totalAnswered": 4,
-              "totalQuestions": 4,
-              "value": 60
+              'label': 'L’éthique',
+              'totalAnswered': 4,
+              'totalQuestions': 4,
+              'value': 60
             },
             {
-              "label": "L’esprit critique",
-              "totalAnswered": 4,
-              "totalQuestions": 4,
-              "value": 60
+              'label': 'L’esprit critique',
+              'totalAnswered': 4,
+              'totalQuestions': 4,
+              'value': 60
             }
           ],
-          "totalAnswered": 11,
-          "totalQuestions": 11,
-          "value": 66
+          'totalAnswered': 11,
+          'totalQuestions': 11,
+          'value': 66
         },
         {
-          "label": "Compétences Méthodologiques",
-          "subCompetenciesResults": [
+          'label': 'Compétences Méthodologiques',
+          'subCompetenciesResults': [
             {
-              "label": "Se tenir au courant des nouvelles technologies et de nouveaux développements",
-              "totalAnswered": 2,
-              "totalQuestions": 2,
-              "value": 80
+              'label': 'Se tenir au courant des nouvelles technologies et de nouveaux développements',
+              'totalAnswered': 2,
+              'totalQuestions': 2,
+              'value': 80
             },
             {
-              "label": "Négocier",
-              "totalAnswered": 5,
-              "totalQuestions": 5,
-              "value": 72
+              'label': 'Négocier',
+              'totalAnswered': 5,
+              'totalQuestions': 5,
+              'value': 72
             },
             {
-              "label": "Conduire un projet",
-              "totalAnswered": 13,
-              "totalQuestions": 13,
-              "value": 63
+              'label': 'Conduire un projet',
+              'totalAnswered': 13,
+              'totalQuestions': 13,
+              'value': 63
             },
             {
-              "label": "Résoudre un problème",
-              "totalAnswered": 5,
-              "totalQuestions": 5,
-              "value": 72
+              'label': 'Résoudre un problème',
+              'totalAnswered': 5,
+              'totalQuestions': 5,
+              'value': 72
             },
             {
-              "label": "Faire preuve de créativité, chercher à innover et à entreprendre",
-              "totalAnswered": 4,
-              "totalQuestions": 4,
-              "value": 70
+              'label': 'Faire preuve de créativité, chercher à innover et à entreprendre',
+              'totalAnswered': 4,
+              'totalQuestions': 4,
+              'value': 70
             }
           ],
-          "totalAnswered": 29,
-          "totalQuestions": 29,
-          "value": 71
+          'totalAnswered': 29,
+          'totalQuestions': 29,
+          'value': 71
         }
       ],
-      "totalAnswered": 67,
-      "totalQuestions": 67,
-      "value": 69.10555555555557
+      'totalAnswered': 67,
+      'totalQuestions': 67,
+      'value': 69.4388888888889
     }
   )
   ;
@@ -230,44 +230,24 @@ test('isUnknownValue', () => {
 });
 
 test('getSubCompetencyResultsAndResources', () => {
-  const expectedResults =
-    {
-      "label": "Je suis amené(e) à rédiger un document écrit dans une situation professionnelle précise:",
-      "questionsAnswers": [
-        {
-          "answer": 5,
-          "questionData": {
-            "acquisitionThreshold": 5,
-            "label": "Lors de la rédaction, je prends en considération mon public cible et j’adapte mon langage."
-          },
-          "questionGlobalIndex": 0
-        },
-        {
-          "answer": 3,
-          "questionData": {
-            "label": "Je choisis le format et j’adapte mon registre à la situation (rapport, power point, mail, lettre interne, note de service, réseau social interne)."
-          },
-          "questionGlobalIndex": 1
-        }
-      ],
-      "resources": [
-        {
-          "content": "<p>Bref récapitulatif des règles de caractéristique de l’écrit professionnel par un enseignant du CNED, Claude Terrier.  \nVoir spécifiquement la partie D5 «Communication» point 1 «Enjeux et concepts de base». Le site propose des exercices avec leurs corrigés.<a href=\"http://www.bts-g-pme.com/\" target=\"_blank\">http://www.bts-g-pme.com/</a></p>",
-          "id": "2315897904",
-          "references": "0:0:0:1",
-          "type": "document"
-        }
-      ],
-      "value": 4
-    };
-
-  expect(getSubCompetencyResultsAndResources(
+  const result = getSubCompetencyResultsAndResources(
     sampleData.questionsByCompetencyAndSubCompetencies,
     sampleAnswerData,
     sampleData.resources,
     sampleData.settings,
     0,
-    0)).toContainEqual(expectedResults);
+    0);
+
+  expect(result.length == 3).toBeTruthy();
+  expect(result[0].questionsAnswers.length == 2).toBeTruthy();
+  expect(result[0].resources[0]).toEqual(
+    {
+      'id': '2353194686',
+      'content': '<p>Bref récapitulatif des règles de caractéristique de l’écrit professionnel par un enseignant du CNED, Claude Terrier.  \nVoir spécifiquement la partie D5 «Communication» point 1 «Enjeux et concepts de base». Le site propose des exercices avec leurs corrigés.<br><a href="http://www.bts-g-pme.com/" target="_blank">http://www.bts-g-pme.com/</a></p>',
+      'type': 'module',
+      'references': '0:0:0:1'
+    }
+  );
 });
 
 test('stringToHashCode', () => {
@@ -337,3 +317,45 @@ test('isAcquiredAnswer', () => {
 
 });
 
+test('isFullyAcquired', () => {
+  const subQuestionnaire = [
+      {
+        "label": "Compétences Sociales",
+        'subCompetencies': [
+          {
+            'label': 'Communiquer pour transmettre des idées et des informations nécessaires au travail',
+            'isVisible': true,
+            'contexts': [
+              {
+                'label': 'Je suis amené(e) à rédiger un document écrit dans une situation professionnelle précise:',
+                'isVisible': true,
+                'questions': [
+                  {
+                    'label': 'Lors de la rédaction, je prends en considération mon public cible et j’adapte mon langage.',
+                    'acquisitionThreshold': 5
+                  },
+                  {
+                    'label': 'Je choisis le format et j’adapte mon registre à la situation (rapport, power point, mail, lettre interne, note de service, réseau social interne).'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ];
+
+  const insufficientAnswers = [
+    {
+      "answerId": 2,
+      "questionGlobalIndex": 0
+    },
+    {
+      "answerId": 5,
+      "questionGlobalIndex": 1
+    } ];
+  expect(isFullyAcquired(sampleData.questionsByCompetencyAndSubCompetencies, sampleAnswerData, sampleData.settings)).toBeFalsy();
+
+  expect(isFullyAcquired(subQuestionnaire, sampleAnswerData, sampleData.settings)).toBeTruthy();
+  expect(isFullyAcquired(subQuestionnaire, insufficientAnswers, sampleData.settings)).toBeFalsy();
+});
