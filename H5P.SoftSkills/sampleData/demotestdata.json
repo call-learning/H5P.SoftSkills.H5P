@@ -181,9 +181,59 @@
       "references": "0:0:2:1"
     },
     {
-      "content": "<p>La communication non verbale, regarder spécifiquement le chapitre 3: Mettre en scène son discours<br><a href=\"http://public.iutenligne.net/expression/depoorter/parler_en_public/index.html\" target=\"_blank\">http://public.iutenligne.net/expression/depoorter/parler_en_public/index.html</a><\/p>",
+      "content": "<p>La prise de parole en public : posture, gestuelle, gestion de l’espace\nVidéo proposée par l’IUT de Roanne © 2016<br><a href=\"https://www.youtube.com/watch?v=ZQNBfE85n2s\" target=\"_blank\">https://www.youtube.com/watch?v=ZQNBfE85n2s</a><\/p>",
+      "type": "video",
+      "references": "0:0:2:2"
+    },
+    {
+      "content": "<p>Liste les 6 rôles du manager selon Peter Drucker. Extrait d’un article de M. Mousli dans Alternatives Economiques n°258  ©2007<a href=\"https://www.i-manuel.fr/REBTS_MG1E14/REBTS_MG1E14part1dos1CO2doc6.html\" target=\"_blank\">https://www.i-manuel.fr/REBTS_MG1E14/REBTS_MG1E14part1dos1CO2doc6.html</a><\/p>",
+      "type": "web",
+      "references": "1:0:0:0"
+    },
+    {
+      "content": "<p>Fiches du CNFPT avec des ressources concernant l’activité du manager. Voir le chapitre 1, «Organiser et animer une équipe de travail» ©2018<a href=\"https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf\" target=\"_blank\">https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf</a><\/p>",
+      "type": "document",
+      "references": "1:0:0:0"
+    },
+    {
+      "content": "<p>Article sur l’apprentissage du management par l’expérience de la gestion de projet et les modes de fonctionnement d’équipe, par C. Verzat & R. Bachelet, LGIL Papers ©2007<a href=\"http://rb.ec-lille.fr/perso/papers/Les_ingenieurs_deviennent_ils_managers_grace_aux_projets.pdf\" target=\"_blank\">http://rb.ec-lille.fr/perso/papers/Les_ingenieurs_deviennent_ils_managers_grace_aux_projets.pdf</a><\/p>",
+      "type": "document",
+      "references": "1:0:0:0"
+    },
+    {
+      "content": "<p>Texte de 2015 et vidéo de 4 min mise en ligne en 2018, sur l’animation d’équipes projet, issue du Mooc gestion de projet, par S. Delpeyroux:<a href=\"http://rb.ec-lille.fr/l/Projets/Management_d_equipe_projet.pdf\" target=\"_blank\">http://rb.ec-lille.fr/l/Projets/Management_d_equipe_projet.pdf</a><\/p>",
+      "type": "document",
+      "references": "1:0:0:0"
+    },
+    {
+      "content": "<p>Texte de 2015 et vidéo de 4 min mise en ligne en 2018, sur l’animation d’équipes projet, issue du Mooc gestion de projet, par S. Delpeyroux:<a href=\"https://gestiondeprojet.pm/management-d-equipe-projet/\" target=\"_blank\">https://gestiondeprojet.pm/management-d-equipe-projet/</a><\/p>",
+      "type": "video",
+      "references": "1:0:0:0"
+    },
+    {
+      "content": "<p>Présentation de la notion de groupe, des types de groupe et des fonctions au sein d’un groupe par un enseignant du CNED, Claude Terrier ©2019<br>Voir spécifiquement la partie D5 «Communication» sous-partie C13 «Communiquer dans les groupes ». Le site propose des exercices avec leurs corrigés.  <a href=\"http://www.bts-g-pme.com/\" target=\"_blank\">http://www.bts-g-pme.com/</a><\/p>",
+      "type": "document",
+      "references": "1:0:0:0"
+    },
+    {
+      "content": "<pFiches du CNFPT avec des ressources concernant l’activité du manager. Voir le chapitre 5 «Communiquer», fiches 49 à 61 ©2018><a href=\"https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf\" target=\"_blank\">https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf</a><\/p>",
       "type": "module",
-      "references": "0:0:2:0"
+      "references": "1:0:0:0"
+    },
+    {
+      "content": "<p>Guide de pratique professionnelle, publié par l’ordre des ingénieurs du Québec, voir notamment le chapitre «Gestion d’une équipe et droit du travail», p. 254. Attention, les lois et règlement évoqués concernent le Québec uniquement ©2018<a href=\"http://gpp.oiq.qc.ca/wf_njs.htm\" target=\"_blank\">http://gpp.oiq.qc.ca/wf_njs.htm</a><\/p>",
+      "type": "document",
+      "references": "1:0:0:0"
+    },
+    {
+      "content": "<p>Vidéo proposée par l’Université Paris Descartes : “Les 4 clefs de l’intelligence collective” (l’une d’elles est l’écoute active), par C. Grabli ©2017<a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/jxjhDfAnC8M5/LD.mp4\" target=\"_blank\">https://d381hmu4snvm3e.cloudfront.net/videos/jxjhDfAnC8M5/LD.mp4</a><\/p>",
+      "type": "document",
+      "references": "1:0:0:0"
+    },
+    {
+      "content": "<p><a href=\"\" target=\"_blank\"></a><\/p>",
+      "type": "document",
+      "references": "1:0:0:0"
     },
     {
       "content": "<p><a href=\"\" target=\"_blank\"></a><\/p>",

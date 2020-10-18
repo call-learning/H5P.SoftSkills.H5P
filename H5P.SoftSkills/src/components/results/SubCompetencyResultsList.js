@@ -72,7 +72,8 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                 >
                   <Box display="flex" alignItems="center" flexGrow={1}>
                     <Box px={2} flexGrow={1}>
-                      <Typography variant="body2">{`${cindex + 1}. ${context.label}`}</Typography>
+                      <Typography variant="body2">{`${cindex + 1}. `}
+                      {<span dangerouslySetInnerHTML={{__html:context.label}}/>}</Typography>
                     </Box>
                     <Box display="flex">
                       {
@@ -101,7 +102,12 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                                               className={isAcquiredAnswer(props.settings,
                                                 q.questionData,
                                                 q.answer) ? classes.acquiredStyle : classes.inAcquisitionStyle}>
-                                    {getTextValueFromPossibleValue(props.settings, q.questionData, q.answer)}
+                                    {
+                                      <span dangerouslySetInnerHTML={{__html:getTextValueFromPossibleValue(
+                                        props.settings,
+                                          q.questionData,
+                                          q.answer)}}/>
+                                    }
                                   </Typography>
                                 </Box>)
                             }
@@ -109,17 +115,19 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                         )
                       }
                     </Container>
-
-                    <Container>
-                      <Container>
-                        <Typography variant="h4"><H5PTranslatedText text='ourAdvice'/></Typography>
-                      </Container>
-                      <Container maxWidth={"100%"}>
-                        {
-                          context.resources.map((resource) => <Resource key={resource.id} resource={resource}/>)
-                        }
-                      </Container>
-                    </Container>
+                    {
+                      (context.resources == null || context.resources.length ==0) ? '' :
+                        (<Container>
+                          <Container>
+                            <Typography variant="h4"><H5PTranslatedText text='ourAdvice'/></Typography>
+                          </Container>
+                          <Container maxWidth={'100%'}>
+                            {
+                              context.resources.map((resource) => <Resource key={resource.id} resource={resource}/>)
+                            }
+                          </Container>
+                        </Container>)
+                    }
                   </Container>
                 </ExpansionPanelDetails>
               </ExpansionPanel>

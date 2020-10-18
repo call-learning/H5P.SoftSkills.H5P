@@ -3,7 +3,7 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { getCompetencyImageFromIndex } from '../../utils/ComponentsUtils';
+import { getCompetencyImageFromIndex, getTextValueFromPossibleValue } from '../../utils/ComponentsUtils';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container';
 import ResultRadarChart from '../elements/ResultRadarChart';
@@ -53,7 +53,8 @@ const CompetencyResultsPage = withStyles(styles)((props) => {
                                            handleActionClick={(e) => props.handleViewSubCompetencyClick(props.competencyIndex, subCompIndex)}
                                            components={[
                                              (<Box key="competencydesc">
-                                               <Typography variant="subtitle2">{subC.label}</Typography>
+                                               <Typography variant="subtitle2">
+                                                 <span dangerouslySetInnerHTML={{__html:subC.label}}/></Typography>
                                                </Box>),
                                              (<Box key="compvalue">
                                                <Typography>{Math.floor(subC.value)}%</Typography>

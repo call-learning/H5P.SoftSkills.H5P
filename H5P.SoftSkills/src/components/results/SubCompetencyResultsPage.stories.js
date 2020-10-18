@@ -16,3 +16,12 @@ export const subCompetencyResultsPage = () => <SubCompetencyResultsPage
   competencyIndex={1}
   resources={sampleData.resources}
 />;
+
+export const subCompetencyResultsPageEmptyRessources = () => <SubCompetencyResultsPage
+  questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
+  settings={sampleData.settings}
+  answeredQuestions={sampleAnswerGenerator(getTotalQuestionCount(sampleData.questionsByCompetencyAndSubCompetencies))}
+  subCompetencyIndex={1}
+  competencyIndex={2}
+  resources={sampleData.resources}
+/>;

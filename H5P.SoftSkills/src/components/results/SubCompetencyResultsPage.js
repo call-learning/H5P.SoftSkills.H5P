@@ -49,8 +49,14 @@ function SubCompetencyResultsPage (props) {
         <Box my={2}><img className="SuccessImage" src={getCompetencyImageFromIndex(props.competencyIndex)} alt=""
                          role="presentation"/></Box>
 
-        <Box><Typography color="textSecondary">{currentCompetency.label}</Typography></Box>
-        <Box><Typography variant="h4">{currentSubCompetency.label}</Typography></Box>
+        <Box>
+          <Typography color="textSecondary">
+            {<span dangerouslySetInnerHTML={{__html:currentCompetency.label}}/>}
+          </Typography></Box>
+        <Box>
+          <Typography variant="h4">
+            {<span dangerouslySetInnerHTML={{__html:currentSubCompetency.label}}/>}
+        </Typography></Box>
         <Box width={{xs:"99%", sm:"50%"}}><ResultBarChart hasCompetencyLabel={false}
                                            resultsList={[currentSubCompetencyResult]} graphHeight={130}/></Box>
         <Container>

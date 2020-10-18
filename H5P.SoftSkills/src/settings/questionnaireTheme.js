@@ -62,6 +62,7 @@ export const questionnaireTheme = createMuiTheme({
           width: '3em',
           marginTop: '0.3em',
           border:  `2px solid ${palette.primary.main}`,
+          background: `${palette.primary.main}`,
           borderRadius: '4px',
           boxShadow: 'inset 0 1px 1px rgba(0, 0, 0, .05)'
         }

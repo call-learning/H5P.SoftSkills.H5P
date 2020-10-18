@@ -7,7 +7,7 @@ import {
   questionsByCompetencyAndSubCompetencies, questionnaireCompetenciesQuestionsDefault,
 } from '../../utils/CommonProptypes';
 import PropTypes from 'prop-types';
-import { getGlobalQuestionIndex } from '../../utils/ComponentsUtils';
+import { getGlobalQuestionIndex, getTextValueFromPossibleValue } from '../../utils/ComponentsUtils';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 const styles = theme => ({
@@ -58,8 +58,9 @@ const QuestionsList = withStyles(styles)((props) => {
           <li className={classes.subCompetencyListItem}>
             {
               (subCompetency.isVisible) ?
-                <Typography
-                  variant="h4">{subCompetency.label}</Typography> : ''
+                <Typography variant="h4">
+                  {<span dangerouslySetInnerHTML={{__html:subCompetency.label}}/>}
+                  </Typography> : ''
             }
             <ol className={classes.listContainer}>
               {
@@ -70,7 +71,8 @@ const QuestionsList = withStyles(styles)((props) => {
                           key={`context-${contextIndex}-${subCompetencyIndex}-${compIndex}`}>
                         {
                           (context.isVisible) ? <Typography
-                            className={classes.contextLabel}>{context.label}</Typography> : ''
+                            className={classes.contextLabel}>
+                            {<span dangerouslySetInnerHTML={{__html:context.label}}/>}</Typography> : ''
                         }
                         <ol className={classes.listContainer}>
                           {

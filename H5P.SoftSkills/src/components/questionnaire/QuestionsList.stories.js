@@ -12,3 +12,23 @@ export const listOfQuestions = () => <QuestionsList
   questionComponent={SampleQuestionHandler}
 />;
 
+/**
+ * This is just intended as debug mode so we can export the question positions and hierarchy
+ *
+ * @return {JSX.Element}
+ */
+export const flatListQuestion = () =>
+  <div>
+    {
+      sampleData.questionsByCompetencyAndSubCompetencies.map(
+        (comp, compIndex) => comp.subCompetencies.map(
+          (subcomp, subcompIndex) => subcomp.contexts.map(
+            (context, contextIndex) => context.questions.map(
+              (qu, questionIndex) =>
+                (<div>"{qu.label}",<span>"{compIndex}:{subcompIndex}:{contextIndex}:{questionIndex}"</span></div>)
+            )
+          )
+        )
+      )
+    }
+  </div>;
