@@ -23,11 +23,8 @@ import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import ResultBarChart from '../elements/ResultBarChart';
 import SubCompetencyResultsList from './SubCompetencyResultsList';
 
-const styles = theme => ({
-});
 
 function SubCompetencyResultsPage (props) {
-  const { classes } = props;
   const currentCompetency = props.questionsByCompetencyAndSubCompetencies[props.competencyIndex];
   const currentSubCompetency = currentCompetency.subCompetencies[props.subCompetencyIndex];
   const globalResults = computeProgressPerCompetency(
@@ -43,8 +40,8 @@ function SubCompetencyResultsPage (props) {
   const currentQuantileValue = getCurrentQuantile(currentSubCompetencyResult.value);
 
   return (
-    <Container  maxWidth={'md'}>
-      <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+    <Container  maxWidth={'md'} >
+      <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" maxHeight={'100vh'}>
         <Box alignSelf="flex-start">{props.topNavigation}</Box>
         <Box my={2}><img className="SuccessImage" src={getCompetencyImageFromIndex(props.competencyIndex)} alt=""
                          role="presentation"/></Box>
@@ -101,4 +98,4 @@ SubCompetencyResultsPage.defaultProps = Object.assign(
   questionnaireResourcesDefault
 );
 
-export default withStyles(styles)(SubCompetencyResultsPage);
+export default SubCompetencyResultsPage;

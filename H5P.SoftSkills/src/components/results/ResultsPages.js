@@ -16,7 +16,7 @@ import {
   questionnaireResources,
   questionnaireResourcesDefault, questionnaireSettings, questionnaireSettingsDefault
 } from '../../utils/CommonProptypes';
-import { computeProgressPerCompetency } from '../../utils/ComponentsUtils';
+import { computeProgressPerCompetency, isFullyAcquired } from '../../utils/ComponentsUtils';
 import QuestionnaireResultsPage from './QuestionaireResultsPage';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import NavigationButton from '../elements/NavigationButton';
@@ -47,6 +47,9 @@ function ResultsPage (props) {
   const handleViewSubCompetencyClick = (compIndex, subCompIndex) => {
     history.push(`/competencies/${compIndex}/subcomp/${subCompIndex}`);
   };
+  const handleObtainMyBadgeClick = () => {
+    history.push(`/obtainmybadge`);
+  };
   const allCompetenciesResults = computeProgressPerCompetency(
     props.questionsByCompetencyAndSubCompetencies,
     props.answeredQuestions,
@@ -68,7 +71,13 @@ function ResultsPage (props) {
         <QuestionnaireResultsPage
           questionsByCompetencyAndSubCompetencies={props.questionsByCompetencyAndSubCompetencies}
           results={allCompetenciesResults}
+          canObtainBadge=
+            {
+              props.settings.hasBadgeEngine &&
+              isFullyAcquired(props.questionsByCompetencyAndSubCompetencies,props.answeredQuestions,props.settings)
+            }
           handleViewCompetencyClick={handleViewCompetencyClick}
+          handleObtainMyBadge={handleObtainMyBadgeClick}
           handleReviewQuestionnaire={props.handleReviewQuestionnaire}
           handleRestartQuestionnaire={props.handleRestartQuestionnaire}
         />
@@ -89,7 +98,7 @@ ResultsPage.propTypes = Object.assign({
 
 ResultsPage.defaultProps = Object.assign({
     handleReviewQuestionnaire: () => null,
-    handleRestartQuestionnaire: () => null
+    handleRestartQuestionnaire: () => null,
   },
   questionnaireSettingsDefault,
   questionnaireCompetenciesQuestionsDefault,

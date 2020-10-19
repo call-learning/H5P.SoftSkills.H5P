@@ -378,6 +378,12 @@
         "type": "number",
         "label": "Id of the answer for Unknown value",
         "importance": "low"
+      },
+      {
+        "name": "hasBadgeEngine",
+        "type": "boolean",
+        "label": "is Badge Engine on?",
+        "default": false
       }
     ]
 

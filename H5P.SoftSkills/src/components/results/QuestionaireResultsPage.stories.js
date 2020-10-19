@@ -19,3 +19,8 @@ export const questionnaireResults = () => <QuestionnaireResultsPage
   questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
   results={allCompetenciesResults}
 />;
+
+export const questionnaireResultsWithBadge = () => <QuestionnaireResultsPage
+  questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
+  results={allCompetenciesResults} isFullyAcquired={true}
+/>;

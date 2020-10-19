@@ -153,6 +153,7 @@ export const questionnaireSettings = {
   settings: PropTypes.shape(
     {
       welcomeTitle: PropTypes.string,
+      hasBadgeEngine: PropTypes.bool,
       generalInstructions: PropTypes.string,
       startButtonLabel: PropTypes.string,
       competenciesDesc: PropTypes.arrayOf(

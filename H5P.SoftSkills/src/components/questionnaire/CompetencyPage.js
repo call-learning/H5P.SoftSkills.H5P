@@ -15,7 +15,6 @@ import PropTypes from 'prop-types';
 import Question from './Question';
 import Box from '@material-ui/core/Box';
 
-import { getTotalQuestionCount } from '../../utils/ComponentsUtils';
 import QuestionsList from './QuestionsList';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import NavigationButton from '../elements/NavigationButton';

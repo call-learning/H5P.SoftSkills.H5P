@@ -1,7 +1,4 @@
-import {
-  Box,
-  LinearProgress,
-} from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
@@ -17,15 +14,13 @@ import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import NavigationButton from '../elements/NavigationButton';
 import { getCurrentQuantile } from '../../utils/ComponentsUtils';
 import ResultBarChart from '../elements/ResultBarChart';
+import ObtainBadgeDialog from '../pages/ObtainBadgeDialog';
 
-const styles = theme => ({});
-
-const QuestionnaireResultsPage = withStyles(styles)((props) => {
-  const { classes } = props;
+const QuestionnaireResultsPage = (props) => {
   const quantileResult = getCurrentQuantile(props.results.value);
   return (
     <Container maxWidth={'md'}>
-      <Box alignContent="center" display="flex" flexDirection="column">
+      <Box alignContent="center" display="flex" flexDirection="column" maxHeight={'100vh'}>
         <Box py={3}>
           <Typography align="center" variant="h4"><H5PTranslatedText text='results'/></Typography>
         </Box>
@@ -68,17 +63,23 @@ const QuestionnaireResultsPage = withStyles(styles)((props) => {
               <H5PTranslatedText text='restartquestionnaire'/>
             </NavigationButton>
           </Box>
+          {
+            props.canObtainBadge?(<ObtainBadgeDialog score={props.results.value}/>) : ''
+          }
+
         </Box>
       </Box>
     </Container>
   );
-});
+};
 
 QuestionnaireResultsPage.propTypes = Object.assign(
   {
     handleViewCompetencyClick: PropTypes.func,
     handleReviewQuestionnaire: PropTypes.func,
     handleRestartQuestionnaire: PropTypes.func,
+    handleObtainBadge: PropTypes.func,
+    canObtainBadge: PropTypes.bool,
   },
   questionsByCompetencyAndSubCompetencies,
   questionnaireResults
@@ -86,9 +87,11 @@ QuestionnaireResultsPage.propTypes = Object.assign(
 
 QuestionnaireResultsPage.defaultProps = Object.assign(
   {
-    handleViewCompetencyClick: (cid) => null,
-    handleReviewQuestionnaire: (cid) => null,
-    handleRestartQuestionnaire: (cid) => null
+    handleViewCompetencyClick: () => null,
+    handleReviewQuestionnaire: () => null,
+    handleRestartQuestionnaire: () => null,
+    handleObtainBadge: ()=> null,
+    canObtainBadge: false,
   },
   questionnaireCompetenciesQuestionsDefault,
   questionnaireResultsDefault

@@ -515,3 +515,29 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
   return resultsAndResources;
 }
 
+/**
+ * Handle Badge emission. This goes through a specific plugin for Moodle (moodle-local_soka)
+ *
+ * This code is very specific to Moodle
+ * @param email
+ * @param score
+ * @param callbackSuccess
+ * @param callbackFailure
+ */
+export function handleBadgeEmit(email, score ,callbackSuccess, callbackFailure) {
+  if ((typeof H5PIntegration != 'undefined') && (typeof H5PIntegration.siteUrl !== 'undefined')) {
+    const baseURL = H5PIntegration.siteUrl;
+    // eslint-disable-next-line no-undef
+    const sesskey = parent.M.cfg.sesskey;
+    fetch(baseURL + '/local/soka/issue_badge.php?'
+      + 'email=' + encodeURIComponent(email)
+      + 'score=' + score
+      + '&sesskey=' + encodeURIComponent(sesskey)
+    ).then(
+        (result) => callbackSuccess(result),
+         (error) => callbackFailure(error)
+      )
+  } else {
+    callbackFailure('no API available');
+  }
+}

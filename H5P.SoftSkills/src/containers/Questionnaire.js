@@ -22,7 +22,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { resetQuestionnaireAndPosition, startQuestionnaireAndPosition } from '../actions/questionnaire';
 
-
 function Questionnaire (props) {
   let currentPage = (<InstructionPageContainer {...props.settings} isReadyToStart={false}/>);
 
@@ -53,7 +52,7 @@ function Questionnaire (props) {
             />
       );
   }
-
+  // The maxheight 100vh is to ensure there will be a scrollbar on Moodle if content goes over the size of the iframe.
   return (<Container maxWidth={false} disableGutters={true}>{currentPage}</Container>);
 }
 
