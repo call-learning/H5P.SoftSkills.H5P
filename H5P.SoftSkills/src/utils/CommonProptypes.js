@@ -154,6 +154,7 @@ export const questionnaireSettings = {
     {
       welcomeTitle: PropTypes.string,
       hasBadgeEngine: PropTypes.bool,
+      alwaysDeliverBadge: PropTypes.bool,
       generalInstructions: PropTypes.string,
       startButtonLabel: PropTypes.string,
       competenciesDesc: PropTypes.arrayOf(

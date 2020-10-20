@@ -74,7 +74,8 @@ function ResultsPage (props) {
           canObtainBadge=
             {
               props.settings.hasBadgeEngine &&
-              isFullyAcquired(props.questionsByCompetencyAndSubCompetencies,props.answeredQuestions,props.settings)
+              ( props.settings.alwaysDeliverBadge ||
+                isFullyAcquired(props.questionsByCompetencyAndSubCompetencies,props.answeredQuestions,props.settings))
             }
           handleViewCompetencyClick={handleViewCompetencyClick}
           handleObtainMyBadge={handleObtainMyBadgeClick}

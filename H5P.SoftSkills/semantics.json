@@ -108,6 +108,7 @@
                             "label": "Answer Label Override",
                             "importance": "low",
                             "expanded": false,
+                            "min": 0,
                             "optional": true,
                             "field": {
                               "name": "text",
@@ -384,6 +385,12 @@
         "type": "boolean",
         "label": "is Badge Engine on?",
         "default": false
+      },
+      {
+        "name": "alwaysDeliverBadge",
+        "type": "boolean",
+        "label": "no threshold for Delivering badges?",
+        "default": false
       }
     ]
 
@@ -485,7 +492,7 @@
         "type": "text"
       },
       {
-        "name": "resultFeedBack0",
+        "name": "resultFeedBack10",
         "type": "text"
       },
       {
@@ -546,6 +553,42 @@
       },
       {
         "name": "yourcompetencyresults",
+        "type": "text"
+      },
+      {
+        "name": "obtainmybadge",
+        "type": "text"
+      },
+      {
+        "name": "badgecongratulationtext",
+        "type": "text"
+      },
+      {
+        "name": "obtainbadgeemail",
+        "type": "text"
+      },
+      {
+        "name": "obtainbadgeemaildesc",
+        "type": "text"
+      },
+      {
+        "name": "obtainmybadgecancel",
+        "type": "text"
+      },
+      {
+        "name": "obtainmybadgeproceed",
+        "type": "text"
+      },
+      {
+        "name": "obtainbadgeemailerror",
+        "type": "text"
+      },
+      {
+        "name": "obtainbadgegenerationfailure",
+        "type": "text"
+      },
+      {
+        "name": "obtainbadgegenerationsuccess",
         "type": "text"
       }
     ]

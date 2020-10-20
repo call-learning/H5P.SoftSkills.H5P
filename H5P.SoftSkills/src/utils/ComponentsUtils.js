@@ -531,7 +531,7 @@ export function handleBadgeEmit(email, score ,callbackSuccess, callbackFailure) 
     const sesskey = parent.M.cfg.sesskey;
     fetch(baseURL + '/local/soka/issue_badge.php?'
       + 'email=' + encodeURIComponent(email)
-      + 'score=' + score
+      + '&score=' + score
       + '&sesskey=' + encodeURIComponent(sesskey)
     ).then(
         (result) => callbackSuccess(result),

@@ -22,7 +22,7 @@
     "resources": "Les ressources pour aller plus loin",
     "restartquestionnaire": "Réinitialiser le questionnaire",
     "resultFeedBack0": "Avec un résultat de :compPercent%, vous avez besoin de travailler sur cette compétence afin de la maîtriser davantage. Les ressources ci-dessous vous guideront dans la connaissance de cette compétence.",
-    "resultFeedBack0": "Continuez !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
+    "resultFeedBack10": "Continuez !<br/>Vos réponses indiquent un niveau homogène dans vos compétences générales, avec une moyenne supérieure à la normale. Vous pouvez accéder au detail ci-dessous pour avec une compréhension plus fine des vos compétences et des axes à améliorer.",
     "resultFeedBack100": "Avec un résultat de :compPercent%, vous maîtrisez cette compétence. Les ressources ci-dessous vous permettront de travailler les différents aspects de cette compétence.",
     "resultFeedBack25": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous permettront de travailler les différents aspects de cette compétence.",
     "resultFeedBack50": "Avec un résultat de :compPercent%, vous maîtrisez les bases de cette compétence, mais vous avez une marge de progression. Les ressources ci-dessous vous permettront de travailler les différents aspects de cette compétence.",
@@ -241,8 +241,8 @@
     "acquisitionThreshold": 4,
     "hideResourceThreshold": 4,
     "unknownValueId": 1,
-    "hasBadgeEngine": true
-
+    "hasBadgeEngine": true,
+    "alwaysDeliverBadge": true
   },
   "questionsByCompetencyAndSubCompetencies": [
     {
