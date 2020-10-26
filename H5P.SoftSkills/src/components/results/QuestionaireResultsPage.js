@@ -21,7 +21,7 @@ const QuestionnaireResultsPage = (props) => {
   return (
     <Container maxWidth={'md'}>
       <Box alignContent="center" display="flex" flexDirection="column" maxHeight={'100vh'}>
-        <Box py={3}>
+        <Box pt={1}>
           <Typography align="center" variant="h4"><H5PTranslatedText text='results'/></Typography>
         </Box>
         <Box py={3}>
@@ -31,7 +31,7 @@ const QuestionnaireResultsPage = (props) => {
         <Box display={{ xs: 'none', sm: 'block' }}>
           <Typography align="center" variant="h4"><H5PTranslatedText text='resultScoreLabel'/></Typography>
         </Box>
-        <Box maxWidth="md" display={{ xs: 'none', sm: 'block' }} p={2} m={2}>
+        <Box maxWidth="md" display={{ xs: 'none', sm: 'block' }}>
           <ResultBarChart resultsList={props.results.competenciesResults} graphHeight={250}/>
         </Box>
         <Box>

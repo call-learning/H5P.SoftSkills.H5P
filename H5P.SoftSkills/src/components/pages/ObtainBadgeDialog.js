@@ -102,7 +102,7 @@ function ObtainBadgeDialog (props) {
 }
 
 ObtainBadgeDialog.propTypes = {
-  score: PropTypes.int
+  score: PropTypes.number
 };
 ObtainBadgeDialog.defaultProps = {
   score: -1

@@ -117,7 +117,7 @@
                             }
                           },
                           {
-                            "name": "acquiredThreshold",
+                            "name": "acquisitionThreshold",
                             "type": "number",
                             "optional": true,
                             "label": "Threshold for Acquired Value",
@@ -363,7 +363,7 @@
         }
       },
       {
-        "name": "acquiredThreshold",
+        "name": "acquisitionThreshold",
         "type": "number",
         "label": "Threshold for Acquired Value",
         "importance": "low"
