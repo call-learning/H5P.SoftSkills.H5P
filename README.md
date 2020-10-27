@@ -20,8 +20,8 @@ by HESAM (https://www.hesam.eu/)
 [coveralls]: https://coveralls.io/github/user/repo
 
 This is a H5P activity aimed at checking a student's softskills via the European Framework for SoftSkills
-([eLene4Work](http://elene4work.eu/)) . The questionnaire is
-editable via usual H5P. It was realised for [HESAM](https://www.hesam.eu/article-soka-un-projet-de-valorisation-des-soft-skills).
+([eLene4Work](http://elene4work.eu/))
+The questionnaire is editable via usual H5P. It was realised for [HESAM](https://www.hesam.eu/article-soka-un-projet-de-valorisation-des-soft-skills).
 
 Cette activité H5P est destinée au test des Softskills pour les étudiants à travers le référentiel européen des compétences des soft skills 
 ([eLene4Work](http://elene4work.eu/)) . Le questionnaire est éditable via l'éditeur usuel H5P.
