@@ -8,9 +8,3 @@ Cette activité H5P est destinée au test des Softskills pour les étudiants à 
 ([eLene4Work](http://elene4work.eu/)) . Le questionnaire est éditable via l'éditeur usuel H5P.
 Réalisé pour l'[HESAM](https://www.hesam.eu/article-soka-un-projet-de-valorisation-des-soft-skills).
 
-
-# TODO
-
-* Associer la resource à la question
-* Ajouter la mention de la licence
-* Ajouter la dépendence (bug sur le plugin moodle) :
