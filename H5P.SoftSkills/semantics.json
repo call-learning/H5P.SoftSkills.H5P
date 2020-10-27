@@ -180,9 +180,9 @@
           "importance": "high"
         },
         {
-          "name": "image",
-          "label": "Illustration Image",
-          "type": "image",
+          "name": "type",
+          "label": "Type",
+          "type": "text",
           "optional": true
         },
         {
@@ -204,12 +204,6 @@
     "type": "group",
     "label": "Miscellaneous Settings",
     "importance": "high",
-    "widgets": [
-      {
-        "name": "ListEditor",
-        "label": "Instructions List"
-      }
-    ],
     "expanded": false,
     "fields": [
       {
