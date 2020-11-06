@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Question from '../components/questionnaire/Question';
 import { PossibleAnswersContext } from '../contexts/PossibleAnswersContext';
 import { ANSWER_NOT_ANSWERED, INDEX_NO_VALUE } from '../constants/QuestionnaireConstants';
-import { Element, scroller } from 'react-scroll';
+import { Element, scroller, animateScroll } from 'react-scroll';
 
 class QuestionWrapper extends React.Component {
   constructor (props) {
@@ -18,12 +18,21 @@ class QuestionWrapper extends React.Component {
   }
   componentDidMount () {
     if (!this.props.isDisabled) {
-      scroller.scrollTo(`question-${this.props.questionID}`, {
-        duration: 800,
-        delay: 3,
-        containerId:'competencyPageContainer',
-        smooth: 'easeInOutQuart'
-      });
+      if (this.props.firstQuestionFromCategory) {
+        animateScroll.scrollToTop( {
+          duration: 800,
+          delay: 3,
+          containerId: 'competencyPageContainer',
+          smooth: 'easeInOutQuart'
+        });
+      } else {
+        scroller.scrollTo(`question-${this.props.questionID}`, {
+          duration: 800,
+          delay: 3,
+          containerId: 'competencyPageContainer',
+          smooth: 'easeInOutQuart'
+        });
+      }
     }
   }
 

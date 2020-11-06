@@ -35,10 +35,10 @@ const styles = theme => ({
     }
   },
   questionListItem: {
-    counterIncrement: 'question',
-    '& legend::before': {
-      content: 'counter(context) "." counter(question, lower-alpha) " "'
-    },
+    // counterIncrement: 'question',
+    // '& legend::before': {
+    //   content: 'counter(context) "." counter(question, lower-alpha) ")"'
+    // },
     marginTop: '1em',
     marginBottom: '2em'
   },
@@ -91,6 +91,7 @@ const QuestionsList = withStyles(styles)((props) => {
                                       contextIndex,
                                       questionIndex
                                     ).toString()}
+                                    firstQuestionFromCategory={subCompetencyIndex === 0 && contextIndex === 0 && questionIndex === 0}
                                     questionText={question.label}
                                     answerLabelsOverride={typeof question.answerLabelsOverride == 'undefined' ?
                                       undefined : question.answerLabelsOverride}

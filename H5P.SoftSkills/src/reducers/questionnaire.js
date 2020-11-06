@@ -5,7 +5,7 @@ import {
   QSTEP_REVIEWING,
   QSTEP_STARTED, QSTEP_READY_TO_START
 } from '../constants/QuestionnaireConstants';
-import { getTotalQuestionCount } from '../utils/ComponentsUtils';
+import { getGlobalQuestionIndex, getTotalQuestionCount } from '../utils/ComponentsUtils';
 
 /**
  *
@@ -49,15 +49,23 @@ export function navigation (state = initialState.navigation, action) {
   const maxCompetencyIndex = questionsByCompetencyAndSubCompetencies ? questionsByCompetencyAndSubCompetencies.length : 0;
   switch (action.type) {
     case types.questionnaire.NEXT_COMPETENCY: {
-      const nextCompetencyIndex = state.currentCompetencyIndex + 1;
+      const nextCompetencyIndex = (state.currentCompetencyIndex < maxCompetencyIndex) ?
+        state.currentCompetencyIndex + 1: state.currentCompetencyIndex;
+      const nextAvailableQuestionIndex = getGlobalQuestionIndex (questionsByCompetencyAndSubCompetencies,
+        nextCompetencyIndex, 0, 0, 0); // Index of the question at the top.
       return {
-        ...state,
-        currentCompetencyIndex: (nextCompetencyIndex < maxCompetencyIndex) ? nextCompetencyIndex : state.currentCompetencyIndex
+        questionGlobalIndex : nextAvailableQuestionIndex,
+        currentCompetencyIndex: nextCompetencyIndex
       };
     }
     case types.questionnaire.PREVIOUS_COMPETENCY: {
-      const prevCompetencyIndex = state.currentCompetencyIndex - 1;
-      return { ...state, currentCompetencyIndex: (prevCompetencyIndex > 0) ? prevCompetencyIndex : 0 };
+      const prevCompetencyIndex = (state.currentCompetencyIndex > 0)?
+        state.currentCompetencyIndex - 1 : state.currentCompetencyIndex;
+      const nextAvailableQuestionIndex = getGlobalQuestionIndex (questionsByCompetencyAndSubCompetencies,
+        prevCompetencyIndex, 0, 0, 0); // Index of the question at the top
+      // So we focus on the first question of the page.
+      return { questionGlobalIndex : nextAvailableQuestionIndex,
+        currentCompetencyIndex: prevCompetencyIndex };
     }
     case types.questionnaire.RESET_NAVIGATION:
     case types.questionnaire.INIT_USER_DATA:  {
