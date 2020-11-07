@@ -32,7 +32,7 @@ const CompetencyResultsPage = withStyles(styles)((props) => {
 
     return (
       <Container  maxWidth={'md'}>
-        <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" maxHeight={'100vh'}>
+        <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
 
           <Box alignSelf="flex-start">{props.topNavigation}</Box>
           <Box><img className="SuccessImage" src={getCompetencyImageFromIndex(props.competencyIndex)} alt=""
@@ -52,11 +52,11 @@ const CompetencyResultsPage = withStyles(styles)((props) => {
                 (<HorizontalCardWithAction width={"80%"} key={'resultcontainer' + subCompIndex}
                                            handleActionClick={(e) => props.handleViewSubCompetencyClick(props.competencyIndex, subCompIndex)}
                                            components={[
-                                             (<Box key="competencydesc">
+                                             (<Box py={3} key="competencydesc">
                                                <Typography variant="subtitle2">
                                                  <span dangerouslySetInnerHTML={{__html:subC.label}}/></Typography>
                                                </Box>),
-                                             (<Box key="compvalue">
+                                             (<Box  py={3} key="compvalue">
                                                <Typography>{Math.floor(subC.value)}%</Typography>
                                              </Box>)
                                            ]}/>))

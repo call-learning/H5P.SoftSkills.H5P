@@ -29,22 +29,22 @@ test('getCompetencyImageFromIndex from first competenty', () => {
 
 test('getProgressData Start of questionnaire', () => {
   expect(getProgressData(sampleData.questionsByCompetencyAndSubCompetencies, sampleAnswerData)).toEqual({
-    'answeredQuestionsCount': 67,
-    'competenciesProgress': [
+    "answeredQuestionsCount": 67,
+    "competenciesProgress": [
       {
-        'answeredQuestionsCount': 27,
-        'questionsCount': 27
+        "answeredQuestionsCount": 27,
+        "questionsCount": 27
       },
       {
-        'answeredQuestionsCount': 11,
-        'questionsCount': 11
+        "answeredQuestionsCount": 15,
+        "questionsCount": 15
       },
       {
-        'answeredQuestionsCount': 29,
-        'questionsCount': 29
+        "answeredQuestionsCount": 25,
+        "questionsCount": 25
       }
     ],
-    'questionsCount': 67
+    "questionsCount": 67
   });
 });
 
@@ -112,107 +112,107 @@ test('computeProgressPerCompetency', () => {
     sampleAnswerData,
     sampleData.settings)).toEqual(
     {
-      'competenciesResults': [
+      "competenciesResults": [
         {
-          'label': 'Compétences Sociales',
-          'subCompetenciesResults': [
+          "label": "Compétences Sociales",
+          "subCompetenciesResults": [
             {
-              'label': 'Communiquer pour transmettre des idées et des informations nécessaires au travail',
-              'totalAnswered': 11,
-              'totalQuestions': 11,
-              'value': 74
+              "label": "Communiquer pour transmettre des idées et des informations nécessaires au travail",
+              "totalAnswered": 11,
+              "totalQuestions": 11,
+              "value": 74
             },
             {
-              'label': 'Manager une équipe',
-              'totalAnswered': 11,
-              'totalQuestions': 11,
-              'value': 61
+              "label": "Manager une équipe",
+              "totalAnswered": 11,
+              "totalQuestions": 11,
+              "value": 61
             },
             {
-              'label': 'Le leadership: un des leviers pour mener et conduire des individus ou des organisations',
-              'totalAnswered': 3,
-              'totalQuestions': 3,
-              'value': 66
+              "label": "Le leadership: un des leviers pour mener et conduire des individus ou des organisations",
+              "totalAnswered": 3,
+              "totalQuestions": 3,
+              "value": 66
             },
             {
-              'label': 'S\'adapter',
-              'totalAnswered': 2,
-              'totalQuestions': 2,
-              'value': 80
+              "label": "S'adapter",
+              "totalAnswered": 2,
+              "totalQuestions": 2,
+              "value": 80
             }
           ],
-          'totalAnswered': 27,
-          'totalQuestions': 27,
-          'value': 70
+          "totalAnswered": 27,
+          "totalQuestions": 27,
+          "value": 70
         },
         {
-          'label': 'Compétences Personnelles',
-          'subCompetenciesResults': [
+          "label": "Compétences Personnelles",
+          "subCompetenciesResults": [
             {
-              'label': 'Identification des apprentissages liés à mon activité professionnelle',
-              'totalAnswered': 3,
-              'totalQuestions': 3,
-              'value': 80
+              "label": "Identification des apprentissages liés à mon activité professionnelle",
+              "totalAnswered": 3,
+              "totalQuestions": 3,
+              "value": 80
             },
             {
-              'label': 'L’éthique',
-              'totalAnswered': 4,
-              'totalQuestions': 4,
-              'value': 60
+              "label": "Faire preuve de créativité, chercher à innover et à entreprendre",
+              "totalAnswered": 4,
+              "totalQuestions": 4,
+              "value": 60
             },
             {
-              'label': 'L’esprit critique',
-              'totalAnswered': 4,
-              'totalQuestions': 4,
-              'value': 60
+              "label": "L’éthique",
+              "totalAnswered": 4,
+              "totalQuestions": 4,
+              "value": 60
+            },
+            {
+              "label": "L’esprit critique",
+              "totalAnswered": 4,
+              "totalQuestions": 4,
+              "value": 75
             }
           ],
-          'totalAnswered': 11,
-          'totalQuestions': 11,
-          'value': 66
+          "totalAnswered": 15,
+          "totalQuestions": 15,
+          "value": 68
         },
         {
-          'label': 'Compétences Méthodologiques',
-          'subCompetenciesResults': [
+          "label": "Compétences Méthodologiques",
+          "subCompetenciesResults": [
             {
-              'label': 'Se tenir au courant des nouvelles technologies et de nouveaux développements',
-              'totalAnswered': 2,
-              'totalQuestions': 2,
-              'value': 80
+              "label": "Se tenir au courant des nouvelles technologies et de nouveaux développements",
+              "totalAnswered": 2,
+              "totalQuestions": 2,
+              "value": 80
             },
             {
-              'label': 'Négocier',
-              'totalAnswered': 5,
-              'totalQuestions': 5,
-              'value': 72
+              "label": "Négocier",
+              "totalAnswered": 5,
+              "totalQuestions": 5,
+              "value": 64
             },
             {
-              'label': 'Conduire un projet',
-              'totalAnswered': 13,
-              'totalQuestions': 13,
-              'value': 63
+              "label": "Conduire un projet",
+              "totalAnswered": 13,
+              "totalQuestions": 13,
+              "value": 66
             },
             {
-              'label': 'Résoudre un problème',
-              'totalAnswered': 5,
-              'totalQuestions': 5,
-              'value': 72
-            },
-            {
-              'label': 'Faire preuve de créativité, chercher à innover et à entreprendre',
-              'totalAnswered': 4,
-              'totalQuestions': 4,
-              'value': 70
+              "label": "Résoudre un problème",
+              "totalAnswered": 5,
+              "totalQuestions": 5,
+              "value": 68
             }
           ],
-          'totalAnswered': 29,
-          'totalQuestions': 29,
-          'value': 71
+          "totalAnswered": 25,
+          "totalQuestions": 25,
+          "value": 69
         }
       ],
-      'totalAnswered': 67,
-      'totalQuestions': 67,
-      'value': 69.4388888888889
+      "totalAnswered": 67,
+      "totalQuestions": 67,
+      "value": 69.5
     }
   )
   ;
@@ -242,10 +242,10 @@ test('getSubCompetencyResultsAndResources', () => {
   expect(result[0].questionsAnswers.length == 2).toBeTruthy();
   expect(result[0].resources[0]).toEqual(
     {
-      'id': '2353194686',
-      'content': '<p>Bref récapitulatif des règles de caractéristique de l’écrit professionnel par un enseignant du CNED, Claude Terrier.  \nVoir spécifiquement la partie D5 «Communication» point 1 «Enjeux et concepts de base». Le site propose des exercices avec leurs corrigés.<br><a href="http://www.bts-g-pme.com/" target="_blank">http://www.bts-g-pme.com/</a></p>',
-      'type': 'module',
-      'references': '0:0:0:1'
+      "content": "Un guide pratique pour l’écriture inclusive diffusé par le Haut conseil d’état chargé de l’Egalité entre les femmes et les hommes et de la lutte contre les discriminations ©2016<br><a href=\"http://www.haut-conseil-egalite.gouv.fr/IMG/pdf/guide_pour_une_communication_publique_sans_stereotype_de_sexe_vf_2016_11_02.compressed.pdf\">http://www.haut-conseil-egalite.gouv.fr/IMG/pdf/guide_pour_une_communication_publique_sans_stereotype_de_sexe_vf_2016_11_02.compressed.pdf</a>",
+      "id": "380651661",
+      "references": "0:0:0:1",
+      "type": "document"
     }
   );
 });

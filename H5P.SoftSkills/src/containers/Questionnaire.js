@@ -17,10 +17,10 @@ import CompetencyPageContainer from './CompetencyPageContainer';
 import InstructionPageContainer from './InstructionPageContainer';
 import CongratulationsPageContainer from './CongratulationsPageContainer';
 import RoutedResultsPageContainer from './RoutedResultsPageContainer';
-import Container from '@material-ui/core/Container';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { resetQuestionnaireAndPosition, startQuestionnaireAndPosition } from '../actions/questionnaire';
+import Box from '@material-ui/core/Box';
 
 function Questionnaire (props) {
   let currentPage = (<InstructionPageContainer {...props.settings} isReadyToStart={false}/>);
@@ -53,7 +53,7 @@ function Questionnaire (props) {
       );
   }
   // The maxheight 100vh is to ensure there will be a scrollbar on Moodle if content goes over the size of the iframe.
-  return (<Container maxWidth={false} disableGutters={true}>{currentPage}</Container>);
+  return (<Box minHeight={"700px"}>{currentPage}</Box>);
 }
 
 Questionnaire.propTypes = Object.assign({

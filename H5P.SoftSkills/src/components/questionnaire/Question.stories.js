@@ -6,6 +6,11 @@ export default { title: 'Questionnaire/Question' };
 
 export const basicQuestion = () => <SampleQuestionHandler possibleAnswers={samplePossibleAnswers}/>;
 export const disabledQuestion = () => <SampleQuestionHandler possibleAnswers={samplePossibleAnswers} isDisabled/>;
+export const selectedDisabledQuestionIdontKnow = () => <SampleQuestionHandler possibleAnswers={samplePossibleAnswers}
+                                                                     defaultSelected={1} isDisabled/>;
+export const selectedDisabledQuestion = () => <SampleQuestionHandler possibleAnswers={samplePossibleAnswers}
+                                                                     defaultSelected={5} isDisabled/>;
+
 export const withLabelQuestion = () => <SampleQuestionHandler possibleAnswers={samplePossibleAnswers}
                                                               questionText={sampleQuestionText}/>;
 export const disabledWithLabelQuestion = () => <SampleQuestionHandler possibleAnswers={samplePossibleAnswers}

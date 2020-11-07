@@ -41,7 +41,7 @@ function SubCompetencyResultsPage (props) {
 
   return (
     <Container  maxWidth={'md'} >
-      <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" maxHeight={'100vh'}>
+      <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
         <Box alignSelf="flex-start">{props.topNavigation}</Box>
         <Box my={2}><img className="SuccessImage" src={getCompetencyImageFromIndex(props.competencyIndex)} alt=""
                          role="presentation"/></Box>

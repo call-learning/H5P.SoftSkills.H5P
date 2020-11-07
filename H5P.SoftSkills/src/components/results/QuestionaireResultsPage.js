@@ -20,7 +20,7 @@ const QuestionnaireResultsPage = (props) => {
   const quantileResult = getCurrentQuantile(props.results.value);
   return (
     <Container maxWidth={'md'}>
-      <Box alignContent="center" display="flex" flexDirection="column" maxHeight={'100vh'}>
+      <Box alignContent="center" display="flex" flexDirection="column">
         <Box pt={1}>
           <Typography align="center" variant="h4"><H5PTranslatedText text='results'/></Typography>
         </Box>

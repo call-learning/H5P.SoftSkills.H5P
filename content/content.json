@@ -85,6 +85,7 @@
     {"content":"Fiches du CNFPT avec des ressources concernant l’activité du manager. Voir le chapitre 5 « Communiquer », fiches 49 à 61 ©2018<br><a href=\"https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf\">https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf</a>", "type":"document", "references":"0:1:0:1"},
     {"content":"Guide de pratique professionnelle, publié par l’ordre des ingénieurs du Québec, voir notamment le chapitre « Gestion d’une équipe et droit du travail », p. 254. Attention, les lois et règlement évoqués concernent le Québec uniquement ©2018   <br><a href=\"http://gpp.oiq.qc.ca/wf_njs.htm\">http://gpp.oiq.qc.ca/wf_njs.htm</a>", "type":"document", "references":"0:1:0:1"},
     {"content":"Vidéo proposée par l’Université Paris Descartes : “Les 4 clefs de l’intelligence collective” (l’une d’elles est l’écoute active), par C. Grabli ©2017<br><a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/jxjhDfAnC8M5/LD.mp4\">https://d381hmu4snvm3e.cloudfront.net/videos/jxjhDfAnC8M5/LD.mp4</a>", "type":"video", "references":"0:1:0:2"},
+    {"content":"Infographie montrant les caractéristiques de l’intelligence collective et le lien avec l’écoute active, proposé par H2 University ©2017https ://pbs.twimg.com/media/DAVUEnFW0AAGzyE.jpg:large", "type":"document", "references":"0:1:0:2"},
     {"content":"Vidéo d’explication brève -5mn29- et claire des caractéristiques de l’écoute active, issue du Mooc gestion de projet, par S. Delpeyroux © 2018Regarder la vidéo « Animer l’équipe projet » et lire les notes « Poser les bonnes questions »<br><a href=\"https://gestiondeprojet.pm/management-d-equipe-projet/\">https://gestiondeprojet.pm/management-d-equipe-projet/</a>", "type":"video", "references":"0:1:0:2"},
     {"content":"Les sept conseils pour pratiquer l’écoute active, par A.-M. Barrero sur le site de la revue Psychologies. La page contient une vidéo de 5mn53 qui présente des conseils pour mieux écouter ©2019<br><a href=\"https://www.psychologies.com/Moi/Moi-et-les-autres/Relationnel/Articles-et-Dossiers/7-conseils-pour-pratiquer-une-ecoute-active\">https://www.psychologies.com/Moi/Moi-et-les-autres/Relationnel/Articles-et-Dossiers/7-conseils-pour-pratiquer-une-ecoute-active</a>", "type":"video", "references":"0:1:0:2"},
     {"content":"Vidéo de 2mn53 de présentation du concept d’empathie par B. Brown, enseignante et chercheuse à l’University of Houston. “The power of empathy” (anglais avec sous-titres français)<br><a href=\"https://www.youtube.com/watch?v=1Evwgu369Jw\">https://www.youtube.com/watch?v=1Evwgu369Jw</a>", "type":"video", "references":"0:1:0:3"},
@@ -112,8 +113,10 @@
     {"content":"Un article pour comprendre les conventions professionnelles culturelles, paru dans le média en ligne The Conversation. ©2018 :  <br><a href=\"https://theconversation.com/au-bout-de-combien-de-temps-est-on-vraiment-en-retard-69449\">https://theconversation.com/au-bout-de-combien-de-temps-est-on-vraiment-en-retard-69449</a>", "type":"web", "references":"0:3:0:0"},
     {"content":"Vidéo de 10mn13 d’une conférence TED Talks, introduction au “growth mindset” (traduit par « état d’esprit en expansion ») de Carol Dweck, enseignante à Stanford ©2014<br><a href=\"https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve#t-609345\">https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve#t-609345</a>", "type":"video", "references":"0:3:0:1"},
     {"content":"Un aperçu de son livre « Mindset : The New Psychology of Success », Ballantine Books. 2007 (trad. 2010)  <br><a href=\"https://www.cairn.info/changer-d-etat-d-esprit--9782804700348.htm\">https://www.cairn.info/changer-d-etat-d-esprit--9782804700348.htm</a>", "type":"document", "references":"0:3:0:1"},
-    {"content":"Des points importants à prendre en lorsque l’on documente un projet. Page web de l’Université de Cergy-Pontoise ©2020<br><a href=\"http://cours.education/dufacilitateur/2016/07/24/atelier-comment-documenter-son-projet-v1/\">http://cours.education/dufacilitateur/2016/07/24/atelier-comment-documenter-son-projet-v1/</a>", "type":"web", "references":"2:0:0:1"},
-    {"content":"Un guide simple et avec des exemples présentant les principes de la documentation d’un projet © 2018<br><a href=\"https://volab.github.io/howto_doc/howTo_Doc.html\">https://volab.github.io/howto_doc/howTo_Doc.html</a>", "type":"web", "references":"2:0:0:1"},
+    {"content":"Créer une veille documentaire sur internet en 4 points. ©2018. Fiches pratiques créées par CoopIST (professionnels de l’information scientifique et technique).https ://coop-ist.cirad.fr/trouver-l-information/créer-une-veille/1-pourquoi-créer-une-veille", "type":"web", "references":"2:0:0:0"},
+    {"content":"Comment utiliser les flux RSS pour effectuer une veille ? Supports de formation produits par l’Urfist. ©2020 :http ://urfist.chartes.psl.eu/ressources/utiliser-les-flux-rss-pour-sa-veille-pourquoi-et-comment", "type":"document", "references":"2:0:0:0"},
+    {"content":"Des points importants à prendre en lorsque l’on documente un projet. Page web de l’Université de Cergy-Pontoise ©2020 <br><a href=\"http://cours.education/dufacilitateur/2016/07/24/atelier-comment-documenter-son-projet-v1/\">http://cours.education/dufacilitateur/2016/07/24/atelier-comment-documenter-son-projet-v1/</a>", "type":"web", "references":"2:0:0:1"},
+    {"content":"Un guide simple et avec des exemples présentant les principes de la documentation d’un projet © 2018 <br><a href=\"https://volab.github.io/howto_doc/howTo_Doc.html\">https://volab.github.io/howto_doc/howTo_Doc.html</a>", "type":"web", "references":"2:0:0:1"},
     {"content":"Définition et caractéristiques de la négociation, article de revue : « Chapitre premier - Qu’est-ce que négocier ? », Lionel Bellenger éd., La négociation. Presses Universitaires de France, 2017, pp. 11-36.<br><a href=\"https://www.cairn.info/la-negociation--9782130794745-page-11.html\">https://www.cairn.info/la-negociation--9782130794745-page-11.html</a>", "type":"document", "references":"2:1:0:0"},
     {"content":"Article du blog Formapart « Le consentement, une alternative au consensus ». 2012 : <br><a href=\"https://formapart.fr/blog/2012/08/28/le-consentement-une-alternative-au-consensus/\">https://formapart.fr/blog/2012/08/28/le-consentement-une-alternative-au-consensus/</a>", "type":"web", "references":"2:1:0:1"},
     {"content":"Aurélien Colson, Professeur à l’ESSEC, explique le rapport de forces dans la négociation. Vidéo d’essai gratuit sur Coursera. 5mn30. 2020  <br><a href=\"https://fr.coursera.org/lecture/fondamentaux-negociation/conclusion-le-rapport-de-force-B1WTx\">https://fr.coursera.org/lecture/fondamentaux-negociation/conclusion-le-rapport-de-force-B1WTx</a>", "type":"video", "references":"2:1:0:1"},
@@ -161,29 +164,30 @@
     {"content":"Trois techniques d’analyse de l’activité pour apprendre à expliciter les composantes de l’activité professionnelle et identifier plus facilement les acquis. ©2013<br><a href=\"https://www.pedagogie.ac-aix-marseille.fr/upload/docs/application/pdf/2013-10/methodologie_analyse_2013-10-09_21-07-48_677.pdf\">https://www.pedagogie.ac-aix-marseille.fr/upload/docs/application/pdf/2013-10/methodologie_analyse_2013-10-09_21-07-48_677.pdf</a>", "type":"module", "references":"1:0:0:0"},
     {"content":"Entretien avec Karine Israël expliquant comment identifier et valoriser ses acquis.Vidéo de 7mn réalisée par Studyrama© 2016 <br><a href=\"https://www.youtube.com/watch?v=JefI3h-LvRY\">https://www.youtube.com/watch?v=JefI3h-LvRY</a>", "type":"video", "references":"1:0:0:2"},
     {"content":"Trois techniques d’analyse de l’activité pour apprendre à expliciter les composantes de l’activité professionnelle et identifier plus facilement les acquis. ©2013<br><a href=\"https://www.pedagogie.ac-aix-marseille.fr/upload/docs/application/pdf/2013-10/methodologie_analyse_2013-10-09_21-07-48_677.pdf\">https://www.pedagogie.ac-aix-marseille.fr/upload/docs/application/pdf/2013-10/methodologie_analyse_2013-10-09_21-07-48_677.pdf</a>", "type":"web", "references":"1:0:0:2"},
-    {"content":"« Manuel de créativité en entreprise » publié par la CCI du Gers. Plusieurs outils de stimulation de la créativité dans les organisations de travail présentés dans ce manuel de créativité appliquée. © 201<br><a href=\"http://www.cci.fr/c/document_library/get_file?uuid=83508432-5459-40a3-9030-cb74a1d6d086&groupId=10988\">http://www.cci.fr/c/document_library/get_file?uuid=83508432-5459-40a3-9030-cb74a1d6d086&groupId=10988</a>", "type":"document", "references":"2:4:0:0"},
-    {"content":"Présentation succincte de différentes techniques de créativité : brainstorming, association, analogique, aléatoire, concassage. © 2018<br><a href=\"https://www.creativite.net/techniques-de-creativite/\">https://www.creativite.net/techniques-de-creativite/</a>", "type":"web", "references":"2:4:0:0"},
-    {"content":"Article par E.-M. Hernandez et R. Redien-Collot Méthodes de créativité et amélioration de projets entrepreneuriaux : présentation d’une expérimentation dans un contexte académique (Gestion 2000 2013/5, p. 93-114)<br><a href=\"https://www.cairn.info/revue-gestion-2000-2013-5-page-93.htm\">https://www.cairn.info/revue-gestion-2000-2013-5-page-93.htm</a>", "type":"document", "references":"2:4:0:0"},
-    {"content":"Vidéo de 3mn20, extraite du Mooc « Accompagner les transitions éducatives » créé par Synlab en partenariat avec le Centre de Recherches Interdisciplinaires et l’Université Paris Descartes et présentant les différentes formes d’innovation. © 2017<br><a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/cJLWGJ8jRx1D/HD.mp4\">https://d381hmu4snvm3e.cloudfront.net/videos/cJLWGJ8jRx1D/HD.mp4</a>", "type":"video", "references":"2:4:0:1"},
-    {"content":"Vidéo de 3mn55, interview de L. de Brabandère du cabinet Boston Consulting Group : ne pas confondre créativité et innovation. © 2010<br><a href=\"https://www.youtube.com/watch?v=UgKNlWbnk_Y&t=33s\">https://www.youtube.com/watch?v=UgKNlWbnk_Y&t=33s</a>", "type":"video", "references":"2:4:0:1"},
-    {"content":"Vidéo de 51mn55 d’introduction aux fondamentaux de l’innovation humaniste : philosophie, sociologie et ressentis profonds des individus par Marc Giget, Président et directeur scientifique de l’European Institute for Creative Strategies & Innovation et du Club de paris des Directeurs de l’Innovation. © 2016   <br><a href=\"https://vimeo.com/196353743\">https://vimeo.com/196353743</a>", "type":"video", "references":"2:4:0:2"},
-    {"content":"Podcast de 5mn de RadioFrance par X. de la Porte sur l’injonction à l’innovation. © 2014<br><a href=\"https://www.franceculture.fr/emissions/ce-qui-nous-arrive-sur-la-toile/si-reflechissait-5mn-ce-que-innover-veut-dire\">https://www.franceculture.fr/emissions/ce-qui-nous-arrive-sur-la-toile/si-reflechissait-5mn-ce-que-innover-veut-dire</a>", "type":"audio", "references":"2:4:0:2"},
-    {"content":"Un texte et des liens sur la mise en œuvre d’une idée innovante, par Bpifrance Création. © 2018 :<br><a href=\"https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-matiere-creation\">https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-matiere-creation</a>", "type":"web", "references":"2:4:0:3"},
-    {"content":"Un texte et des liens sur les questions à se poser pour mettre en œuvre une idée innovante, par Bpifrance Création. © 2018 :   <br><a href=\"https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-creation-dentreprise\">https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-creation-dentreprise</a>", "type":"web", "references":"2:4:0:3"},
-    {"content":"Une réflexion sur les limites de l’intrapreneuriat et ses rapports avec l’innovation dans les organisations de travail « Intrapreneuriat et innovation. Introduction du dossier », revue Gestion, 2011.<br><a href=\"https://www.cairn.info/revue-gestion-2011-4-page-4.hthttps://www.cairn.info/revue-gestion-2011-4-page-4.html\">https://www.cairn.info/revue-gestion-2011-4-page-4.hthttps://www.cairn.info/revue-gestion-2011-4-page-4.html</a>", "type":"web", "references":"2:4:0:3"},
-    {"content":"« L’éthique au travail : des valeurs à cultiver », récapitulatif des valeurs essentielles dans toute organisation de travail, par la Commission des droits de la personne et des droits de la jeunesse du Québec. © 2010 :<br><a href=\"http://www.cdpdj.qc.ca/Publications/valeurs_organisationnelles_Commission.pdf\">http://www.cdpdj.qc.ca/Publications/valeurs_organisationnelles_Commission.pdf</a>", "type":"document", "references":"1:1:0:0"},
-    {"content":"« Chartes d'éthique, alerte professionnelle et droit du travail français : état des lieux et perspectives », rapport public du Ministère de l'Emploi, du Travail et de l'Insertion professionnelle des Jeunes, 2007. Etat des lieux sur les chartes éthiques, la déontologie et le droit en entreprise :  <br><a href=\"http://www.ladocumentationfrancaise.fr/rapports-publics/074000335-chartes-d-ethique-alerte-professionnelle-et-droit-du-travail-francais-etat-des\">http://www.ladocumentationfrancaise.fr/rapports-publics/074000335-chartes-d-ethique-alerte-professionnelle-et-droit-du-travail-francais-etat-des</a>", "type":"document", "references":"1:1:0:0"},
-    {"content":"Définitions de la déontologique, la morale et l’éthique par Christophe Marsollier. Vidéo de 10 mn. Regarder notamment les 2 premières minutes. Manag’Educ ©2019<br><a href=\"https://www.youtube.com/watch?v=s1O8oKZKSrc\">https://www.youtube.com/watch?v=s1O8oKZKSrc</a>", "type":"video", "references":"1:1:0:0"},
-    {"content":"C. Afef, et F. Zaddem. « Le climat éthique au travail : pour promouvoir des relations interpersonnelles de confiance », Revue Interdisciplinaire Management, Homme & Entreprise, 2012. Article académique sur les liens entre le climat éthique en entreprise, la confiance et le rôle des managers :  <br><a href=\"https://www.cairn.info/revue-rimhe-2012-1-page-53.htm\">https://www.cairn.info/revue-rimhe-2012-1-page-53.htm</a>", "type":"document", "references":"1:1:0:1"},
-    {"content":"Informations sur les discriminations au travail et les recours dans le privé et dans le public, par Service-public.fr, le site officiel de l’administration. © 2020 :  <br><a href=\"https://www.service-public.fr/particuliers/vosdroits/F1642\">https://www.service-public.fr/particuliers/vosdroits/F1642</a>", "type":"web", "references":"1:1:0:2"},
-    {"content":"10e Baromètre de la perception des discriminations dans l’emploi réalisé par le Défenseur des droits et l’Organisation internationale du travail (OIT) issus de l’enquête « Accès aux droits » du Défenseur des droits, © 2017 :<br><a href=\"https://www.defenseurdesdroits.fr/sites/default/files/atoms/files/enquete-ead_vol_3_-_oit.pdf\">https://www.defenseurdesdroits.fr/sites/default/files/atoms/files/enquete-ead_vol_3_-_oit.pdf</a>", "type":"document", "references":"1:1:0:2"},
-    {"content":"La santé et la sécurité au travail, les obligations de l’employeur. Site Service public © 2020.<br><a href=\"https://www.service-public.fr/particuliers/vosdroits/F2210\">https://www.service-public.fr/particuliers/vosdroits/F2210</a>", "type":"web", "references":"1:1:0:3"},
-    {"content":"Sécurité et santé des travailleurs : les obligations générales de l’employeur et sa responsabilité. ©2020<br><a href=\"https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs-les-emplois-les-savoir-faire-et-les-competences/proteger-les-travailleurs/article/securite-et-sante-des-travailleurs-les-obligations-generales-de-l-employeur-et\">https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs-les-emplois-les-savoir-faire-et-les-competences/proteger-les-travailleurs/article/securite-et-sante-des-travailleurs-les-obligations-generales-de-l-employeur-et</a>", "type":"web", "references":"1:1:0:3"},
-    {"content":"Article bref portant sur la communication et sur l’acceptation des critiques dans un contexte professionnel. Revue Psychologies, 2020.<br><a href=\"https://www.psychologies.com/Travail/Relations-professionnelles/Vie-de-bureau/Articles-et-Dossiers/Comment-bien-communiquer-au-travail\">https://www.psychologies.com/Travail/Relations-professionnelles/Vie-de-bureau/Articles-et-Dossiers/Comment-bien-communiquer-au-travail</a>", "type":"web", "references":"1:2:0:0"},
-    {"content":"Comment accepter les critiques ? Les types de critiques, l’émetteur et la gestion de celle-ci. ©2020  <br><a href=\"https://www.manager-go.com/efficacite-professionnelle/savoir-gerer-une-critique.htm\">https://www.manager-go.com/efficacite-professionnelle/savoir-gerer-une-critique.htm</a>", "type":"web", "references":"1:2:0:1"},
-    {"content":"Sur le Blog Chèvre pensante, un test pour prendre conscience de ses propres biais « Avez-vous l’esprit critique ? ». © 2016<br><a href=\"http://chevrepensante.fr/2016/11/05/test-avez-lesprit-critique/\">http://chevrepensante.fr/2016/11/05/test-avez-lesprit-critique/</a>", "type":"module", "references":"1:2:0:2"},
-    {"content":"Atelier en ligne « Se méfier de ses raisonnements » Contient des quiz correspondant aux différentes manipulations argumentatives (Erreurs logiques, sophismes, généralisations abusives, etc.). Mis en ligne en 2019<br><a href=\"https://apprentissage.atelier-mediation-critique.com/courses/course-v1:amcsti+raisonements+2018/about\">https://apprentissage.atelier-mediation-critique.com/courses/course-v1:amcsti+raisonements+2018/about</a>", "type":"module", "references":"1:2:0:2"},
-    {"content":"Article « Développer l’esprit critique par l’argumentation : de l’élève au citoyen », issu des Dossier de veille de l’Ifé “Argumenter, qu’est-ce que c’est ?”. 2016 :  <br><a href=\"https://edupass.hypotheses.org/978#chap1\">https://edupass.hypotheses.org/978#chap1</a>", "type":"document", "references":"1:2:0:3"}
+    {"content":"« Manuel de créativité en entreprise » publié par la CCI du Gers. Plusieurs outils de stimulation de la créativité dans les organisations de travail présentés dans ce manuel de créativité appliquée. © 201<br><a href=\"http://www.cci.fr/c/document_library/get_file?uuid=83508432-5459-40a3-9030-cb74a1d6d086&groupId=10988\">http://www.cci.fr/c/document_library/get_file?uuid=83508432-5459-40a3-9030-cb74a1d6d086&groupId=10988</a>", "type":"document", "references":"1:1:0:0"},
+    {"content":"Présentation succincte de différentes techniques de créativité : brainstorming, association, analogique, aléatoire, concassage. © 2018<br><a href=\"https://www.creativite.net/techniques-de-creativite/\">https://www.creativite.net/techniques-de-creativite/</a>", "type":"web", "references":"1:1:0:0"},
+    {"content":"Article par E.-M. Hernandez et R. Redien-Collot Méthodes de créativité et amélioration de projets entrepreneuriaux : présentation d’une expérimentation dans un contexte académique (Gestion 2000 2013/5, p. 93-114)<br><a href=\"https://www.cairn.info/revue-gestion-2000-2013-5-page-93.htm\">https://www.cairn.info/revue-gestion-2000-2013-5-page-93.htm</a>", "type":"document", "references":"1:1:0:0"},
+    {"content":"Vidéo de 3mn20, extraite du Mooc « Accompagner les transitions éducatives » créé par Synlab en partenariat avec le Centre de Recherches Interdisciplinaires et l’Université Paris Descartes et présentant les différentes formes d’innovation. © 2017<br><a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/cJLWGJ8jRx1D/HD.mp4\">https://d381hmu4snvm3e.cloudfront.net/videos/cJLWGJ8jRx1D/HD.mp4</a>", "type":"video", "references":"1:1:0:1"},
+    {"content":"Vidéo de 3mn55, interview de L. de Brabandère du cabinet Boston Consulting Group : ne pas confondre créativité et innovation. © 2010<br><a href=\"https://www.youtube.com/watch?v=UgKNlWbnk_Y&t=33s\">https://www.youtube.com/watch?v=UgKNlWbnk_Y&t=33s</a>", "type":"video", "references":"1:1:0:1"},
+    {"content":"Vidéo de 51mn55 d’introduction aux fondamentaux de l’innovation humaniste : philosophie, sociologie et ressentis profonds des individus par Marc Giget, Président et directeur scientifique de l’European Institute for Creative Strategies & Innovation et du Club de paris des Directeurs de l’Innovation. © 2016   <br><a href=\"https://vimeo.com/196353743\">https://vimeo.com/196353743</a>", "type":"video", "references":"1:1:0:2"},
+    {"content":"Podcast de 5mn de RadioFrance par X. de la Porte sur l’injonction à l’innovation. © 2014<br><a href=\"https://www.franceculture.fr/emissions/ce-qui-nous-arrive-sur-la-toile/si-reflechissait-5mn-ce-que-innover-veut-dire\">https://www.franceculture.fr/emissions/ce-qui-nous-arrive-sur-la-toile/si-reflechissait-5mn-ce-que-innover-veut-dire</a>", "type":"audio", "references":"1:1:0:2"},
+    {"content":"Un texte et des liens sur la mise en œuvre d’une idée innovante, par Bpifrance Création. © 2018 :<br><a href=\"https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-matiere-creation\">https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-matiere-creation</a>", "type":"web", "references":"1:1:0:3"},
+    {"content":"Un texte et des liens sur les questions à se poser pour mettre en œuvre une idée innovante, par Bpifrance Création. © 2018 :   <br><a href=\"https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-creation-dentreprise\">https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-creation-dentreprise</a>", "type":"web", "references":"1:1:0:3"},
+    {"content":"Une réflexion sur les limites de l’intrapreneuriat et ses rapports avec l’innovation dans les organisations de travail « Intrapreneuriat et innovation. Introduction du dossier », revue Gestion, 2011.<br><a href=\"https://www.cairn.info/revue-gestion-2011-4-page-4.hthttps://www.cairn.info/revue-gestion-2011-4-page-4.html\">https://www.cairn.info/revue-gestion-2011-4-page-4.hthttps://www.cairn.info/revue-gestion-2011-4-page-4.html</a>", "type":"web", "references":"1:1:0:3"},
+    {"content":"« L’éthique au travail : des valeurs à cultiver », récapitulatif des valeurs essentielles dans toute organisation de travail, par la Commission des droits de la personne et des droits de la jeunesse du Québec. © 2010 :<br><a href=\"http://www.cdpdj.qc.ca/Publications/valeurs_organisationnelles_Commission.pdf\">http://www.cdpdj.qc.ca/Publications/valeurs_organisationnelles_Commission.pdf</a>", "type":"document", "references":"1:2:0:0"},
+    {"content":"« Chartes d'éthique, alerte professionnelle et droit du travail français : état des lieux et perspectives », rapport public du Ministère de l'Emploi, du Travail et de l'Insertion professionnelle des Jeunes, 2007. Etat des lieux sur les chartes éthiques, la déontologie et le droit en entreprise :  <br><a href=\"http://www.ladocumentationfrancaise.fr/rapports-publics/074000335-chartes-d-ethique-alerte-professionnelle-et-droit-du-travail-francais-etat-des\">http://www.ladocumentationfrancaise.fr/rapports-publics/074000335-chartes-d-ethique-alerte-professionnelle-et-droit-du-travail-francais-etat-des</a>", "type":"document", "references":"1:2:0:0"},
+    {"content":"Définitions de la déontologique, la morale et l’éthique par Christophe Marsollier. Vidéo de 10 mn. Regarder notamment les 2 premières minutes. Manag’Educ ©2019<br><a href=\"https://www.youtube.com/watch?v=s1O8oKZKSrc\">https://www.youtube.com/watch?v=s1O8oKZKSrc</a>", "type":"video", "references":"1:2:0:0"},
+    {"content":"C. Afef, et F. Zaddem. « Le climat éthique au travail : pour promouvoir des relations interpersonnelles de confiance », Revue Interdisciplinaire Management, Homme & Entreprise, 2012. Article académique sur les liens entre le climat éthique en entreprise, la confiance et le rôle des managers :  <br><a href=\"https://www.cairn.info/revue-rimhe-2012-1-page-53.htm\">https://www.cairn.info/revue-rimhe-2012-1-page-53.htm</a>", "type":"document", "references":"1:2:0:1"},
+    {"content":"Informations sur les discriminations au travail et les recours dans le privé et dans le public, par Service-public.fr, le site officiel de l’administration. © 2020 :  <br><a href=\"https://www.service-public.fr/particuliers/vosdroits/F1642\">https://www.service-public.fr/particuliers/vosdroits/F1642</a>", "type":"web", "references":"1:2:0:2"},
+    {"content":"10e Baromètre de la perception des discriminations dans l’emploi réalisé par le Défenseur des droits et l’Organisation internationale du travail (OIT) issus de l’enquête « Accès aux droits » du Défenseur des droits, © 2017 :<br><a href=\"https://www.defenseurdesdroits.fr/sites/default/files/atoms/files/enquete-ead_vol_3_-_oit.pdf\">https://www.defenseurdesdroits.fr/sites/default/files/atoms/files/enquete-ead_vol_3_-_oit.pdf</a>", "type":"document", "references":"1:2:0:2"},
+    {"content":"La santé et la sécurité au travail, les obligations de l’employeur. Site Service public © 2020.<br><a href=\"https://www.service-public.fr/particuliers/vosdroits/F2210\">https://www.service-public.fr/particuliers/vosdroits/F2210</a>", "type":"web", "references":"1:2:0:3"},
+    {"content":"Sécurité et santé des travailleurs : les obligations générales de l’employeur et sa responsabilité. ©2020<br><a href=\"https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs-les-emplois-les-savoir-faire-et-les-competences/proteger-les-travailleurs/article/securite-et-sante-des-travailleurs-les-obligations-generales-de-l-employeur-et\">https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs-les-emplois-les-savoir-faire-et-les-competences/proteger-les-travailleurs/article/securite-et-sante-des-travailleurs-les-obligations-generales-de-l-employeur-et</a>", "type":"web", "references":"1:2:0:3"},
+    {"content":"Article bref portant sur la communication et sur l’acceptation des critiques dans un contexte professionnel. Revue Psychologies, 2020.<br><a href=\"https://www.psychologies.com/Travail/Relations-professionnelles/Vie-de-bureau/Articles-et-Dossiers/Comment-bien-communiquer-au-travail\">https://www.psychologies.com/Travail/Relations-professionnelles/Vie-de-bureau/Articles-et-Dossiers/Comment-bien-communiquer-au-travail</a>", "type":"web", "references":"1:3:0:0"},
+    {"content":"Comment accepter les critiques ? Les types de critiques, l’émetteur et la gestion de celle-ci. ©2020  <br><a href=\"https://www.manager-go.com/efficacite-professionnelle/savoir-gerer-une-critique.htm\">https://www.manager-go.com/efficacite-professionnelle/savoir-gerer-une-critique.htm</a>", "type":"web", "references":"1:3:0:1"},
+    {"content":"Sur le Blog Chèvre pensante, un test pour prendre conscience de ses propres biais « Avez-vous l’esprit critique ? ». © 2016<br><a href=\"http://chevrepensante.fr/2016/11/05/test-avez-lesprit-critique/\">http://chevrepensante.fr/2016/11/05/test-avez-lesprit-critique/</a>", "type":"module", "references":"1:3:0:2"},
+    {"content":"Atelier en ligne « Se méfier de ses raisonnements » Contient des quiz correspondant aux différentes manipulations argumentatives (Erreurs logiques, sophismes, généralisations abusives, etc.). Mis en ligne en 2019<br><a href=\"https://apprentissage.atelier-mediation-critique.com/courses/course-v1:amcsti+raisonements+2018/about\">https://apprentissage.atelier-mediation-critique.com/courses/course-v1:amcsti+raisonements+2018/about</a>", "type":"module", "references":"1:3:0:2"},
+    {"content":"Article « Développer l’esprit critique par l’argumentation : de l’élève au citoyen », issu des Dossier de veille de l’Ifé “Argumenter, qu’est-ce que c’est ?”. 2016 :  <br><a href=\"https://edupass.hypotheses.org/978#chap1\">https://edupass.hypotheses.org/978#chap1</a>", "type":"document", "references":"1:3:0:3"},
+    {"content":"L’affirmation de soi, émission France 3 Hauts-de-France, 7mn. Des techniques simples pour s’affirmer. © 2017  <br><a href=\"https://www.youtube.com/watch?v=g6vV7ZhaIPc\">https://www.youtube.com/watch?v=g6vV7ZhaIPc</a>", "type":"video", "references":"1:3:0:3"}
   ],
   "settings": {
     "welcomeTitle": "Bienvenue sur le\nTest d'auto-positionnement sur les soft skills.",
@@ -523,6 +527,47 @@
           ]
         },
         {
+          "label": "Faire preuve de créativité, chercher à innover et à entreprendre",
+          "isVisible": false,
+          "contexts": [
+            {
+              "label": "Dans le cadre de mes activités,",
+              "isVisible": true,
+              "questions": [
+                {
+                  "label": "J’utilise les méthodes de créativité. ",
+                  "hideResourceThreshold": 9999
+                },
+                {
+                  "label": "Je m’appuie sur la typologie des innovations pour concevoir des solutions adaptées."
+                },
+                {
+                  "label": "Je mets en œuvre des processus d’innovation.",
+                  "answerLabelsOverride":  [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
+                  "hideResourceThreshold": 9999
+                },
+                {
+                  "label": "Je pense à transformer mes idées en activités rentables. ",
+                  "answerLabelsOverride":  [
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
+                  "hideResourceThreshold": 9999
+                }
+              ]
+            }
+          ]
+        },
+        {
           "label": "L’éthique",
           "isVisible": true,
           "contexts": [
@@ -786,47 +831,6 @@
                 {
                   "label": "Je surveille la mise en œuvre de la solution.",
                   "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Faire preuve de créativité, chercher à innover et à entreprendre",
-          "isVisible": false,
-          "contexts": [
-            {
-              "label": "Dans le cadre de mes activités,",
-              "isVisible": true,
-              "questions": [
-                {
-                  "label": "J’utilise les méthodes de créativité. ",
-                  "hideResourceThreshold": 9999
-                },
-                {
-                  "label": "Je m’appuie sur la typologie des innovations pour concevoir des solutions adaptées."
-                },
-                {
-                  "label": "Je mets en œuvre des processus d’innovation.",
-                  "answerLabelsOverride":  [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "hideResourceThreshold": 9999
-                },
-                {
-                  "label": "Je pense à transformer mes idées en activités rentables. ",
-                  "answerLabelsOverride":  [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
                   "hideResourceThreshold": 9999
                 }
               ]

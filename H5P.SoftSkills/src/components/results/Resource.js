@@ -24,7 +24,8 @@ const styles = theme => ({
     maxHeight: "50px"
   },
   textBox: {
-    overflowWrap: "anywhere"
+    overflowWrap: "break-word",
+    wordBreak: "break-all"
   },
   icon: {
     fontSize: 50
