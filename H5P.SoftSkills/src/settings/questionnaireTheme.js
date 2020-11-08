@@ -55,6 +55,7 @@ export const questionnaireTheme = createMuiTheme({
   overrides: {
     MuiTypography: {
       subtitle2: {
+        position: "relative",
         '&::after': {
           content: "' '",
           position: 'absolute',

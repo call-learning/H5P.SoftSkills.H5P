@@ -18,8 +18,8 @@ const CompetencyLabel = (props) => {
   const { payload, x, y, textAnchor, resultsList, ...otherprops } = props;
   return (
     <text x={x} y={y} textAnchor={textAnchor}>
-      <tspan className="label-compname" textAnchor={textAnchor}>{truncateLabel(resultsList[payload.index].label, MAX_LABEL_CHARACTERS)}
-      </tspan>
+      <tspan className="label-compname" textAnchor={textAnchor}
+             dangerouslySetInnerHTML={{__html:truncateLabel(resultsList[payload.index].label, MAX_LABEL_CHARACTERS)}}/>
       <tspan className="label-percent" dx={-payload.offset} dy={'1em'}>{resultsList[payload.index].value}%</tspan>
     </text>
   );

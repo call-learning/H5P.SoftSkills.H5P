@@ -6,10 +6,10 @@ import { questionnaireStore } from '../utils/ReduxUtils';
 
 import H5P from '../utils/H5P.mock';
 import { initializeUserData } from '../actions/questionnaire';
+import Box from '@material-ui/core/Box';
 
 export default { title: 'Questionnaire' };
 window.H5P = H5P;
-
 
 const questionnaireData = {
   questionsByCompetencyAndSubCompetencies: sampleData.questionsByCompetencyAndSubCompetencies,
@@ -19,7 +19,9 @@ const questionnaireData = {
 
 export const fullQuestionnaire = () => {
   questionnaireStore.dispatch(initializeUserData(''));
-  return (<Provider store={questionnaireStore}>
+  return (<Box  height={"900px"} overflow={"auto"}>
+    <Provider store={questionnaireStore}>
     <Questionnaire {...questionnaireData} />
-  </Provider>)
-}
+  </Provider>
+  </Box>);
+};
