@@ -35,6 +35,7 @@ function CompetencyPage (props) {
         questionsCount={currentCompetencyProgress.questionsCount}
         competencyTitle={currentCompetency.label}
         competencyProgressData={competencyProgressData}
+        competencyIndex={props.currentCompetencyIndex}
       />
     </Box>
     <Box flex={4} mx={1} px={1} overflow={'auto'} id={'competencyPageContainer'}>

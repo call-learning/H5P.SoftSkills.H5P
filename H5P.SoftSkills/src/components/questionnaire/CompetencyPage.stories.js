@@ -28,4 +28,27 @@ export const simpleCompetencyPage = () =>
                     }}/>
   </Box>);
 
+export const simpleCompetencyPageSecondPart = () =>
+  (<Box maxHeight="800px">
+    <CompetencyPage questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
+                    currentCompetencyIndex={2}
+                    progressData={{
+                      answeredQuestionsCount: 50,
+                      questionsCount: 51,
+                      competenciesProgress: [{
+                        answeredQuestionsCount: 20,
+                        questionsCount: 20,
+                      },
+                        {
+                          answeredQuestionsCount: 5,
+                          questionsCount: 20,
+                        },
+                        {
+                          answeredQuestionsCount: 5,
+                          questionsCount: 11,
+                        }
+                      ]
+                    }}/>
+  </Box>);
+
 
