@@ -3,4 +3,6 @@
 /node_modules
 npm-debug.log*
 .idea/
+*.h5p
+*.zip
 

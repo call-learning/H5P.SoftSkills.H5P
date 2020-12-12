@@ -356,16 +356,21 @@ export function getContextFromReference (ref) {
   for (let ref of resourceRefs) {
     const refSplit = ref.split(':');
     if (refSplit) {
-      let [competencyId, subCompetencyId, contextId] = refSplit;
+      let [competencyId, subCompetencyId, contextId, questionIndex] = refSplit;
       competencyId = parseInt(competencyId);
       subCompetencyId = parseInt(subCompetencyId);
       contextId = parseInt(contextId);
+      questionIndex = parseInt(questionIndex);
       if (!(isNaN(contextId) || isNaN(subCompetencyId) || isNaN(contextId))) {
-        allRefs.push({
+        var newRef = {
           competencyId: competencyId,
           subCompetencyId: subCompetencyId,
           contextId: contextId
-        });
+        };
+        if (!(isNaN(questionIndex))) {
+          newRef.questionId = questionIndex;
+        }
+        allRefs.push(newRef);
       }
     }
   }
@@ -423,6 +428,7 @@ export function truncateLabel (text, MAXCHAR) {
 
 /**
  * Get subcompetencies context and attached resources
+ *
  * @param questionsByCompetencyAndSubCompetencies
  * @param answeredQuestion
  * @param resources
@@ -472,11 +478,13 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
         if (ref.competencyId === competencyIndex
           && ref.subCompetencyId === subCompetencyIndex
           && ref.contextId === contextIndex) {
-          if (typeof ref.questionIndex != 'undefined') {
+          // TODO: Check if this part is still valid: i.e. we hide resources when the question
+          // was specified in the resource index AND it is below the threshold where we hide them.
+          if (typeof ref.questionId != 'undefined') {
             // If resource is up to index we only display the resource if question has an answer greater than the
             // threshold.
-            if ((context.questions.length > ref.questionIndex)){
-              const question  = context.questions[ref.questionIndex];
+            if (ref.questionId < context.questions.length ){
+              const question  = context.questions[ref.questionId];
               const hideResourceThreshold = typeof question.hideResourceThreshold === 'undefined' ?
                 settings.hideResourceThreshold :  question.hideResourceThreshold;
 
@@ -485,7 +493,7 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
                 competencyIndex,
                 subCompetencyIndex,
                 contextIndex,
-                ref.questionIndex);
+                ref.questionId);
               const answeredQuestion = contextQA.find(
                 (element) => (element.questionGlobalIndex === questionGlobalIndex)
               )
@@ -495,12 +503,12 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
             }
           }
           const currentResourceWID = Object.assign({ id: stringToHashCode(resource.content) }, resource);
-          acc.set(contextIndex, currentResourceWID);
+          acc.push(currentResourceWID);
         }
       }
       return acc;
       // eslint-disable-next-line no-undef
-    }, new Map());
+    }, []);
     const resultValue = Math.floor(contextTotalScore / contextTotalQuestionCount);
     resultsAndResources.push({
       label: context.label,
@@ -508,7 +516,7 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
       contextAcquisitionThreshold: contextAcquiredValue,
       rawValue: contextTotalScore,
       questionsAnswers: contextQA,
-      resources: Array.from(resourcesList.values())
+      resources: resourcesList
     });
   }
 

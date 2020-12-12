@@ -120,7 +120,7 @@ test('computeProgressPerCompetency', () => {
               "label": "Communiquer pour transmettre des idées et des informations nécessaires au travail",
               "totalAnswered": 11,
               "totalQuestions": 11,
-              "value": 74
+              "value": 63
             },
             {
               "label": "Manager une équipe",
@@ -143,7 +143,7 @@ test('computeProgressPerCompetency', () => {
           ],
           "totalAnswered": 27,
           "totalQuestions": 27,
-          "value": 70
+          "value": 67
         },
         {
           "label": "Compétences Personnelles",
@@ -212,7 +212,7 @@ test('computeProgressPerCompetency', () => {
       ],
       "totalAnswered": 67,
       "totalQuestions": 67,
-      "value": 69.5
+      "value": 68.58333333333333
     }
   )
   ;
@@ -239,13 +239,52 @@ test('getSubCompetencyResultsAndResources', () => {
     0);
 
   expect(result.length == 3).toBeTruthy();
-  expect(result[0].questionsAnswers.length == 2).toBeTruthy();
+  expect(result[0].resources.length == 6).toBeTruthy();
+  expect(result[1].resources.length == 13).toBeTruthy();
+  expect(result[2].resources.length == 8).toBeTruthy();
   expect(result[0].resources[0]).toEqual(
     {
-      "content": "Un guide pratique pour l’écriture inclusive diffusé par le Haut conseil d’état chargé de l’Egalité entre les femmes et les hommes et de la lutte contre les discriminations ©2016<br><a href=\"http://www.haut-conseil-egalite.gouv.fr/IMG/pdf/guide_pour_une_communication_publique_sans_stereotype_de_sexe_vf_2016_11_02.compressed.pdf\">http://www.haut-conseil-egalite.gouv.fr/IMG/pdf/guide_pour_une_communication_publique_sans_stereotype_de_sexe_vf_2016_11_02.compressed.pdf</a>",
-      "id": "380651661",
-      "references": "0:0:0:1",
-      "type": "document"
+      "id": "3100862142",
+      "content": "Sous forme de tableau, quel format pour quel public et quelle situation ? Ressource mise à disposition sur le site de l’académie de Poitiers ©2005<br><a href=\"http://ww2.ac-poitiers.fr/ecogest/IMG/pdf/Adapter_les_outils_de_com.pdf\">http://ww2.ac-poitiers.fr/ecogest/IMG/pdf/Adapter_les_outils_de_com.pdf</a>",
+      "type": "document",
+      "references": "0:0:0:0"
+    }
+  );
+});
+
+test('getSubCompetencyResultsAndResourcesWithTopAnswers', () => {
+  // All answer < 20 are to the max, so we should remove
+  // resources from the list
+  var sampleAnswerDataRectified = sampleAnswerData.reduce(
+    (data, value, index) => {
+      if (index < 20) {
+        data.push({ ...value, ...{ "answerId": 5 } });
+      } else {
+        data.push({...value});
+      }
+      return data;
+  }, []
+  );
+
+
+  const result = getSubCompetencyResultsAndResources(
+    sampleData.questionsByCompetencyAndSubCompetencies,
+    sampleAnswerDataRectified,
+    sampleData.resources,
+    sampleData.settings,
+    0,
+    0);
+
+  expect(result.length == 3).toBeTruthy();
+  expect(result[0].resources.length == 0).toBeTruthy();
+  expect(result[1].resources.length == 2).toBeTruthy();
+  expect(result[2].resources.length == 1).toBeTruthy();
+  expect(result[1].resources[0]).toEqual(
+    {
+      "content": "Page web ou extension pour Chrome. Correcteur d’orthographe et grammaire, dictionnaire, conjugueur. ©2020<br><a href=\"http://www.reverso.net/orthographe/correcteur-francais/\">http://www.reverso.net/orthographe/correcteur-francais/</a>",
+      "id": "4117933756",
+      "references": "0:0:1:0",
+      "type": "web"
     }
   );
 });
@@ -271,7 +310,7 @@ test('truncateLabel', () => {
 });
 
 test('getContextFromReference', () => {
-  const ref = '1:2:3,3:4:5,A&b';
+  const ref = '1:2:3,3:4:5,A&b,1:2:3:4';
   expect(getContextFromReference(ref)).toEqual([
     {
       competencyId: 1,
@@ -282,6 +321,12 @@ test('getContextFromReference', () => {
       competencyId: 3,
       subCompetencyId: 4,
       contextId: 5
+    },
+    {
+      competencyId: 1,
+      subCompetencyId: 2,
+      contextId: 3,
+      questionId: 4
     }
   ]);
 });
@@ -345,9 +390,9 @@ test('isFullyAcquired', () => {
       }
     ];
 
-  const insufficientAnswers = [
+  const sufficientAnswer = [
     {
-      "answerId": 2,
+      "answerId": 5,
       "questionGlobalIndex": 0
     },
     {
@@ -356,6 +401,6 @@ test('isFullyAcquired', () => {
     } ];
   expect(isFullyAcquired(sampleData.questionsByCompetencyAndSubCompetencies, sampleAnswerData, sampleData.settings)).toBeFalsy();
 
-  expect(isFullyAcquired(subQuestionnaire, sampleAnswerData, sampleData.settings)).toBeTruthy();
-  expect(isFullyAcquired(subQuestionnaire, insufficientAnswers, sampleData.settings)).toBeFalsy();
+  expect(isFullyAcquired(subQuestionnaire, sampleAnswerData, sampleData.settings)).toBeFalsy();
+  expect(isFullyAcquired(subQuestionnaire, sufficientAnswer, sampleData.settings)).toBeTruthy();
 });

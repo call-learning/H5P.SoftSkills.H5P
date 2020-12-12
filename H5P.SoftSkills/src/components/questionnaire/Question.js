@@ -9,7 +9,6 @@ import {
 } from '../../utils/CommonProptypes';
 import CheckCircle from '@material-ui/icons/CheckCircle';
 import { resourceCreateMarkup } from '../../utils/ComponentsUtils';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const styles = theme => ({
   roundedControl: {

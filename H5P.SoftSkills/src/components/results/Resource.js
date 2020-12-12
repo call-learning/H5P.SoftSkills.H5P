@@ -55,7 +55,7 @@ const ResourceIcon = withStyles(styles)((props) => {
 function Resource (props) {
   const { classes } = props;
   return (
-    <Box display="flex" flexDirection="row" >
+    <Box display="flex" flexDirection="row" py={1}>
       <Box width={"50px"} alignSelf={"center"} px={3}>
         {
         props.resource.imageUrl ?

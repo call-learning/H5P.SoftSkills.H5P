@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Button, Container, Box } from '@material-ui/core';
+import { Container, Box } from '@material-ui/core';
 import { Icon } from '@material-ui/core';
 import { getCompetencyImageFromIndex, resourceCreateMarkup } from '../../utils/ComponentsUtils';
 import { questionnaireSettings, questionnaireSettingsDefault } from '../../utils/CommonProptypes';
