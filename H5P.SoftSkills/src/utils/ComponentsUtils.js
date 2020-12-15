@@ -430,7 +430,7 @@ export function truncateLabel (text, MAXCHAR) {
  * Get subcompetencies context and attached resources
  *
  * @param questionsByCompetencyAndSubCompetencies
- * @param answeredQuestion
+ * @param answeredQuestions
  * @param resources
  * @param settings
  * @param competencyIndex
@@ -438,7 +438,7 @@ export function truncateLabel (text, MAXCHAR) {
  * @return {[]}
  */
 export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSubCompetencies,
-                                                     answeredQuestion,
+                                                     answeredQuestions,
                                                      resources,
                                                      settings,
                                                      competencyIndex,
@@ -451,7 +451,7 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
     const minQuestionIndexForContext =
       getGlobalQuestionIndex(questionsByCompetencyAndSubCompetencies, competencyIndex, subCompetencyIndex, contextIndex, 0);
     const contextTotalQuestionCount = context.questions.length;
-    const contextTotalScore = answeredQuestion.reduce((acc, answer) => {
+    const contextTotalScore = answeredQuestions.reduce((acc, answer) => {
       const qi = answer.questionGlobalIndex - minQuestionIndexForContext;
       return acc + ((qi >= 0 && qi < contextTotalQuestionCount) ?
         getRealValueFromPossibleValue(settings.possibleAnswers, answer.answerId) : 0);
@@ -459,7 +459,7 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
     // Get cumulative acquisition Threshold
     const contextAcquiredValue =
       context.questions.reduce((acc, question) => (acc + acquisitionThreshold(settings, question)),0);
-    const contextQA = answeredQuestion.reduce((acc, answer) => {
+    const contextQA = answeredQuestions.reduce((acc, answer) => {
       const qi = answer.questionGlobalIndex - minQuestionIndexForContext;
       if (qi >= 0 && qi < contextTotalQuestionCount) {
         acc.push({
@@ -497,7 +497,7 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
               const answeredQuestion = contextQA.find(
                 (element) => (element.questionGlobalIndex === questionGlobalIndex)
               )
-              if (answeredQuestion.answer > hideResourceThreshold) {
+              if (answeredQuestion && answeredQuestion.answer > hideResourceThreshold) {
                 continue; // We don't add the resource to the list as the user has answer correctly.
               }
             }
