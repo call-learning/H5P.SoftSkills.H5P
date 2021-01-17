@@ -77,7 +77,7 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                     </Box>
                     <Box display="flex">
                       {
-                        context.rawValue > context.contextAcquisitionThreshold ? masteredInfo : toImproveInfo
+                        context.rawValue >= context.contextAcquisitionThreshold ? masteredInfo : toImproveInfo
                       }
                     </Box>
                   </Box>
