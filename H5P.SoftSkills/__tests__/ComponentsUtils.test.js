@@ -240,7 +240,7 @@ test('getSubCompetencyResultsAndResources', () => {
 
   expect(result.length == 3).toBeTruthy();
   expect(result[0].resources.length == 6).toBeTruthy();
-  expect(result[1].resources.length == 13).toBeTruthy();
+  expect(result[1].resources.length == 7).toBeTruthy();
   expect(result[2].resources.length == 8).toBeTruthy();
   expect(result[0].resources[0]).toEqual(
     {
@@ -277,14 +277,14 @@ test('getSubCompetencyResultsAndResourcesWithTopAnswers', () => {
 
   expect(result.length == 3).toBeTruthy();
   expect(result[0].resources.length == 0).toBeTruthy();
-  expect(result[1].resources.length == 2).toBeTruthy();
+  expect(result[1].resources.length == 0).toBeTruthy();
   expect(result[2].resources.length == 1).toBeTruthy();
-  expect(result[1].resources[0]).toEqual(
+  expect(result[2].resources[0]).toEqual(
     {
-      "content": "Page web ou extension pour Chrome. Correcteur d’orthographe et grammaire, dictionnaire, conjugueur. ©2020<br><a href=\"http://www.reverso.net/orthographe/correcteur-francais/\">http://www.reverso.net/orthographe/correcteur-francais/</a>",
-      "id": "4117933756",
-      "references": "0:0:1:0",
-      "type": "web"
+      "id": "3666240837",
+      "content": "La prise de parole en public : posture, gestuelle, gestion de l’espace Vidéo proposée par l’IUT de Roanne © 2016<br><a href=\"https://www.youtube.com/watch?v=ZQNBfE85n2s\">https://www.youtube.com/watch?v=ZQNBfE85n2s</a>",
+      "type": "video",
+      "references": "0:0:2:2"
     }
   );
 });

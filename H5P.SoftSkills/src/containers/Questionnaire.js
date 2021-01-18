@@ -53,7 +53,7 @@ function Questionnaire (props) {
       );
   }
   // The maxheight 100vh is to ensure there will be a scrollbar on Moodle if content goes over the size of the iframe.
-  return (<Box minHeight={"900px"}>{currentPage}</Box>);
+  return (<Box id={'sokaApplicationContainer'}>{currentPage}</Box>);
 }
 
 Questionnaire.propTypes = Object.assign({

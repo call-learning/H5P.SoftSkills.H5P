@@ -7,6 +7,6 @@ export default { title: 'Widget' };
 
 window.H5P = H5P;
 
-export const basicSideNavigation = () => (<Box display="flex" flexDirection="column" height="800px">
+export const basicSideNavigation = () => (<Box display="flex" flexDirection="column" height="1200px">
   <VerticalProgressWithSteps progressInfo={[100,40,0]}/>
 </Box>);

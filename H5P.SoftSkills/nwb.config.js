@@ -11,7 +11,7 @@ module.exports = {
   webpack: {
     extra: {
       entry: {
-        dist: process.env.NODE_ENV == 'development' ? './demo/src/index.js' : './src/index.js',
+        dist: './src/index.js',
       },
       output: {
         filename: 'h5p-softskills.js',

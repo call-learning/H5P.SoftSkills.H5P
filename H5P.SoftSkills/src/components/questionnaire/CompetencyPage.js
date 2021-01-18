@@ -28,7 +28,7 @@ function CompetencyPage (props) {
   const currentCompetency = props.questionsByCompetencyAndSubCompetencies[competencyIndex];
   const currentCompetencyProgress = props.progressData.competenciesProgress[competencyIndex];
 
-  return (<Box display="flex" flexDirection="row" maxHeight={'100vh'}>
+  return (<Box display="flex" flexDirection="row" height={'100%'}>
     <Box mx={1} flex={1}>
       <CompetencySideNavigation
         answeredQuestionsCount={currentCompetencyProgress.answeredQuestionsCount}
@@ -38,7 +38,7 @@ function CompetencyPage (props) {
         competencyIndex={props.currentCompetencyIndex}
       />
     </Box>
-    <Box flex={4} mx={1} px={1} overflow={'auto'} id={'competencyPageContainer'}>
+    <Box flex={4} mx={1} px={1} overflow={'auto'} height={'100%'}  id={'competencyPageContainer'}>
       <QuestionsList
         questionComponent={props.questionComponent}
         questionsByCompetencyAndSubCompetencies={props.questionsByCompetencyAndSubCompetencies}

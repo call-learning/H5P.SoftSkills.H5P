@@ -31,8 +31,8 @@ export const sideNavigationWithScrollContent = () => {
     count++;
   }
   return (
-    <Box display="flex" flexDirection="row" maxHeight={"500px"} >
-      <Box>
+    <Box display="flex" flexDirection="row" maxHeight={"1200px"} >
+      <Box mx={1} flex={1}>
         <CompetencySideNavigation competencyIndex={1}
                                   competencyTitle={'compétences sociales'}
                                   competencyImagePath={socialImage}
@@ -41,7 +41,7 @@ export const sideNavigationWithScrollContent = () => {
                                   competencyProgressData={subCompetencyProgressData}
         />
       </Box>
-      <Box minWidth="80%" overflow={"auto"} >
+      <Box flex={4} mx={1} px={1} overflow={'auto'}>
         {sideContent}
       </Box>
     </Box>

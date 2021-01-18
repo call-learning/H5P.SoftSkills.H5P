@@ -6,7 +6,7 @@ import Box from '@material-ui/core/Box';
 export default { title: 'Questionnaire' };
 
 export const simpleCompetencyPage = () =>
-  (<Box maxHeight="800px">
+  (<Box height="1200px" position="relative">
     <CompetencyPage questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
                     currentCompetencyIndex={1}
                     progressData={{
@@ -29,7 +29,7 @@ export const simpleCompetencyPage = () =>
   </Box>);
 
 export const simpleCompetencyPageSecondPart = () =>
-  (<Box maxHeight="800px">
+  (<Box height="1200px" position="relative">
     <CompetencyPage questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
                     currentCompetencyIndex={2}
                     progressData={{

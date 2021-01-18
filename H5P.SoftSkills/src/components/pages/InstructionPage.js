@@ -61,7 +61,7 @@ const InstructionPage = withStyles(styles)((props) => {
                   <Box>
                     <BottomRectangle/>
                   </Box>
-                  <Box>
+                  <Box px={1}>
                     <Box><Typography variant="subtitle1" className={classes.competencyTitle}>{e.title}</Typography></Box>
                     <Box><Typography color="textSecondary">{e.description}</Typography></Box>
                   </Box>

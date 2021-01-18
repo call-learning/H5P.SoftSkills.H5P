@@ -5,15 +5,17 @@ import Typography from '@material-ui/core/Typography';
 
 
 const WAVEBOX_HEIGHT = 300;
-const CONTENT_HEIGHT = 150;
+const CONTENT_HEIGHT = 180;
+const CONTENT_MARGIN = 75;
 const styles = theme => ({
   waveHeadingBox: {
     background: 'linear-gradient(78deg, #bb0e29 48%, #ffffff 200%)',
     minHeight: '245px',
     padding: "0px",
+    position: 'relative',
   },
   waveHeadingShape: {
-    minHeight: `${WAVEBOX_HEIGHT-50}px`,
+    minHeight: `${CONTENT_HEIGHT-CONTENT_MARGIN}px`,
     fill: "#ffffff",
     '& path:first-child': {
       opacity: 0.1
@@ -31,16 +33,14 @@ const styles = theme => ({
       opacity: 1
     },
     width: "100%",
-    maxWidth:"auto",
     height: "100%",
   },
   waveDividerWrap: {
-    left: '50%',
     width: '100%',
-    top: `${CONTENT_HEIGHT-50}px`,
-    bottom: 0,
-    height:`${WAVEBOX_HEIGHT-50}px`,
-    margin: '0px'
+    bottom: `0px`,
+    height:`${CONTENT_HEIGHT-CONTENT_MARGIN}px`,
+    margin: '0px',
+    position: 'absolute'
   },
   title: {
     paddingTop:'2em',

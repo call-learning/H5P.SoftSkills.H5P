@@ -4,8 +4,19 @@ html, *:fullscreen, *:-webkit-full-screen, *:-moz-full-screen {
     background-color: white !important;
     z-index:1;
 }
-.h5p-semi-fullscreen, .h5p-fullscreen, html.h5p-iframe .h5p-container {
+.h5p-semi-fullscreen,
+.h5p-fullscreen,
+html.h5p-iframe .h5p-container {
     overflow-y: auto;
+}
+
+#sokaApplicationContainer {
+    height: 1200px;
+}
+
+.h5p-semi-fullscreen #sokaApplicationContainer,
+.h5p-fullscreen #sokaApplicationContainer {
+    height: 100%;
 }
 
 ::backdrop

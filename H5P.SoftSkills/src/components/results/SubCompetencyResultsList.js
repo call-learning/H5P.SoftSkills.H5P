@@ -3,9 +3,9 @@ import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container';
 import PropTypes from 'prop-types';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Resource from './Resource';
 import {
   questionnaireAnsweredQuestions,
@@ -64,8 +64,8 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
           resultsAndResources.map((context, cindex) => {
             const panelName = `context-${cindex}`;
             return (
-              <ExpansionPanel key={cindex} expanded={expanded === panelName} onChange={handleChange(panelName)}>
-                <ExpansionPanelSummary
+              <Accordion key={cindex} expanded={expanded === panelName} onChange={handleChange(panelName)}>
+                <AccordionSummary
                   expandIcon={<Fab color="primary"><ExpandMore/></Fab>}
                   aria-controls={`${panelName}-content`}
                   id={`${panelName}-header`}
@@ -81,8 +81,8 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                       }
                     </Box>
                   </Box>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
+                </AccordionSummary>
+                <AccordionDetails>
                   <Container>
                     <Container py={1}>
                       {
@@ -121,7 +121,7 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                           <Container>
                             <Typography variant="h4"><H5PTranslatedText text='ourAdvice'/></Typography>
                           </Container>
-                          <Container maxWidth={'100%'}>
+                          <Container maxWidth={'lg'}>
                             {
                               context.resources.map((resource) => <Resource key={resource.id} resource={resource}/>)
                             }
@@ -129,8 +129,8 @@ const SubCompetencyResultsList = withStyles(styles)((props) => {
                         </Container>)
                     }
                   </Container>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
+                </AccordionDetails>
+              </Accordion>
             );
           })
         }

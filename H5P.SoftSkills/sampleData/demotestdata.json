@@ -198,7 +198,7 @@
         "description": "Quelle est votre capacité à travailler avec d’autres personnes dans un contexte professionnel où l’interaction est importante ?"
       },
       {
-        "title": "Compétences personelles",
+        "title": "Compétences personnelles",
         "description": "Quelles aptitudes personnelles utiles dans un contexte professionnel avez-vous développées ?"
       },
       {
@@ -332,23 +332,23 @@
                 {
                   "label": "Je comprends les enjeux et les principes d’animation d’une équipe dans un contexte professionnel.",
                   "answerLabelsOverride":[
-                      "Tout à fait d'accord",
-                      "Plutôt d'accord",
-                      "D'accord",
-                      "Plutôt pas d'accord",
-                      "Pas d'accord"
-                    ],
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
                   "acquisitionThreshold": 5
                 },
                 {
                   "label": "Je sais (re)formuler les consignes pour que mes collaborateurs comprennent ce qui est attendu d’eux.",
                   "answerLabelsOverride": [
-                      "Tout à fait d'accord",
-                      "Plutôt d'accord",
-                      "D'accord",
-                      "Plutôt pas d'accord",
-                      "Pas d'accord"
-                    ]
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ]
                 },
                 {
                   "label": "J’échange avec mes interlocuteurs en appliquant les principes de l’écoute active.",
@@ -395,12 +395,12 @@
                 {
                   "label": "Je sais mettre en place un plan de prévention pour éviter les tensions et les conflits.",
                   "answerLabelsOverride": [
-                      "Tout à fait d'accord",
-                      "Plutôt d'accord",
-                      "D'accord",
-                      "Plutôt pas d'accord",
-                      "Pas d'accord"
-                    ],
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
                   "hideResourceThreshold": 9999
                 }
               ]
@@ -412,23 +412,23 @@
                 {
                   "label": "Je sais me mettre dans une posture d’écoute et de médiation pour désamorcer les tensions et les conflits.",
                   "answerLabelsOverride": [
-                      "Tout à fait d'accord",
-                      "Plutôt d'accord",
-                      "D'accord",
-                      "Plutôt pas d'accord",
-                      "Pas d'accord"
-                    ],
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
                   "hideResourceThreshold": 9999
                 },
                 {
                   "label": "Je sais mettre en place des plans d’action et de suivi des solutions.",
                   "answerLabelsOverride": [
-                      "Tout à fait d'accord",
-                      "Plutôt d'accord",
-                      "D'accord",
-                      "Plutôt pas d'accord",
-                      "Pas d'accord"
-                    ],
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
                   "hideResourceThreshold": 9999
                 }
               ]
@@ -513,12 +513,12 @@
                 {
                   "label": "Je suis capable d’expliciter mes acquis en termes de connaissances et de compétences pour les valoriser dans d’autres contextes.",
                   "answerLabelsOverride":  [
-                      "Tout à fait d'accord",
-                      "Plutôt d'accord",
-                      "D'accord",
-                      "Plutôt pas d'accord",
-                      "Pas d'accord"
-                    ],
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
                   "acquisitionThreshold": 5,
                   "hideResourceThreshold": 9999
                 }
@@ -736,24 +736,24 @@
                 {
                   "label": "Je connais les règles de rédaction d’un cahier des charges fonctionnel.",
                   "answerLabelsOverride":  [
-                      "Tout à fait d'accord",
-                      "Plutôt d'accord",
-                      "D'accord",
-                      "Plutôt pas d'accord",
-                      "Pas d'accord"
-                    ],
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
                   "acquisitionThreshold": 5,
                   "hideResourceThreshold": 9999
                 },
                 {
                   "label": "Je connais les règles de rédaction d’un cahier des charges technique.",
                   "answerLabelsOverride":  [
-                      "Tout à fait d'accord",
-                      "Plutôt d'accord",
-                      "D'accord",
-                      "Plutôt pas d'accord",
-                      "Pas d'accord"
-                    ],
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
                   "acquisitionThreshold": 5,
                   "hideResourceThreshold": 9999
                 }
@@ -797,34 +797,34 @@
                 {
                   "label": "Je m’appuie sur des méthodes pour comprendre le problème.",
                   "answerLabelsOverride":  [
-                      "Tout à fait d'accord",
-                      "Plutôt d'accord",
-                      "D'accord",
-                      "Plutôt pas d'accord",
-                      "Pas d'accord"
-                    ],
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
                   "hideResourceThreshold": 9999
                 },
                 {
                   "label": "Je m’appuie sur des méthodes pour déterminer les causes du problème.",
                   "answerLabelsOverride": [
-                      "Tout à fait d'accord",
-                      "Plutôt d'accord",
-                      "D'accord",
-                      "Plutôt pas d'accord",
-                      "Pas d'accord"
-                    ],
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
                   "hideResourceThreshold": 5
                 },
                 {
                   "label": "Je mets en œuvre les ressources scientifiques et techniques nécessaires à la résolution du problème.",
                   "answerLabelsOverride":  [
-                      "Tout à fait d'accord",
-                      "Plutôt d'accord",
-                      "D'accord",
-                      "Plutôt pas d'accord",
-                      "Pas d'accord"
-                    ],
+                    "Tout à fait d'accord",
+                    "Plutôt d'accord",
+                    "D'accord",
+                    "Plutôt pas d'accord",
+                    "Pas d'accord"
+                  ],
                   "acquisitionThreshold": 5,
                   "hideResourceThreshold": 9999
                 },

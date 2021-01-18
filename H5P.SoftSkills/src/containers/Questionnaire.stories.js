@@ -19,7 +19,7 @@ const questionnaireData = {
 
 export const fullQuestionnaire = () => {
   questionnaireStore.dispatch(initializeUserData(''));
-  return (<Box  height={"900px"} overflow={"auto"}>
+  return (<Box  height={"1200px"} overflow={"auto"}>
     <Provider store={questionnaireStore}>
     <Questionnaire {...questionnaireData} />
   </Provider>

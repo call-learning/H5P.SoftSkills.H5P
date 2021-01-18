@@ -44,7 +44,7 @@ const CompetencyProgress = (props) => {
 const CompetencySideNavigation = withStyles(styles)((props) => {
   const { classes } = props;
   return (
-    <Box display="flex" flexDirection="row" height="100%" position="sticky" top={0}>
+    <Box display="flex" flexDirection="row" height="100%" position="absolute" top={0}>
       <Box display="flex" flexDirection="column" alignItems="center" px={{xs:0, sm: 3}}>
         <Box display={{xs:'none', sm: 'flex'}} pt="15%" justifyContent="center">
           <Box>

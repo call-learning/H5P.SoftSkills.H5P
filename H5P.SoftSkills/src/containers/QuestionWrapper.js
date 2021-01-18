@@ -23,14 +23,14 @@ class QuestionWrapper extends React.Component {
           duration: 800,
           delay: 3,
           containerId: 'competencyPageContainer',
-          smooth: 'easeInOutQuart'
+          smooth: true
         });
       } else {
         scroller.scrollTo(`question-${this.props.questionID}`, {
           duration: 800,
           delay: 3,
           containerId: 'competencyPageContainer',
-          smooth: 'easeInOutQuart'
+          smooth: true
         });
       }
     }
@@ -47,7 +47,7 @@ class QuestionWrapper extends React.Component {
 
       const needsScroll = (
         rect.top < 0 ||
-        rect.bottom > (window.innerHeight || document.documentElement.clientHeight)
+        rect.bottom > questionElem.offsetParent.getBoundingClientRect().height
       );
 
       if (needsScroll) {
@@ -55,7 +55,7 @@ class QuestionWrapper extends React.Component {
           duration: 800,
           delay: 3,
           containerId: containerID,
-          smooth: 'easeInOutQuart'
+          smooth: true
         });
       }
     }
