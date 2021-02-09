@@ -129,6 +129,13 @@
                             "optional": true,
                             "label": "Threshold for Badge Value",
                             "importance": "low"
+                          },
+                          {
+                            "name": "hideResourceThreshold",
+                            "type": "number",
+                            "optional": true,
+                            "label": "Threshold to hide or show the resource",
+                            "importance": "low"
                           }
                         ]
                       }
@@ -384,6 +391,12 @@
         "name": "alwaysDeliverBadge",
         "type": "boolean",
         "label": "no threshold for Delivering badges?",
+        "default": false
+      },
+      {
+        "name": "ignoreHiddenThreshold",
+        "type": "boolean",
+        "label": "no threshold to show resources?",
         "default": false
       }
     ]

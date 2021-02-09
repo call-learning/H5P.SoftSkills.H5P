@@ -252,6 +252,25 @@ test('getSubCompetencyResultsAndResources', () => {
   );
 });
 
+test('getSubCompetencyResultsAndResourcesWithHiddenParam', () => {
+  var settingsIgnoreHidden = sampleData.settings;
+  settingsIgnoreHidden.ignoreHiddenThreshold = true;
+
+  const result = getSubCompetencyResultsAndResources(
+    sampleData.questionsByCompetencyAndSubCompetencies,
+    sampleAnswerData,
+    sampleData.resources,
+    settingsIgnoreHidden,
+    0,
+    0);
+
+  expect(result.length == 3).toBeTruthy();
+  expect(result[0].resources.length == 6).toBeTruthy();
+  expect(result[1].resources.length == 14).toBeTruthy();
+  expect(result[2].resources.length == 8).toBeTruthy();
+});
+
+
 test('getSubCompetencyResultsAndResourcesWithTopAnswers', () => {
   // All answer < 20 are to the max, so we should remove
   // resources from the list

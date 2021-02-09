@@ -497,7 +497,8 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
               const answeredQuestion = contextQA.find(
                 (element) => (element.questionGlobalIndex === questionGlobalIndex)
               )
-              if (answeredQuestion && answeredQuestion.answer >= hideResourceThreshold) {
+              if (!settings.ignoreHiddenThreshold  &&
+                (answeredQuestion && answeredQuestion.answer >= hideResourceThreshold)) {
                 continue; // We don't add the resource to the list as the user has answer correctly.
               }
             }

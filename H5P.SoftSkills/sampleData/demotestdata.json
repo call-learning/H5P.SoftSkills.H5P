@@ -246,7 +246,8 @@
     "hideResourceThreshold": 4,
     "unknownValueId": 1,
     "hasBadgeEngine": true,
-    "alwaysDeliverBadge": false
+    "alwaysDeliverBadge": false,
+    "ignoreHiddenThreshold": false
   },
   "questionsByCompetencyAndSubCompetencies": [
     {
