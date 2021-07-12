@@ -1,7 +1,7 @@
 // Set the basic translations
+import React from 'react';
 import { sampleAnswerGenerator } from '../../utils/StoriesUtils';
 import { sampleData } from '../../utils/StoriesUtils';
-import React from 'react';
 import { getTotalQuestionCount } from '../../utils/ComponentsUtils';
 import SubCompetencyResultsPage from './SubCompetencyResultsPage';
 

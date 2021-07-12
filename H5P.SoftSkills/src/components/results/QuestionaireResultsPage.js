@@ -1,7 +1,6 @@
 import { Box } from '@material-ui/core';
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container';
 import CompetencyResultsCard from './CompetencyResultsCard';
 import PropTypes from 'prop-types';
@@ -44,7 +43,7 @@ const QuestionnaireResultsPage = (props) => {
                 questionsByCompetencyAndSubCompetencies={props.questionsByCompetencyAndSubCompetencies}
                 results={props.results}
                 competencyIndex={compIndex}
-                handleActionClick={(e) => {props.handleViewCompetencyClick(compIndex);}}
+                handleActionClick={() => {props.handleViewCompetencyClick(compIndex);}}
               />
             </Box>))
         }
@@ -73,28 +72,24 @@ const QuestionnaireResultsPage = (props) => {
   );
 };
 
-QuestionnaireResultsPage.propTypes = Object.assign(
-  {
-    handleViewCompetencyClick: PropTypes.func,
-    handleReviewQuestionnaire: PropTypes.func,
-    handleRestartQuestionnaire: PropTypes.func,
-    handleObtainBadge: PropTypes.func,
-    canObtainBadge: PropTypes.bool,
-  },
-  questionsByCompetencyAndSubCompetencies,
-  questionnaireResults
-);
+QuestionnaireResultsPage.propTypes = {
+  handleViewCompetencyClick: PropTypes.func,
+  handleReviewQuestionnaire: PropTypes.func,
+  handleRestartQuestionnaire: PropTypes.func,
+  handleObtainBadge: PropTypes.func,
+  canObtainBadge: PropTypes.bool,
+  ...questionsByCompetencyAndSubCompetencies,
+  ...questionnaireResults
+};
 
-QuestionnaireResultsPage.defaultProps = Object.assign(
-  {
-    handleViewCompetencyClick: () => null,
-    handleReviewQuestionnaire: () => null,
-    handleRestartQuestionnaire: () => null,
-    handleObtainBadge: ()=> null,
-    canObtainBadge: false,
-  },
-  questionnaireCompetenciesQuestionsDefault,
-  questionnaireResultsDefault
-);
+QuestionnaireResultsPage.defaultProps = {
+  handleViewCompetencyClick: () => null,
+  handleReviewQuestionnaire: () => null,
+  handleRestartQuestionnaire: () => null,
+  handleObtainBadge: () => null,
+  canObtainBadge: false,
+  ...questionnaireCompetenciesQuestionsDefault,
+  ...questionnaireResultsDefault
+};
 
 export default QuestionnaireResultsPage;

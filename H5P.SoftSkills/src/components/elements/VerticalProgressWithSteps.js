@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import CircularProgressWithStep from './CircularProgressWithStep';
 import PropTypes from 'prop-types';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     padding: 'initial',
   },
@@ -20,10 +20,10 @@ const styles = theme => ({
   horizontalProgressActive: {
     backgroundColor: theme.palette.primary.main
   }
-});
+}));
 
 function VerticalProgressWithSteps (props) {
-  const { classes } = props;
+  const classes = useStyles(props);
   const currentStep = props.progressInfo.reduce(
     (carry, element, index) => (!carry && element !== 0 ? index : carry),
     0
@@ -63,4 +63,4 @@ VerticalProgressWithSteps.propTypes = {
 VerticalProgressWithSteps.defaultProps = {
   progressInfo: []
 };
-export default withStyles(styles)(VerticalProgressWithSteps);
+export default VerticalProgressWithSteps;

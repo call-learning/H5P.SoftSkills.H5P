@@ -1,16 +1,10 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import {
   simpleResultsType, simpleResultsTypeDefault
 } from '../../utils/CommonProptypes';
-import ResponsiveContainer from 'recharts/lib/component/ResponsiveContainer';
-import XAxis from 'recharts/lib/cartesian/XAxis';
-import YAxis from 'recharts/lib/cartesian/YAxis';
-import CartesianGrid from 'recharts/lib/cartesian/CartesianGrid';
-import Bar from 'recharts/lib/cartesian/Bar';
-import BarChart from 'recharts/lib/chart/BarChart';
-import Text from 'recharts/lib/component/Text';
+import { ResponsiveContainer, XAxis, YAxis, CartesianGrid, Bar, BarChart, Text } from 'recharts';
 import { truncateLabel } from '../../utils/ComponentsUtils';
 
 
@@ -42,15 +36,18 @@ const BarLabel = (props) => {
     </g>);
 };
 
-
 const CompetencyLabel= (props) => {
-  const { width, payload ,...otherprops } = props;
+  const { payload, ...otherprops } = props;
   return (
     <Text {...otherprops} className="competency-labels">{truncateLabel(payload.value, MAX_LABEL_CHARACTERS)}</Text>
   );
 };
+CompetencyLabel.propTypes = {
+  width: PropTypes.number,
+  payload: PropTypes.object
+}
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   barChartStyle: {
     fill: theme.palette.primary.main,
     fontFamily: theme.typography.fontFamily,
@@ -58,29 +55,30 @@ const styles = theme => ({
       fontWeight: "bold",
     }
   },
-});
+}));
 
 function ResultBarChart (props) {
-  const { classes } = props;
-  const EM=8;
+  const classes = useStyles(props);
+  const EM = 8;
   const labelSpace = MAX_LABEL_CHARACTERS * EM;
-  return (<ResponsiveContainer height={props.graphHeight}>
-    <BarChart
-      layout="vertical"
-      data={props.resultsList}
-      barCategoryGap={8}
-      margin={{ top: 20, right: 5, bottom: 30, left: props.hasCompetencyLabel? labelSpace:5 }}
-      className={classes.barChartStyle}
-    >
-      <XAxis type="number" domain={[0, 100]}  scale={"linear"} axisLine={false} tickLine={false}/>
-      {
-        props.hasCompetencyLabel?
-          (<YAxis type="category" dataKey="label" tick={<CompetencyLabel/>}/>):
-          (<YAxis type="category" dataKey="label" hide/>)
-      }
-      <CartesianGrid horizontal={false}/>
-      <Bar dataKey="value" background label={<BarLabel/>} radius={[0, 4, 4, 0]}/>
-    </BarChart>
+  return (
+    <ResponsiveContainer height={props.graphHeight}>
+      <BarChart
+        layout="vertical"
+        data={props.resultsList}
+        barCategoryGap={8}
+        margin={{ top: 20, right: 5, bottom: 30, left: props.hasCompetencyLabel ? labelSpace : 5 }}
+        className={classes.barChartStyle}
+      >
+        <XAxis type="number" domain={[0, 100]}  scale={"linear"} axisLine={false} tickLine={false}/>
+        {
+          props.hasCompetencyLabel?
+            (<YAxis type="category" dataKey="label" tick={<CompetencyLabel/>}/>):
+            (<YAxis type="category" dataKey="label" hide/>)
+        }
+        <CartesianGrid horizontal={false}/>
+        <Bar dataKey="value" background label={<BarLabel/>} radius={[0, 4, 4, 0]}/>
+      </BarChart>
     </ResponsiveContainer>
   );
 }
@@ -99,5 +97,5 @@ ResultBarChart.defaultProps = {
   hasCompetencyLabel: true
 };
 
-export default withStyles(styles)(ResultBarChart);
+export default ResultBarChart;
 

@@ -1,15 +1,9 @@
 // Set the basic translations
-import { sampleData } from '../../utils/StoriesUtils';
 import React from 'react';
-import Resource from './Resource';
-import Container from '@material-ui/core/Container';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import Fab from '@material-ui/core/Fab';
+import { Container, Accordion, Box, Fab, AccordionSummary, AccordionDetails } from '@material-ui/core';
 import { ExpandMore } from '@material-ui/icons';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
+import { sampleData } from '../../utils/StoriesUtils';
+import Resource from './Resource';
 
 export default { title: 'Results' };
 

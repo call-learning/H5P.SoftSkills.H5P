@@ -25,6 +25,5 @@ afterEach(cleanup);
 test('Questionnaire', () => {
   questionnaireStore.dispatch(initializeUserData(''));
   const {container} = render(<Provider store={questionnaireStore}><Questionnaire {...smallerQuestionnaireData} /></Provider>);
-  expect(container.innerHTML).toContain('Test d\'auto-positionnement sur les soft skills.')
-
+  expect(container.innerHTML).toContain('Test d\'auto-positionnement sur les soft skills.');
 })

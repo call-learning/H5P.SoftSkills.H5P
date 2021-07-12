@@ -5,8 +5,7 @@ import PropTypes from 'prop-types';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import Typography from '@material-ui/core/Typography';
 import { getCompetencyImageFromIndex } from '../../utils/ComponentsUtils';
-import { withStyles } from '@material-ui/core/styles';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 const DEFAULT_STRING_NUMBERING = ['firstpart',
   'secondpart',
@@ -17,7 +16,7 @@ const DEFAULT_STRING_NUMBERING = ['firstpart',
   'eigthpart',
   'ninthpart'];
 
-const styles = () => ({
+const useStyles = makeStyles(theme => ({
   partNumber: {
     fontSize: 'smaller',
     textTransform: 'lowercase',
@@ -25,7 +24,7 @@ const styles = () => ({
   progressBarLegend: {
     fontSize: 'smaller',
   }
-});
+}));
 
 const progressUseStyles = makeStyles(theme => ({
   root: {
@@ -41,8 +40,8 @@ const CompetencyProgress = (props) => {
   return <LinearProgress className={classes.root} variant="determinate" value={props.value}/>;
 };
 
-const CompetencySideNavigation = withStyles(styles)((props) => {
-  const { classes } = props;
+const CompetencySideNavigation = (props) => {
+  const classes = useStyles(props);
   return (
     <Box display="flex" flexDirection="row" height="100%" position="absolute" top={0}>
       <Box display="flex" flexDirection="column" alignItems="center" px={{xs:0, sm: 3}}>
@@ -73,7 +72,7 @@ const CompetencySideNavigation = withStyles(styles)((props) => {
       </Box>
       <Box><VerticalProgressWithSteps progressInfo={props.competencyProgressData}/></Box>
     </Box>);
-});
+};
 
 CompetencySideNavigation.propTypes = {
   answeredQuestionsCount: PropTypes.number,

@@ -1,5 +1,6 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
@@ -7,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 const WAVEBOX_HEIGHT = 300;
 const CONTENT_HEIGHT = 180;
 const CONTENT_MARGIN = 75;
-const styles = theme => ({
+const useStyles = makeStyles(() => ({
   waveHeadingBox: {
     background: 'linear-gradient(78deg, #bb0e29 48%, #ffffff 200%)',
     minHeight: '245px',
@@ -56,10 +57,10 @@ const styles = theme => ({
       lineHeight: 2.5
     }
   }
-});
+}));
 
-const WaveHeading = withStyles(styles)((props) => {
-  const { classes } = props;
+const WaveHeading = (props) => {
+  const classes = useStyles(props);
   return (
     <Container className={classes.waveHeadingBox} maxWidth={false}>
       <Container maxWidth={'md'}><Typography variant="h3" className={classes.title}>{props.title}</Typography></Container>
@@ -78,6 +79,10 @@ const WaveHeading = withStyles(styles)((props) => {
         </svg>
       </div>
     </Container>);
-});
+};
+
+WaveHeading.prototype = {
+  title: PropTypes.string
+};
 
 export default WaveHeading;

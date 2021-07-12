@@ -1,10 +1,10 @@
 import { questionnaire } from '../constants/actionTypes';
 import { answerQuestion } from './question';
+import {} from 'global'
 
 /*
  * action creators
  */
-
 export function initializeUserDataQuestionnaire (userCurrentStep, userAnsweredQuestions) {
   return {
     type: questionnaire.INIT_USER_DATA,
@@ -77,28 +77,25 @@ export function resetNavigation () {
 /** Thunk types of actions */
 export function startQuestionnaireAndPosition () {
   return function (dispatch) {
-    return Promise.all([
-      dispatch(resetNavigation()),
-      dispatch(startQuestionnaire())]);
+    dispatch(resetNavigation());
+    dispatch(startQuestionnaire());
   };
 }
 
 /** Thunk types of actions */
 export function resetQuestionnaireAndPosition () {
   return function (dispatch) {
-    return Promise.all([
-      dispatch(resetNavigation()),
-      dispatch(resetQuestionnaire())]);
+    dispatch(resetNavigation());
+    dispatch(resetQuestionnaire());
   };
 }
 
 export function answerQuestionAndNavigateToNext (questionGlobalIndex, answerId, questionsByCompetencyAndSubCompetencies) {
   return function (dispatch, getState) {
-    return Promise.all([dispatch(answerQuestion(questionGlobalIndex, answerId)),
-      dispatch(setNextOpenQuestionPosition(questionGlobalIndex,
-        questionsByCompetencyAndSubCompetencies,
-        getState().answeredQuestions))]
-    );
+    dispatch(answerQuestion(questionGlobalIndex, answerId));
+    dispatch(setNextOpenQuestionPosition(questionGlobalIndex,
+      questionsByCompetencyAndSubCompetencies,
+      getState().answeredQuestions))
   };
 }
 
@@ -108,10 +105,11 @@ export function answerQuestionAndNavigateToNext (questionGlobalIndex, answerId, 
  * @return {function(*, *): Promise}
  */
 export function finishQuestionnaireAndSaveData (finishAction) {
-  return function (dispatch, getState) {
-    return new Promise( (resolve) => {dispatch(finishQuestionnaire());resolve();})
-      .then(() => { if (finishAction) {finishAction(getState(), 'userState');}}
-    );
+  return async (dispatch, getState) => {
+    dispatch(finishQuestionnaire());
+    if (finishAction) {
+      finishAction(getState(), 'userState');
+    }
   };
 }
 
@@ -125,8 +123,8 @@ export function initializeUserData (h5pContentId = '', h5pDataID = 'userState') 
   return (dispatch) =>
     new Promise(
       (resolve) => {
-        if (H5P && H5P.getUserData && h5pContentId) {
-          H5P.getUserData(h5pContentId, h5pDataID, (error, userdata) => (resolve(userdata)));
+        if (window.H5P && window.H5P.getUserData && h5pContentId) {
+          window.H5P.getUserData(h5pContentId, h5pDataID, (error, userdata) => resolve(userdata));
         } else {
           resolve();
         }

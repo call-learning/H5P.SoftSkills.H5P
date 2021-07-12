@@ -1,16 +1,16 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-
 import React from 'react';
+import PropTypes from 'prop-types';
+import Box from '@material-ui/core/Box';
+import {makeStyles} from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import Question from './Question';
 import {
   questionsByCompetencyAndSubCompetencies, questionnaireCompetenciesQuestionsDefault,
 } from '../../utils/CommonProptypes';
-import PropTypes from 'prop-types';
-import { getGlobalQuestionIndex, getTextValueFromPossibleValue } from '../../utils/ComponentsUtils';
-import withStyles from '@material-ui/core/styles/withStyles';
+import { getGlobalQuestionIndex } from '../../utils/ComponentsUtils';
 
-const styles = theme => ({
+
+const useStyles = makeStyles(theme => ({
   contextLabel: {
     fontSize: 'larger'
   },
@@ -43,10 +43,10 @@ const styles = theme => ({
     marginBottom: '2em'
   },
 
-});
+}));
 
-const QuestionsList = withStyles(styles)((props) => {
-  const { classes } = props;
+const QuestionsList = (props) => {
+  const classes = useStyles(props);
   const QuestionWrapper = props.questionComponent;
   const currentCompetency = props.questionsByCompetencyAndSubCompetencies[props.competencyIndex];
   const compIndex = props.competencyIndex;
@@ -108,7 +108,7 @@ const QuestionsList = withStyles(styles)((props) => {
         </ol>))
     }
   </Box>);
-});
+};
 
 QuestionsList.propTypes = Object.assign(
   {
@@ -127,9 +127,7 @@ QuestionsList.defaultProps = Object.assign(
   {
     questionComponent: Question,
     competencyIndex: 0,
-    answerLabelsOverride: null,
-    handleEnableQuestion: (qid) => null,
-    handleSelectAnswer: (quid, val) => null
+    answerLabelsOverride: null
   },
   questionnaireCompetenciesQuestionsDefault,
 );

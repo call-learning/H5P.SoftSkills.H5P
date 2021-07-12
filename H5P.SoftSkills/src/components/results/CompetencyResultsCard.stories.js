@@ -5,7 +5,6 @@ import React from 'react';
 import CompetencyResultsCard from './CompetencyResultsCard';
 import { computeProgressPerCompetency, getTotalQuestionCount } from '../../utils/ComponentsUtils';
 
-
 export default { title: 'Results/Widget' };
 
 const allCompetenciesResults = computeProgressPerCompetency(

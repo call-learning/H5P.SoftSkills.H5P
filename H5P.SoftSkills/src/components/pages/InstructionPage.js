@@ -4,7 +4,7 @@ import { Icon } from '@material-ui/core';
 import { getCompetencyImageFromIndex, resourceCreateMarkup } from '../../utils/ComponentsUtils';
 import { questionnaireSettings, questionnaireSettingsDefault } from '../../utils/CommonProptypes';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles'
 import WaveHeading from '../elements/WaveHeading';
 import Typography from '@material-ui/core/Typography';
 import BottomRectangle from '../elements/BottomRectangle';
@@ -13,7 +13,7 @@ import 'material-design-icons/iconfont/material-icons.css';
 import NavigationButton from '../elements/NavigationButton';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   competencyTitle: {
     textTransform: 'lowercase',
     textAlign: 'justify'
@@ -28,10 +28,10 @@ const styles = theme => ({
       flexDirection: 'column',
     }
   }
-});
+}));
 
-const InstructionPage = withStyles(styles)((props) => {
-  const { classes } = props;
+const InstructionPage = (props) => {
+  const classes = useStyles(props);
   return (<Container maxWidth={false} disableGutters={true} className={classes.root}>
       <Container maxWidth={false} disableGutters={true} className={classes.containerNoPadding}>
         <WaveHeading title={props.welcomeTitle}/>
@@ -101,7 +101,7 @@ const InstructionPage = withStyles(styles)((props) => {
       </Container>
     </Container>
   );
-});
+};
 
 InstructionPage.propTypes = Object.assign(
   {

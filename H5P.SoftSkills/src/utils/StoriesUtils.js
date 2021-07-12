@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import demoData from '../../sampleData/demotestdata.json';
 import answeredQuestions from '../../sampleData/sampleAnswer.json';
 import Question from '../components/questionnaire/Question';
@@ -12,38 +12,39 @@ export const sampleQuestionText = 'Lors de la rédaction, je prends en considér
 /**
  * Question handler: will handle the question state
  */
-export class SampleQuestionHandler extends React.Component {
-  constructor (props) {
-    super(props);
+export const SampleQuestionHandler = (props) => {
+  const [isDisabled, setIsDisabled] = useState(props.isDisabled || false);
+  const [selectedItemId, setSelectedItemId] = useState(props.selectedItemId || 0);
 
-    this.state = {
-      isDisabled: this.props.isDisabled ? this.props.isDisabled : false,
-      selectedItemId: this.props.defaultSelected ? this.props.defaultSelected : 0
-    };
-    this.handleEnableQuestion = this.handleEnableQuestion.bind(this);
-    this.handleSelectAnswer = this.handleSelectAnswer.bind(this);
+  const handleSelectAnswer = (questionID, answerId) => {
+    setSelectedItemId(parseInt(answerId));
   }
 
-  handleSelectAnswer (questionID, answerId) {
-    this.setState((state, props) => ({ selectedItemId: parseInt(answerId) }));
+  const handleEnableQuestion = () => {
+    setIsDisabled(false)
   }
 
-  handleEnableQuestion (questionID) {
-    this.setState((state, props) => ({ isDisabled: false }));
-  }
-
-  render () {
-    return (<Question
-      questionID={this.props.questionID}
-      questionText={this.props.questionText}
-      answerLabelsOverride={this.props.answerLabelsOverride}
-      selectedItemId={this.state.selectedItemId}
-      isDisabled={this.state.isDisabled}
-      handleSelectAnswer={this.handleSelectAnswer}
-      handleEnableQuestion={this.handleEnableQuestion}/>);
-  }
+  return (
+    <Question
+    questionID={props.questionID}
+    questionText={props.questionText}
+    answerLabelsOverride={props.answerLabelsOverride}
+    selectedItemId={selectedItemId}
+    isDisabled={isDisabled}
+    handleSelectAnswer={handleSelectAnswer}
+    handleEnableQuestion={handleEnableQuestion}/>
+  );
 }
 
+SampleQuestionHandler.propTypes = {
+  questionID: PropTypes.string, // Question identifier. Provided in the event as a unique id.
+  selectedItemId: PropTypes.number,
+  questionText: PropTypes.string,
+  answerLabelsOverride: PropTypes.arrayOf(
+    PropTypes.string
+  ),
+  isDisabled: PropTypes.bool
+};
 
 export const sampleInstructionPageSettings = {
   welcomeTitle: 'Bienvenue sur le\nTest d\'auto-positionnement sur les soft skills.',

@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { getProgressData, getTotalQuestionCountCompetency } from '../utils/ComponentsUtils';
-import { connect } from 'react-redux';
+import React, { useContext } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { getProgressData } from '../utils/ComponentsUtils';
 import { CompetenciesContext } from '../contexts/CompetenciesContext';
 import CompetencyPage from '../components/questionnaire/CompetencyPage';
 import QuestionWrapper from './QuestionWrapper';
@@ -12,30 +12,26 @@ import {
 import { H5PContext } from '../contexts/H5PContext';
 
 
-const CompetencyPageContainer = (props) =>{
+const CompetencyPageContainer = () =>{
+  const dispatch = useDispatch();
+  const navigation = useSelector((state) => state.navigation)
+  const answeredQuestions = useSelector((state) => state.answeredQuestions)
   const allCompetencies = useContext(CompetenciesContext);
-  const progressData = getProgressData(allCompetencies, props.answeredQuestions);
-  const h5pcontext = useContext(H5PContext);
+  const h5pContext = useContext(H5PContext);
+  const progressData = getProgressData(allCompetencies, answeredQuestions);
+
   return (<CompetencyPage questionsByCompetencyAndSubCompetencies={allCompetencies}
                           progressData={progressData}
                           questionComponent={QuestionWrapper}
-                          currentCompetencyIndex={props.navigation.currentCompetencyIndex}
+                          currentCompetencyIndex={navigation.currentCompetencyIndex}
                           handleSelectAnswer={(qid,value) =>
-                            props.dispatch(answerQuestionAndNavigateToNext(qid,value,allCompetencies))
+                            dispatch(answerQuestionAndNavigateToNext(qid,value,allCompetencies))
                           }
                           handleFinishAndSubmit={
-                            () => props.dispatch(finishQuestionnaireAndSaveData(h5pcontext && h5pcontext.finishAction))}
-                          handleNextCompetency={() => props.dispatch(nextCompetency(allCompetencies))}
-                          handlePreviousCompetency={() => props.dispatch(previousCompetency(allCompetencies))}
+                            () => dispatch(finishQuestionnaireAndSaveData(h5pContext && h5pContext.finishAction))}
+                          handleNextCompetency={() => dispatch(nextCompetency(allCompetencies))}
+                          handlePreviousCompetency={() => dispatch(previousCompetency(allCompetencies))}
   />);
 };
 
-const mapStateToProps = (state) => {
-  const { navigation, answeredQuestions } = state;
-  return {
-    navigation: navigation,
-    answeredQuestions: answeredQuestions,
-  };
-};
-
-export default connect(mapStateToProps)(CompetencyPageContainer);
+export default CompetencyPageContainer;

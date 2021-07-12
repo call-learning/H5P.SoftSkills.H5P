@@ -10,12 +10,13 @@ export default { title: 'Results/Widget' };
 const sampleAnswers = sampleAnswerGenerator(getTotalQuestionCount(sampleData.questionsByCompetencyAndSubCompetencies));
 
 export const subCompetencyResultsList = () => {
-  return (<SubCompetencyResultsList competencyIndex={0}
-                                    subCompetencyIndex={0}
-                                    questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
-                                    settings={sampleData.settings}
-                                    answeredQuestions={sampleAnswers}
-                                    questionnaireResources={sampleData.resources}
+  return (<SubCompetencyResultsList
+    competencyIndex={0}
+    subCompetencyIndex={0}
+    questionsByCompetencyAndSubCompetencies={sampleData.questionsByCompetencyAndSubCompetencies}
+    settings={sampleData.settings}
+    answeredQuestions={sampleAnswers}
+    questionnaireResources={sampleData.resources}
   />);
 };
 

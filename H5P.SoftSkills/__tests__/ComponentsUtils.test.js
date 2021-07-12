@@ -263,7 +263,7 @@ test('getSubCompetencyResultsAndResourcesWithHiddenParam', () => {
     settingsIgnoreHidden,
     0,
     0);
-
+  settingsIgnoreHidden.ignoreHiddenThreshold = false;
   expect(result.length == 3).toBeTruthy();
   expect(result[0].resources.length == 6).toBeTruthy();
   expect(result[1].resources.length == 14).toBeTruthy();
@@ -274,6 +274,7 @@ test('getSubCompetencyResultsAndResourcesWithHiddenParam', () => {
 test('getSubCompetencyResultsAndResourcesWithTopAnswers', () => {
   // All answer < 20 are to the max, so we should remove
   // resources from the list
+
   var sampleAnswerDataRectified = sampleAnswerData.reduce(
     (data, value, index) => {
       if (index < 20) {

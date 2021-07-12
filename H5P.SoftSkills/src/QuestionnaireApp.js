@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Questionnaire from './containers/Questionnaire';
 import { Provider } from 'react-redux';
 import { questionnaireTheme } from './settings/questionnaireTheme';
 import { ThemeProvider } from '@material-ui/styles';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import {
   questionnaireCompetenciesQuestionsDefault, questionnaireResourceDefault,
   questionnaireResources,
@@ -16,7 +17,8 @@ import { H5PContext } from './contexts/H5PContext';
 
 export const QuestionnaireApp = (props) => {
   const h5pContext = useContext(H5PContext);
-  const {resources,...otherprops} =  props;
+  const { resources, ...otherprops } =  props;
+  const dispatch = useDispatch();
 
   // Use the fact we know the context to try and get the absolute path.
   let resourcesWithAbsoluteURL = resources.map((r)=> {
@@ -28,7 +30,10 @@ export const QuestionnaireApp = (props) => {
     }
     return newResource;
   })
-  questionnaireStore.dispatch(initializeUserData(h5pContext.contentId));
+
+ useEffect(() => {
+   dispatch(initializeUserData(h5pContext.contentId));
+ }, [])
 
   return (
     <ThemeProvider theme={questionnaireTheme}>
@@ -38,19 +43,17 @@ export const QuestionnaireApp = (props) => {
     </ThemeProvider>);
 };
 
-QuestionnaireApp.propTypes = Object.assign({
-    currentStep: PropTypes.string,
-    contentId: PropTypes.string
-  },
-  questionsByCompetencyAndSubCompetencies,
-  questionnaireSettings,
-  questionnaireResources
-);
-QuestionnaireApp.defaultProps = Object.assign({
-    currentStep: '',
-    contentId: ''
-  },
-  questionnaireCompetenciesQuestionsDefault,
-  questionnaireResourceDefault,
-  questionnaireSettingsDefault
-);
+QuestionnaireApp.propTypes = {
+  currentStep: PropTypes.string,
+  contentId: PropTypes.string,
+  ...questionsByCompetencyAndSubCompetencies,
+  ...questionnaireSettings,
+  ...questionnaireResources
+};
+QuestionnaireApp.defaultProps = {
+  currentStep: '',
+  contentId: '',
+  ...questionnaireCompetenciesQuestionsDefault,
+  ...questionnaireResourceDefault,
+  ...questionnaireSettingsDefault
+};

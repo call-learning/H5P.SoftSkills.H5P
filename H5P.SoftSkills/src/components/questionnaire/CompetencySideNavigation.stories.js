@@ -10,12 +10,15 @@ window.H5P = H5P;
 
 const subCompetencyProgressData = [100, 50, 0];
 
-export const basicSideNavigation = () => <CompetencySideNavigation competencyIndex={3}
-                                                                   subCompetencyIndex={2}
-                                                                   competencyTitle={'compétences sociales'}
-                                                                   competencyImagePath={socialImage}
-                                                                   maxPages={5}
-                                                                   currentPage={1}/>;
+export const basicSideNavigation = () => (
+  <CompetencySideNavigation
+    competencyIndex={3}
+    subCompetencyIndex={2}
+    competencyTitle={'compétences sociales'}
+    competencyImagePath={socialImage}
+    maxPages={5}
+    currentPage={1}/>
+);
 
 export const sideNavigationWithScrollContent = () => {
   let sideContent = [];
@@ -31,19 +34,20 @@ export const sideNavigationWithScrollContent = () => {
     count++;
   }
   return (
-    <Box display="flex" flexDirection="row" maxHeight={"1200px"} >
+    <Box display="flex" flexDirection="row" maxHeight={'1200px'}>
       <Box mx={1} flex={1}>
-        <CompetencySideNavigation competencyIndex={1}
-                                  competencyTitle={'compétences sociales'}
-                                  competencyImagePath={socialImage}
-                                  answeredQuestionCount={4}
-                                  totalQuestion={28}
-                                  competencyProgressData={subCompetencyProgressData}
+        <CompetencySideNavigation
+          competencyIndex={1}
+          competencyTitle={'compétences sociales'}
+          competencyImagePath={socialImage}
+          answeredQuestionCount={4}
+          totalQuestion={28}
+          competencyProgressData={subCompetencyProgressData}
         />
       </Box>
       <Box flex={4} mx={1} px={1} overflow={'auto'}>
         {sideContent}
       </Box>
     </Box>
-  );
+  )
 };

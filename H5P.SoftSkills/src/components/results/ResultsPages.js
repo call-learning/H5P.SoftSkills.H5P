@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   MemoryRouter,
   Switch,
@@ -20,27 +21,26 @@ import { computeProgressPerCompetency, isFullyAcquired } from '../../utils/Compo
 import QuestionnaireResultsPage from './QuestionaireResultsPage';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import NavigationButton from '../elements/NavigationButton';
-import PropTypes from 'prop-types';
 
 function CompetencyResultsPageWithRoute (props) {
-  let { compid } = useParams();
-  let history = useHistory();
-  const topNavigation = (<NavigationButton isBack onClick={(e)=> { history.push('/')}} ><H5PTranslatedText text='back'/></NavigationButton>);
-  return (<CompetencyResultsPage {...props} competencyIndex={parseInt(compid)} topNavigation={topNavigation}/>);
+  const { compId } = useParams();
+  const history = useHistory();
+  const topNavigation = (<NavigationButton isBack onClick={()=> { history.push('/')}} ><H5PTranslatedText text='back'/></NavigationButton>);
+  return (<CompetencyResultsPage {...props} competencyIndex={parseInt(compId)} topNavigation={topNavigation}/>);
 }
 
 function SubCompetencyResultsPageWithRoute (props) {
-  let { compid, subcompid } = useParams();
-  let history = useHistory();
-  const topNavigation = (<NavigationButton isBack onClick={(e)=> { history.push(`/competencies/${compid}`)}} ><H5PTranslatedText text='back'/></NavigationButton>);
-  return (<SubCompetencyResultsPage {...props} subCompetencyIndex={parseInt(subcompid)}
-                                    competencyIndex={parseInt(compid)}
+  const { compId, subCompId } = useParams();
+  const history = useHistory();
+  const topNavigation = (<NavigationButton isBack onClick={()=> { history.push(`/competencies/${compId}`)}} ><H5PTranslatedText text='back'/></NavigationButton>);
+  return (<SubCompetencyResultsPage {...props} subCompetencyIndex={parseInt(subCompId)}
+                                    competencyIndex={parseInt(compId)}
                                     topNavigation={topNavigation}
   />);
 }
 
 function ResultsPage (props) {
-  let history = useHistory();
+  const history = useHistory();
   const handleViewCompetencyClick = (compIndex) => {
     history.push(`/competencies/${compIndex}`);
   };
@@ -57,11 +57,11 @@ function ResultsPage (props) {
   );
   return (
     <Switch>
-      <Route path="/competencies/:compid/subcomp/:subcompid">
+      <Route path="/competencies/:compId/subcomp/:subCompId">
         <SubCompetencyResultsPageWithRoute {...props}
                                            results={allCompetenciesResults}/>
       </Route>
-      <Route path="/competencies/:compid">
+      <Route path="/competencies/:compId">
         <CompetencyResultsPageWithRoute {...props}
                                         results={allCompetenciesResults}
                                         handleViewSubCompetencyClick={handleViewSubCompetencyClick}/>
@@ -87,25 +87,23 @@ function ResultsPage (props) {
   );
 }
 
-ResultsPage.propTypes = Object.assign({
-    handleReviewQuestionnaire: PropTypes.func,
-    handleRestartQuestionnaire: PropTypes.func
-  },
-  questionnaireSettings,
-  questionsByCompetencyAndSubCompetencies,
-  questionnaireAnsweredQuestions,
-  questionnaireResources
-);
+ResultsPage.propTypes = {
+  handleReviewQuestionnaire: PropTypes.func,
+  handleRestartQuestionnaire: PropTypes.func,
+  ...questionnaireSettings,
+  ...questionsByCompetencyAndSubCompetencies,
+  ...questionnaireAnsweredQuestions,
+  ...questionnaireResources
+};
 
-ResultsPage.defaultProps = Object.assign({
-    handleReviewQuestionnaire: () => null,
-    handleRestartQuestionnaire: () => null,
-  },
-  questionnaireSettingsDefault,
-  questionnaireCompetenciesQuestionsDefault,
-  questionnaireAnsweredQuestionsDefault,
-  questionnaireResourcesDefault
-);
+ResultsPage.defaultProps = {
+  handleReviewQuestionnaire: () => null,
+  handleRestartQuestionnaire: () => null,
+  ...questionnaireSettingsDefault,
+  ...questionnaireCompetenciesQuestionsDefault,
+  ...questionnaireAnsweredQuestionsDefault,
+  ...questionnaireResourcesDefault
+};
 
 export default ResultsPage;
 

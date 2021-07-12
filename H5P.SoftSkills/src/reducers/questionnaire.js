@@ -1,11 +1,12 @@
-import initialState from '../constants/initialState';
-import * as types from '../constants/actionTypes';
+import initialState from '../constants/initialState'
+import * as types from '../constants/actionTypes'
 import {
   QSTEP_FINISHED,
+  QSTEP_READY_TO_START,
   QSTEP_REVIEWING,
-  QSTEP_STARTED, QSTEP_READY_TO_START
-} from '../constants/QuestionnaireConstants';
-import { getGlobalQuestionIndex, getTotalQuestionCount } from '../utils/ComponentsUtils';
+  QSTEP_STARTED
+} from '../constants/QuestionnaireConstants'
+import { getGlobalQuestionIndex, getTotalQuestionCount } from '../utils/ComponentsUtils'
 
 /**
  *
@@ -77,10 +78,10 @@ export function navigation (state = initialState.navigation, action) {
         (maxIndex, currentAnswer) => (currentAnswer.questionGlobalIndex > maxIndex ? currentAnswer.questionGlobalIndex : maxIndex),
         0
       );
-      const newState = {...state, questionGlobalIndex: lastQuestionIndex < maxQuestionCount ?
-            lastQuestionIndex + 1 : lastQuestionIndex
-        };
-      return newState;
+      return {
+        ...state, questionGlobalIndex: lastQuestionIndex < maxQuestionCount ?
+          lastQuestionIndex + 1 : lastQuestionIndex
+      };
     }
   }
   return state;

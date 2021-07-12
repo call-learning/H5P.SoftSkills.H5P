@@ -30,6 +30,7 @@ CongratulationsPage.propTypes = {
   onClick: PropTypes.func,
   isNext: PropTypes.bool,
   isBack: PropTypes.bool,
+  handleViewResultsClick: PropTypes.func
 };
 CongratulationsPage.defaultProps = {
   onClick: () => null,

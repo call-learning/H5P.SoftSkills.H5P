@@ -2,8 +2,7 @@ import { connect } from 'react-redux';
 import { reviewQuestionnaire } from '../actions/questionnaire';
 import CongratulationsPage from '../components/pages/CongratulationsPage';
 
-
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     handleViewResultsClick: () => dispatch(reviewQuestionnaire())
   }

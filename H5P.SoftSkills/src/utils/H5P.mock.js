@@ -5,10 +5,10 @@
 var H5P = {};
 var H5PIntegration = {};
 
-H5P.t = function (key, vars, ns) {
+H5P.t = function (key, vars) {
   return '[' + key + (vars? ':' + JSON.stringify(vars): '') + ']';
 } // Emulate translation function
-H5P.getPath = function (srcpath, contentid) {
+H5P.getPath = function (srcpath) {
   return srcpath;
 }
 H5PIntegration.siteUrl='/';

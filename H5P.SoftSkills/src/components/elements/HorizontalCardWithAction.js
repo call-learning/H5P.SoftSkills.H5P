@@ -1,19 +1,19 @@
 import {
   Box,
-  Grid,
 } from '@material-ui/core';
 import React from 'react';
-import Container from '@material-ui/core/Container';
-import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Fab from '@material-ui/core/Fab';
 import { ArrowForward } from '@material-ui/icons';
 
-const styles = theme => ({
-});
+/*
+const useStyles = makeStyles(theme => ({
+}));
+*/
 
 function HorizontalCardWithAction (props) {
-  const { classes, handleActionClick, components, ...otherprops } = props;
+  const { handleActionClick, components, ...otherprops } = props;
+  // const classes = useStyles(props);
   return (
     <Box boxShadow={5} p={1} m={1} {...otherprops}>
       <Box display="flex" alignItems="center" flexDirection={{ xs: 'column', sm:'row' }}>
@@ -39,4 +39,4 @@ HorizontalCardWithAction.defaultProps = {
   components: []
 };
 
-export default withStyles(styles)(HorizontalCardWithAction);
+export default HorizontalCardWithAction;

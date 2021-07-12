@@ -1,16 +1,14 @@
-import {
-  Box
-} from '@material-ui/core';
 import React  from 'react';
-import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+import PropTypes from 'prop-types';
+import {
+  Box,
+  Typography
+} from '@material-ui/core';
 import {
   computeProgressPerCompetency,
   getCompetencyImageFromIndex, getCurrentQuantile
 } from '../../utils/ComponentsUtils';
-import withStyles from '@material-ui/core/styles/withStyles';
-import Container from '@material-ui/core/Container';
-
-import PropTypes from 'prop-types';
 import {
   questionsByCompetencyAndSubCompetencies,
   questionnaireCompetenciesQuestionsDefault,
@@ -74,28 +72,24 @@ function SubCompetencyResultsPage (props) {
   );
 }
 
-SubCompetencyResultsPage.propTypes = Object.assign(
-  {
-    competencyIndex: PropTypes.number,
-    subCompetencyIndex: PropTypes.number,
-    topNavigation: PropTypes.element
-  },
-  questionsByCompetencyAndSubCompetencies,
-  questionnaireSettings,
-  questionnaireAnsweredQuestions,
-  questionnaireResources
-);
+SubCompetencyResultsPage.propTypes = {
+  competencyIndex: PropTypes.number,
+  subCompetencyIndex: PropTypes.number,
+  topNavigation: PropTypes.element,
+  ...questionsByCompetencyAndSubCompetencies,
+  ...questionnaireSettings,
+  ...questionnaireAnsweredQuestions,
+  ...questionnaireResources
+};
 
-SubCompetencyResultsPage.defaultProps = Object.assign(
-  {
-    competencyIndex: 0,
-    subCompetencyIndex: 0,
-    topNavigation: (<div/>)
-  },
-  questionnaireCompetenciesQuestionsDefault,
-  questionnaireSettingsDefault,
-  questionnaireAnsweredQuestionsDefault,
-  questionnaireResourcesDefault
-);
+SubCompetencyResultsPage.defaultProps = {
+  competencyIndex: 0,
+  subCompetencyIndex: 0,
+  topNavigation: (<div/>),
+  ...questionnaireCompetenciesQuestionsDefault,
+  ...questionnaireSettingsDefault,
+  ...questionnaireAnsweredQuestionsDefault,
+  ...questionnaireResourcesDefault
+};
 
 export default SubCompetencyResultsPage;

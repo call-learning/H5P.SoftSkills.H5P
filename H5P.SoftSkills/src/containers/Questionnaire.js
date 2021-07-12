@@ -17,15 +17,16 @@ import CompetencyPageContainer from './CompetencyPageContainer';
 import InstructionPageContainer from './InstructionPageContainer';
 import CongratulationsPageContainer from './CongratulationsPageContainer';
 import RoutedResultsPageContainer from './RoutedResultsPageContainer';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 import { resetQuestionnaireAndPosition, startQuestionnaireAndPosition } from '../actions/questionnaire';
 import Box from '@material-ui/core/Box';
 
 function Questionnaire (props) {
   let currentPage = (<InstructionPageContainer {...props.settings} isReadyToStart={false}/>);
+  const dispatch = useDispatch();
+  const currentStep = useSelector((state) => state.currentStep)
 
-  switch (props.currentStep) {
+  switch (currentStep) {
     case QSTEP_READY_TO_START:
       currentPage = (<InstructionPageContainer {...props.settings}/>);
       break;
@@ -44,33 +45,29 @@ function Questionnaire (props) {
       break;
     case QSTEP_REVIEWING:
       currentPage = (
-            <RoutedResultsPageContainer {...props}
-                                        handleReviewQuestionnaire={
-                                          () => (props.dispatch(startQuestionnaireAndPosition()))}
-                                        handleRestartQuestionnaire={
-                                          () => (props.dispatch(resetQuestionnaireAndPosition()))}
-            />
+        <RoutedResultsPageContainer {...props}
+                                    handleReviewQuestionnaire={
+                                      () => (dispatch(startQuestionnaireAndPosition()))}
+                                    handleRestartQuestionnaire={
+                                      () => (dispatch(resetQuestionnaireAndPosition()))}
+        />
       );
   }
   // The maxheight 100vh is to ensure there will be a scrollbar on Moodle if content goes over the size of the iframe.
   return (<Box id={'sokaApplicationContainer'}>{currentPage}</Box>);
 }
 
-Questionnaire.propTypes = Object.assign({
-    currentStep: PropTypes.string,
-  },
-  questionsByCompetencyAndSubCompetencies,
-  questionnaireSettings,
-  questionnaireResources
-);
-Questionnaire.defaultProps = Object.assign({
-    currentStep: ''
-  },
-  questionnaireCompetenciesQuestionsDefault,
-  questionnaireResourceDefault,
-  questionnaireSettingsDefault
-);
+Questionnaire.propTypes = {
+  ...questionsByCompetencyAndSubCompetencies,
+  ...questionnaireSettings,
+  ...questionnaireResources
+};
+Questionnaire.defaultProps = {
+  ...questionnaireCompetenciesQuestionsDefault,
+  ...questionnaireResourceDefault,
+  ...questionnaireSettingsDefault
+};
 
-export default connect((state) => ({...state}))(Questionnaire);
+export default Questionnaire;
 
 

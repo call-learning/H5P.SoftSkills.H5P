@@ -1,9 +1,9 @@
+import React from 'react';
 import {
   Box
 } from '@material-ui/core';
-import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles'
 import HorizontalCardWithAction from '../elements/HorizontalCardWithAction';
 import ResultRadarChart from '../elements/ResultRadarChart';
 import PropTypes from 'prop-types';
@@ -13,7 +13,7 @@ import {
 } from '../../utils/CommonProptypes';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   'smallProgress': {
     height: '1em',
     margin: '0.5em'
@@ -27,10 +27,10 @@ const styles = theme => ({
   'cardLike': {
     boxShadow: '0 7px 17px 0 rgba(0, 0, 0, 0.2)'
   }
-});
+}));
 
-const CompetencyResultsCard = withStyles(styles)((props) => {
-  const { classes } = props;
+const CompetencyResultsCard = (props) => {
+  const classes = useStyles(props);
   const competency = props.questionsByCompetencyAndSubCompetencies[props.competencyIndex];
   const components = [
     (<Box display="flex" key="description">
@@ -61,7 +61,7 @@ const CompetencyResultsCard = withStyles(styles)((props) => {
   return (
     <HorizontalCardWithAction components={components} handleActionClick={props.handleActionClick}/>
   );
-});
+};
 
 CompetencyResultsCard.propTypes = Object.assign(
   {

@@ -1,8 +1,4 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
-import {
-  getTotalQuestionCountCompetency
-} from '../../utils/ComponentsUtils';
 import CompetencySideNavigation from './CompetencySideNavigation';
 import {
   questionsByCompetencyAndSubCompetencies,

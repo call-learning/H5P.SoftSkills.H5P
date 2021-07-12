@@ -1,10 +1,6 @@
-import RadarChart from 'recharts/lib/chart/RadarChart';
-import Radar from 'recharts/lib/polar/Radar';
-import PolarGrid from 'recharts/lib/polar/PolarGrid';
 import React from 'react';
-import ResponsiveContainer from 'recharts/lib/component/ResponsiveContainer';
-import { withStyles } from '@material-ui/core/styles';
-import PolarAngleAxis from 'recharts/lib/polar/PolarAngleAxis';
+import {ResponsiveContainer, RadarChart, Radar, PolarGrid, PolarAngleAxis} from 'recharts';
+import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import {
   simpleResultsType, simpleResultsTypeDefault
@@ -25,7 +21,7 @@ const CompetencyLabel = (props) => {
   );
 };
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   innerRadar: {
     stroke: theme.palette.primary.dark,
     fill: theme.palette.primary.main,
@@ -42,10 +38,10 @@ const styles = theme => ({
     },
     fontFamily: theme.typography.fontFamily,
   }
-});
+}));
 
 function ResultRadarChart (props) {
-  const { classes } = props;
+  const classes = useStyles(props);
   // Here if there are less than 4 competenciesResults for this competency, we pad them so to have at least 4
   let competenciesResults = props.resultsList;
   if (competenciesResults.length < MIN_ITEM_RADAR) {
@@ -85,4 +81,4 @@ ResultRadarChart.defaultProps = {
   resultsList: simpleResultsTypeDefault
 };
 
-export default withStyles(styles)(ResultRadarChart);
+export default ResultRadarChart;

@@ -1,21 +1,20 @@
 import React from 'react';
-import { Button, withStyles } from '@material-ui/core';
+import { Button, makeStyles } from '@material-ui/core';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import PropTypes from 'prop-types';
-import { shadows } from '@material-ui/system';
-import Box from '@material-ui/core/Box';
 
-const styles = theme => ({
+const useStyles = makeStyles(() => ({
   'label': {
     textTransform: 'initial',
   }
-});
+}));
 
-const NavigationButton = withStyles(styles)((props) => {
-  const { classes, isNext, isBack, ...otherprops } = props;
+const NavigationButton = (props) => {
+  const { isNext, isBack, ...otherProps } = props;
+  const classes = useStyles(props);
   return (
-    <Button className={classes.label} {...otherprops}
+    <Button className={classes.label} {...otherProps}
             variant={isNext? "contained": "outlined"}
             color="primary"
             startIcon={isBack ? <ArrowBackIcon/> : ''}
@@ -23,13 +22,15 @@ const NavigationButton = withStyles(styles)((props) => {
             py={1}
     >
       {props.children}
-    </Button>);
-});
+    </Button>
+  );
+};
 
 NavigationButton.propTypes = {
   components: PropTypes.arrayOf(PropTypes.element),
   isNext: PropTypes.bool,
   isBack: PropTypes.bool,
+  children: PropTypes.func
 };
 NavigationButton.defaultProps = {
   components: [],

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography } from '@material-ui/core';
 import CheckIcon from '@material-ui/icons/Check';
 // From https://github.com/kimmobrunfeldt/progressbar.js/blob/master/src/circle.js
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   'circle': {
     position: 'relative'
   },
@@ -29,7 +29,7 @@ const styles = theme => ({
     top: '50%',
     transform: 'translate(-50%, -50%)',
   }
-});
+}));
 
 let getPathFromRadius = (centerX, centerY, radius) => {
   return (`M ${centerX},${centerY} m 0,-${radius} a ${radius},${radius} 0 1 1\
@@ -39,9 +39,8 @@ let getPathFromRadius = (centerX, centerY, radius) => {
 const DEFAULT_SIZE_PIX = 40;
 const PROGRESS_CIRCLE_THICKNESS_RELATIVE = 6;
 
-
 function  CircularProgressWithStep(props) {
-    const { classes } = props;
+  const classes = useStyles(props);
     const outerRadius = (props.size ? props.size : DEFAULT_SIZE_PIX) / 2;
     const outerCircleThickness = outerRadius / PROGRESS_CIRCLE_THICKNESS_RELATIVE;
     const progressCircleThickness = outerRadius / PROGRESS_CIRCLE_THICKNESS_RELATIVE * 1.5;
@@ -64,7 +63,7 @@ function  CircularProgressWithStep(props) {
                 className={props.isActive || isFinished ? classes.outerCircleActive : classes.outerCircle}
                 strokeWidth={outerCircleThickness}
                 fillOpacity={isFinished ? 1 : 0}/>
-          {props.value > 0 && props.value < 100 ?
+          {props.value > 0 && props.value < 100 &&
             (<g>
               <path d={pathInnerCircle} className={classes.innerCircle} strokeWidth={progressCircleThickness}
                     fillOpacity="0"/>
@@ -74,7 +73,7 @@ function  CircularProgressWithStep(props) {
                     strokeDasharray={`${innerCircleLength}, ${innerCircleLength}`}
                     strokeDashoffset={progressValueOnCircle}
               />
-            </g>) : ''
+            </g>)
           }
         </svg>
         {
@@ -87,11 +86,13 @@ function  CircularProgressWithStep(props) {
 
 CircularProgressWithStep.propTypes = {
   insideText: PropTypes.string,
-  value: PropTypes.number
+  value: PropTypes.number,
+  size: PropTypes.number,
+  isActive: PropTypes.bool
 };
 CircularProgressWithStep.defaultProps = {
   insideText: "",
   value: 0
 };
 
-export default withStyles(styles)(CircularProgressWithStep);
+export default CircularProgressWithStep;

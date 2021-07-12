@@ -25,6 +25,7 @@ export const flatListQuestion = () =>
           (subcomp, subcompIndex) => subcomp.contexts.map(
             (context, contextIndex) => context.questions.map(
               (qu, questionIndex) =>
+                // eslint-disable-next-line react/jsx-key
                 (<div>"{qu.label}",<span>"{compIndex}:{subcompIndex}:{contextIndex}:{questionIndex}"</span></div>)
             )
           )

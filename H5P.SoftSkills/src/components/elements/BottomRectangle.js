@@ -1,19 +1,18 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 
-
-const styles = theme => ({
+const useStyles = makeStyles(theme=> ({
   root: {
     backgroundColor: theme.palette.primary.main,
     width: "3.5em",
     height: "3px"
   }
-});
+}));
 
-const BottomRectangle = withStyles(styles)((props) => {
-  const { classes } = props;
+const BottomRectangle = (props) => {
+  const classes = useStyles(props);
   return (<Box className={classes.root} {...props}>&nbsp;</Box>)
-});
+};
 
 export default BottomRectangle;
