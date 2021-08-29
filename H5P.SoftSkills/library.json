@@ -1,9 +1,9 @@
 {
   "title": "Soft Skills Questionnaire",
-  "description": "Soft Skill Questionnaire for HESAM Soka project",
-  "majorVersion": 1,
-  "minorVersion": 7,
-  "patchVersion": 1,
+  "description": "Soft Skill Questionnaire for HESAM Soka project (Bachelor and Pitch)",
+  "majorVersion": 2,
+  "minorVersion": 1,
+  "patchVersion": 2,
   "runnable": 1,
   "author": "CALL Learning 2020 (contact@call-learning.fr)",
   "license": "MIT",

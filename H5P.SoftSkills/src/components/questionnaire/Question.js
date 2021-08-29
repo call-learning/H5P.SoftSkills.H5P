@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Radio, RadioGroup, FormControl, FormControlLabel, Checkbox } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles';
 import FormLabel from '@material-ui/core/FormLabel';
 import PropTypes from 'prop-types';
 import {
@@ -11,23 +11,56 @@ import CheckCircle from '@material-ui/icons/CheckCircle';
 import { resourceCreateMarkup } from '../../utils/ComponentsUtils';
 
 const useStyles = makeStyles(theme => ({
+  formControl: {
+    flexDirection: 'row',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column'
+    }
+  },
+  bigger: {
+    fontSize: 'xx-large'
+  },
+  radioGroup: {
+    marginLeft: '2.5em'
+  },
   roundedControl: {
-    borderRadius: '4px',
-    border: `solid 2px ${theme.palette.grey['400']}`,
-    marginLeft: '2em',
+    paddingLeft: '1.5em',
     marginTop: '0.25em',
     marginBottom: '0.25em',
     padding: '0 1em',
     [theme.breakpoints.down('sm')]: {
       width: '100%'
     },
+    '& .MuiFormControlLabel-label': {
+      display: 'none',
+      [theme.breakpoints.down('sm')]: {
+        display: 'initial',
+      },
+    },
+    '&:first-child': {
+      flexDirection: 'row-reverse',
+      [theme.breakpoints.down('sm')]: {
+        flexDirection: 'initial',
+      }
+    },
+    '&:first-child, &:last-child': {
+      [theme.breakpoints.up('sm')]: {
+        '& svg': {
+          //transform: "scale(1.5)",
+          width: '1.3em',
+          height: '1.3em'
+        }
+      }
+    },
+    '&:first-child .MuiFormControlLabel-label,  &:last-child .MuiFormControlLabel-label': {
+      display: 'initial',
+    }
   },
+
   selectedControl: {
     border: `solid 2px ${theme.palette.primary.main}`,
   },
   checkboxLast: {
-    display: 'block',
-    textAlign: 'center',
     marginTop: '0.25em'
   },
   labelQuestion: {
@@ -40,43 +73,44 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Question = (props) => {
-  const classes = useStyles(props)
+  const classes = useStyles(props);
 
   // Deal with possible text override.
-  const possibleAnswerArray = Array.from(props.possibleAnswers)
+  const possibleAnswerArray = Array.from(props.possibleAnswers);
   const allRadioButtonsValues = props.answerLabelsOverride ?
     possibleAnswerArray.map(
       (val, index) => ({ text: props.answerLabelsOverride[index], id: val.id })
-    ) : possibleAnswerArray
+    ) : possibleAnswerArray;
 
-  const checkBoxValue = allRadioButtonsValues.pop() // The value for checkbox is the last one.
+  const checkBoxValue = allRadioButtonsValues.pop(); // The value for checkbox is the last one.
 
   const maxTextLength = allRadioButtonsValues.reduce(
     (maxLength, possibleValue) => (possibleValue.text.length > maxLength ? possibleValue.text.length : maxLength),
     0
-  )
+  );
 
   const hSelect = (e, value) => {
-    e.stopPropagation()
+    e.stopPropagation();
     props.handleSelectAnswer(
       props.questionID,
       value
-    )
-  }
+    );
+  };
 
   return (
     <Container disableGutters={true}>
       <FormControl component="fieldset" disabled={props.isDisabled} onClick={
         (e) => {
           if (props.isDisabled) {
-            props.handleEnableQuestion(props.questionID)
+            props.handleEnableQuestion(props.questionID);
           }
         }
-      }>
+      } className={classes.formControl}>
         <FormLabel className={classes.labelQuestion} component="legend">
           <span dangerouslySetInnerHTML={resourceCreateMarkup(props.questionText)}/>
         </FormLabel>
         <RadioGroup row
+                    className={classes.radioGroup}
                     defaultValue="top"
                     value={props.selectedItemId}
                     name={`${props.questionID}-radio`}
@@ -84,7 +118,7 @@ const Question = (props) => {
                     }>
           {
             allRadioButtonsValues.map((e, index) => (
-              <FormControlLabel style={{ minWidth: `${maxTextLength}ex` }} key={index}
+              <FormControlLabel key={index}
                                 className={`${classes.roundedControl} ${(props.selectedItemId === e.id) ? classes.selectedControl : ''}`}
                                 value={e.id}
                                 control={<Radio color="primary"
@@ -106,33 +140,32 @@ const Question = (props) => {
         />
       </FormControl>
     </Container>
-  )
-}
+  );
+};
 
-Question.propTypes = Object.assign({
-    questionID: PropTypes.string, // Question identifier. Provided in the event as a unique id.
-    selectedItemId: PropTypes.number,
-    questionText: PropTypes.string,
-    answerLabelsOverride: PropTypes.arrayOf(
-      PropTypes.string
-    ),
-    isDisabled: PropTypes.bool,
-    handleEnableQuestion: PropTypes.func,
-    handleSelectAnswer: PropTypes.func
-  },
-  possibleAnswers,
-);
+Question.propTypes = {
+  questionID: PropTypes.string, // Question identifier. Provided in the event as a unique id.
+  selectedItemId: PropTypes.number,
+  questionText: PropTypes.string,
+  answerLabelsOverride: PropTypes.arrayOf(
+    PropTypes.string
+  ),
+  isDisabled: PropTypes.bool,
+  handleEnableQuestion: PropTypes.func,
+  handleSelectAnswer: PropTypes.func,
 
-Question.defaultProps = Object.assign({
-    questionID: '', // Question identifier is empty.
-    selectedItemId: 0,
-    questionText: '',
-    answerLabelsOverride: null,
-    isDisabled: false,
-    handleEnableQuestion: () => null,
-    handleSelectAnswer: () => null,
-  },
-  possibleAnswersDefault
-);
+  ...possibleAnswers,
+};
+
+Question.defaultProps = {
+  questionID: '', // Question identifier is empty.
+  selectedItemId: 0,
+  questionText: '',
+  answerLabelsOverride: null,
+  isDisabled: false,
+  handleEnableQuestion: () => null,
+  handleSelectAnswer: () => null,
+  ...possibleAnswersDefault
+};
 
 export default Question;

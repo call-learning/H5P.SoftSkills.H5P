@@ -95,47 +95,106 @@
                           {
                             "name": "label",
                             "type": "text",
-                            "label": "Question Text",
-                            "widget": "html",
-                            "tags": [
-                              "strong",
-                              "em"
+                            "label": "Question Text"
+                          },
+                          {
+                            "name": "overrides",
+                            "type": "group",
+                            "label": "Question overrides",
+                            "importance": "low",
+                            "expanded": false,
+                            "fields": [
+                              {
+                                "name": "answerLabelsOverride",
+                                "type": "list",
+                                "label": "Answer Label Override",
+                                "importance": "low",
+                                "expanded": false,
+                                "min": 0,
+                                "optional": true,
+                                "field": {
+                                  "name": "text",
+                                  "type": "text",
+                                  "label": "Answer Text"
+                                }
+                              },
+                              {
+                                "name": "acquisitionThreshold",
+                                "type": "number",
+                                "optional": true,
+                                "label": "Threshold for Acquired Value",
+                                "importance": "low"
+                              },
+                              {
+                                "name": "hideResourceThreshold",
+                                "type": "number",
+                                "optional": true,
+                                "label": "Threshold to hide or show the resource",
+                                "importance": "low"
+                              }
                             ]
                           },
                           {
-                            "name": "answerLabelsOverride",
+                            "name": "resources",
                             "type": "list",
-                            "label": "Answer Label Override",
+                            "label": "Resources",
                             "importance": "low",
                             "expanded": false,
-                            "min": 0,
                             "optional": true,
                             "field": {
-                              "name": "text",
-                              "type": "text",
-                              "label": "Answer Text"
+                              "name": "resource",
+                              "type": "group",
+                              "label": "Resource",
+                              "expanded": false,
+                              "importance": "high",
+                              "fields": [
+                                {
+                                  "name": "content",
+                                  "type": "text",
+                                  "label": "Content",
+                                  "widget": "html",
+                                  "tags": [
+                                    "p",
+                                    "br",
+                                    "strong",
+                                    "em",
+                                    "code",
+                                    "table",
+                                    "a",
+                                    "ul",
+                                    "ol"
+                                  ]
+                                },
+                                {
+                                  "name": "type",
+                                  "label": "Type",
+                                  "type": "select",
+                                  "options": [
+                                    {
+                                      "value": "audio",
+                                      "label": "Audio"
+                                    },
+                                    {
+                                      "value": "document",
+                                      "label": "Document"
+                                    },
+                                    {
+                                      "value": "module",
+                                      "label": "Module"
+                                    },
+                                    {
+                                      "value": "video",
+                                      "label": "Vidéo"
+                                    },
+                                    {
+                                      "value": "web",
+                                      "label": "Web"
+                                    }
+
+                                  ]
+                                }
+                              ]
                             }
-                          },
-                          {
-                            "name": "acquisitionThreshold",
-                            "type": "number",
-                            "optional": true,
-                            "label": "Threshold for Acquired Value",
-                            "importance": "low"
-                          },
-                          {
-                            "name": "badgeThreshold",
-                            "type": "number",
-                            "optional": true,
-                            "label": "Threshold for Badge Value",
-                            "importance": "low"
-                          },
-                          {
-                            "name": "hideResourceThreshold",
-                            "type": "number",
-                            "optional": true,
-                            "label": "Threshold to hide or show the resource",
-                            "importance": "low"
                           }
                         ]
                       }
@@ -150,68 +209,11 @@
     }
   },
   {
-    "name": "resources",
-    "type": "list",
-    "widgets": [
-      {
-        "name": "VerticalTabs",
-        "label": "Default"
-      }
-    ],
-    "label": "Resources List",
-    "importance": "medium",
-    "isSubContent": true,
-    "expanded": false,
-    "field": {
-      "name": "resource",
-      "type": "group",
-      "label": "Resource",
-      "importance": "high",
-      "fields": [
-        {
-          "name": "content",
-          "type": "text",
-          "label": "Content",
-          "widget": "html",
-          "tags": [
-            "p",
-            "br",
-            "strong",
-            "em",
-            "code",
-            "table",
-            "a",
-            "ul",
-            "ol"
-          ],
-          "importance": "high"
-        },
-        {
-          "name": "type",
-          "label": "Type",
-          "type": "text",
-          "optional": true
-        },
-        {
-          "name": "references",
-          "type": "text",
-          "label": "Reference of a category:subcategory:context",
-          "regexp": {
-            "pattern": "([0-9]+(:[0-9]+)*)*",
-            "modifiers": "i"
-          },
-          "default": "",
-          "importance": "high"
-        }
-      ]
-    }
-  },
-  {
     "name": "settings",
     "type": "group",
     "label": "Miscellaneous Settings",
+    "description": "Miscellaneous Settings",
     "importance": "high",
-    "expanded": false,
     "fields": [
       {
         "name": "welcomeTitle",
@@ -400,7 +402,6 @@
         "default": false
       }
     ]
-
   },
   {
     "name": "l10n",

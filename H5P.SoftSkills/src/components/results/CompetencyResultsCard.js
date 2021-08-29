@@ -63,22 +63,18 @@ const CompetencyResultsCard = (props) => {
   );
 };
 
-CompetencyResultsCard.propTypes = Object.assign(
-  {
-    competencyIndex: PropTypes.number,
-    handleActionClick: PropTypes.func
-  },
-  questionsByCompetencyAndSubCompetencies,
-  questionnaireResults,
-);
+CompetencyResultsCard.propTypes = {
+  competencyIndex: PropTypes.number,
+  handleActionClick: PropTypes.func,
+  ...questionsByCompetencyAndSubCompetencies,
+  ...questionnaireResults,
+};
 
-CompetencyResultsCard.defaultProps = Object.assign(
-  {
-    competencyIndex: 0,
-    handleActionClick: (e) => null
-  },
-  questionnaireCompetenciesQuestionsDefault,
-  questionnaireResultsDefault
-);
+CompetencyResultsCard.defaultProps = {
+  competencyIndex: 0,
+  handleActionClick: (e) => null,
+  ...questionnaireCompetenciesQuestionsDefault,
+  ...questionnaireResultsDefault
+};
 
 export default CompetencyResultsCard;

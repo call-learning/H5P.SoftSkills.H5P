@@ -34,7 +34,7 @@ function CompetencyPage (props) {
         competencyIndex={props.currentCompetencyIndex}
       />
     </Box>
-    <Box flex={4} mx={1} px={1} overflow={'auto'} height={'100%'}  id={'competencyPageContainer'}>
+    <Box flex={4} mx={1} px={1} overflow={'auto'} height={'100%'} id={'competencyPageContainer'}>
       <QuestionsList
         questionComponent={props.questionComponent}
         questionsByCompetencyAndSubCompetencies={props.questionsByCompetencyAndSubCompetencies}
@@ -44,32 +44,32 @@ function CompetencyPage (props) {
       />
       <Box display="flex"
            width="100%"
-           justifyContent={"space-between"}
-           flexDirection={{xs:'column', sm: 'row'}}
+           justifyContent={'space-between'}
+           flexDirection={{ xs: 'column', sm: 'row' }}
            pb={3}
       >
-        <Box alignSelf={"flex-start"} my={1}>
+        <Box alignSelf={'flex-start'} my={1}>
           {
             competencyIndex > 0 ?
               (<NavigationButton isBack
                                  onClick={props.handlePreviousCompetency}><H5PTranslatedText
-                text='previouscompetencypage'/>
+                text="previouscompetencypage"/>
               </NavigationButton>) : ''
           }
         </Box>
-        <Box alignSelf={{xs:'flex-start', sm: 'flex-end'}} my={1}>
+        <Box alignSelf={{ xs: 'flex-start', sm: 'flex-end' }} my={1}>
           {
             competencyIndex >= (props.questionsByCompetencyAndSubCompetencies.length - 1) ?
               (
                 <NavigationButton isNext
                                   onClick={props.handleFinishAndSubmit}>
-                  <H5PTranslatedText text='finishquestionnaire'/>
+                  <H5PTranslatedText text="finishquestionnaire"/>
                 </NavigationButton>
               ) :
               (
                 <NavigationButton isNext
                                   onClick={props.handleNextCompetency}>
-                  <H5PTranslatedText text='nextcompetencypage'/>
+                  <H5PTranslatedText text="nextcompetencypage"/>
                 </NavigationButton>
               )
           }
@@ -80,32 +80,28 @@ function CompetencyPage (props) {
   </Box>);
 }
 
-CompetencyPage.propTypes = Object.assign(
-  {
-    currentCompetencyIndex: PropTypes.number,
-    questionComponent: PropTypes.elementType,
-    handleEnableQuestion: PropTypes.func,
-    handleSelectAnswer: PropTypes.func,
-    handlePreviousCompetency: PropTypes.func,
-    handleNextCompetency: PropTypes.func,
-    handleFinishAndSubmit: PropTypes.func,
-  },
-  questionsByCompetencyAndSubCompetencies,
-  progressData
-);
+CompetencyPage.propTypes = {
+  currentCompetencyIndex: PropTypes.number,
+  questionComponent: PropTypes.elementType,
+  handleEnableQuestion: PropTypes.func,
+  handleSelectAnswer: PropTypes.func,
+  handlePreviousCompetency: PropTypes.func,
+  handleNextCompetency: PropTypes.func,
+  handleFinishAndSubmit: PropTypes.func,
+  ...questionsByCompetencyAndSubCompetencies,
+  ...progressData
+};
 
-CompetencyPage.defaultProps = Object.assign(
-  {
-    currentCompetencyIndex: 0,
-    questionComponent: Question,
-    handleEnableQuestion: () => null,
-    handleSelectAnswer: () => null,
-    handlePreviousCompetency: () => null,
-    handleNextCompetency: () => null,
-    handleFinishAndSubmit: () => null,
-  },
-  questionnaireCompetenciesQuestionsDefault,
-  progressDataDefault
-);
+CompetencyPage.defaultProps = {
+  currentCompetencyIndex: 0,
+  questionComponent: Question,
+  handleEnableQuestion: () => null,
+  handleSelectAnswer: () => null,
+  handlePreviousCompetency: () => null,
+  handleNextCompetency: () => null,
+  handleFinishAndSubmit: () => null,
+  ...questionnaireCompetenciesQuestionsDefault,
+  ...progressDataDefault
+};
 
 export default CompetencyPage;

@@ -233,7 +233,6 @@ test('getSubCompetencyResultsAndResources', () => {
   const result = getSubCompetencyResultsAndResources(
     sampleData.questionsByCompetencyAndSubCompetencies,
     sampleAnswerData,
-    sampleData.resources,
     sampleData.settings,
     0,
     0);
@@ -259,7 +258,6 @@ test('getSubCompetencyResultsAndResourcesWithHiddenParam', () => {
   const result = getSubCompetencyResultsAndResources(
     sampleData.questionsByCompetencyAndSubCompetencies,
     sampleAnswerData,
-    sampleData.resources,
     settingsIgnoreHidden,
     0,
     0);
@@ -290,7 +288,6 @@ test('getSubCompetencyResultsAndResourcesWithTopAnswers', () => {
   const result = getSubCompetencyResultsAndResources(
     sampleData.questionsByCompetencyAndSubCompetencies,
     sampleAnswerDataRectified,
-    sampleData.resources,
     sampleData.settings,
     0,
     0);

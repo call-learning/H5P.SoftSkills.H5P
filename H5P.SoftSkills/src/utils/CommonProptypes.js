@@ -53,11 +53,15 @@ export const questionsByCompetencyAndSubCompetencies = {
                     questions: PropTypes.arrayOf(
                       PropTypes.shape({
                         label: PropTypes.string,
-                        answerLabelsOverride: PropTypes.arrayOf(
-                          PropTypes.string
-                        ),
-                        badgeThreshold: PropTypes.number,
-                        acquisitionThreshold: PropTypes.number
+                        overrides: PropTypes.shape({
+                          answerLabelsOverride: PropTypes.arrayOf(
+                            PropTypes.string
+                          ),
+                          acquisitionThreshold: PropTypes.number
+                        }),
+                        resources: PropTypes.arrayOf(
+                          aQuestionnaireResource
+                        )
                       })
                     )
                   }

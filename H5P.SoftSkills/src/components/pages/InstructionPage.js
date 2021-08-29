@@ -4,7 +4,7 @@ import { Icon } from '@material-ui/core';
 import { getCompetencyImageFromIndex, resourceCreateMarkup } from '../../utils/ComponentsUtils';
 import { questionnaireSettings, questionnaireSettingsDefault } from '../../utils/CommonProptypes';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles';
 import WaveHeading from '../elements/WaveHeading';
 import Typography from '@material-ui/core/Typography';
 import BottomRectangle from '../elements/BottomRectangle';
@@ -92,7 +92,7 @@ const InstructionPage = (props) => {
             {
               props.isReadyToStart ?
                 (<NavigationButton isNext
-                                   onClick={props.startQuestionnaire}><H5PTranslatedText text='startquestionnaire'/>
+                                   onClick={props.startQuestionnaire}><H5PTranslatedText text="startquestionnaire"/>
                   </NavigationButton>
                 ) : <CircularProgress/>
             }
@@ -103,20 +103,16 @@ const InstructionPage = (props) => {
   );
 };
 
-InstructionPage.propTypes = Object.assign(
-  {
-    startQuestionnaire: PropTypes.func,
-    isReadyToStart: PropTypes.bool
-  },
-  questionnaireSettings
-);
+InstructionPage.propTypes = {
+  startQuestionnaire: PropTypes.func,
+  isReadyToStart: PropTypes.bool,
+  ...questionnaireSettings
+};
 
-InstructionPage.defaultProps = Object.assign(
-  {
-    startQuestionnaire: null,
-    isReadyToStart: true
-  },
-  questionnaireSettingsDefault
-);
+InstructionPage.defaultProps = {
+  startQuestionnaire: null,
+  isReadyToStart: true,
+  ...questionnaireSettingsDefault
+};
 
 export default InstructionPage;

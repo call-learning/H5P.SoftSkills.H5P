@@ -48,147 +48,6 @@
     "obtainbadgegenerationfailure": "Erreur, contacter votre administrateur système (:errorid)",
     "obtainbadgegenerationsuccess": "Votre badge a été généré, vérifiez votre email pour l'obtenir."
   },
-  "resources": [
-    {"content":"Sous forme de tableau, quel format pour quel public et quelle situation ? Ressource mise à disposition sur le site de l’académie de Poitiers ©2005<br><a href=\"http://ww2.ac-poitiers.fr/ecogest/IMG/pdf/Adapter_les_outils_de_com.pdf\">http://ww2.ac-poitiers.fr/ecogest/IMG/pdf/Adapter_les_outils_de_com.pdf</a>", "type":"document", "references":"0:0:0:0"},
-    {"content":"Brève fiche sur les caractéristiques des trois registres de langage par le site Cap Concours : soutenu, courant, familier. Conçue pour préparer le concours de professeur des écoles, programme établi en 2013. Un test est également disponible.<br><a href=\"https://www.cap-concours.fr/enseignement/preparer-les-concours/les-epreuves-du-crpe/les-registres-de-langue-mas_fra_26\">https://www.cap-concours.fr/enseignement/preparer-les-concours/les-epreuves-du-crpe/les-registres-de-langue-mas_fra_26</a>", "type":"document", "references":"0:0:0:0"},
-    {"content":"Présentation d’un guide de rédaction administrative. Document publié par l’Ecole supérieure de l’éducation nationale à destination des cadres.  Contenus : généralités, ponctuation, le style administratif, la lettre administrative, la note, la convocation, le bordereau, le compte rendu, le rapport, le procès-verbal.Pour chaque type d’écrit une maquette est proposée ©2013   <br><a href=\"https://www.modernisation.gouv.fr/sites/default/files/fichiers-attaches/guide_de_la_redaction_administrative.pdf\">https://www.modernisation.gouv.fr/sites/default/files/fichiers-attaches/guide_de_la_redaction_administrative.pdf</a>", "type":"document", "references":"0:0:0:1"},
-    {"content":"Bref récapitulatif des règles et caractéristiques de l’écrit professionnel par un enseignant du CNED, Claude Terrier.  Voir spécifiquement la partie D5 « Communication », point 1 « Enjeux et concepts de base » et point 2 « Communication écrite opérationnelle en langue nationale ou étrangère ». Le site propose des exercices avec leurs corrigés ©2019<br><a href=\"http://www.bts-g-pme.com/\">http://www.bts-g-pme.com/</a>", "type":"module", "references":"0:0:0:1"},
-    {"content":"A l’intersection de l’éthique et de la communication professionnelle, un article publié dans la revue Communiquer, par deux didacticiennes de l’écriture professionnelle, Céline Beaudet et Véronique Rey. Voir spécifiquement la partie « les compétences du rédacteur » ©2014<br><a href=\"https://journals.openedition.org/communiquer/560\">https://journals.openedition.org/communiquer/560</a>", "type":"document", "references":"0:0:0:1"},
-    {"content":"Un guide pratique pour l’écriture inclusive diffusé par le Haut conseil d’état chargé de l’Egalité entre les femmes et les hommes et de la lutte contre les discriminations ©2016<br><a href=\"http://www.haut-conseil-egalite.gouv.fr/IMG/pdf/guide_pour_une_communication_publique_sans_stereotype_de_sexe_vf_2016_11_02.compressed.pdf\">http://www.haut-conseil-egalite.gouv.fr/IMG/pdf/guide_pour_une_communication_publique_sans_stereotype_de_sexe_vf_2016_11_02.compressed.pdf</a>", "type":"document", "references":"0:0:0:1"},
-    {"content":"Page web ou extension pour Chrome. Correcteur d’orthographe et grammaire, dictionnaire, conjugueur. ©2020<br><a href=\"http://www.reverso.net/orthographe/correcteur-francais/\">http://www.reverso.net/orthographe/correcteur-francais/</a>", "type":"web", "references":"0:0:1:0"},
-    {"content":"Pour l’anglais : Grammarly, extension pour Chrome ou Mozilla et application installable sur ordinateur. ©2020<br><a href=\"https://www.grammarly.com/\">https://www.grammarly.com/</a>", "type":"web", "references":"0:0:1:0"},
-    {"content":"Rappels des règles et conseil pour rédiger un document scientifique par le site CoopIST du Cirad © 2018<br><a href=\"https://coop-ist.cirad.fr/rediger/article-scientifique\">https://coop-ist.cirad.fr/rediger/article-scientifique</a>", "type":"web", "references":"0:0:1:1"},
-    {"content":"Article académique « Préparer à communiquer par écrit dans l’entreprise : courrier traditionnel vs courrier électronique », avec des exemples pour donner des points de repères © 2016<br><a href=\"https://journals.openedition.org/pratiques/3231\">https://journals.openedition.org/pratiques/3231</a>", "type":"document", "references":"0:0:1:1"},
-    {"content":"Collection « savoir dire pour savoir penser » par IUT en ligne, module : vulgariser – informer © 2013<br><a href=\"http://www.iutenligne.net/ressources/collection-savoir-dire-pour-savoir-penser-vulgariser.htmlhttp://www.iutenligne.net/ressources/collection-savoir-dire-pour-savoir-penser-informer.html\">http://www.iutenligne.net/ressources/collection-savoir-dire-pour-savoir-penser-vulgariser.htmlhttp://www.iutenligne.net/ressources/collection-savoir-dire-pour-savoir-penser-informer.html</a>", "type":"module", "references":"0:0:1:1"},
-    {"content":"Sur les règles et caractéristiques des écrits professionnels, par Claude Terrier partie D5, Communication, « Construire un message professionnel », et différents diaporamas sur les spécificités de la communication écrite © 2019<br><a href=\"http://www.bts-g-pme.com/\">http://www.bts-g-pme.com/</a>", "type":"module", "references":"0:0:1:1"},
-    {"content":"Dix conseils pour la relecture d’un texte par le site redacteur.com. ©2019   <br><a href=\"https://www.redacteur.com/blog/conseils-relecture-texte/\">https://www.redacteur.com/blog/conseils-relecture-texte/</a>", "type":"web", "references":"0:0:1:2"},
-    {"content":"Guide portant sur la mise en forme d’un document, créé par O. Bouhet pour les masters Transport, mobilités, réseaux de l’université Montpellier 3. 2013<br><a href=\"http://ufr3.univ-montp3.fr/IMG/pdf/Regle_d_or_edition_memoire_version_juin_2013_-_Masters_MOBILITES_Transport_cle81b1f6.pdf\">http://ufr3.univ-montp3.fr/IMG/pdf/Regle_d_or_edition_memoire_version_juin_2013_-_Masters_MOBILITES_Transport_cle81b1f6.pdf</a>", "type":"document", "references":"0:0:1:3"},
-    {"content":"Règles de typographie et de mise en page d’un texte par la bibliothèque universitaire d’Evry © 2013<br><a href=\"https://www.biblio.univ-evry.fr/assets/files/formations/autoformation/guide-typographie-miseenpage_BUEvry.pdf\">https://www.biblio.univ-evry.fr/assets/files/formations/autoformation/guide-typographie-miseenpage_BUEvry.pdf</a>", "type":"document", "references":"0:0:1:3"},
-    {"content":"Normes APA (une des normes de présentation de références bibliographiques) pour les citations bibliographiques par les bibliothèques universitaires de l’université de Lorraine © 2020    <br><a href=\"http://bu.univ-lorraine.fr/sites/default/files/users/user781/Guide%20biblio%20APA%202020-2021.pdf\">http://bu.univ-lorraine.fr/sites/default/files/users/user781/Guide%20biblio%20APA%202020-2021.pdf</a>", "type":"document", "references":"0:0:1:3"},
-    {"content":"Les règles pour rédiger une synthèse sur le site culture.expression.fr © 2014<br><a href=\"https://www.culture-expression.fr/accueil/comment-faire-une-synth%C3%A8se-de-documents-m%C3%A9thode-pour-la-note-de-synth%C3%A8se/\">https://www.culture-expression.fr/accueil/comment-faire-une-synth%C3%A8se-de-documents-m%C3%A9thode-pour-la-note-de-synth%C3%A8se/</a>", "type":"web", "references":"0:0:1:4"},
-    {"content":"Collection « savoir dire pour savoir penser » développée par l’IUT en ligne. Module « Analyser pour communiquer ». Voir surtout la 3e séquence : élaborer la synthèse d’un ensemble documentaire ©2013<br><a href=\"http://public.iutenligne.net/expression/lecomte/analyse_com/general/index.html\">http://public.iutenligne.net/expression/lecomte/analyse_com/general/index.html</a>", "type":"module", "references":"0:0:1:4"},
-    {"content":"Une présentation succincte des stratégies du discours argumentatif par le site espacefrancais.com, un site libanais francophone ©2012<br><a href=\"https://www.espacefrancais.com/les-strategies-du-discours-argumentatif/\">https://www.espacefrancais.com/les-strategies-du-discours-argumentatif/</a>", "type":"web", "references":"0:0:1:5"},
-    {"content":"Collection « savoir dire pour savoir penser » de l’IUT en ligne, modules : raisonner – convaincre – persuader.  <br><a href=\"http://www.iutenligne.net/catalog/thematique/expression\">http://www.iutenligne.net/catalog/thematique/expression</a>  ©2011http://public.iutenligne.net/expression/parouty_prevot/raisonner/index.html  ©2013http://public.iutenligne.net/expression/poveda_prevot/convaincre/index.html  ©2013http://public.iutenligne.net/expression/poveda_prevot/persuader/index.html", "type":"module", "references":"0:0:1:5"},
-    {"content":"Collection « savoir dire pour savoir penser » de l’IUT en ligne. Modules : introduire, conclure et relier ; faire un plan ; parler ou écrire ; vulgariser ; informer ;   se documenter © 2015<br><a href=\"http://www.iutenligne.net/catalog/thematique/expression\">http://www.iutenligne.net/catalog/thematique/expression</a>", "type":"module", "references":"0:0:2:0"},
-    {"content":"Brève fiche sur les caractéristiques des trois registres de langage : soutenu, familier, courant, sur le site Capconcours qui propose des ressources pour préparer des concours- ici le CRPE et le concours de CPE.  <br><a href=\"https://www.cap-concours.fr/enseignement/preparer-les-concours/les-epreuves-du-crpe/les-registres-de-langue-mas_fra_26\">https://www.cap-concours.fr/enseignement/preparer-les-concours/les-epreuves-du-crpe/les-registres-de-langue-mas_fra_26</a>", "type":"web", "references":"0:0:2:0"},
-    {"content":"Par l’université d’Hawaï. En anglais mais simple, propose un questionnaire à administrer au public ou qu’on peut utiliser en se posant les questions soi-même au sujet du public ©2002<br><a href=\"http://www.hawaii.edu/mauispeech/html/analyzing_your_audience.html\">http://www.hawaii.edu/mauispeech/html/analyzing_your_audience.html</a>", "type":"web", "references":"0:0:2:0"},
-    {"content":"Quelques conseils pour concevoir un diaporama, sur le site de soutien aux logiciels libres april.org ©2010<br><a href=\"https://www.april.org/realiser-une-presentation-attractive#Realiser_une_presentation_attractive\">https://www.april.org/realiser-une-presentation-attractive#Realiser_une_presentation_attractive</a>", "type":"web", "references":"0:0:2:0"},
-    {"content":"Des conseils pour organiser sa présentation orale par l’IUT en ligne ©2015<br><a href=\"http://public.iutenligne.net/expression/depoorter/parler_en_public/http://www.iutenligne.net/ressources/la-prise-de-parole-en-public-exposes-soutenances.html\">http://public.iutenligne.net/expression/depoorter/parler_en_public/http://www.iutenligne.net/ressources/la-prise-de-parole-en-public-exposes-soutenances.html</a>", "type":"module", "references":"0:0:2:1"},
-    {"content":"Conseils pour un exposé oral face à un jury, par AUNEGe sur Canal U. ©2013<br><a href=\"https://www.canal-u.tv/video/canal_aunege/face_a_un_jury.12408\">https://www.canal-u.tv/video/canal_aunege/face_a_un_jury.12408</a>", "type":"video", "references":"0:0:2:1"},
-    {"content":"S’organiser pour communiquer, vidéo explicative par Régine Acquier, Université de Montpellier 1 ©2000<br><a href=\"https://www.canal-u.tv/video/les_amphis_de_france_5/s_organiser_pour_communiquer.280\">https://www.canal-u.tv/video/les_amphis_de_france_5/s_organiser_pour_communiquer.280</a>", "type":"video", "references":"0:0:2:1"},
-    {"content":"La prise de parole en public : posture, gestuelle, gestion de l’espace Vidéo proposée par l’IUT de Roanne © 2016<br><a href=\"https://www.youtube.com/watch?v=ZQNBfE85n2s\">https://www.youtube.com/watch?v=ZQNBfE85n2s</a>", "type":"video", "references":"0:0:2:2"},
-    {"content":"Liste les 6 rôles du manager selon Peter Drucker. Extrait d’un article de M. Mousli dans Alternatives Economiques n°258 ©2007<br><a href=\"https://www.i-manuel.fr/REBTS_MG1E14/REBTS_MG1E14part1dos1CO2doc6.html\">https://www.i-manuel.fr/REBTS_MG1E14/REBTS_MG1E14part1dos1CO2doc6.html</a>", "type":"web", "references":"0:1:0:0"},
-    {"content":"Fiches du CNFPT avec des ressources concernant l’activité du manager. Voir le chapitre 1, « Organiser et animer une équipe de travail » ©2018<br><a href=\"https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf\">https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf</a>", "type":"document", "references":"0:1:0:0"},
-    {"content":"Article sur l’apprentissage du management par l’expérience de la gestion de projet et les modes de fonctionnement d’équipe, par C. Verzat & R. Bachelet, LGIL Papers ©2007<br><a href=\"http://rb.ec-lille.fr/perso/papers/Les_ingenieurs_deviennent_ils_managers_grace_aux_projets.pdf\">http://rb.ec-lille.fr/perso/papers/Les_ingenieurs_deviennent_ils_managers_grace_aux_projets.pdf</a>", "type":"document", "references":"0:1:0:0"},
-    {"content":"Texte de 2015 et vidéo de 4 min mise en ligne en 2018, sur l’animation d’équipes projet, issue du Mooc gestion de projet, par S. Delpeyroux :<br><a href=\"http://rb.ec-lille.fr/l/Projets/Management_d_equipe_projet.pdfhttps://gestiondeprojet.pm/management-d-equipe-projet/\">http://rb.ec-lille.fr/l/Projets/Management_d_equipe_projet.pdfhttps://gestiondeprojet.pm/management-d-equipe-projet/</a>", "type":"video", "references":"0:1:0:0"},
-    {"content":"Présentation de la notion de groupe, des types de groupe et des fonctions au sein d’un groupe par un enseignant du CNED, Claude Terrier ©2019Voir spécifiquement la partie D5 « Communication » sous-partie C13 « Communiquer dans les groupes ». Le site propose des exercices avec leurs corrigés.      <br><a href=\"http://www.bts-g-pme.com/\">http://www.bts-g-pme.com/</a>", "type":"module", "references":"0:1:0:0"},
-    {"content":"Fiches du CNFPT avec des ressources concernant l’activité du manager. Voir le chapitre 5 « Communiquer », fiches 49 à 61 ©2018<br><a href=\"https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf\">https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf</a>", "type":"document", "references":"0:1:0:1"},
-    {"content":"Guide de pratique professionnelle, publié par l’ordre des ingénieurs du Québec, voir notamment le chapitre « Gestion d’une équipe et droit du travail », p. 254. Attention, les lois et règlement évoqués concernent le Québec uniquement ©2018   <br><a href=\"http://gpp.oiq.qc.ca/wf_njs.htm\">http://gpp.oiq.qc.ca/wf_njs.htm</a>", "type":"document", "references":"0:1:0:1"},
-    {"content":"Vidéo proposée par l’Université Paris Descartes : “Les 4 clefs de l’intelligence collective” (l’une d’elles est l’écoute active), par C. Grabli ©2017<br><a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/jxjhDfAnC8M5/LD.mp4\">https://d381hmu4snvm3e.cloudfront.net/videos/jxjhDfAnC8M5/LD.mp4</a>", "type":"video", "references":"0:1:0:2"},
-    {"content":"Infographie montrant les caractéristiques de l’intelligence collective et le lien avec l’écoute active, proposé par H2 University ©2017https ://pbs.twimg.com/media/DAVUEnFW0AAGzyE.jpg:large", "type":"document", "references":"0:1:0:2"},
-    {"content":"Vidéo d’explication brève -5mn29- et claire des caractéristiques de l’écoute active, issue du Mooc gestion de projet, par S. Delpeyroux © 2018Regarder la vidéo « Animer l’équipe projet » et lire les notes « Poser les bonnes questions »<br><a href=\"https://gestiondeprojet.pm/management-d-equipe-projet/\">https://gestiondeprojet.pm/management-d-equipe-projet/</a>", "type":"video", "references":"0:1:0:2"},
-    {"content":"Les sept conseils pour pratiquer l’écoute active, par A.-M. Barrero sur le site de la revue Psychologies. La page contient une vidéo de 5mn53 qui présente des conseils pour mieux écouter ©2019<br><a href=\"https://www.psychologies.com/Moi/Moi-et-les-autres/Relationnel/Articles-et-Dossiers/7-conseils-pour-pratiquer-une-ecoute-active\">https://www.psychologies.com/Moi/Moi-et-les-autres/Relationnel/Articles-et-Dossiers/7-conseils-pour-pratiquer-une-ecoute-active</a>", "type":"video", "references":"0:1:0:2"},
-    {"content":"Vidéo de 2mn53 de présentation du concept d’empathie par B. Brown, enseignante et chercheuse à l’University of Houston. “The power of empathy” (anglais avec sous-titres français)<br><a href=\"https://www.youtube.com/watch?v=1Evwgu369Jw\">https://www.youtube.com/watch?v=1Evwgu369Jw</a>", "type":"video", "references":"0:1:0:3"},
-    {"content":"Article de présentation du rôle de l’intelligence émotionnelle dans le management, par J.-F. Chanlat, paru dans Travailler 2003/1 (n° 9), pages 113 à 132 Attention, il faut copier et coller le lien dans votre navigateur.<br><a href=\"https://www.cairn.info/revue-travailler-2003-1-page-113.html#\">https://www.cairn.info/revue-travailler-2003-1-page-113.html#</a>", "type":"document", "references":"0:1:0:3"},
-    {"content":"Fiche pratique n°57 du Cedip, du Ministère en charge du développement durable “Identifier les connaissances et savoir-faire que doit acquérir un nouvel arrivant” © 2013<br><a href=\"http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/Fiche_EL_57_cle6978d2.pdf\">http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/Fiche_EL_57_cle6978d2.pdf</a>", "type":"document", "references":"0:1:1:0"},
-    {"content":"« De la reconnaissance à la motivation au travail », article paru dans la revue L’expansion management review, 2013/3 pp. 104-112, Robert Diez et Pierre Carton<br><a href=\"https://www.cairn.info/revue-l-expansion-management-review-2013-3-page-104.htm\">https://www.cairn.info/revue-l-expansion-management-review-2013-3-page-104.htm</a>", "type":"document", "references":"0:1:1:1"},
-    {"content":"Podcast de 7mn22 “Libérer les talents” par E. Kerleroux, issu du Mooc « Accompagner les transitions éducatives » réalisé entre autres par Synlab et l’USPC © 2018.   Attention: il faut utiliser le zip extracteur pour accéder au fichier audio.<br><a href=\"https://drive.google.com/file/d/0B2DPH3zwn8Z3NXd1amhkaTZ5N1U/view\">https://drive.google.com/file/d/0B2DPH3zwn8Z3NXd1amhkaTZ5N1U/view</a>", "type":"audio", "references":"0:1:1:2"},
-    {"content":"Conflits : l’escalade et la désescalade, vidéo d’une durée de sept minutes par Jacques Salzer et Jean-Edouard Grésy. Mis en ligne en 2015 par AlterNégo, cabinet en négociation et gestion de conflits.<br><a href=\"https://www.youtube.com/watch?v=ddoZnARR_ks&t=5s\">https://www.youtube.com/watch?v=ddoZnARR_ks&t=5s</a>", "type":"video", "references":"0:1:2:0"},
-    {"content":"“ Gestion de conflits et communication pour l’ingénieur”, par l’Ordre des ingénieurs du Québec. Définition, types de conflit, processus de résolution et mise en situation. ©2011<br><a href=\"http://gpp.oiq.qc.ca/gestion_de_conflits_et_communication.htm\">http://gpp.oiq.qc.ca/gestion_de_conflits_et_communication.htm</a>", "type":"module", "references":"0:1:2:0"},
-    {"content":"Pour comprendre le stress au travail, une vidéo de 10 min30, coproduction européenne diffusée par l’INRS ©2014<br><a href=\"http://www.inrs.fr/publications/mediatheque/doc/complement-autres-ressources-2013.html?planClassement=3a&typedata=CatalogueMultimedia&skipMod=true\">http://www.inrs.fr/publications/mediatheque/doc/complement-autres-ressources-2013.html?planClassement=3a&typedata=CatalogueMultimedia&skipMod=true</a>", "type":"video", "references":"0:1:2:0"},
-    {"content":"Conditions de travail et risques psycho-sociaux, entretien avec Yves Clot, professeur au Cnam. Vidéo de 12mn12 mise en ligne par la Haute Autorité de Santé en 2012<br><a href=\"https://www.youtube.com/watch?v=WZ6UFuR3jw8\">https://www.youtube.com/watch?v=WZ6UFuR3jw8</a>", "type":"video", "references":"0:1:2:1"},
-    {"content":"Article de Matthieu Detchessahar, professeur à l’université de Nantes, publié dans la revue Négociations, 2013/1, pp. 57-80 portant sur le modèle de management par la discussion.<br><a href=\"https://www.cairn.info/revue-negociations-2013-1-page-57.htm\">https://www.cairn.info/revue-negociations-2013-1-page-57.htm</a>", "type":"document", "references":"0:1:2:0"},
-    {"content":"Mooc diffusé sur FunMooc sur la santé au travail pour les ingénieurs et managers, par William Dab. ©2019<br><a href=\"https://www.fun-mooc.fr/courses/course-v1:CNAM+01003+self_paced/about\">https://www.fun-mooc.fr/courses/course-v1:CNAM+01003+self_paced/about</a>", "type":"video", "references":"0:1:2:0"},
-    {"content":"Publication de l’Anact, Agence nationale pour l’amélioration des conditions de travail, pour comprendre la prévention des risques psychosociaux en dix questions. Document PDF à télécharger (20 pages) ©2019<br><a href=\"https://www.anact.fr/10-questions-sur-la-prevention-des-risques-psychosociaux\">https://www.anact.fr/10-questions-sur-la-prevention-des-risques-psychosociaux</a>", "type":"document", "references":"0:1:2:0"},
-    {"content":"« Conflit dans l’équipe ? Actions et limites du manager … médiateur ». Un texte concernant la médiation par le manager, par AlterNégo, cabinet en négociation et gestion de conflits ©2016  <br><a href=\"https://alternego.com/culturenego/conflit-dans-lequipe-actions-et-limites-du-manager-mediateur/\">https://alternego.com/culturenego/conflit-dans-lequipe-actions-et-limites-du-manager-mediateur/</a>", "type":"web", "references":"0:1:3:0"},
-    {"content":"Article publié dans la revue de l’INRS Hygiène et sécurité au travail, par M. Favaro. Les données présentées permettent d’analyser les relations organisationnelles et interpersonnelles (6 pages) ©2015<br><a href=\"http://www.inrs.fr/media.html?refINRS=DC%2010\">http://www.inrs.fr/media.html?refINRS=DC%2010</a>", "type":"document", "references":"0:1:3:1"},
-    {"content":"Note Scientifique et Technique de l'INRS. Présente un modèle de compréhension et d’aide à l’intervention autour de 8 types de tensions et/ou conflits en situation de travail. Le texte (71 pages) aborde la question complexe des violences au travail. Lire notamment le chapitre 1 (définition) et à partir de la p.38 ©2014<br><a href=\"http://www.inrs.fr/inrs/recherche/etudes-publications-communications/doc/publication.html?refINRS=A.1%2F1.041%2FP2014-044%2FNS320\">http://www.inrs.fr/inrs/recherche/etudes-publications-communications/doc/publication.html?refINRS=A.1%2F1.041%2FP2014-044%2FNS320</a>", "type":"document", "references":"0:1:3:1"},
-    {"content":"Vidéo de 6mn11 sur le leadership et la relation à l’autorité « Tendre vers un leadership libérateur ». Extrait du Mooc « Accompagner les transitions éducatives » créé par Synlab en partenariat avec le Centre de Recherches Interdisciplinaires et l’Université Paris Descartes © 2017 :<br><a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/TvvhP94D8SVx/HD.mp4\">https://d381hmu4snvm3e.cloudfront.net/videos/TvvhP94D8SVx/HD.mp4</a>", "type":"video", "references":"0:2:0:0"},
-    {"content":"Support de présentation « Les styles de leadership », par V. Petit de l’EDHEC Business School ©2016 :  <br><a href=\"https://s3-eu-west-1.amazonaws.com/odcuploads/public/58121af1e48dec000c23bd86.pdf\">https://s3-eu-west-1.amazonaws.com/odcuploads/public/58121af1e48dec000c23bd86.pdf</a>", "type":"document", "references":"0:2:0:0"},
-    {"content":"« Développer un management collaboratif et reconnaître les talents ». Extrait du Mooc « Accompagner les transitions éducatives » créé par Synlab en partenariat avec le Centre de Recherches Interdisciplinaires et l’Université Paris Descartes. ©2017 <br><a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/nhf8NXSiYVpN/HD.mp4\">https://d381hmu4snvm3e.cloudfront.net/videos/nhf8NXSiYVpN/HD.mp4</a>", "type":"video", "references":"0:2:0:0"},
-    {"content":"Une autre organisation qui valorise radicalement les initiatives de chacun : l’entreprise libérée. Vidéo de 7mn22 de l’interview de Frédéric Laloux lors de la soirée \"Vivre l'économie autrement\" du 18 novembre 2015<br><a href=\"https://www.youtube.com/watch?v=xFh2vDoD2wo\">https://www.youtube.com/watch?v=xFh2vDoD2wo</a>", "type":"video", "references":"0:2:0:0"},
-    {"content":"Support de présentation « Le leadership transformationnel », par V. Petit de l’EDHEC Business School. © 2016 <br><a href=\"https://s3-eu-west-1.amazonaws.com/odcuploads/public/5819bea7b0c45f000b053097.pdf\">https://s3-eu-west-1.amazonaws.com/odcuploads/public/5819bea7b0c45f000b053097.pdf</a>", "type":"document", "references":"0:2:0:1"},
-    {"content":"Inclure les autres dans ses décisions : « Examen de cinq capacités clés du leadership Prendre part à des conversations courageuses » dans la lettre Passer des idées à l’action n°2, 2013-2014, publiée par le ministère de l’Éducation de l’Ontari<br><a href=\"http://www.edu.gov.on.ca/fre/policyfunding/leadership/IdeasIntoActionBulletin2Fr.pdf\">http://www.edu.gov.on.ca/fre/policyfunding/leadership/IdeasIntoActionBulletin2Fr.pdf</a>", "type":"document", "references":"0:2:0:1"},
-    {"content":"Résumé du double système de pensée tiré du livre de Kahneman (Thinking, fast & slow) sur les précautions à prendre avec les décisions qui paraissent évidentes. Vidéo de 2mn42 réalisée par www.competencepro.net, mis en ligne en 2015 :  <br><a href=\"https://www.youtube.com/watch?time_continue=154&v=SHaWAny4sqQ\">https://www.youtube.com/watch?time_continue=154&v=SHaWAny4sqQ</a>", "type":"video", "references":"0:2:0:2"},
-    {"content":"Un article pour comprendre les conventions professionnelles culturelles, paru dans le média en ligne The Conversation. ©2018 :  <br><a href=\"https://theconversation.com/au-bout-de-combien-de-temps-est-on-vraiment-en-retard-69449\">https://theconversation.com/au-bout-de-combien-de-temps-est-on-vraiment-en-retard-69449</a>", "type":"web", "references":"0:3:0:0"},
-    {"content":"Vidéo de 10mn13 d’une conférence TED Talks, introduction au “growth mindset” (traduit par « état d’esprit en expansion ») de Carol Dweck, enseignante à Stanford ©2014<br><a href=\"https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve#t-609345\">https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve#t-609345</a>", "type":"video", "references":"0:3:0:1"},
-    {"content":"Un aperçu de son livre « Mindset : The New Psychology of Success », Ballantine Books. 2007 (trad. 2010)  <br><a href=\"https://www.cairn.info/changer-d-etat-d-esprit--9782804700348.htm\">https://www.cairn.info/changer-d-etat-d-esprit--9782804700348.htm</a>", "type":"document", "references":"0:3:0:1"},
-    {"content":"Créer une veille documentaire sur internet en 4 points. ©2018. Fiches pratiques créées par CoopIST (professionnels de l’information scientifique et technique).https ://coop-ist.cirad.fr/trouver-l-information/créer-une-veille/1-pourquoi-créer-une-veille", "type":"web", "references":"2:0:0:0"},
-    {"content":"Comment utiliser les flux RSS pour effectuer une veille ? Supports de formation produits par l’Urfist. ©2020 :http ://urfist.chartes.psl.eu/ressources/utiliser-les-flux-rss-pour-sa-veille-pourquoi-et-comment", "type":"document", "references":"2:0:0:0"},
-    {"content":"Des points importants à prendre en lorsque l’on documente un projet. Page web de l’Université de Cergy-Pontoise ©2020 <br><a href=\"http://cours.education/dufacilitateur/2016/07/24/atelier-comment-documenter-son-projet-v1/\">http://cours.education/dufacilitateur/2016/07/24/atelier-comment-documenter-son-projet-v1/</a>", "type":"web", "references":"2:0:0:1"},
-    {"content":"Un guide simple et avec des exemples présentant les principes de la documentation d’un projet © 2018 <br><a href=\"https://volab.github.io/howto_doc/howTo_Doc.html\">https://volab.github.io/howto_doc/howTo_Doc.html</a>", "type":"web", "references":"2:0:0:1"},
-    {"content":"Définition et caractéristiques de la négociation, article de revue : « Chapitre premier - Qu’est-ce que négocier ? », Lionel Bellenger éd., La négociation. Presses Universitaires de France, 2017, pp. 11-36.<br><a href=\"https://www.cairn.info/la-negociation--9782130794745-page-11.html\">https://www.cairn.info/la-negociation--9782130794745-page-11.html</a>", "type":"document", "references":"2:1:0:0"},
-    {"content":"Article du blog Formapart « Le consentement, une alternative au consensus ». 2012 : <br><a href=\"https://formapart.fr/blog/2012/08/28/le-consentement-une-alternative-au-consensus/\">https://formapart.fr/blog/2012/08/28/le-consentement-une-alternative-au-consensus/</a>", "type":"web", "references":"2:1:0:1"},
-    {"content":"Aurélien Colson, Professeur à l’ESSEC, explique le rapport de forces dans la négociation. Vidéo d’essai gratuit sur Coursera. 5mn30. 2020  <br><a href=\"https://fr.coursera.org/lecture/fondamentaux-negociation/conclusion-le-rapport-de-force-B1WTx\">https://fr.coursera.org/lecture/fondamentaux-negociation/conclusion-le-rapport-de-force-B1WTx</a>", "type":"video", "references":"2:1:0:1"},
-    {"content":"Extrait de l’article « Développer l’esprit critique par l’argumentation : de l’élève au citoyen », Marie Gaussel : “Argumenter, qu’est-ce que c’est ?”, accompagné d’une bibliographie. 2016 : <br><a href=\"https://edupass.hypotheses.org/978#chap1\">https://edupass.hypotheses.org/978#chap1</a>  Liste d’arguments fallacieux, “Petit recueil de 20 moisissures argumentatives”, Richard Monvoisin et Stanislas Antczak, Cortecs. 2010, mis à jour en 2015  4 pages https://cortecs.org/wp-content/uploads/2010/12/Cortecs_20_Argumentaires_moisis.pdf", "type":"web", "references":"2:1:0:2"},
-    {"content":"Conseils pour trouver un accord dans le cadre d’une négociation. Cadre-Dirigeant magazine, 2018.<br><a href=\"https://www.cadre-dirigeant-magazine.com/manager/negociation-astuces-incontournables-pour-trouver-le-compromis/\">https://www.cadre-dirigeant-magazine.com/manager/negociation-astuces-incontournables-pour-trouver-le-compromis/</a>", "type":"web", "references":"2:1:0:3"},
-    {"content":"Tutoriels de recherche d’information à destination des étudiants réalisé par l’Urfist. 2018 <br><a href=\"http://urfist.chartes.psl.eu/cerise/\">http://urfist.chartes.psl.eu/cerise/</a>", "type":"video", "references":"2:2:0:0"},
-    {"content":"Quelques outils pour l’accès à des publications scientifiques en Open Access. 2020  <br><a href=\"http://urfist.chartes.psl.eu/ressources/methodologie-de-l-information/exploiter-l-open-access-en-recherche-d-informatons\">http://urfist.chartes.psl.eu/ressources/methodologie-de-l-information/exploiter-l-open-access-en-recherche-d-informatons</a>", "type":"web", "references":"2:2:0:0"},
-    {"content":"Présentation de ressources en libre accès dans le domaine scientifique. 2018.<br><a href=\"https://urfist.chartes.psl.eu/ressources/recherche-d-information-en-sciences-exactes-et-appliquees\">https://urfist.chartes.psl.eu/ressources/recherche-d-information-en-sciences-exactes-et-appliquees</a>", "type":"web", "references":"2:2:0:0"},
-    {"content":"Cours créé par Sciences Po disponible sur Openclassrooms, pour évaluer la validité des sources et ressources sur Internet lors d’une recherche d’information. Inscription nécessaire (gratuite) pour bénéficier de certaines fonctionnalités. 2018<br><a href=\"https://openclassrooms.com/fr/courses/5265341-exercer-son-esprit-critique-vis-a-vis-d-internet/5273766-internet-une-source-dinformation-privilegiee\">https://openclassrooms.com/fr/courses/5265341-exercer-son-esprit-critique-vis-a-vis-d-internet/5273766-internet-une-source-dinformation-privilegiee</a>", "type":"video", "references":"2:2:0:0"},
-    {"content":"Article portant sur la réalisation d’une veille stratégique servant à nourrir le processus d’innovation par G. Balmisse et D. Meingan<br><a href=\"https://www.techniques-ingenieur.fr/res/pdf/encyclopedia/42482210-ag1310.pdf\">https://www.techniques-ingenieur.fr/res/pdf/encyclopedia/42482210-ag1310.pdf</a>", "type":"document", "references":"2:2:0:0"},
-    {"content":"Mode d’emploi de l’outil gratuit de gestion de références bibliographiques Zotero<br><a href=\"https://www.zotero.org/support/fr/quick_start_guide\">https://www.zotero.org/support/fr/quick_start_guide</a>", "type":"web", "references":"2:2:0:0"},
-    {"content":"Module du guide méthodologique de recherche et de traitement de l’information scientifique et technique, réalisé par le Service d'Appui à la Pédagogie de l'Université Paul Sabatier - Toulouse 3, consacré au traitement des documents récoltés. 2018 :<br><a href=\"http://sup.ups-tlse.fr/abcdoc/rechercher-traiter-information/int/traiter.html\">http://sup.ups-tlse.fr/abcdoc/rechercher-traiter-information/int/traiter.html</a>", "type":"module", "references":"2:2:0:1"},
-    {"content":"Formation du Campus numérique IUT en ligne « Analyser pour communiquer », module « Elaborer une synthèse de l’information d’un ensemble documentaire ». 2004 : <br><a href=\"http://public.iutenligne.net/expression/lecomte/analyse_com/sequence3/index.html\">http://public.iutenligne.net/expression/lecomte/analyse_com/sequence3/index.html</a>", "type":"module", "references":"2:2:0:1"},
-    {"content":"Vidéo de 2mn50 présentant succinctement ce qu’est un état de l’art, par l’agence Bigbang science communication. 201<br><a href=\"https://www.youtube.com/watch?v=q9nblly8oKc\">https://www.youtube.com/watch?v=q9nblly8oKc</a>", "type":"video", "references":"2:2:0:2"},
-    {"content":"Notices méthodologiques pour réaliser un état de l’art  <br><a href=\"http://homepages.ulb.ac.be/~jmdecrol/Upload_enseignement/TOURF414_SOA.pdf\">http://homepages.ulb.ac.be/~jmdecrol/Upload_enseignement/TOURF414_SOA.pdf</a>", "type":"module", "references":"2:2:0:2"},
-    {"content":"Texte court présentant différentes techniques et outils pour le traitement des informations collectées, par Claire François   <br><a href=\"https://hal.archives-ouvertes.fr/hal-00337122/document\">https://hal.archives-ouvertes.fr/hal-00337122/document</a>", "type":"document", "references":"2:2:0:3"},
-    {"content":"Module du guide méthodologique de recherche et de traitement de l’information scientifique et technique, réalisé par le Service d'Appui à la Pédagogie de l'Université Paul Sabatier - Toulouse 3, consacré au traitement des documents récoltés. 2018<br><a href=\"http://sup.ups-tlse.fr/abcdoc/rechercher-traiter-information/int/traiter.html\">http://sup.ups-tlse.fr/abcdoc/rechercher-traiter-information/int/traiter.html</a>", "type":"module", "references":"2:2:0:3"},
-    {"content":"Formation du Campus numérique IUTenligne « Analyser pour communiquer », module « Elaborer une synthèse de l’information d’un ensemble documentaire ». 2004 <br><a href=\"http://public.iutenligne.net/expression/lecomte/analyse_com/sequence3/index.html\">http://public.iutenligne.net/expression/lecomte/analyse_com/sequence3/index.html</a>", "type":"module", "references":"2:2:0:4"},
-    {"content":"Cours d’Openclassrooms avec vidéos créé par l’IESA concernant les bases de la gestion de projets Inscription nécessaire (gratuite) pour bénéficier de certaines fonctionnalités. 2016<br><a href=\"https://openclassrooms.com/fr/courses/3522386-decouvrez-les-bases-de-la-gestion-de-projet\">https://openclassrooms.com/fr/courses/3522386-decouvrez-les-bases-de-la-gestion-de-projet</a>", "type":"module", "references":"2:2:1:0"},
-    {"content":"Article de la revue Techniques de l'ingénieur Méthodes pour la conception, qui présente les principes et les méthodes utilisés dans le domaine industriel pour concevoir et réaliser des produits. 1997.<br><a href=\"https://www.techniques-ingenieur.fr/base-documentaire/genie-industriel-th6/methodes-pour-la-conception-42128210/gestion-de-projet-t7700/principes-de-base-t7700niv10001.html\">https://www.techniques-ingenieur.fr/base-documentaire/genie-industriel-th6/methodes-pour-la-conception-42128210/gestion-de-projet-t7700/principes-de-base-t7700niv10001.html</a>", "type":"document", "references":"2:2:1:0"},
-    {"content":"Module “Gestion de projets : méthode et outils - Les essentiels” de l’IAE de Lille, initiation aux méthodes et outils de gestion de projet. 2013 :<br><a href=\"https://modules-iae.univ-lille.fr/M06/cours/co/002_module_06_IAE_web.html\">https://modules-iae.univ-lille.fr/M06/cours/co/002_module_06_IAE_web.html</a>", "type":"module", "references":"2:2:1:0"},
-    {"content":"Exemples d’outils de planification / organisation. Les deux outils sont en « freemium », gratuit sur inscription avec fonctionnalités limitées, payants pour d’avantage de fonctions  Trello <br><a href=\"https://trello.com\">https://trello.com</a>", "type":"web", "references":"2:2:1:1"},
-    {"content":"« Réaliser un état des lieux à mi-parcours », diapositives de présentation de la faculté de psychologie et de sciences de l’éducation de l’université de Mons (Belgique). 2015 :  <br><a href=\"https://sharepoint1.umons.ac.be/FR/universite/facultes/fpse/serviceseetr/methodo/recherches/recherches_en_cours/Expairs/Realiser-un-etat-des-lieux.pdf\">https://sharepoint1.umons.ac.be/FR/universite/facultes/fpse/serviceseetr/methodo/recherches/recherches_en_cours/Expairs/Realiser-un-etat-des-lieux.pdf</a>", "type":"document", "references":"2:2:1:1"},
-    {"content":"3e étape du Module “Gestion de projets : méthode et outils - Les essentiels” de l’IAE de Lille, présentant la phase de conception. 2013 :<br><a href=\"http://bricks.univ-lille1.fr/M06/cours/co/ch1_03_etape3_01_def.html\">http://bricks.univ-lille1.fr/M06/cours/co/ch1_03_etape3_01_def.html</a>", "type":"module", "references":"2:2:1:2"},
-    {"content":"Brochure INRS rédigée sur la base de la norme AFNOR NF16271 pour l’achat d’une machine, transposable pour d’autres produits ou services. Contient un exemple et une méthode de questionnement basée sur QQOQCPC pour analyser les besoins. 2013 :  <br><a href=\"http://www.inrs.fr/media.html?refINRS=ED%20113\">http://www.inrs.fr/media.html?refINRS=ED%20113</a>", "type":"document", "references":"2:2:1:3"},
-    {"content":"Définition du cahier des charges fonctionnel, étape 2 du module “Gestion de projets : méthode et outils - Les essentiels” de l’IAE de Lille, concernant la faisabilité du projet. 2013 :<br><a href=\"https://modules-iae.univ-lille.fr/M06/cours/co/ch1_02_etape2_12_aller_plus_loin.html\">https://modules-iae.univ-lille.fr/M06/cours/co/ch1_02_etape2_12_aller_plus_loin.html</a>", "type":"module", "references":"2:2:1:3"},
-    {"content":"Cours avec vidéo d’Openclassrooms sur la réalisation de cahiers des charges, créé par l’IESA. Concerne les projets numériques mais le fond est valable pour tout type de projet. 2020 :<br><a href=\"https://openclassrooms.com/fr/courses/3676841-realisez-le-cahier-des-charges-dun-projet-digital/3676848-quest-ce-quun-cahier-des-charges\">https://openclassrooms.com/fr/courses/3676841-realisez-le-cahier-des-charges-dun-projet-digital/3676848-quest-ce-quun-cahier-des-charges</a> Inscription nécessaire (gratuite) pour bénéficier de certaines fonctionnalités.", "type":"video", "references":"2:2:1:3"},
-    {"content":"Définition du cahier des charges technique ou opérationnel, étape 3 (sur la phase de conception) du Module “Gestion de projets : méthode et outils - Les essentiels” de l’IAE de Lille. 2013 :<br><a href=\"https://modules-iae.univ-lille.fr/M06/cours/co/ch1_03_etape3_13_aller_plus_loin.html\">https://modules-iae.univ-lille.fr/M06/cours/co/ch1_03_etape3_13_aller_plus_loin.html</a>", "type":"module", "references":"2:2:1:4"},
-    {"content":"Guide de l’association Synlab qui expose la méthode et les outils du Design Thinking. Pp. 16-23, la partie consacrée au démarrage du projet, expose des méthodes pour former une équipe et fixer des règles. 2017 :  <br><a href=\"https://syn-lab.fr/wp-content/uploads/2017/10/Innover-a-plusieurs-version-longue.pdf\">https://syn-lab.fr/wp-content/uploads/2017/10/Innover-a-plusieurs-version-longue.pdf</a>", "type":"document", "references":"2:2:2:0"},
-    {"content":"Présentation et quizz d’autoévaluation du module “Gestion de projets : méthode et outils - Les essentiels” de l’IAE de Lille. 2013 :  <br><a href=\"http://bricks.univ-lille1.fr/M06/cours/co/000_module_06_IAE.html\">http://bricks.univ-lille1.fr/M06/cours/co/000_module_06_IAE.html</a>", "type":"module", "references":"2:2:2:1"},
-    {"content":"Guide méthodologique de conduite de projet pour les jeunes actifs par le ministère de la Jeunesse et des Sports. Page 24, chapitre « Evaluer et rendre compte ». 2004 :<br><a href=\"http://www.jeunes.gouv.fr/IMG/pdf/NDI_guidemethodo.pdf\">http://www.jeunes.gouv.fr/IMG/pdf/NDI_guidemethodo.pdf</a>", "type":"document", "references":"2:2:2:2"},
-    {"content":"Vidéo d’introduction à l’approche systémique, 5mn17, extrait du Mooc « Accompagner les transitions éducatives » créé par Synlab en partenariat avec le Centre de Recherches Interdisciplinaires et l’Université Paris Descartes. 2017 <br><a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/PLTgE4HV0WLX/HD.mp4\">https://d381hmu4snvm3e.cloudfront.net/videos/PLTgE4HV0WLX/HD.mp4</a>", "type":"video", "references":"2:3:0:0"},
-    {"content":"Article « L’approche systémique ; de quoi s’agit-il ? » qui pose les bases d’une définition de cette manière de penser la complexité du monde. 2003.<br><a href=\"http://www.afscet.asso.fr/SystemicApproach.pdf\">http://www.afscet.asso.fr/SystemicApproach.pdf</a>", "type":"document", "references":"2:3:0:0"},
-    {"content":"Vidéo de 2mn45 créée par A. Magnin pour illustrer l’importance de l’approche systémique. « Pensée systémique : les chats de Bornéo ». Mis en ligne en 2014 :  <br><a href=\"https://www.youtube.com/watch?v=SZImKzAZUv4\">https://www.youtube.com/watch?v=SZImKzAZUv4</a>", "type":"video", "references":"2:3:0:0"},
-    {"content":"« Mot problème et non mot solution », à propos du mot « complexe ». Introduction aux problèmes complexes par Edgar Morin. Vidéo de 10mn39 extraite d’un cours en ligne créée par l’ESSEC Business School « L’avenir de la décision : connaitre et agir en complexité ». Mis en ligne en 2014 :<br><a href=\"https://www.youtube.com/watch?v=P2PQ5lSO1qI&index=1&list=PLHTgkYBniq1-idttv6LyAsHWcloSp107f\">https://www.youtube.com/watch?v=P2PQ5lSO1qI&index=1&list=PLHTgkYBniq1-idttv6LyAsHWcloSp107f</a>", "type":"video", "references":"2:3:0:1"},
-    {"content":"Définir le problème et les objectifs. Module publié par l’Ordre des Architectes du Québec.2011.  <br><a href=\"http://www.gpp.oiq.qc.ca/\">http://www.gpp.oiq.qc.ca/</a>", "type":"module", "references":"2:3:0:1"},
-    {"content":"Module de cours en ligne « Méthodes de résolution de problèmes » du Mooc Gestion de projet par Rémy Bachelet. Mis en ligne en 2014 :<br><a href=\"https://gestiondeprojet.pm/demarche-de-resolution-de-probleme/\">https://gestiondeprojet.pm/demarche-de-resolution-de-probleme/</a>", "type":"module", "references":"2:3:0:1"},
-    {"content":"« Résoudre un problème : la démarche ». Document points de repères n° 17 du CEDIP (Centre Ministériel de Valorisation des Ressources Humaines), ministère de l’Equipement, des Transports et du Logement. Présentation de la démarche d’une démarche de résolution de problème, de l’analyse de la situation à la mise en place d’une solution. Transposable pour toute organisation de travail. 2001<br><a href=\"http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/resol_probleme_cle595fb7.pdf\">http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/resol_probleme_cle595fb7.pdf</a>", "type":"document", "references":"2:3:0:2"},
-    {"content":"« Résoudre un problème : la démarche ». Document points de repères n° 17 du CEDIP (Centre Ministériel de Valorisation des Ressources Humaines), ministère de l’Equipement, des Transports et du Logement. Présentation d’une sélection d’outils de résolution de problème. Transposable pour toute organisation de travail. 2001 <br><a href=\"http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/outils_resol_problemes.doc_cle182ac8.pdf\">http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/outils_resol_problemes.doc_cle182ac8.pdf</a>", "type":"document", "references":"2:3:0:3"},
-    {"content":"Elaborer les solutions, les décrire et mener une étude de faisabilité des solutions envisagées. Module produit par l’Ordre des architectes du Québec. 2011.<br><a href=\"http://www.gpp.oiq.qc.ca/\">http://www.gpp.oiq.qc.ca/</a>", "type":"module", "references":"2:3:0:3"},
-    {"content":"« Résoudre un problème : la démarche ». Document points de repères n° 17 du CEDIP (Centre Ministériel de Valorisation des Ressources Humaines), ministère de l’Equipement, des Transports et du Logement. Pages 14 et 15, déroulé des phases de vérification des résultats et de consolidation de l’amélioration. Transposable pour toute organisation de travail. 2001<br><a href=\"http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/resol_probleme_cle595fb7.pdf\">http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/resol_probleme_cle595fb7.pdf</a>", "type":"document", "references":"2:3:0:4"},
-    {"content":"Le cadre de référence des compétences professionnelles de l'ingénieur par l’Ordre des Ingénieurs du Québec (attention : document québécois, les références légales ne s’appliquent pas en France) ©2017 :<br><a href=\"https://www.oiq.qc.ca/fr/jeSuis/membre/developpementProfessionnel/Pages/referentieldecompetencesprofessionnelles.aspx\">https://www.oiq.qc.ca/fr/jeSuis/membre/developpementProfessionnel/Pages/referentieldecompetencesprofessionnelles.aspx</a>", "type":"document", "references":"1:0:0:0"},
-    {"content":"AUNEGE fiche de la ressource « Apprendre à apprendre »<br><a href=\"http://ressources.aunege.fr/notice/view/aunege-927?lightbox=true\">http://ressources.aunege.fr/notice/view/aunege-927?lightbox=true</a>", "type":"web", "references":"1:0:0:0"},
-    {"content":"Cours pour “apprendre à apprendre” par l’Université de Lille :<br><a href=\"https://rpn-langues.univ-lille.fr/apprendre/site/co/apprendreAapprendre_1.html\">https://rpn-langues.univ-lille.fr/apprendre/site/co/apprendreAapprendre_1.html</a>", "type":"video", "references":"1:0:0:0"},
-    {"content":"Trois techniques d’analyse de l’activité pour apprendre à expliciter les composantes de l’activité professionnelle et identifier plus facilement les acquis. ©2013<br><a href=\"https://www.pedagogie.ac-aix-marseille.fr/upload/docs/application/pdf/2013-10/methodologie_analyse_2013-10-09_21-07-48_677.pdf\">https://www.pedagogie.ac-aix-marseille.fr/upload/docs/application/pdf/2013-10/methodologie_analyse_2013-10-09_21-07-48_677.pdf</a>", "type":"module", "references":"1:0:0:0"},
-    {"content":"Entretien avec Karine Israël expliquant comment identifier et valoriser ses acquis.Vidéo de 7mn réalisée par Studyrama© 2016 <br><a href=\"https://www.youtube.com/watch?v=JefI3h-LvRY\">https://www.youtube.com/watch?v=JefI3h-LvRY</a>", "type":"video", "references":"1:0:0:2"},
-    {"content":"Trois techniques d’analyse de l’activité pour apprendre à expliciter les composantes de l’activité professionnelle et identifier plus facilement les acquis. ©2013<br><a href=\"https://www.pedagogie.ac-aix-marseille.fr/upload/docs/application/pdf/2013-10/methodologie_analyse_2013-10-09_21-07-48_677.pdf\">https://www.pedagogie.ac-aix-marseille.fr/upload/docs/application/pdf/2013-10/methodologie_analyse_2013-10-09_21-07-48_677.pdf</a>", "type":"web", "references":"1:0:0:2"},
-    {"content":"« Manuel de créativité en entreprise » publié par la CCI du Gers. Plusieurs outils de stimulation de la créativité dans les organisations de travail présentés dans ce manuel de créativité appliquée. © 201<br><a href=\"http://www.cci.fr/c/document_library/get_file?uuid=83508432-5459-40a3-9030-cb74a1d6d086&groupId=10988\">http://www.cci.fr/c/document_library/get_file?uuid=83508432-5459-40a3-9030-cb74a1d6d086&groupId=10988</a>", "type":"document", "references":"1:1:0:0"},
-    {"content":"Présentation succincte de différentes techniques de créativité : brainstorming, association, analogique, aléatoire, concassage. © 2018<br><a href=\"https://www.creativite.net/techniques-de-creativite/\">https://www.creativite.net/techniques-de-creativite/</a>", "type":"web", "references":"1:1:0:0"},
-    {"content":"Article par E.-M. Hernandez et R. Redien-Collot Méthodes de créativité et amélioration de projets entrepreneuriaux : présentation d’une expérimentation dans un contexte académique (Gestion 2000 2013/5, p. 93-114)<br><a href=\"https://www.cairn.info/revue-gestion-2000-2013-5-page-93.htm\">https://www.cairn.info/revue-gestion-2000-2013-5-page-93.htm</a>", "type":"document", "references":"1:1:0:0"},
-    {"content":"Vidéo de 3mn20, extraite du Mooc « Accompagner les transitions éducatives » créé par Synlab en partenariat avec le Centre de Recherches Interdisciplinaires et l’Université Paris Descartes et présentant les différentes formes d’innovation. © 2017<br><a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/cJLWGJ8jRx1D/HD.mp4\">https://d381hmu4snvm3e.cloudfront.net/videos/cJLWGJ8jRx1D/HD.mp4</a>", "type":"video", "references":"1:1:0:1"},
-    {"content":"Vidéo de 3mn55, interview de L. de Brabandère du cabinet Boston Consulting Group : ne pas confondre créativité et innovation. © 2010<br><a href=\"https://www.youtube.com/watch?v=UgKNlWbnk_Y&t=33s\">https://www.youtube.com/watch?v=UgKNlWbnk_Y&t=33s</a>", "type":"video", "references":"1:1:0:1"},
-    {"content":"Vidéo de 51mn55 d’introduction aux fondamentaux de l’innovation humaniste : philosophie, sociologie et ressentis profonds des individus par Marc Giget, Président et directeur scientifique de l’European Institute for Creative Strategies & Innovation et du Club de paris des Directeurs de l’Innovation. © 2016   <br><a href=\"https://vimeo.com/196353743\">https://vimeo.com/196353743</a>", "type":"video", "references":"1:1:0:2"},
-    {"content":"Podcast de 5mn de RadioFrance par X. de la Porte sur l’injonction à l’innovation. © 2014<br><a href=\"https://www.franceculture.fr/emissions/ce-qui-nous-arrive-sur-la-toile/si-reflechissait-5mn-ce-que-innover-veut-dire\">https://www.franceculture.fr/emissions/ce-qui-nous-arrive-sur-la-toile/si-reflechissait-5mn-ce-que-innover-veut-dire</a>", "type":"audio", "references":"1:1:0:2"},
-    {"content":"Un texte et des liens sur la mise en œuvre d’une idée innovante, par Bpifrance Création. © 2018 :<br><a href=\"https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-matiere-creation\">https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-matiere-creation</a>", "type":"web", "references":"1:1:0:3"},
-    {"content":"Un texte et des liens sur les questions à se poser pour mettre en œuvre une idée innovante, par Bpifrance Création. © 2018 :   <br><a href=\"https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-creation-dentreprise\">https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-creation-dentreprise</a>", "type":"web", "references":"1:1:0:3"},
-    {"content":"Une réflexion sur les limites de l’intrapreneuriat et ses rapports avec l’innovation dans les organisations de travail « Intrapreneuriat et innovation. Introduction du dossier », revue Gestion, 2011.<br><a href=\"https://www.cairn.info/revue-gestion-2011-4-page-4.hthttps://www.cairn.info/revue-gestion-2011-4-page-4.html\">https://www.cairn.info/revue-gestion-2011-4-page-4.hthttps://www.cairn.info/revue-gestion-2011-4-page-4.html</a>", "type":"web", "references":"1:1:0:3"},
-    {"content":"« L’éthique au travail : des valeurs à cultiver », récapitulatif des valeurs essentielles dans toute organisation de travail, par la Commission des droits de la personne et des droits de la jeunesse du Québec. © 2010 :<br><a href=\"http://www.cdpdj.qc.ca/Publications/valeurs_organisationnelles_Commission.pdf\">http://www.cdpdj.qc.ca/Publications/valeurs_organisationnelles_Commission.pdf</a>", "type":"document", "references":"1:2:0:0"},
-    {"content":"« Chartes d'éthique, alerte professionnelle et droit du travail français : état des lieux et perspectives », rapport public du Ministère de l'Emploi, du Travail et de l'Insertion professionnelle des Jeunes, 2007. Etat des lieux sur les chartes éthiques, la déontologie et le droit en entreprise :  <br><a href=\"http://www.ladocumentationfrancaise.fr/rapports-publics/074000335-chartes-d-ethique-alerte-professionnelle-et-droit-du-travail-francais-etat-des\">http://www.ladocumentationfrancaise.fr/rapports-publics/074000335-chartes-d-ethique-alerte-professionnelle-et-droit-du-travail-francais-etat-des</a>", "type":"document", "references":"1:2:0:0"},
-    {"content":"Définitions de la déontologique, la morale et l’éthique par Christophe Marsollier. Vidéo de 10 mn. Regarder notamment les 2 premières minutes. Manag’Educ ©2019<br><a href=\"https://www.youtube.com/watch?v=s1O8oKZKSrc\">https://www.youtube.com/watch?v=s1O8oKZKSrc</a>", "type":"video", "references":"1:2:0:0"},
-    {"content":"C. Afef, et F. Zaddem. « Le climat éthique au travail : pour promouvoir des relations interpersonnelles de confiance », Revue Interdisciplinaire Management, Homme & Entreprise, 2012. Article académique sur les liens entre le climat éthique en entreprise, la confiance et le rôle des managers :  <br><a href=\"https://www.cairn.info/revue-rimhe-2012-1-page-53.htm\">https://www.cairn.info/revue-rimhe-2012-1-page-53.htm</a>", "type":"document", "references":"1:2:0:1"},
-    {"content":"Informations sur les discriminations au travail et les recours dans le privé et dans le public, par Service-public.fr, le site officiel de l’administration. © 2020 :  <br><a href=\"https://www.service-public.fr/particuliers/vosdroits/F1642\">https://www.service-public.fr/particuliers/vosdroits/F1642</a>", "type":"web", "references":"1:2:0:2"},
-    {"content":"10e Baromètre de la perception des discriminations dans l’emploi réalisé par le Défenseur des droits et l’Organisation internationale du travail (OIT) issus de l’enquête « Accès aux droits » du Défenseur des droits, © 2017 :<br><a href=\"https://www.defenseurdesdroits.fr/sites/default/files/atoms/files/enquete-ead_vol_3_-_oit.pdf\">https://www.defenseurdesdroits.fr/sites/default/files/atoms/files/enquete-ead_vol_3_-_oit.pdf</a>", "type":"document", "references":"1:2:0:2"},
-    {"content":"La santé et la sécurité au travail, les obligations de l’employeur. Site Service public © 2020.<br><a href=\"https://www.service-public.fr/particuliers/vosdroits/F2210\">https://www.service-public.fr/particuliers/vosdroits/F2210</a>", "type":"web", "references":"1:2:0:3"},
-    {"content":"Sécurité et santé des travailleurs : les obligations générales de l’employeur et sa responsabilité. ©2020<br><a href=\"https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs-les-emplois-les-savoir-faire-et-les-competences/proteger-les-travailleurs/article/securite-et-sante-des-travailleurs-les-obligations-generales-de-l-employeur-et\">https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs-les-emplois-les-savoir-faire-et-les-competences/proteger-les-travailleurs/article/securite-et-sante-des-travailleurs-les-obligations-generales-de-l-employeur-et</a>", "type":"web", "references":"1:2:0:3"},
-    {"content":"Article bref portant sur la communication et sur l’acceptation des critiques dans un contexte professionnel. Revue Psychologies, 2020.<br><a href=\"https://www.psychologies.com/Travail/Relations-professionnelles/Vie-de-bureau/Articles-et-Dossiers/Comment-bien-communiquer-au-travail\">https://www.psychologies.com/Travail/Relations-professionnelles/Vie-de-bureau/Articles-et-Dossiers/Comment-bien-communiquer-au-travail</a>", "type":"web", "references":"1:3:0:0"},
-    {"content":"Comment accepter les critiques ? Les types de critiques, l’émetteur et la gestion de celle-ci. ©2020  <br><a href=\"https://www.manager-go.com/efficacite-professionnelle/savoir-gerer-une-critique.htm\">https://www.manager-go.com/efficacite-professionnelle/savoir-gerer-une-critique.htm</a>", "type":"web", "references":"1:3:0:1"},
-    {"content":"Sur le Blog Chèvre pensante, un test pour prendre conscience de ses propres biais « Avez-vous l’esprit critique ? ». © 2016<br><a href=\"http://chevrepensante.fr/2016/11/05/test-avez-lesprit-critique/\">http://chevrepensante.fr/2016/11/05/test-avez-lesprit-critique/</a>", "type":"module", "references":"1:3:0:2"},
-    {"content":"Atelier en ligne « Se méfier de ses raisonnements » Contient des quiz correspondant aux différentes manipulations argumentatives (Erreurs logiques, sophismes, généralisations abusives, etc.). Mis en ligne en 2019<br><a href=\"https://apprentissage.atelier-mediation-critique.com/courses/course-v1:amcsti+raisonements+2018/about\">https://apprentissage.atelier-mediation-critique.com/courses/course-v1:amcsti+raisonements+2018/about</a>", "type":"module", "references":"1:3:0:2"},
-    {"content":"Article « Développer l’esprit critique par l’argumentation : de l’élève au citoyen », issu des Dossier de veille de l’Ifé “Argumenter, qu’est-ce que c’est ?”. 2016 :  <br><a href=\"https://edupass.hypotheses.org/978#chap1\">https://edupass.hypotheses.org/978#chap1</a>", "type":"document", "references":"1:3:0:3"},
-    {"content":"L’affirmation de soi, émission France 3 Hauts-de-France, 7mn. Des techniques simples pour s’affirmer. © 2017  <br><a href=\"https://www.youtube.com/watch?v=g6vV7ZhaIPc\">https://www.youtube.com/watch?v=g6vV7ZhaIPc</a>", "type":"video", "references":"1:3:0:3"}
-  ],
   "settings": {
     "welcomeTitle": "Bienvenue sur le\nTest d'auto-positionnement sur les soft skills.",
     "generalInstructions": "Ce questionnaire vous permettra d’identifier vos compétences transversales, autrement appelées soft skills, et vous proposera des ressources d’auto-formation afin d’accompagner le développement de ces compétences.",
@@ -262,10 +121,40 @@
               "questions": [
                 {
                   "label": "Lors de la rédaction, je prends en considération mon public cible et j’adapte mon langage.",
-                  "acquisitionThreshold": 5
+                  "overrides": {
+                    "acquisitionThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Sous forme de tableau, quel format pour quel public et quelle situation ? Ressource mise à disposition sur le site de l’académie de Poitiers ©2005<br><a href=\"http://ww2.ac-poitiers.fr/ecogest/IMG/pdf/Adapter_les_outils_de_com.pdf\">http://ww2.ac-poitiers.fr/ecogest/IMG/pdf/Adapter_les_outils_de_com.pdf</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Brève fiche sur les caractéristiques des trois registres de langage par le site Cap Concours : soutenu, courant, familier. Conçue pour préparer le concours de professeur des écoles, programme établi en 2013. Un test est également disponible.<br><a href=\"https://www.cap-concours.fr/enseignement/preparer-les-concours/les-epreuves-du-crpe/les-registres-de-langue-mas_fra_26\">https://www.cap-concours.fr/enseignement/preparer-les-concours/les-epreuves-du-crpe/les-registres-de-langue-mas_fra_26</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
-                  "label": "Je choisis le format et j’adapte mon registre à la situation (rapport, power point, mail, lettre interne, note de service, réseau social interne)."
+                  "label": "Je choisis le format et j’adapte mon registre à la situation (rapport, power point, mail, lettre interne, note de service, réseau social interne).",
+                  "resources": [
+                    {
+                      "content": "Présentation d’un guide de rédaction administrative. Document publié par l’Ecole supérieure de l’éducation nationale à destination des cadres.  Contenus : généralités, ponctuation, le style administratif, la lettre administrative, la note, la convocation, le bordereau, le compte rendu, le rapport, le procès-verbal.Pour chaque type d’écrit une maquette est proposée ©2013   <br><a href=\"https://www.modernisation.gouv.fr/sites/default/files/fichiers-attaches/guide_de_la_redaction_administrative.pdf\">https://www.modernisation.gouv.fr/sites/default/files/fichiers-attaches/guide_de_la_redaction_administrative.pdf</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Bref récapitulatif des règles et caractéristiques de l’écrit professionnel par un enseignant du CNED, Claude Terrier.  Voir spécifiquement la partie D5 « Communication », point 1 « Enjeux et concepts de base » et point 2 « Communication écrite opérationnelle en langue nationale ou étrangère ». Le site propose des exercices avec leurs corrigés ©2019<br><a href=\"http://www.bts-g-pme.com/\">http://www.bts-g-pme.com/</a>",
+                      "type": "module"
+                    },
+                    {
+                      "content": "A l’intersection de l’éthique et de la communication professionnelle, un article publié dans la revue Communiquer, par deux didacticiennes de l’écriture professionnelle, Céline Beaudet et Véronique Rey. Voir spécifiquement la partie « les compétences du rédacteur » ©2014<br><a href=\"https://journals.openedition.org/communiquer/560\">https://journals.openedition.org/communiquer/560</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Un guide pratique pour l’écriture inclusive diffusé par le Haut conseil d’état chargé de l’Egalité entre les femmes et les hommes et de la lutte contre les discriminations ©2016<br><a href=\"http://www.haut-conseil-egalite.gouv.fr/IMG/pdf/guide_pour_une_communication_publique_sans_stereotype_de_sexe_vf_2016_11_02.compressed.pdf\">http://www.haut-conseil-egalite.gouv.fr/IMG/pdf/guide_pour_une_communication_publique_sans_stereotype_de_sexe_vf_2016_11_02.compressed.pdf</a>",
+                      "type": "document"
+                    }
+                  ]
                 }
               ]
             },
@@ -275,29 +164,109 @@
               "questions": [
                 {
                   "label": "J’utilise un correcteur orthographique",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 5
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Page web ou extension pour Chrome. Correcteur d’orthographe et grammaire, dictionnaire, conjugueur. ©2020<br><a href=\"http://www.reverso.net/orthographe/correcteur-francais/\">http://www.reverso.net/orthographe/correcteur-francais/</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Pour l’anglais : Grammarly, extension pour Chrome ou Mozilla et application installable sur ordinateur. ©2020<br><a href=\"https://www.grammarly.com/\">https://www.grammarly.com/</a>",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
                   "label": "Je relis et/ou fais relire mes productions pour corriger les fautes d’orthographe et pour vérifier la clarté du contenu.",
-                  "acquisitionThreshold": 5
+                  "overrides": {
+                    "acquisitionThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Rappels des règles et conseil pour rédiger un document scientifique par le site CoopIST du Cirad © 2018<br><a href=\"https://coop-ist.cirad.fr/rediger/article-scientifique\">https://coop-ist.cirad.fr/rediger/article-scientifique</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Article académique « Préparer à communiquer par écrit dans l’entreprise : courrier traditionnel vs courrier électronique », avec des exemples pour donner des points de repères © 2016<br><a href=\"https://journals.openedition.org/pratiques/3231\">https://journals.openedition.org/pratiques/3231</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Collection « savoir dire pour savoir penser » par IUT en ligne, module : vulgariser – informer © 2013<br><a href=\"http://www.iutenligne.net/ressources/collection-savoir-dire-pour-savoir-penser-vulgariser.htmlhttp://www.iutenligne.net/ressources/collection-savoir-dire-pour-savoir-penser-informer.html\">http://www.iutenligne.net/ressources/collection-savoir-dire-pour-savoir-penser-vulgariser.htmlhttp://www.iutenligne.net/ressources/collection-savoir-dire-pour-savoir-penser-informer.html</a>",
+                      "type": "module"
+                    },
+                    {
+                      "content": "Sur les règles et caractéristiques des écrits professionnels, par Claude Terrier partie D5, Communication, « Construire un message professionnel », et différents diaporamas sur les spécificités de la communication écrite © 2019<br><a href=\"http://www.bts-g-pme.com/\">http://www.bts-g-pme.com/</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "Lorsque je le considère nécessaire, je fais valider le contenu de mes productions par un expert métier.",
-                  "acquisitionThreshold": 3,
-                  "hideResourceThreshold": 2
+                  "overrides": {
+                    "acquisitionThreshold": 3,
+                    "hideResourceThreshold": 2
+                  },
+                  "resources": [
+                    {
+                      "content": "Dix conseils pour la relecture d’un texte par le site redacteur.com. ©2019   <br><a href=\"https://www.redacteur.com/blog/conseils-relecture-texte/\">https://www.redacteur.com/blog/conseils-relecture-texte/</a>",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
                   "label": "J’applique les règles de mise en forme en fonction du format (lettre, rapport…).",
-                  "acquisitionThreshold": 5
+                  "overrides": {
+                    "acquisitionThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Guide portant sur la mise en forme d’un document, créé par O. Bouhet pour les masters Transport, mobilités, réseaux de l’université Montpellier 3. 2013<br><a href=\"http://ufr3.univ-montp3.fr/IMG/pdf/Regle_d_or_edition_memoire_version_juin_2013_-_Masters_MOBILITES_Transport_cle81b1f6.pdf\">http://ufr3.univ-montp3.fr/IMG/pdf/Regle_d_or_edition_memoire_version_juin_2013_-_Masters_MOBILITES_Transport_cle81b1f6.pdf</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Règles de typographie et de mise en page d’un texte par la bibliothèque universitaire d’Evry © 2013<br><a href=\"https://www.biblio.univ-evry.fr/assets/files/formations/autoformation/guide-typographie-miseenpage_BUEvry.pdf\">https://www.biblio.univ-evry.fr/assets/files/formations/autoformation/guide-typographie-miseenpage_BUEvry.pdf</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Normes APA (une des normes de présentation de références bibliographiques) pour les citations bibliographiques par les bibliothèques universitaires de l’université de Lorraine © 2020    <br><a href=\"http://bu.univ-lorraine.fr/sites/default/files/users/user781/Guide%20biblio%20APA%202020-2021.pdf\">http://bu.univ-lorraine.fr/sites/default/files/users/user781/Guide%20biblio%20APA%202020-2021.pdf</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
                   "label": "J’applique les règles permettant la réalisation d’une synthèse.",
-                  "acquisitionThreshold": 5
+                  "overrides": {
+                    "acquisitionThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Les règles pour rédiger une synthèse sur le site culture.expression.fr © 2014<br><a href=\"https://www.culture-expression.fr/accueil/comment-faire-une-synth%C3%A8se-de-documents-m%C3%A9thode-pour-la-note-de-synth%C3%A8se/\">https://www.culture-expression.fr/accueil/comment-faire-une-synth%C3%A8se-de-documents-m%C3%A9thode-pour-la-note-de-synth%C3%A8se/</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Collection « savoir dire pour savoir penser » développée par l’IUT en ligne. Module « Analyser pour communiquer ». Voir surtout la 3e séquence : élaborer la synthèse d’un ensemble documentaire ©2013<br><a href=\"http://public.iutenligne.net/expression/lecomte/analyse_com/general/index.html\">http://public.iutenligne.net/expression/lecomte/analyse_com/general/index.html</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "J’applique les règles permettant la production d’un discours argumenté.",
-                  "acquisitionThreshold": 5
+                  "overrides": {
+                    "acquisitionThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Une présentation succincte des stratégies du discours argumentatif par le site espacefrancais.com, un site libanais francophone ©2012<br><a href=\"https://www.espacefrancais.com/les-strategies-du-discours-argumentatif/\">https://www.espacefrancais.com/les-strategies-du-discours-argumentatif/</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Collection « savoir dire pour savoir penser » de l’IUT en ligne, modules : raisonner – convaincre – persuader.  <br><a href=\"http://www.iutenligne.net/catalog/thematique/expression\">http://www.iutenligne.net/catalog/thematique/expression</a>  ©2011http://public.iutenligne.net/expression/parouty_prevot/raisonner/index.html  ©2013http://public.iutenligne.net/expression/poveda_prevot/convaincre/index.html  ©2013http://public.iutenligne.net/expression/poveda_prevot/persuader/index.html",
+                      "type": "module"
+                    }
+                  ]
                 }
               ]
             },
@@ -307,16 +276,60 @@
               "questions": [
                 {
                   "label": "Au cours de la présentation j’adapte mon discours au public cible.",
-                  "acquisitionThreshold": 5
+                  "overrides": {
+                    "acquisitionThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Collection « savoir dire pour savoir penser » de l’IUT en ligne. Modules : introduire, conclure et relier ; faire un plan ; parler ou écrire ; vulgariser ; informer ;   se documenter © 2015<br><a href=\"http://www.iutenligne.net/catalog/thematique/expression\">http://www.iutenligne.net/catalog/thematique/expression</a>",
+                      "type": "module"
+                    },
+                    {
+                      "content": "Brève fiche sur les caractéristiques des trois registres de langage : soutenu, familier, courant, sur le site Capconcours qui propose des ressources pour préparer des concours- ici le CRPE et le concours de CPE.  <br><a href=\"https://www.cap-concours.fr/enseignement/preparer-les-concours/les-epreuves-du-crpe/les-registres-de-langue-mas_fra_26\">https://www.cap-concours.fr/enseignement/preparer-les-concours/les-epreuves-du-crpe/les-registres-de-langue-mas_fra_26</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Par l’université d’Hawaï. En anglais mais simple, propose un questionnaire à administrer au public ou qu’on peut utiliser en se posant les questions soi-même au sujet du public ©2002<br><a href=\"http://www.hawaii.edu/mauispeech/html/analyzing_your_audience.html\">http://www.hawaii.edu/mauispeech/html/analyzing_your_audience.html</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Quelques conseils pour concevoir un diaporama, sur le site de soutien aux logiciels libres april.org ©2010<br><a href=\"https://www.april.org/realiser-une-presentation-attractive#Realiser_une_presentation_attractive\">https://www.april.org/realiser-une-presentation-attractive#Realiser_une_presentation_attractive</a>",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
                   "label": "Je choisis des supports adaptés (vidéo, ppt, …) à la situation (discours, pitch, entretien, conférence, réunion), au contenu à transmettre et à mon objectif.",
-                  "acquisitionThreshold": 5
+                  "overrides": {
+                    "acquisitionThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Des conseils pour organiser sa présentation orale par l’IUT en ligne ©2015<br><a href=\"http://public.iutenligne.net/expression/depoorter/parler_en_public/http://www.iutenligne.net/ressources/la-prise-de-parole-en-public-exposes-soutenances.html\">http://public.iutenligne.net/expression/depoorter/parler_en_public/http://www.iutenligne.net/ressources/la-prise-de-parole-en-public-exposes-soutenances.html</a>",
+                      "type": "module"
+                    },
+                    {
+                      "content": "Conseils pour un exposé oral face à un jury, par AUNEGe sur Canal U. ©2013<br><a href=\"https://www.canal-u.tv/video/canal_aunege/face_a_un_jury.12408\">https://www.canal-u.tv/video/canal_aunege/face_a_un_jury.12408</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "S’organiser pour communiquer, vidéo explicative par Régine Acquier, Université de Montpellier 1 ©2000<br><a href=\"https://www.canal-u.tv/video/les_amphis_de_france_5/s_organiser_pour_communiquer.280\">https://www.canal-u.tv/video/les_amphis_de_france_5/s_organiser_pour_communiquer.280</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "Je pense à mon comportement gestuel.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "La prise de parole en public : posture, gestuelle, gestion de l’espace Vidéo proposée par l’IUT de Roanne © 2016<br><a href=\"https://www.youtube.com/watch?v=ZQNBfE85n2s\">https://www.youtube.com/watch?v=ZQNBfE85n2s</a>",
+                      "type": "video"
+                    }
+                  ]
                 }
               ]
             }
@@ -332,34 +345,102 @@
               "questions": [
                 {
                   "label": "Je comprends les enjeux et les principes d’animation d’une équipe dans un contexte professionnel.",
-                  "answerLabelsOverride":[
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "acquisitionThreshold": 5
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ],
+                    "acquisitionThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Liste les 6 rôles du manager selon Peter Drucker. Extrait d’un article de M. Mousli dans Alternatives Economiques n°258 ©2007<br><a href=\"https://www.i-manuel.fr/REBTS_MG1E14/REBTS_MG1E14part1dos1CO2doc6.html\">https://www.i-manuel.fr/REBTS_MG1E14/REBTS_MG1E14part1dos1CO2doc6.html</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Fiches du CNFPT avec des ressources concernant l’activité du manager. Voir le chapitre 1, « Organiser et animer une équipe de travail » ©2018<br><a href=\"https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf\">https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Article sur l’apprentissage du management par l’expérience de la gestion de projet et les modes de fonctionnement d’équipe, par C. Verzat & R. Bachelet, LGIL Papers ©2007<br><a href=\"http://rb.ec-lille.fr/perso/papers/Les_ingenieurs_deviennent_ils_managers_grace_aux_projets.pdf\">http://rb.ec-lille.fr/perso/papers/Les_ingenieurs_deviennent_ils_managers_grace_aux_projets.pdf</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Texte de 2015 et vidéo de 4 min mise en ligne en 2018, sur l’animation d’équipes projet, issue du Mooc gestion de projet, par S. Delpeyroux :<br><a href=\"http://rb.ec-lille.fr/l/Projets/Management_d_equipe_projet.pdfhttps://gestiondeprojet.pm/management-d-equipe-projet/\">http://rb.ec-lille.fr/l/Projets/Management_d_equipe_projet.pdfhttps://gestiondeprojet.pm/management-d-equipe-projet/</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Présentation de la notion de groupe, des types de groupe et des fonctions au sein d’un groupe par un enseignant du CNED, Claude Terrier ©2019Voir spécifiquement la partie D5 « Communication » sous-partie C13 « Communiquer dans les groupes ». Le site propose des exercices avec leurs corrigés.      <br><a href=\"http://www.bts-g-pme.com/\">http://www.bts-g-pme.com/</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "Je sais (re)formuler les consignes pour que mes collaborateurs comprennent ce qui est attendu d’eux.",
-                  "answerLabelsOverride": [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ]
+                  },
+                  "resources": [
+                    {
+                      "content": "Fiches du CNFPT avec des ressources concernant l’activité du manager. Voir le chapitre 5 « Communiquer », fiches 49 à 61 ©2018<br><a href=\"https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf\">https://e-communautes.cnfpt.fr/sites/default/files/documents_refs/boite_a_outils_du_manager.pdf</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Guide de pratique professionnelle, publié par l’ordre des ingénieurs du Québec, voir notamment le chapitre « Gestion d’une équipe et droit du travail », p. 254. Attention, les lois et règlement évoqués concernent le Québec uniquement ©2018   <br><a href=\"http://gpp.oiq.qc.ca/wf_njs.htm\">http://gpp.oiq.qc.ca/wf_njs.htm</a>",
+                      "type": "document"
+                    }
                   ]
                 },
                 {
                   "label": "J’échange avec mes interlocuteurs en appliquant les principes de l’écoute active.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Vidéo proposée par l’Université Paris Descartes : “Les 4 clefs de l’intelligence collective” (l’une d’elles est l’écoute active), par C. Grabli ©2017<br><a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/jxjhDfAnC8M5/LD.mp4\">https://d381hmu4snvm3e.cloudfront.net/videos/jxjhDfAnC8M5/LD.mp4</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Infographie montrant les caractéristiques de l’intelligence collective et le lien avec l’écoute active, proposé par H2 University ©2017https ://pbs.twimg.com/media/DAVUEnFW0AAGzyE.jpg:large",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Vidéo d’explication brève -5mn29- et claire des caractéristiques de l’écoute active, issue du Mooc gestion de projet, par S. Delpeyroux © 2018Regarder la vidéo « Animer l’équipe projet » et lire les notes « Poser les bonnes questions »<br><a href=\"https://gestiondeprojet.pm/management-d-equipe-projet/\">https://gestiondeprojet.pm/management-d-equipe-projet/</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Les sept conseils pour pratiquer l’écoute active, par A.-M. Barrero sur le site de la revue Psychologies. La page contient une vidéo de 5mn53 qui présente des conseils pour mieux écouter ©2019<br><a href=\"https://www.psychologies.com/Moi/Moi-et-les-autres/Relationnel/Articles-et-Dossiers/7-conseils-pour-pratiquer-une-ecoute-active\">https://www.psychologies.com/Moi/Moi-et-les-autres/Relationnel/Articles-et-Dossiers/7-conseils-pour-pratiquer-une-ecoute-active</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "Pour accompagner le travail de mes collaborateurs, je fais preuve d’empathie et je favorise l’échange.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Vidéo de 2mn53 de présentation du concept d’empathie par B. Brown, enseignante et chercheuse à l’University of Houston. “The power of empathy” (anglais avec sous-titres français)<br><a href=\"https://www.youtube.com/watch?v=1Evwgu369Jw\">https://www.youtube.com/watch?v=1Evwgu369Jw</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Article de présentation du rôle de l’intelligence émotionnelle dans le management, par J.-F. Chanlat, paru dans Travailler 2003/1 (n° 9), pages 113 à 132 Attention, il faut copier et coller le lien dans votre navigateur.<br><a href=\"https://www.cairn.info/revue-travailler-2003-1-page-113.html#\">https://www.cairn.info/revue-travailler-2003-1-page-113.html#</a>",
+                      "type": "document"
+                    }
+                  ]
                 }
               ]
             },
@@ -369,18 +450,42 @@
               "questions": [
                 {
                   "label": "Je mets en place des méthodes et des outils d’évaluation des compétences.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Fiche pratique n°57 du Cedip, du Ministère en charge du développement durable “Identifier les connaissances et savoir-faire que doit acquérir un nouvel arrivant” © 2013<br><a href=\"http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/Fiche_EL_57_cle6978d2.pdf\">http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/Fiche_EL_57_cle6978d2.pdf</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
                   "label": "Je mets en place des actions de valorisation des activités de mes collaborateurs.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "« De la reconnaissance à la motivation au travail », article paru dans la revue L’expansion management review, 2013/3 pp. 104-112, Robert Diez et Pierre Carton<br><a href=\"https://www.cairn.info/revue-l-expansion-management-review-2013-3-page-104.htm\">https://www.cairn.info/revue-l-expansion-management-review-2013-3-page-104.htm</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
                   "label": "Je mets en place des actions pour développer les compétences de mes collaborateurs.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Podcast de 7mn22 “Libérer les talents” par E. Kerleroux, issu du Mooc « Accompagner les transitions éducatives » réalisé entre autres par Synlab et l’USPC © 2018.   Attention: il faut utiliser le zip extracteur pour accéder au fichier audio.<br><a href=\"https://drive.google.com/file/d/0B2DPH3zwn8Z3NXd1amhkaTZ5N1U/view\">https://drive.google.com/file/d/0B2DPH3zwn8Z3NXd1amhkaTZ5N1U/view</a>",
+                      "type": "audio"
+                    }
+                  ]
                 }
               ]
             },
@@ -390,19 +495,55 @@
               "questions": [
                 {
                   "label": "Je sais repérer les signaux faibles pour déterminer les situations de malaise.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Conflits : l’escalade et la désescalade, vidéo d’une durée de sept minutes par Jacques Salzer et Jean-Edouard Grésy. Mis en ligne en 2015 par AlterNégo, cabinet en négociation et gestion de conflits.<br><a href=\"https://www.youtube.com/watch?v=ddoZnARR_ks&t=5s\">https://www.youtube.com/watch?v=ddoZnARR_ks&t=5s</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "“ Gestion de conflits et communication pour l’ingénieur”, par l’Ordre des ingénieurs du Québec. Définition, types de conflit, processus de résolution et mise en situation. ©2011<br><a href=\"http://gpp.oiq.qc.ca/gestion_de_conflits_et_communication.htm\">http://gpp.oiq.qc.ca/gestion_de_conflits_et_communication.htm</a>",
+                      "type": "module"
+                    },
+                    {
+                      "content": "Pour comprendre le stress au travail, une vidéo de 10 min30, coproduction européenne diffusée par l’INRS ©2014<br><a href=\"http://www.inrs.fr/publications/mediatheque/doc/complement-autres-ressources-2013.html?planClassement=3a&typedata=CatalogueMultimedia&skipMod=true\">http://www.inrs.fr/publications/mediatheque/doc/complement-autres-ressources-2013.html?planClassement=3a&typedata=CatalogueMultimedia&skipMod=true</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Article de Matthieu Detchessahar, professeur à l’université de Nantes, publié dans la revue Négociations, 2013/1, pp. 57-80 portant sur le modèle de management par la discussion.<br><a href=\"https://www.cairn.info/revue-negociations-2013-1-page-57.htm\">https://www.cairn.info/revue-negociations-2013-1-page-57.htm</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Mooc diffusé sur FunMooc sur la santé au travail pour les ingénieurs et managers, par William Dab. ©2019<br><a href=\"https://www.fun-mooc.fr/courses/course-v1:CNAM+01003+self_paced/about\">https://www.fun-mooc.fr/courses/course-v1:CNAM+01003+self_paced/about</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Publication de l’Anact, Agence nationale pour l’amélioration des conditions de travail, pour comprendre la prévention des risques psychosociaux en dix questions. Document PDF à télécharger (20 pages) ©2019<br><a href=\"https://www.anact.fr/10-questions-sur-la-prevention-des-risques-psychosociaux\">https://www.anact.fr/10-questions-sur-la-prevention-des-risques-psychosociaux</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
                   "label": "Je sais mettre en place un plan de prévention pour éviter les tensions et les conflits.",
-                  "answerLabelsOverride": [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ],
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Conditions de travail et risques psycho-sociaux, entretien avec Yves Clot, professeur au Cnam. Vidéo de 12mn12 mise en ligne par la Haute Autorité de Santé en 2012<br><a href=\"https://www.youtube.com/watch?v=WZ6UFuR3jw8\">https://www.youtube.com/watch?v=WZ6UFuR3jw8</a>",
+                      "type": "video"
+                    }
+                  ]
                 }
               ]
             },
@@ -412,25 +553,45 @@
               "questions": [
                 {
                   "label": "Je sais me mettre dans une posture d’écoute et de médiation pour désamorcer les tensions et les conflits.",
-                  "answerLabelsOverride": [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ],
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "« Conflit dans l’équipe ? Actions et limites du manager … médiateur ». Un texte concernant la médiation par le manager, par AlterNégo, cabinet en négociation et gestion de conflits ©2016  <br><a href=\"https://alternego.com/culturenego/conflit-dans-lequipe-actions-et-limites-du-manager-mediateur/\">https://alternego.com/culturenego/conflit-dans-lequipe-actions-et-limites-du-manager-mediateur/</a>",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
                   "label": "Je sais mettre en place des plans d’action et de suivi des solutions.",
-                  "answerLabelsOverride": [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ],
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Article publié dans la revue de l’INRS Hygiène et sécurité au travail, par M. Favaro. Les données présentées permettent d’analyser les relations organisationnelles et interpersonnelles (6 pages) ©2015<br><a href=\"http://www.inrs.fr/media.html?refINRS=DC%2010\">http://www.inrs.fr/media.html?refINRS=DC%2010</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Note Scientifique et Technique de l'INRS. Présente un modèle de compréhension et d’aide à l’intervention autour de 8 types de tensions et/ou conflits en situation de travail. Le texte (71 pages) aborde la question complexe des violences au travail. Lire notamment le chapitre 1 (définition) et à partir de la p.38 ©2014<br><a href=\"http://www.inrs.fr/inrs/recherche/etudes-publications-communications/doc/publication.html?refINRS=A.1%2F1.041%2FP2014-044%2FNS320\">http://www.inrs.fr/inrs/recherche/etudes-publications-communications/doc/publication.html?refINRS=A.1%2F1.041%2FP2014-044%2FNS320</a>",
+                      "type": "document"
+                    }
+                  ]
                 }
               ]
             }
@@ -446,15 +607,55 @@
               "questions": [
                 {
                   "label": "Je stimule et valorise l’apport de chacun dans l’atteinte des objectifs.",
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Vidéo de 6mn11 sur le leadership et la relation à l’autorité « Tendre vers un leadership libérateur ». Extrait du Mooc « Accompagner les transitions éducatives » créé par Synlab en partenariat avec le Centre de Recherches Interdisciplinaires et l’Université Paris Descartes © 2017 :<br><a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/TvvhP94D8SVx/HD.mp4\">https://d381hmu4snvm3e.cloudfront.net/videos/TvvhP94D8SVx/HD.mp4</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Support de présentation « Les styles de leadership », par V. Petit de l’EDHEC Business School ©2016 :  <br><a href=\"https://s3-eu-west-1.amazonaws.com/odcuploads/public/58121af1e48dec000c23bd86.pdf\">https://s3-eu-west-1.amazonaws.com/odcuploads/public/58121af1e48dec000c23bd86.pdf</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "« Développer un management collaboratif et reconnaître les talents ». Extrait du Mooc « Accompagner les transitions éducatives » créé par Synlab en partenariat avec le Centre de Recherches Interdisciplinaires et l’Université Paris Descartes. ©2017 <br><a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/nhf8NXSiYVpN/HD.mp4\">https://d381hmu4snvm3e.cloudfront.net/videos/nhf8NXSiYVpN/HD.mp4</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Une autre organisation qui valorise radicalement les initiatives de chacun : l’entreprise libérée. Vidéo de 7mn22 de l’interview de Frédéric Laloux lors de la soirée \"Vivre l'économie autrement\" du 18 novembre 2015<br><a href=\"https://www.youtube.com/watch?v=xFh2vDoD2wo\">https://www.youtube.com/watch?v=xFh2vDoD2wo</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "Je fais en sorte que mes actions et mes attitudes soient cohérentes avec mon discours.",
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Support de présentation « Le leadership transformationnel », par V. Petit de l’EDHEC Business School. © 2016 <br><a href=\"https://s3-eu-west-1.amazonaws.com/odcuploads/public/5819bea7b0c45f000b053097.pdf\">https://s3-eu-west-1.amazonaws.com/odcuploads/public/5819bea7b0c45f000b053097.pdf</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Inclure les autres dans ses décisions : « Examen de cinq capacités clés du leadership Prendre part à des conversations courageuses » dans la lettre Passer des idées à l’action n°2, 2013-2014, publiée par le ministère de l’Éducation de l’Ontari<br><a href=\"http://www.edu.gov.on.ca/fre/policyfunding/leadership/IdeasIntoActionBulletin2Fr.pdf\">http://www.edu.gov.on.ca/fre/policyfunding/leadership/IdeasIntoActionBulletin2Fr.pdf</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
                   "label": "Je sais communiquer et faire accepter une décision.",
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Résumé du double système de pensée tiré du livre de Kahneman (Thinking, fast & slow) sur les précautions à prendre avec les décisions qui paraissent évidentes. Vidéo de 2mn42 réalisée par www.competencepro.net, mis en ligne en 2015 :  <br><a href=\"https://www.youtube.com/watch?time_continue=154&v=SHaWAny4sqQ\">https://www.youtube.com/watch?time_continue=154&v=SHaWAny4sqQ</a>",
+                      "type": "video"
+                    }
+                  ]
                 }
               ]
             }
@@ -470,19 +671,39 @@
               "questions": [
                 {
                   "label": "Lorsque je le considère nécessaire, je suis capable de m’adapter aux codes des environnements dans lesquels j’évolue.",
-                  "answerLabelsOverride":  [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ],
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Un article pour comprendre les conventions professionnelles culturelles, paru dans le média en ligne The Conversation. ©2018 :  <br><a href=\"https://theconversation.com/au-bout-de-combien-de-temps-est-on-vraiment-en-retard-69449\">https://theconversation.com/au-bout-de-combien-de-temps-est-on-vraiment-en-retard-69449</a>",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
                   "label": "Je modifie mon action afin de m’adapter à des aléas.",
-                  "acquisitionThreshold": 5
+                  "overrides": {
+                    "acquisitionThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Vidéo de 10mn13 d’une conférence TED Talks, introduction au “growth mindset” (traduit par « état d’esprit en expansion ») de Carol Dweck, enseignante à Stanford ©2014<br><a href=\"https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve#t-609345\">https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve#t-609345</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Un aperçu de son livre « Mindset : The New Psychology of Success », Ballantine Books. 2007 (trad. 2010)  <br><a href=\"https://www.cairn.info/changer-d-etat-d-esprit--9782804700348.htm\">https://www.cairn.info/changer-d-etat-d-esprit--9782804700348.htm</a>",
+                      "type": "document"
+                    }
+                  ]
                 }
               ]
             }
@@ -503,25 +724,61 @@
               "questions": [
                 {
                   "label": "Au démarrage des projets, j’identifie mes besoins en termes de connaissances et de compétences.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Le cadre de référence des compétences professionnelles de l'ingénieur par l’Ordre des Ingénieurs du Québec (attention : document québécois, les références légales ne s’appliquent pas en France) ©2017 :<br><a href=\"https://www.oiq.qc.ca/fr/jeSuis/membre/developpementProfessionnel/Pages/referentieldecompetencesprofessionnelles.aspx\">https://www.oiq.qc.ca/fr/jeSuis/membre/developpementProfessionnel/Pages/referentieldecompetencesprofessionnelles.aspx</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "AUNEGE fiche de la ressource « Apprendre à apprendre »<br><a href=\"http://ressources.aunege.fr/notice/view/aunege-927?lightbox=true\">http://ressources.aunege.fr/notice/view/aunege-927?lightbox=true</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Cours pour “apprendre à apprendre” par l’Université de Lille :<br><a href=\"https://rpn-langues.univ-lille.fr/apprendre/site/co/apprendreAapprendre_1.html\">https://rpn-langues.univ-lille.fr/apprendre/site/co/apprendreAapprendre_1.html</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Trois techniques d’analyse de l’activité pour apprendre à expliciter les composantes de l’activité professionnelle et identifier plus facilement les acquis. ©2013<br><a href=\"https://www.pedagogie.ac-aix-marseille.fr/upload/docs/application/pdf/2013-10/methodologie_analyse_2013-10-09_21-07-48_677.pdf\">https://www.pedagogie.ac-aix-marseille.fr/upload/docs/application/pdf/2013-10/methodologie_analyse_2013-10-09_21-07-48_677.pdf</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "A l’issue de mes projets, j’identifie mes acquis en termes de connaissances et de compétences.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                  ]
                 },
                 {
                   "label": "Je suis capable d’expliciter mes acquis en termes de connaissances et de compétences pour les valoriser dans d’autres contextes.",
-                  "answerLabelsOverride":  [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ],
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Entretien avec Karine Israël expliquant comment identifier et valoriser ses acquis.Vidéo de 7mn réalisée par Studyrama© 2016 <br><a href=\"https://www.youtube.com/watch?v=JefI3h-LvRY\">https://www.youtube.com/watch?v=JefI3h-LvRY</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Trois techniques d’analyse de l’activité pour apprendre à expliciter les composantes de l’activité professionnelle et identifier plus facilement les acquis. ©2013<br><a href=\"https://www.pedagogie.ac-aix-marseille.fr/upload/docs/application/pdf/2013-10/methodologie_analyse_2013-10-09_21-07-48_677.pdf\">https://www.pedagogie.ac-aix-marseille.fr/upload/docs/application/pdf/2013-10/methodologie_analyse_2013-10-09_21-07-48_677.pdf</a>",
+                      "type": "web"
+                    }
+                  ]
                 }
               ]
             }
@@ -537,32 +794,86 @@
               "questions": [
                 {
                   "label": "J’utilise les méthodes de créativité. ",
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "« Manuel de créativité en entreprise » publié par la CCI du Gers. Plusieurs outils de stimulation de la créativité dans les organisations de travail présentés dans ce manuel de créativité appliquée. © 201<br><a href=\"http://www.cci.fr/c/document_library/get_file?uuid=83508432-5459-40a3-9030-cb74a1d6d086&groupId=10988\">http://www.cci.fr/c/document_library/get_file?uuid=83508432-5459-40a3-9030-cb74a1d6d086&groupId=10988</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Présentation succincte de différentes techniques de créativité : brainstorming, association, analogique, aléatoire, concassage. © 2018<br><a href=\"https://www.creativite.net/techniques-de-creativite/\">https://www.creativite.net/techniques-de-creativite/</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Article par E.-M. Hernandez et R. Redien-Collot Méthodes de créativité et amélioration de projets entrepreneuriaux : présentation d’une expérimentation dans un contexte académique (Gestion 2000 2013/5, p. 93-114)<br><a href=\"https://www.cairn.info/revue-gestion-2000-2013-5-page-93.htm\">https://www.cairn.info/revue-gestion-2000-2013-5-page-93.htm</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
-                  "label": "Je m’appuie sur la typologie des innovations pour concevoir des solutions adaptées."
+                  "label": "Je m’appuie sur la typologie des innovations pour concevoir des solutions adaptées.",
+                  "resources": [
+                    {
+                      "content": "Vidéo de 3mn20, extraite du Mooc « Accompagner les transitions éducatives » créé par Synlab en partenariat avec le Centre de Recherches Interdisciplinaires et l’Université Paris Descartes et présentant les différentes formes d’innovation. © 2017<br><a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/cJLWGJ8jRx1D/HD.mp4\">https://d381hmu4snvm3e.cloudfront.net/videos/cJLWGJ8jRx1D/HD.mp4</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Vidéo de 3mn55, interview de L. de Brabandère du cabinet Boston Consulting Group : ne pas confondre créativité et innovation. © 2010<br><a href=\"https://www.youtube.com/watch?v=UgKNlWbnk_Y&t=33s\">https://www.youtube.com/watch?v=UgKNlWbnk_Y&t=33s</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "Je mets en œuvre des processus d’innovation.",
-                  "answerLabelsOverride":  [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ],
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Vidéo de 51mn55 d’introduction aux fondamentaux de l’innovation humaniste : philosophie, sociologie et ressentis profonds des individus par Marc Giget, Président et directeur scientifique de l’European Institute for Creative Strategies & Innovation et du Club de paris des Directeurs de l’Innovation. © 2016   <br><a href=\"https://vimeo.com/196353743\">https://vimeo.com/196353743</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Podcast de 5mn de RadioFrance par X. de la Porte sur l’injonction à l’innovation. © 2014<br><a href=\"https://www.franceculture.fr/emissions/ce-qui-nous-arrive-sur-la-toile/si-reflechissait-5mn-ce-que-innover-veut-dire\">https://www.franceculture.fr/emissions/ce-qui-nous-arrive-sur-la-toile/si-reflechissait-5mn-ce-que-innover-veut-dire</a>",
+                      "type": "audio"
+                    }
+                  ]
                 },
                 {
                   "label": "Je pense à transformer mes idées en activités rentables. ",
-                  "answerLabelsOverride":  [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ],
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Un texte et des liens sur la mise en œuvre d’une idée innovante, par Bpifrance Création. © 2018 :<br><a href=\"https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-matiere-creation\">https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-matiere-creation</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Un texte et des liens sur les questions à se poser pour mettre en œuvre une idée innovante, par Bpifrance Création. © 2018 :   <br><a href=\"https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-creation-dentreprise\">https://bpifrance-creation.fr/encyclopedie/trouver-proteger-tester-son-idee/trouver-idee/lidee-innovante-creation-dentreprise</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Une réflexion sur les limites de l’intrapreneuriat et ses rapports avec l’innovation dans les organisations de travail « Intrapreneuriat et innovation. Introduction du dossier », revue Gestion, 2011.<br><a href=\"https://www.cairn.info/revue-gestion-2011-4-page-4.hthttps://www.cairn.info/revue-gestion-2011-4-page-4.html\">https://www.cairn.info/revue-gestion-2011-4-page-4.hthttps://www.cairn.info/revue-gestion-2011-4-page-4.html</a>",
+                      "type": "web"
+                    }
+                  ]
                 }
               ]
             }
@@ -577,17 +888,59 @@
               "isVisible": false,
               "questions": [
                 {
-                  "label": "Dans le contexte professionnel, mes actions visent le bien commun."
+                  "label": "Dans le contexte professionnel, mes actions visent le bien commun.",
+                  "resources": [
+                    {
+                      "content": "« L’éthique au travail : des valeurs à cultiver », récapitulatif des valeurs essentielles dans toute organisation de travail, par la Commission des droits de la personne et des droits de la jeunesse du Québec. © 2010 :<br><a href=\"http://www.cdpdj.qc.ca/Publications/valeurs_organisationnelles_Commission.pdf\">http://www.cdpdj.qc.ca/Publications/valeurs_organisationnelles_Commission.pdf</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "« Chartes d'éthique, alerte professionnelle et droit du travail français : état des lieux et perspectives », rapport public du Ministère de l'Emploi, du Travail et de l'Insertion professionnelle des Jeunes, 2007. Etat des lieux sur les chartes éthiques, la déontologie et le droit en entreprise :  <br><a href=\"http://www.ladocumentationfrancaise.fr/rapports-publics/074000335-chartes-d-ethique-alerte-professionnelle-et-droit-du-travail-francais-etat-des\">http://www.ladocumentationfrancaise.fr/rapports-publics/074000335-chartes-d-ethique-alerte-professionnelle-et-droit-du-travail-francais-etat-des</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Définitions de la déontologique, la morale et l’éthique par Christophe Marsollier. Vidéo de 10 mn. Regarder notamment les 2 premières minutes. Manag’Educ ©2019<br><a href=\"https://www.youtube.com/watch?v=s1O8oKZKSrc\">https://www.youtube.com/watch?v=s1O8oKZKSrc</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
-                  "label": "J’agis systématiquement dans le respect de la culture et des valeurs de mon entourage."
+                  "label": "J’agis systématiquement dans le respect de la culture et des valeurs de mon entourage.",
+                  "resources": [
+                    {
+                      "content": "C. Afef, et F. Zaddem. « Le climat éthique au travail : pour promouvoir des relations interpersonnelles de confiance », Revue Interdisciplinaire Management, Homme & Entreprise, 2012. Article académique sur les liens entre le climat éthique en entreprise, la confiance et le rôle des managers :  <br><a href=\"https://www.cairn.info/revue-rimhe-2012-1-page-53.htm\">https://www.cairn.info/revue-rimhe-2012-1-page-53.htm</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
                   "label": "Je me comporte systématiquement vis-à-vis d’autrui avec loyauté, équité et sans discriminer.",
-                  "acquisitionThreshold": 5
+                  "overrides": {
+                    "acquisitionThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Informations sur les discriminations au travail et les recours dans le privé et dans le public, par Service-public.fr, le site officiel de l’administration. © 2020 :  <br><a href=\"https://www.service-public.fr/particuliers/vosdroits/F1642\">https://www.service-public.fr/particuliers/vosdroits/F1642</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "10e Baromètre de la perception des discriminations dans l’emploi réalisé par le Défenseur des droits et l’Organisation internationale du travail (OIT) issus de l’enquête « Accès aux droits » du Défenseur des droits, © 2017 :<br><a href=\"https://www.defenseurdesdroits.fr/sites/default/files/atoms/files/enquete-ead_vol_3_-_oit.pdf\">https://www.defenseurdesdroits.fr/sites/default/files/atoms/files/enquete-ead_vol_3_-_oit.pdf</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
-                  "label": "Je respecte les contraintes relevant de la santé, de la sécurité et de l’environnement."
+                  "label": "Je respecte les contraintes relevant de la santé, de la sécurité et de l’environnement.",
+                  "resources": [
+                    {
+                      "content": "La santé et la sécurité au travail, les obligations de l’employeur. Site Service public © 2020.<br><a href=\"https://www.service-public.fr/particuliers/vosdroits/F2210\">https://www.service-public.fr/particuliers/vosdroits/F2210</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Sécurité et santé des travailleurs : les obligations générales de l’employeur et sa responsabilité. ©2020<br><a href=\"https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs-les-emplois-les-savoir-faire-et-les-competences/proteger-les-travailleurs/article/securite-et-sante-des-travailleurs-les-obligations-generales-de-l-employeur-et\">https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs-les-emplois-les-savoir-faire-et-les-competences/proteger-les-travailleurs/article/securite-et-sante-des-travailleurs-les-obligations-generales-de-l-employeur-et</a>",
+                      "type": "web"
+                    }
+                  ]
                 }
               ]
             }
@@ -603,18 +956,56 @@
               "questions": [
                 {
                   "label": "J’intègre les remarques de mes pairs.",
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Article bref portant sur la communication et sur l’acceptation des critiques dans un contexte professionnel. Revue Psychologies, 2020.<br><a href=\"https://www.psychologies.com/Travail/Relations-professionnelles/Vie-de-bureau/Articles-et-Dossiers/Comment-bien-communiquer-au-travail\">https://www.psychologies.com/Travail/Relations-professionnelles/Vie-de-bureau/Articles-et-Dossiers/Comment-bien-communiquer-au-travail</a>",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
-                  "label": "J’intègre les remarques des experts."
+                  "label": "J’intègre les remarques des experts.",
+                  "resources": [
+                    {
+                      "content": "Comment accepter les critiques ? Les types de critiques, l’émetteur et la gestion de celle-ci. ©2020  <br><a href=\"https://www.manager-go.com/efficacite-professionnelle/savoir-gerer-une-critique.htm\">https://www.manager-go.com/efficacite-professionnelle/savoir-gerer-une-critique.htm</a>",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
                   "label": "Je suis capable de me remettre en question.",
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Sur le Blog Chèvre pensante, un test pour prendre conscience de ses propres biais « Avez-vous l’esprit critique ? ». © 2016<br><a href=\"http://chevrepensante.fr/2016/11/05/test-avez-lesprit-critique/\">http://chevrepensante.fr/2016/11/05/test-avez-lesprit-critique/</a>",
+                      "type": "module"
+                    },
+                    {
+                      "content": "Atelier en ligne « Se méfier de ses raisonnements » Contient des quiz correspondant aux différentes manipulations argumentatives (Erreurs logiques, sophismes, généralisations abusives, etc.). Mis en ligne en 2019<br><a href=\"https://apprentissage.atelier-mediation-critique.com/courses/course-v1:amcsti+raisonements+2018/about\">https://apprentissage.atelier-mediation-critique.com/courses/course-v1:amcsti+raisonements+2018/about</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "Je défends mon point de vue de manière constructive.",
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Article « Développer l’esprit critique par l’argumentation : de l’élève au citoyen », issu des Dossier de veille de l’Ifé “Argumenter, qu’est-ce que c’est ?”. 2016 :  <br><a href=\"https://edupass.hypotheses.org/978#chap1\">https://edupass.hypotheses.org/978#chap1</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "L’affirmation de soi, émission France 3 Hauts-de-France, 7mn. Des techniques simples pour s’affirmer. © 2017  <br><a href=\"https://www.youtube.com/watch?v=g6vV7ZhaIPc\">https://www.youtube.com/watch?v=g6vV7ZhaIPc</a>",
+                      "type": "video"
+                    }
+                  ]
                 }
               ]
             }
@@ -635,11 +1026,35 @@
               "questions": [
                 {
                   "label": "Je mets en place des techniques de veille scientifique, technique et technologique.",
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Créer une veille documentaire sur internet en 4 points. ©2018. Fiches pratiques créées par CoopIST (professionnels de l’information scientifique et technique).https ://coop-ist.cirad.fr/trouver-l-information/créer-une-veille/1-pourquoi-créer-une-veille",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Comment utiliser les flux RSS pour effectuer une veille ? Supports de formation produits par l’Urfist. ©2020 :http ://urfist.chartes.psl.eu/ressources/utiliser-les-flux-rss-pour-sa-veille-pourquoi-et-comment",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
                   "label": "Je documente mes activités et les travaux réalisés.",
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Des points importants à prendre en lorsque l’on documente un projet. Page web de l’Université de Cergy-Pontoise ©2020 <br><a href=\"http://cours.education/dufacilitateur/2016/07/24/atelier-comment-documenter-son-projet-v1/\">http://cours.education/dufacilitateur/2016/07/24/atelier-comment-documenter-son-projet-v1/</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Un guide simple et avec des exemples présentant les principes de la documentation d’un projet © 2018 <br><a href=\"https://volab.github.io/howto_doc/howTo_Doc.html\">https://volab.github.io/howto_doc/howTo_Doc.html</a>",
+                      "type": "web"
+                    }
+                  ]
                 }
               ]
             }
@@ -658,23 +1073,57 @@
                 },
                 {
                   "label": "Je comprends les rapports de force et j’identifie les concessions possibles.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 5
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Définition et caractéristiques de la négociation, article de revue : « Chapitre premier - Qu’est-ce que négocier ? », Lionel Bellenger éd., La négociation. Presses Universitaires de France, 2017, pp. 11-36.<br><a href=\"https://www.cairn.info/la-negociation--9782130794745-page-11.html\">https://www.cairn.info/la-negociation--9782130794745-page-11.html</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
                   "label": "J’identifie les arguments servant à convaincre mes interlocuteurs.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 5
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Article du blog Formapart « Le consentement, une alternative au consensus ». 2012 : <br><a href=\"https://formapart.fr/blog/2012/08/28/le-consentement-une-alternative-au-consensus/\">https://formapart.fr/blog/2012/08/28/le-consentement-une-alternative-au-consensus/</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Aurélien Colson, Professeur à l’ESSEC, explique le rapport de forces dans la négociation. Vidéo d’essai gratuit sur Coursera. 5mn30. 2020  <br><a href=\"https://fr.coursera.org/lecture/fondamentaux-negociation/conclusion-le-rapport-de-force-B1WTx\">https://fr.coursera.org/lecture/fondamentaux-negociation/conclusion-le-rapport-de-force-B1WTx</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "Je mets en place les leviers d’action de la négociation: accords, compromis, personnes ressources.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 5
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "Extrait de l’article « Développer l’esprit critique par l’argumentation : de l’élève au citoyen », Marie Gaussel : “Argumenter, qu’est-ce que c’est ?”, accompagné d’une bibliographie. 2016 : <br><a href=\"https://edupass.hypotheses.org/978#chap1\">https://edupass.hypotheses.org/978#chap1</a>  Liste d’arguments fallacieux, “Petit recueil de 20 moisissures argumentatives”, Richard Monvoisin et Stanislas Antczak, Cortecs. 2010, mis à jour en 2015  4 pages https://cortecs.org/wp-content/uploads/2010/12/Cortecs_20_Argumentaires_moisis.pdf",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
                   "label": "Je formalise l’accord de chaque négociation par une contractualisation.",
                   "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 5
+                  "hideResourceThreshold": 5,
+                  "resources": [
+                    {
+                      "content": "Conseils pour trouver un accord dans le cadre d’une négociation. Cadre-Dirigeant magazine, 2018.<br><a href=\"https://www.cadre-dirigeant-magazine.com/manager/negociation-astuces-incontournables-pour-trouver-le-compromis/\">https://www.cadre-dirigeant-magazine.com/manager/negociation-astuces-incontournables-pour-trouver-le-compromis/</a>",
+                      "type": "web"
+                    }
+                  ]
                 }
               ]
             }
@@ -690,28 +1139,100 @@
               "questions": [
                 {
                   "label": "J’applique les techniques et les étapes de recherche d’information.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Tutoriels de recherche d’information à destination des étudiants réalisé par l’Urfist. 2018 <br><a href=\"http://urfist.chartes.psl.eu/cerise/\">http://urfist.chartes.psl.eu/cerise/</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Quelques outils pour l’accès à des publications scientifiques en Open Access. 2020  <br><a href=\"http://urfist.chartes.psl.eu/ressources/methodologie-de-l-information/exploiter-l-open-access-en-recherche-d-informatons\">http://urfist.chartes.psl.eu/ressources/methodologie-de-l-information/exploiter-l-open-access-en-recherche-d-informatons</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Présentation de ressources en libre accès dans le domaine scientifique. 2018.<br><a href=\"https://urfist.chartes.psl.eu/ressources/recherche-d-information-en-sciences-exactes-et-appliquees\">https://urfist.chartes.psl.eu/ressources/recherche-d-information-en-sciences-exactes-et-appliquees</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Cours créé par Sciences Po disponible sur Openclassrooms, pour évaluer la validité des sources et ressources sur Internet lors d’une recherche d’information. Inscription nécessaire (gratuite) pour bénéficier de certaines fonctionnalités. 2018<br><a href=\"https://openclassrooms.com/fr/courses/5265341-exercer-son-esprit-critique-vis-a-vis-d-internet/5273766-internet-une-source-dinformation-privilegiee\">https://openclassrooms.com/fr/courses/5265341-exercer-son-esprit-critique-vis-a-vis-d-internet/5273766-internet-une-source-dinformation-privilegiee</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Article portant sur la réalisation d’une veille stratégique servant à nourrir le processus d’innovation par G. Balmisse et D. Meingan<br><a href=\"https://www.techniques-ingenieur.fr/res/pdf/encyclopedia/42482210-ag1310.pdf\">https://www.techniques-ingenieur.fr/res/pdf/encyclopedia/42482210-ag1310.pdf</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Mode d’emploi de l’outil gratuit de gestion de références bibliographiques Zotero<br><a href=\"https://www.zotero.org/support/fr/quick_start_guide\">https://www.zotero.org/support/fr/quick_start_guide</a>",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
                   "label": "J’applique les techniques d’organisation de l’information collectée.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Module du guide méthodologique de recherche et de traitement de l’information scientifique et technique, réalisé par le Service d'Appui à la Pédagogie de l'Université Paul Sabatier - Toulouse 3, consacré au traitement des documents récoltés. 2018 :<br><a href=\"http://sup.ups-tlse.fr/abcdoc/rechercher-traiter-information/int/traiter.html\">http://sup.ups-tlse.fr/abcdoc/rechercher-traiter-information/int/traiter.html</a>",
+                      "type": "module"
+                    },
+                    {
+                      "content": "Formation du Campus numérique IUT en ligne « Analyser pour communiquer », module « Elaborer une synthèse de l’information d’un ensemble documentaire ». 2004 : <br><a href=\"http://public.iutenligne.net/expression/lecomte/analyse_com/sequence3/index.html\">http://public.iutenligne.net/expression/lecomte/analyse_com/sequence3/index.html</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "Dans le cadre d’un projet scientifique et/ou technique, j’établis un état de l’art.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Vidéo de 2mn50 présentant succinctement ce qu’est un état de l’art, par l’agence Bigbang science communication. 201<br><a href=\"https://www.youtube.com/watch?v=q9nblly8oKc\">https://www.youtube.com/watch?v=q9nblly8oKc</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Notices méthodologiques pour réaliser un état de l’art  <br><a href=\"http://homepages.ulb.ac.be/~jmdecrol/Upload_enseignement/TOURF414_SOA.pdf\">http://homepages.ulb.ac.be/~jmdecrol/Upload_enseignement/TOURF414_SOA.pdf</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "J’applique les techniques d’analyse de l’information collectée.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Texte court présentant différentes techniques et outils pour le traitement des informations collectées, par Claire François   <br><a href=\"https://hal.archives-ouvertes.fr/hal-00337122/document\">https://hal.archives-ouvertes.fr/hal-00337122/document</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Module du guide méthodologique de recherche et de traitement de l’information scientifique et technique, réalisé par le Service d'Appui à la Pédagogie de l'Université Paul Sabatier - Toulouse 3, consacré au traitement des documents récoltés. 2018<br><a href=\"http://sup.ups-tlse.fr/abcdoc/rechercher-traiter-information/int/traiter.html\">http://sup.ups-tlse.fr/abcdoc/rechercher-traiter-information/int/traiter.html</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "J’applique les techniques de synthèse écrite.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Formation du Campus numérique IUTenligne « Analyser pour communiquer », module « Elaborer une synthèse de l’information d’un ensemble documentaire ». 2004 <br><a href=\"http://public.iutenligne.net/expression/lecomte/analyse_com/sequence3/index.html\">http://public.iutenligne.net/expression/lecomte/analyse_com/sequence3/index.html</a>",
+                      "type": "module"
+                    }
+                  ]
                 }
               ]
             },
@@ -721,42 +1242,102 @@
               "questions": [
                 {
                   "label": "Je définis les objectifs du projet.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Cours d’Openclassrooms avec vidéos créé par l’IESA concernant les bases de la gestion de projets Inscription nécessaire (gratuite) pour bénéficier de certaines fonctionnalités. 2016<br><a href=\"https://openclassrooms.com/fr/courses/3522386-decouvrez-les-bases-de-la-gestion-de-projet\">https://openclassrooms.com/fr/courses/3522386-decouvrez-les-bases-de-la-gestion-de-projet</a>",
+                      "type": "module"
+                    },
+                    {
+                      "content": "Article de la revue Techniques de l'ingénieur Méthodes pour la conception, qui présente les principes et les méthodes utilisés dans le domaine industriel pour concevoir et réaliser des produits. 1997.<br><a href=\"https://www.techniques-ingenieur.fr/base-documentaire/genie-industriel-th6/methodes-pour-la-conception-42128210/gestion-de-projet-t7700/principes-de-base-t7700niv10001.html\">https://www.techniques-ingenieur.fr/base-documentaire/genie-industriel-th6/methodes-pour-la-conception-42128210/gestion-de-projet-t7700/principes-de-base-t7700niv10001.html</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Module “Gestion de projets : méthode et outils - Les essentiels” de l’IAE de Lille, initiation aux méthodes et outils de gestion de projet. 2013 :<br><a href=\"https://modules-iae.univ-lille.fr/M06/cours/co/002_module_06_IAE_web.html\">https://modules-iae.univ-lille.fr/M06/cours/co/002_module_06_IAE_web.html</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "Je définis les différents actions et étapes associées.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Exemples d’outils de planification / organisation. Les deux outils sont en « freemium », gratuit sur inscription avec fonctionnalités limitées, payants pour d’avantage de fonctions  Trello <br><a href=\"https://trello.com\">https://trello.com</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "« Réaliser un état des lieux à mi-parcours », diapositives de présentation de la faculté de psychologie et de sciences de l’éducation de l’université de Mons (Belgique). 2015 :  <br><a href=\"https://sharepoint1.umons.ac.be/FR/universite/facultes/fpse/serviceseetr/methodo/recherches/recherches_en_cours/Expairs/Realiser-un-etat-des-lieux.pdf\">https://sharepoint1.umons.ac.be/FR/universite/facultes/fpse/serviceseetr/methodo/recherches/recherches_en_cours/Expairs/Realiser-un-etat-des-lieux.pdf</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
                   "label": "J’identifie les ressources (humaine, matérielle, financière) nécessaires et adaptées aux actions.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "3e étape du Module “Gestion de projets : méthode et outils - Les essentiels” de l’IAE de Lille, présentant la phase de conception. 2013 :<br><a href=\"http://bricks.univ-lille1.fr/M06/cours/co/ch1_03_etape3_01_def.html\">http://bricks.univ-lille1.fr/M06/cours/co/ch1_03_etape3_01_def.html</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "Je connais les règles de rédaction d’un cahier des charges fonctionnel.",
-                  "answerLabelsOverride":  [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ],
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Brochure INRS rédigée sur la base de la norme AFNOR NF16271 pour l’achat d’une machine, transposable pour d’autres produits ou services. Contient un exemple et une méthode de questionnement basée sur QQOQCPC pour analyser les besoins. 2013 :  <br><a href=\"http://www.inrs.fr/media.html?refINRS=ED%20113\">http://www.inrs.fr/media.html?refINRS=ED%20113</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Définition du cahier des charges fonctionnel, étape 2 du module “Gestion de projets : méthode et outils - Les essentiels” de l’IAE de Lille, concernant la faisabilité du projet. 2013 :<br><a href=\"https://modules-iae.univ-lille.fr/M06/cours/co/ch1_02_etape2_12_aller_plus_loin.html\">https://modules-iae.univ-lille.fr/M06/cours/co/ch1_02_etape2_12_aller_plus_loin.html</a>",
+                      "type": "module"
+                    },
+                    {
+                      "content": "Cours avec vidéo d’Openclassrooms sur la réalisation de cahiers des charges, créé par l’IESA. Concerne les projets numériques mais le fond est valable pour tout type de projet. 2020 :<br><a href=\"https://openclassrooms.com/fr/courses/3676841-realisez-le-cahier-des-charges-dun-projet-digital/3676848-quest-ce-quun-cahier-des-charges\">https://openclassrooms.com/fr/courses/3676841-realisez-le-cahier-des-charges-dun-projet-digital/3676848-quest-ce-quun-cahier-des-charges</a> Inscription nécessaire (gratuite) pour bénéficier de certaines fonctionnalités.",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "Je connais les règles de rédaction d’un cahier des charges technique.",
-                  "answerLabelsOverride":  [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ],
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Définition du cahier des charges technique ou opérationnel, étape 3 (sur la phase de conception) du Module “Gestion de projets : méthode et outils - Les essentiels” de l’IAE de Lille. 2013 :<br><a href=\"https://modules-iae.univ-lille.fr/M06/cours/co/ch1_03_etape3_13_aller_plus_loin.html\">https://modules-iae.univ-lille.fr/M06/cours/co/ch1_03_etape3_13_aller_plus_loin.html</a>",
+                      "type": "module"
+                    }
+                  ]
                 }
               ]
             },
@@ -766,18 +1347,42 @@
               "questions": [
                 {
                   "label": "En tant que chef de projet, je mets en place des règles d’animation et de coordination de l’équipe du projet.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Guide de l’association Synlab qui expose la méthode et les outils du Design Thinking. Pp. 16-23, la partie consacrée au démarrage du projet, expose des méthodes pour former une équipe et fixer des règles. 2017 :  <br><a href=\"https://syn-lab.fr/wp-content/uploads/2017/10/Innover-a-plusieurs-version-longue.pdf\">https://syn-lab.fr/wp-content/uploads/2017/10/Innover-a-plusieurs-version-longue.pdf</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
                   "label": "En tant que chef de projet, j’applique les méthodes de suivi du projet.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Présentation et quizz d’autoévaluation du module “Gestion de projets : méthode et outils - Les essentiels” de l’IAE de Lille. 2013 :  <br><a href=\"http://bricks.univ-lille1.fr/M06/cours/co/000_module_06_IAE.html\">http://bricks.univ-lille1.fr/M06/cours/co/000_module_06_IAE.html</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "En tant que chef de projet, je rends compte systématiquement à ma hiérarchie de l’état d’avancement du projet.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Guide méthodologique de conduite de projet pour les jeunes actifs par le ministère de la Jeunesse et des Sports. Page 24, chapitre « Evaluer et rendre compte ». 2004 :<br><a href=\"http://www.jeunes.gouv.fr/IMG/pdf/NDI_guidemethodo.pdf\">http://www.jeunes.gouv.fr/IMG/pdf/NDI_guidemethodo.pdf</a>",
+                      "type": "document"
+                    }
+                  ]
                 }
               ]
             }
@@ -793,46 +1398,106 @@
               "questions": [
                 {
                   "label": "Je pense systématiquement le problème dans un système global.",
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "Vidéo d’introduction à l’approche systémique, 5mn17, extrait du Mooc « Accompagner les transitions éducatives » créé par Synlab en partenariat avec le Centre de Recherches Interdisciplinaires et l’Université Paris Descartes. 2017 <br><a href=\"https://d381hmu4snvm3e.cloudfront.net/videos/PLTgE4HV0WLX/HD.mp4\">https://d381hmu4snvm3e.cloudfront.net/videos/PLTgE4HV0WLX/HD.mp4</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Article « L’approche systémique ; de quoi s’agit-il ? » qui pose les bases d’une définition de cette manière de penser la complexité du monde. 2003.<br><a href=\"http://www.afscet.asso.fr/SystemicApproach.pdf\">http://www.afscet.asso.fr/SystemicApproach.pdf</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Vidéo de 2mn45 créée par A. Magnin pour illustrer l’importance de l’approche systémique. « Pensée systémique : les chats de Bornéo ». Mis en ligne en 2014 :  <br><a href=\"https://www.youtube.com/watch?v=SZImKzAZUv4\">https://www.youtube.com/watch?v=SZImKzAZUv4</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "Je m’appuie sur des méthodes pour comprendre le problème.",
-                  "answerLabelsOverride":  [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ],
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "« Mot problème et non mot solution », à propos du mot « complexe ». Introduction aux problèmes complexes par Edgar Morin. Vidéo de 10mn39 extraite d’un cours en ligne créée par l’ESSEC Business School « L’avenir de la décision : connaitre et agir en complexité ». Mis en ligne en 2014 :<br><a href=\"https://www.youtube.com/watch?v=P2PQ5lSO1qI&index=1&list=PLHTgkYBniq1-idttv6LyAsHWcloSp107f\">https://www.youtube.com/watch?v=P2PQ5lSO1qI&index=1&list=PLHTgkYBniq1-idttv6LyAsHWcloSp107f</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Définir le problème et les objectifs. Module publié par l’Ordre des Architectes du Québec.2011.  <br><a href=\"http://www.gpp.oiq.qc.ca/\">http://www.gpp.oiq.qc.ca/</a>",
+                      "type": "module"
+                    },
+                    {
+                      "content": "Module de cours en ligne « Méthodes de résolution de problèmes » du Mooc Gestion de projet par Rémy Bachelet. Mis en ligne en 2014 :<br><a href=\"https://gestiondeprojet.pm/demarche-de-resolution-de-probleme/\">https://gestiondeprojet.pm/demarche-de-resolution-de-probleme/</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "Je m’appuie sur des méthodes pour déterminer les causes du problème.",
-                  "answerLabelsOverride": [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "hideResourceThreshold": 5
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ],
+                    "hideResourceThreshold": 5
+                  },
+                  "resources": [
+                    {
+                      "content": "« Résoudre un problème : la démarche ». Document points de repères n° 17 du CEDIP (Centre Ministériel de Valorisation des Ressources Humaines), ministère de l’Equipement, des Transports et du Logement. Présentation de la démarche d’une démarche de résolution de problème, de l’analyse de la situation à la mise en place d’une solution. Transposable pour toute organisation de travail. 2001<br><a href=\"http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/resol_probleme_cle595fb7.pdf\">http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/resol_probleme_cle595fb7.pdf</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
                   "label": "Je mets en œuvre les ressources scientifiques et techniques nécessaires à la résolution du problème.",
-                  "answerLabelsOverride":  [
-                    "Tout à fait d'accord",
-                    "Plutôt d'accord",
-                    "D'accord",
-                    "Plutôt pas d'accord",
-                    "Pas d'accord"
-                  ],
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "answerLabelsOverride": [
+                      "Tout à fait d'accord",
+                      "Plutôt d'accord",
+                      "D'accord",
+                      "Plutôt pas d'accord",
+                      "Pas d'accord"
+                    ],
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "« Résoudre un problème : la démarche ». Document points de repères n° 17 du CEDIP (Centre Ministériel de Valorisation des Ressources Humaines), ministère de l’Equipement, des Transports et du Logement. Présentation d’une sélection d’outils de résolution de problème. Transposable pour toute organisation de travail. 2001 <br><a href=\"http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/outils_resol_problemes.doc_cle182ac8.pdf\">http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/outils_resol_problemes.doc_cle182ac8.pdf</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Elaborer les solutions, les décrire et mener une étude de faisabilité des solutions envisagées. Module produit par l’Ordre des architectes du Québec. 2011.<br><a href=\"http://www.gpp.oiq.qc.ca/\">http://www.gpp.oiq.qc.ca/</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "Je surveille la mise en œuvre de la solution.",
-                  "acquisitionThreshold": 5,
-                  "hideResourceThreshold": 9999
+                  "overrides": {
+                    "acquisitionThreshold": 5,
+                    "hideResourceThreshold": 9999
+                  },
+                  "resources": [
+                    {
+                      "content": "« Résoudre un problème : la démarche ». Document points de repères n° 17 du CEDIP (Centre Ministériel de Valorisation des Ressources Humaines), ministère de l’Equipement, des Transports et du Logement. Pages 14 et 15, déroulé des phases de vérification des résultats et de consolidation de l’amélioration. Transposable pour toute organisation de travail. 2001<br><a href=\"http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/resol_probleme_cle595fb7.pdf\">http://www.cedip.developpement-durable.gouv.fr/IMG/pdf/resol_probleme_cle595fb7.pdf</a>",
+                      "type": "document"
+                    }
+                  ]
                 }
               ]
             }

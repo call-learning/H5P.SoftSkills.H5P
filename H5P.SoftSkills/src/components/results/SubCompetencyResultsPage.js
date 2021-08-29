@@ -12,7 +12,6 @@ import {
 import {
   questionsByCompetencyAndSubCompetencies,
   questionnaireCompetenciesQuestionsDefault,
-  questionnaireResources,
   questionnaireResourcesDefault,
   questionnaireAnsweredQuestions,
   questionnaireAnsweredQuestionsDefault, questionnaireSettings, questionnaireSettingsDefault
@@ -78,8 +77,7 @@ SubCompetencyResultsPage.propTypes = {
   topNavigation: PropTypes.element,
   ...questionsByCompetencyAndSubCompetencies,
   ...questionnaireSettings,
-  ...questionnaireAnsweredQuestions,
-  ...questionnaireResources
+  ...questionnaireAnsweredQuestions
 };
 
 SubCompetencyResultsPage.defaultProps = {
@@ -88,8 +86,7 @@ SubCompetencyResultsPage.defaultProps = {
   topNavigation: (<div/>),
   ...questionnaireCompetenciesQuestionsDefault,
   ...questionnaireSettingsDefault,
-  ...questionnaireAnsweredQuestionsDefault,
-  ...questionnaireResourcesDefault
+  ...questionnaireAnsweredQuestionsDefault
 };
 
 export default SubCompetencyResultsPage;

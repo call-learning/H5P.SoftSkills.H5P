@@ -179,7 +179,7 @@ export function computeProgressPerCompetency (
       let subCompetencyQuestionsCount = 0;
       let subCompetencyAnsweredCount = 0;
       for (let compContext of SubCompetency.contexts) {
-        for (let question of compContext.questions)  {
+        for (let question of compContext.questions) {
           if (typeof indexedAnswers[currentGlobalIndex] !== 'undefined') {
             currentsubCompetenciesResults += getRealValueFromPossibleValue(possibleAnswers,
               indexedAnswers[currentGlobalIndex].answerId);
@@ -207,8 +207,8 @@ export function computeProgressPerCompetency (
       totalAnswered: competencyAnsweredCount
     });
     globalResult += categoryResults;
-    globalQuestionsCount +=competencyQuestionsCount;
-    globalAnsweredCount +=competencyAnsweredCount;
+    globalQuestionsCount += competencyQuestionsCount;
+    globalAnsweredCount += competencyAnsweredCount;
   }
   return {
     value: globalResult / questionsByCompetencyAndSubCompetencies.length,
@@ -246,8 +246,8 @@ export function getTextValueFromPossibleValue (settings, questionData, answerId)
     return '';
   }
   const answerIndex = settings.possibleAnswers.findIndex((answ) => answ.id === answerId);
-  return typeof questionData.answerLabelsOverride != 'undefined' ?
-    questionData.answerLabelsOverride[answerIndex] : answer.text;
+  return typeof questionData.overrides?.answerLabelsOverride != 'undefined' ?
+    questionData.overrides.answerLabelsOverride[answerIndex] : answer.text;
 }
 
 /**
@@ -266,7 +266,7 @@ export function isAcquiredAnswer (settings, questionData, answerId) {
     return false;
   }
 
-  const levelOfAcquisition = acquisitionThreshold(settings, questionData)
+  const levelOfAcquisition = acquisitionThreshold(settings, questionData);
   return answerId >= levelOfAcquisition;
 }
 
@@ -281,8 +281,8 @@ export function isAcquiredAnswer (settings, questionData, answerId) {
  */
 export function acquisitionThreshold (settings, questionData) {
   // First find the identifier in the list of possible answers
-  return typeof questionData.acquisitionThreshold != 'undefined' ?
-    questionData.acquisitionThreshold : settings.acquisitionThreshold;
+  return typeof questionData.overrides?.acquisitionThreshold != 'undefined' ?
+    questionData.overrides.acquisitionThreshold : settings.acquisitionThreshold;
 }
 
 /**
@@ -342,7 +342,7 @@ export function getGloballyIndexedAnswerArray (answeredQuestions) {
  */
 export function isUnknownValue (settings, answerId) {
   const answer = settings.possibleAnswers.find((answ) => answ.id === answerId);
-  return Boolean(answer && (settings.unknownValueId === answerId)) ;
+  return Boolean(answer && (settings.unknownValueId === answerId));
 }
 
 /**
@@ -431,7 +431,6 @@ export function truncateLabel (text, MAXCHAR) {
  *
  * @param questionsByCompetencyAndSubCompetencies
  * @param answeredQuestions
- * @param resources
  * @param settings
  * @param competencyIndex
  * @param subCompetencyIndex
@@ -439,7 +438,6 @@ export function truncateLabel (text, MAXCHAR) {
  */
 export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSubCompetencies,
                                                      answeredQuestions,
-                                                     resources,
                                                      settings,
                                                      competencyIndex,
                                                      subCompetencyIndex) {
@@ -458,7 +456,7 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
     }, 0);
     // Get cumulative acquisition Threshold
     const contextAcquiredValue =
-      context.questions.reduce((acc, question) => (acc + acquisitionThreshold(settings, question)),0);
+      context.questions.reduce((acc, question) => (acc + acquisitionThreshold(settings, question)), 0);
     const contextQA = answeredQuestions.reduce((acc, answer) => {
       const qi = answer.questionGlobalIndex - minQuestionIndexForContext;
       if (qi >= 0 && qi < contextTotalQuestionCount) {
@@ -471,40 +469,29 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
       return acc;
     }, []);
 
-    const resourcesList = resources.reduce((acc, resource) => {
-      const allrefs = getContextFromReference(resource.references);
+    const resourcesList = context.questions.reduce((acc, question, questionIndex) => {
+      if (question.resources) {
+        const hideResourceThreshold = typeof question.overrides?.hideResourceThreshold === 'undefined' ?
+          settings.hideResourceThreshold : question.overrides.hideResourceThreshold;
 
-      for (let ref of allrefs) {
-        if (ref.competencyId === competencyIndex
-          && ref.subCompetencyId === subCompetencyIndex
-          && ref.contextId === contextIndex) {
-          // TODO: Check if this part is still valid: i.e. we hide resources when the question
-          // was specified in the resource index AND it is below the threshold where we hide them.
-          if (typeof ref.questionId != 'undefined') {
-            // If resource is up to index we only display the resource if question has an answer greater than the
-            // threshold.
-            if (ref.questionId < context.questions.length ){
-              const question  = context.questions[ref.questionId];
-              const hideResourceThreshold = typeof question.hideResourceThreshold === 'undefined' ?
-                settings.hideResourceThreshold :  question.hideResourceThreshold;
-
-              const questionGlobalIndex = getGlobalQuestionIndex(
-                questionsByCompetencyAndSubCompetencies,
-                competencyIndex,
-                subCompetencyIndex,
-                contextIndex,
-                ref.questionId);
-              const answeredQuestion = contextQA.find(
-                (element) => (element.questionGlobalIndex === questionGlobalIndex)
-              )
-              if (!settings.ignoreHiddenThreshold  &&
-                (answeredQuestion && answeredQuestion.answer >= hideResourceThreshold)) {
-                continue; // We don't add the resource to the list as the user has answer correctly.
-              }
+        const questionGlobalIndex = getGlobalQuestionIndex(
+          questionsByCompetencyAndSubCompetencies,
+          competencyIndex,
+          subCompetencyIndex,
+          contextIndex,
+          questionIndex);
+        const answeredQuestion = contextQA.find(
+          (element) => (element.questionGlobalIndex === questionGlobalIndex)
+        );
+        if ((settings.ignoreHiddenThreshold || !answeredQuestion) ||
+          (answeredQuestion && answeredQuestion.answer < hideResourceThreshold)) {
+          // We don't add the resource to the list as the user has answer correctly.
+          question.resources.forEach(
+            (r) => {
+              const currentResourceWID = { id: stringToHashCode(r.content), ...r };
+              acc.push(currentResourceWID);
             }
-          }
-          const currentResourceWID = Object.assign({ id: stringToHashCode(resource.content) }, resource);
-          acc.push(currentResourceWID);
+          );
         }
       }
       return acc;
@@ -533,7 +520,7 @@ export function getSubCompetencyResultsAndResources (questionsByCompetencyAndSub
  * @param callbackSuccess
  * @param callbackFailure
  */
-export function handleBadgeEmit(email, score ,callbackSuccess, callbackFailure) {
+export function handleBadgeEmit (email, score, callbackSuccess, callbackFailure) {
   if ((typeof H5PIntegration != 'undefined') && (typeof H5PIntegration.siteUrl !== 'undefined')) {
     const baseURL = H5PIntegration.siteUrl;
     // eslint-disable-next-line no-undef
@@ -543,10 +530,30 @@ export function handleBadgeEmit(email, score ,callbackSuccess, callbackFailure) 
       + '&score=' + score
       + '&sesskey=' + encodeURIComponent(sesskey)
     ).then(
-        (result) => callbackSuccess(result),
-         (error) => callbackFailure(error)
-      )
+      (result) => callbackSuccess(result),
+      (error) => callbackFailure(error)
+    );
   } else {
     callbackFailure('no API available');
   }
+}
+
+/**
+ * Get absolute URL for resources
+ *
+ * Use the fact we know the context to try and get the absolute path.
+ * @param res
+ * @return {T[]}
+ */
+
+export function resourcesWithAbsoluteURL (res) {
+  return res.resources.map((r) => {
+    let newResource = {...r};
+    newResource.imageUrl = '';
+    if (r.image && r.image.path) {
+      // eslint-disable-next-line no-undef
+      newResource.imageUrl = H5P.getPath(r.image.path, h5pContext.contentId);
+    }
+    return newResource;
+  });
 }

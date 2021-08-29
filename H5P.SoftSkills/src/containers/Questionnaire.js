@@ -2,7 +2,6 @@ import React from 'react';
 import {
   questionnaireCompetenciesQuestionsDefault,
   questionnaireResourceDefault,
-  questionnaireResources,
   questionnaireSettings, questionnaireSettingsDefault,
   questionsByCompetencyAndSubCompetencies,
 } from '../utils/CommonProptypes';
@@ -60,11 +59,9 @@ function Questionnaire (props) {
 Questionnaire.propTypes = {
   ...questionsByCompetencyAndSubCompetencies,
   ...questionnaireSettings,
-  ...questionnaireResources
 };
 Questionnaire.defaultProps = {
   ...questionnaireCompetenciesQuestionsDefault,
-  ...questionnaireResourceDefault,
   ...questionnaireSettingsDefault
 };
 

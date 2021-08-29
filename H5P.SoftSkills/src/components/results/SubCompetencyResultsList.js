@@ -8,8 +8,7 @@ import {
   questionnaireAnsweredQuestions,
   questionnaireAnsweredQuestionsDefault,
   questionnaireCompetenciesQuestionsDefault,
-  questionnaireResources,
-  questionnaireResourcesDefault, questionnaireSettings, questionnaireSettingsDefault,
+  questionnaireSettings, questionnaireSettingsDefault,
   questionsByCompetencyAndSubCompetencies
 } from '../../utils/CommonProptypes';
 import {
@@ -38,7 +37,6 @@ const SubCompetencyResultsList = (props) => {
   const resultsAndResources = getSubCompetencyResultsAndResources(
     props.questionsByCompetencyAndSubCompetencies,
     props.answeredQuestions,
-    props.resources,
     props.settings,
     props.competencyIndex,
     props.subCompetencyIndex);
@@ -138,8 +136,7 @@ SubCompetencyResultsList.propTypes = {
   subCompetencyIndex: PropTypes.number,
   ...questionsByCompetencyAndSubCompetencies,
   ...questionnaireSettings,
-  ...questionnaireAnsweredQuestions,
-  ...questionnaireResources
+  ...questionnaireAnsweredQuestions
 };
 
 SubCompetencyResultsList.defaultProps = {
@@ -147,8 +144,7 @@ SubCompetencyResultsList.defaultProps = {
   subCompetencyIndex: 0,
   ...questionnaireCompetenciesQuestionsDefault,
   ...questionnaireSettingsDefault,
-  ...questionnaireAnsweredQuestionsDefault,
-  ...questionnaireResourcesDefault
+  ...questionnaireAnsweredQuestionsDefault
 };
 
 export default SubCompetencyResultsList;

@@ -4,23 +4,20 @@ import InstructionPage from '../components/pages/InstructionPage';
 import { connect } from 'react-redux';
 import { startQuestionnaireAndPosition } from '../actions/questionnaire';
 
-
 const mapDispatchToProps = (dispatch) => {
   return {
     startQuestionnaire: () => dispatch(startQuestionnaireAndPosition())
-  }
-}
+  };
+};
 
 const InstructionPageContainer = connect(null,
   mapDispatchToProps
-)(InstructionPage)
+)(InstructionPage);
 
-InstructionPageContainer.propTypes =  Object.assign(
-  {
-    start: PropTypes.func,
-    isReadyToStart: PropTypes.bool
-  },
-  questionnaireSettings
-);
+InstructionPageContainer.propTypes = {
+  start: PropTypes.func,
+  isReadyToStart: PropTypes.bool,
+  ...questionnaireSettings
+};
 
 export default InstructionPageContainer;

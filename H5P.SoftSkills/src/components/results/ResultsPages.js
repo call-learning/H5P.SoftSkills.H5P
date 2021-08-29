@@ -14,7 +14,6 @@ import {
   questionsByCompetencyAndSubCompetencies,
   questionnaireCompetenciesQuestionsDefault,
   questionnaireAnsweredQuestions,
-  questionnaireResources,
   questionnaireResourcesDefault, questionnaireSettings, questionnaireSettingsDefault
 } from '../../utils/CommonProptypes';
 import { computeProgressPerCompetency, isFullyAcquired } from '../../utils/ComponentsUtils';
@@ -92,8 +91,7 @@ ResultsPage.propTypes = {
   handleRestartQuestionnaire: PropTypes.func,
   ...questionnaireSettings,
   ...questionsByCompetencyAndSubCompetencies,
-  ...questionnaireAnsweredQuestions,
-  ...questionnaireResources
+  ...questionnaireAnsweredQuestions
 };
 
 ResultsPage.defaultProps = {
@@ -101,8 +99,7 @@ ResultsPage.defaultProps = {
   handleRestartQuestionnaire: () => null,
   ...questionnaireSettingsDefault,
   ...questionnaireCompetenciesQuestionsDefault,
-  ...questionnaireAnsweredQuestionsDefault,
-  ...questionnaireResourcesDefault
+  ...questionnaireAnsweredQuestionsDefault
 };
 
 export default ResultsPage;

@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@material-ui/core/Box';
-import {makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Question from './Question';
 import {
   questionsByCompetencyAndSubCompetencies, questionnaireCompetenciesQuestionsDefault,
 } from '../../utils/CommonProptypes';
 import { getGlobalQuestionIndex } from '../../utils/ComponentsUtils';
-
 
 const useStyles = makeStyles(theme => ({
   contextLabel: {
@@ -59,8 +58,8 @@ const QuestionsList = (props) => {
             {
               (subCompetency.isVisible) ?
                 <Typography variant="h4">
-                  {<span dangerouslySetInnerHTML={{__html:subCompetency.label}}/>}
-                  </Typography> : ''
+                  {<span dangerouslySetInnerHTML={{ __html: subCompetency.label }}/>}
+                </Typography> : ''
             }
             <ol className={classes.listContainer}>
               {
@@ -72,7 +71,7 @@ const QuestionsList = (props) => {
                         {
                           (context.isVisible) ? <Typography
                             className={classes.contextLabel}>
-                            {<span dangerouslySetInnerHTML={{__html:context.label}}/>}</Typography> : ''
+                            {<span dangerouslySetInnerHTML={{ __html: context.label }}/>}</Typography> : ''
                         }
                         <ol className={classes.listContainer}>
                           {
@@ -93,8 +92,8 @@ const QuestionsList = (props) => {
                                     ).toString()}
                                     firstQuestionFromCategory={subCompetencyIndex === 0 && contextIndex === 0 && questionIndex === 0}
                                     questionText={question.label}
-                                    answerLabelsOverride={typeof question.answerLabelsOverride == 'undefined' ?
-                                      undefined : question.answerLabelsOverride}
+                                    answerLabelsOverride={typeof question.overrides?.answerLabelsOverride == 'undefined' ?
+                                      undefined : question.overrides.answerLabelsOverride}
                                     handleEnableQuestion={props.handleEnableQuestion}
                                     handleSelectAnswer={props.handleSelectAnswer}
                                   /></li>))
@@ -110,26 +109,22 @@ const QuestionsList = (props) => {
   </Box>);
 };
 
-QuestionsList.propTypes = Object.assign(
-  {
-    questionComponent: PropTypes.elementType,
-    competencyIndex: PropTypes.number,
-    answerLabelsOverride: PropTypes.arrayOf(
-      PropTypes.string
-    ),
-    handleEnableQuestion: PropTypes.func,
-    handleSelectAnswer: PropTypes.func,
-  },
-  questionsByCompetencyAndSubCompetencies,
-);
+QuestionsList.propTypes = {
+  questionComponent: PropTypes.elementType,
+  competencyIndex: PropTypes.number,
+  answerLabelsOverride: PropTypes.arrayOf(
+    PropTypes.string
+  ),
+  handleEnableQuestion: PropTypes.func,
+  handleSelectAnswer: PropTypes.func,
+  ...questionsByCompetencyAndSubCompetencies,
+};
 
-QuestionsList.defaultProps = Object.assign(
-  {
-    questionComponent: Question,
-    competencyIndex: 0,
-    answerLabelsOverride: null
-  },
-  questionnaireCompetenciesQuestionsDefault,
-);
+QuestionsList.defaultProps = {
+  questionComponent: Question,
+  competencyIndex: 0,
+  answerLabelsOverride: null,
+  ...questionnaireCompetenciesQuestionsDefault
+};
 
 export default QuestionsList;

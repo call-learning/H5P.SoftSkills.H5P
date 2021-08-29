@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import {
   questionnaireCompetenciesQuestionsDefault, questionnaireResourceDefault,
-  questionnaireResources,
   questionnaireSettings, questionnaireSettingsDefault,
   questionsByCompetencyAndSubCompetencies
 } from './utils/CommonProptypes';
@@ -17,19 +16,7 @@ import { H5PContext } from './contexts/H5PContext';
 
 export const QuestionnaireApp = (props) => {
   const h5pContext = useContext(H5PContext);
-  const { resources, ...otherprops } =  props;
   const dispatch = useDispatch();
-
-  // Use the fact we know the context to try and get the absolute path.
-  let resourcesWithAbsoluteURL = resources.map((r)=> {
-    let  newResource = Object.assign({}, r);
-    newResource.imageUrl = '';
-    if (r.image && r.image.path) {
-      // eslint-disable-next-line no-undef
-      newResource.imageUrl = H5P.getPath(r.image.path, h5pContext.contentId);
-    }
-    return newResource;
-  })
 
  useEffect(() => {
    dispatch(initializeUserData(h5pContext.contentId));
@@ -38,7 +25,7 @@ export const QuestionnaireApp = (props) => {
   return (
     <ThemeProvider theme={questionnaireTheme}>
       <Provider store={questionnaireStore}>
-        <Questionnaire resources={resourcesWithAbsoluteURL} {...otherprops} />
+        <Questionnaire {...props} />
       </Provider>
     </ThemeProvider>);
 };
@@ -47,13 +34,11 @@ QuestionnaireApp.propTypes = {
   currentStep: PropTypes.string,
   contentId: PropTypes.string,
   ...questionsByCompetencyAndSubCompetencies,
-  ...questionnaireSettings,
-  ...questionnaireResources
+  ...questionnaireSettings
 };
 QuestionnaireApp.defaultProps = {
   currentStep: '',
   contentId: '',
   ...questionnaireCompetenciesQuestionsDefault,
-  ...questionnaireResourceDefault,
-  ...questionnaireSettingsDefault
+  ...questionnaireResourceDefault
 };

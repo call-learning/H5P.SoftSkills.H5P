@@ -67,15 +67,13 @@ const CompetencyResultsPage = (props) => {
   )
 }
 
-CompetencyResultsPage.propTypes = Object.assign(
-  {
-    competencyIndex: PropTypes.number,
-    handleViewSubCompetencyClick: PropTypes.func,
-    topNavigation: PropTypes.element
-  },
-  questionsByCompetencyAndSubCompetencies,
-  questionnaireResults
-);
+CompetencyResultsPage.propTypes = {
+  competencyIndex: PropTypes.number,
+  handleViewSubCompetencyClick: PropTypes.func,
+  topNavigation: PropTypes.element,
+  ...questionsByCompetencyAndSubCompetencies,
+  ...questionnaireResults
+};
 
 CompetencyResultsPage.defaultProps = {
   competencyIndex: 0,
