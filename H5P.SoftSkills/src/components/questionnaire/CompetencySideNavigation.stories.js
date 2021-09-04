@@ -4,7 +4,7 @@ import H5P from '../../utils/H5P.mock';
 import { socialImage } from '../../../assets/social.svg';
 import Box from '@material-ui/core/Box';
 
-export default { title: 'Questionnaire' };
+export default { title: 'Questionnaire/Page' };
 
 window.H5P = H5P;
 

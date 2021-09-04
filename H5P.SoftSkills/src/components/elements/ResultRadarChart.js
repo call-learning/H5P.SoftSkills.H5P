@@ -8,18 +8,20 @@ import {
 import { truncateLabel } from '../../utils/ComponentsUtils';
 
 const MIN_ITEM_RADAR = 3;
-const MAX_LABEL_CHARACTERS = 30;
+const MAX_LABEL_CHARACTERS = 25;
 
 const CompetencyLabel = (props) => {
   const { payload, x, y, textAnchor, resultsList, ...otherprops } = props;
   return (
-    <text x={x} y={y} textAnchor={textAnchor}>
-      <tspan className="label-compname" textAnchor={textAnchor}
+    <g>
+      <text x={x} y={y} className="label-compname" textAnchor={textAnchor}
              dangerouslySetInnerHTML={{__html:truncateLabel(resultsList[payload.index].label, MAX_LABEL_CHARACTERS)}}/>
-      <tspan className="label-percent" dx={-payload.offset} dy={'1em'}>{resultsList[payload.index].value}%</tspan>
-    </text>
+      <text x={x} y={y}  textAnchor={textAnchor} className="label-percent"  dy={'1em'}>{resultsList[payload.index].value}%</text>
+    </g>
   );
 };
+
+
 
 const useStyles = makeStyles(theme => ({
   innerRadar: {
@@ -57,11 +59,12 @@ function ResultRadarChart (props) {
     }
   }
   return <ResponsiveContainer minHeight={props.graphSize} minWidth={props.graphSize} className={classes.root}>
-    <RadarChart data={competenciesResults} margin={{ top: MAX_LABEL_CHARACTERS, right: MAX_LABEL_CHARACTERS, bottom: MAX_LABEL_CHARACTERS, left: MAX_LABEL_CHARACTERS }}>
+    <RadarChart data={competenciesResults} margin={{top: 10, right: 10, bottom: 10, left: 10}}>
       <PolarGrid/>
       {
         props.hasLabels ? <PolarAngleAxis tickLine={{ size: MAX_LABEL_CHARACTERS }} data={competenciesResults}
-                                          tick={<CompetencyLabel resultsList={props.resultsList}/>}/>
+                                          tick={<CompetencyLabel resultsList={props.resultsList}/>}
+          />
           : ''
       }
       <Radar name="Competency" dataKey="value" className={classes.innerRadar}/>

@@ -50,25 +50,7 @@ export const sampleInstructionPageSettings = {
   welcomeTitle: 'Bienvenue sur le\nTest d\'auto-positionnement sur les soft skills.',
   generalInstructions: 'Ce questionnaire vous permettra d’identifier vos compétences transversales, autrement appelées soft skills, et vous proposera des ressources d’auto-formation afin d’accompagner le développement de ces compétences.',
   startButtonLabel: 'Démarrer le test',
-  competenciesDesc: [
-    {
-      imagePath: 'assets/social.png',
-      title: 'Compétences sociales',
-      description: 'Quelle est votre capacité à travailler avec d’autres personnes dans un contexte professionnel où l’interaction est importante ?'
-    },
-    {
-
-      imagePath: 'assets/personal.png',
-      title: 'Compétences personelles',
-      description: 'Quelles aptitudes personnelles utiles dans un contexte professionnel avez-vous développées ?'
-    },
-    {
-      imagePath: 'assets/methodological.png',
-      title: 'Compétences méthodologiques',
-      description: 'Par quelles démarches réussissez-vous à organiser vos activités professionnelles ?'
-    }
-  ],
-
+  footerText: "SOK@A est un projet soutenu dans le cadre de l’AMI<br> 2017 TRANSFORMATION PÉDAGOGIQUE ET<br> NUMÉRIQUE.",
   instructionsDesc: [
     {
       icon: 'timer',

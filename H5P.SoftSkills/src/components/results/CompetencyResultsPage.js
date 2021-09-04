@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Box,
 } from '@material-ui/core';
@@ -14,6 +14,7 @@ import {
 } from '../../utils/CommonProptypes';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import HorizontalCardWithAction from '../elements/HorizontalCardWithAction';
+import { H5PContext } from '../../contexts/H5PContext';
 
 const useStyles = makeStyles(theme => ({
   cardLike: {
@@ -27,22 +28,23 @@ const useStyles = makeStyles(theme => ({
 
 const CompetencyResultsPage = (props) => {
   const classes = useStyles(props);
-  const currentCompetency = props.questionsByCompetencyAndSubCompetencies[props.competencyIndex]
-  const currentCompetenyResults = props.results.competenciesResults[props.competencyIndex]
-
+  const currentCompetency = props.questionsByCompetencyAndSubCompetencies[props.competencyIndex];
+  const currentCompetenyResults = props.results.competenciesResults[props.competencyIndex];
+  const h5pContext = useContext(H5PContext);
   return (
     <Container maxWidth={'md'}>
       <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" pt={2}>
 
         <Box alignSelf="flex-start">{props.topNavigation}</Box>
-        <Box><img className="SuccessImage" src={getCompetencyImageFromIndex(props.competencyIndex)} alt=""
+        <Box><img className="SuccessImage"
+                  src={getCompetencyImageFromIndex(props.competencyIndex, undefined, h5pContext.contentId)} alt=""
                   role="presentation"/></Box>
 
         <Typography variant="subtitle2">{currentCompetency.label}</Typography>
         <ResultRadarChart resultsList={currentCompetenyResults.subCompetenciesResults} hasLabels
                           graphSize={300}/>
         <Box>
-          <Typography variant="h4"><H5PTranslatedText text='detailpercompetency'/></Typography>
+          <Typography variant="h4"><H5PTranslatedText text="detailpercompetency"/></Typography>
         </Box>
         {
           !(props.results &&
@@ -64,8 +66,8 @@ const CompetencyResultsPage = (props) => {
         }
       </Box>
     </Container>
-  )
-}
+  );
+};
 
 CompetencyResultsPage.propTypes = {
   competencyIndex: PropTypes.number,

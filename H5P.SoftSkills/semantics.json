@@ -25,6 +25,14 @@
           "optional": true
         },
         {
+          "name": "image",
+          "type": "image",
+          "label": "Image",
+          "description": "The relevant image",
+          "importance": "high",
+          "optional": true
+        },
+        {
           "name": "subCompetencies",
           "type": "list",
           "label": "Sub Competencies",
@@ -250,50 +258,6 @@
         "default": "Démarrer le test"
       },
       {
-        "name": "competenciesDesc",
-        "type": "list",
-        "label": "Description of each competencies",
-        "importance": "low",
-        "expanded": false,
-        "min": 3,
-        "max": 3,
-        "defaultNum": 3,
-        "widgets": [
-          {
-            "name": "ListEditor",
-            "label": "Competencies List"
-          }
-        ],
-        "field": {
-          "name": "competencyDesc",
-          "type": "group",
-          "label": "Competency",
-          "importance": "high",
-          "fields": [
-            {
-              "name": "title",
-              "type": "text",
-              "label": "Title",
-              "importance": "high"
-            },
-            {
-              "name": "description",
-              "type": "text",
-              "label": "Title",
-              "widget": "html",
-              "tags": [
-                "p",
-                "br",
-                "strong",
-                "em",
-                "code"
-              ],
-              "importance": "high"
-            }
-          ]
-        }
-      },
-      {
         "name": "instructionsDesc",
         "type": "list",
         "label": "Instructions",
@@ -337,6 +301,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "footerText",
+        "type": "text",
+        "widget": "html",
+        "tags": [
+          "p",
+          "br",
+          "strong",
+          "em",
+          "code"
+        ],
+        "label": "Footer Text",
+        "default": "SOK@A est un projet soutenu dans le cadre de l’AMI<br> 2017 TRANSFORMATION PÉDAGOGIQUE ET<br> NUMÉRIQUE."
       },
       {
         "name": "possibleAnswers",

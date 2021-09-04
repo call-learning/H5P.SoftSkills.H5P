@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import 'material-design-icons/iconfont/material-icons.css';
 import { render } from 'react-dom';
 import { QuestionnaireApp } from './QuestionnaireApp';

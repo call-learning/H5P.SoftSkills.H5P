@@ -160,13 +160,8 @@ export const questionnaireSettings = {
       hasBadgeEngine: PropTypes.bool,
       alwaysDeliverBadge: PropTypes.bool,
       generalInstructions: PropTypes.string,
+      footerText: PropTypes.string,
       startButtonLabel: PropTypes.string,
-      competenciesDesc: PropTypes.arrayOf(
-        PropTypes.shape({
-          title: PropTypes.string,
-          description: PropTypes.string,
-        })
-      ),
       instructionsDesc: PropTypes.arrayOf(
         PropTypes.shape({
           icon: PropTypes.string,

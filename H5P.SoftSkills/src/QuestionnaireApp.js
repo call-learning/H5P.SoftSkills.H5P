@@ -7,20 +7,12 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import {
   questionnaireCompetenciesQuestionsDefault, questionnaireResourceDefault,
-  questionnaireSettings, questionnaireSettingsDefault,
+  questionnaireSettings,
   questionsByCompetencyAndSubCompetencies
 } from './utils/CommonProptypes';
 import { questionnaireStore } from './utils/ReduxUtils';
-import { initializeUserData } from './actions/questionnaire';
-import { H5PContext } from './contexts/H5PContext';
 
 export const QuestionnaireApp = (props) => {
-  const h5pContext = useContext(H5PContext);
-  const dispatch = useDispatch();
-
- useEffect(() => {
-   dispatch(initializeUserData(h5pContext.contentId));
- }, [])
 
   return (
     <ThemeProvider theme={questionnaireTheme}>

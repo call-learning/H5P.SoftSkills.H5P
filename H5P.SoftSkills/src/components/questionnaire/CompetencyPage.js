@@ -30,6 +30,7 @@ function CompetencyPage (props) {
         answeredQuestionsCount={currentCompetencyProgress.answeredQuestionsCount}
         questionsCount={currentCompetencyProgress.questionsCount}
         competencyTitle={currentCompetency.label}
+        competencyImage={currentCompetency.image?currentCompetency.image:null}
         competencyProgressData={competencyProgressData}
         competencyIndex={props.currentCompetencyIndex}
       />

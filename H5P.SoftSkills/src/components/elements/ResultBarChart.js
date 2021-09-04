@@ -8,7 +8,7 @@ import { ResponsiveContainer, XAxis, YAxis, CartesianGrid, Bar, BarChart, Text }
 import { truncateLabel } from '../../utils/ComponentsUtils';
 
 
-const MAX_LABEL_CHARACTERS = 30;
+const MAX_LABEL_CHARACTERS = 25;
 // See https://upload.wikimedia.org/wikipedia/commons/d/de/Caret_right_font_awesome.svg
 // TODO: check Rechart Symbols
 const SmallTriangle = (props) => {
@@ -73,7 +73,7 @@ function ResultBarChart (props) {
         <XAxis type="number" domain={[0, 100]}  scale={"linear"} axisLine={false} tickLine={false}/>
         {
           props.hasCompetencyLabel?
-            (<YAxis type="category" dataKey="label" tick={<CompetencyLabel/>}/>):
+            (<YAxis type="category" dataKey="label" tick={<CompetencyLabel width={labelSpace}/>}/>):
             (<YAxis type="category" dataKey="label" hide/>)
         }
         <CartesianGrid horizontal={false}/>

@@ -3,7 +3,7 @@ import CompetencyPage from './CompetencyPage';
 import { sampleData } from '../../utils/StoriesUtils';
 import Box from '@material-ui/core/Box';
 
-export default { title: 'Questionnaire' };
+export default { title: 'Questionnaire/Page' };
 
 export const simpleCompetencyPage = () =>
   (<Box height="1200px" position="relative">

@@ -30,7 +30,7 @@ const QuestionnaireResultsPage = (props) => {
         <Box display={{ xs: 'none', sm: 'block' }}>
           <Typography align="center" variant="h4"><H5PTranslatedText text='resultScoreLabel'/></Typography>
         </Box>
-        <Box maxWidth="md" display={{ xs: 'none', sm: 'block' }}>
+        <Box maxWidth="md" display={{ xs: 'none', sm: 'block' }} marginX={"10%"} marginY={"2em"}>
           <ResultBarChart resultsList={props.results.competenciesResults} graphHeight={250}/>
         </Box>
         <Box>

@@ -42,33 +42,16 @@ const InstructionPage = (props) => {
             <span dangerouslySetInnerHTML={resourceCreateMarkup(props.generalInstructions)}/>
           </Typography>
         </Box>
-
-
-        <Box display="flex" justifyContent="center" py={2} className={classes.responsiveCompList}>
-          {
-            props.competenciesDesc.map((e, index) => {
-                return (<Box
-                  display="flex"
-                  key={index}
-                  px={2}
-                  flexDirection="column"
-                  alignItems={{ xs: 'center', sm: 'auto' }}
-                >
-                  <Box pb={3}><img
-                    src={getCompetencyImageFromIndex(index)}
-                    alt={e.title}
-                    role="presentation"/></Box>
-                  <Box>
-                    <BottomRectangle/>
-                  </Box>
-                  <Box px={1}>
-                    <Box><Typography variant="subtitle1" className={classes.competencyTitle}>{e.title}</Typography></Box>
-                    <Box><Typography color="textSecondary">{e.description}</Typography></Box>
-                  </Box>
-                </Box>);
-              }
-            )
-          }
+        <Box display="flex" justifyContent="center">
+          <Box my={'2em'}>
+            {
+              props.isReadyToStart ?
+                (<NavigationButton isNext
+                                   onClick={props.startQuestionnaire}><H5PTranslatedText text="startquestionnaire"/>
+                  </NavigationButton>
+                ) : <CircularProgress/>
+            }
+          </Box>
         </Box>
         <Box display="flex" justifyContent="center" py={2}>
           <Box display="flex" flexDirection="column">
@@ -87,17 +70,12 @@ const InstructionPage = (props) => {
             }
           </Box>
         </Box>
-        <Box display="flex" justifyContent="center">
-          <Box my={'2em'}>
-            {
-              props.isReadyToStart ?
-                (<NavigationButton isNext
-                                   onClick={props.startQuestionnaire}><H5PTranslatedText text="startquestionnaire"/>
-                  </NavigationButton>
-                ) : <CircularProgress/>
-            }
-          </Box>
-        </Box>
+        <Container display="flex" justifyContent="center" py={2}>
+          <Typography align={"center"}  color="textSecondary" >
+          <span dangerouslySetInnerHTML={resourceCreateMarkup(props.footerText)}/>
+          </Typography>
+        </Container>
+
       </Container>
     </Container>
   );

@@ -17,7 +17,7 @@ const allCompetenciesResults = computeProgressPerCompetency(
 
 
 export const resultBarChart = () => (<Box display="flex" flexDirection="column" height="1200px">
-  <ResultBarChart resultsList={allCompetenciesResults.competenciesResults}/>
+  <ResultBarChart resultsList={allCompetenciesResults.competenciesResults} graphHeight={300} />
 </Box>);
 
 export const resultBarChartOnElement = () => (<Box display="flex" flexDirection="column" height="1200px">

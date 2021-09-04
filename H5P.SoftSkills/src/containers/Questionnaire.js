@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import {
   questionnaireCompetenciesQuestionsDefault,
-  questionnaireResourceDefault,
   questionnaireSettings, questionnaireSettingsDefault,
   questionsByCompetencyAndSubCompetencies,
 } from '../utils/CommonProptypes';
@@ -17,12 +16,21 @@ import InstructionPageContainer from './InstructionPageContainer';
 import CongratulationsPageContainer from './CongratulationsPageContainer';
 import RoutedResultsPageContainer from './RoutedResultsPageContainer';
 import { useDispatch, useSelector } from 'react-redux';
-import { resetQuestionnaireAndPosition, startQuestionnaireAndPosition } from '../actions/questionnaire';
+import {
+  initializeUserData,
+  resetQuestionnaireAndPosition,
+  startQuestionnaireAndPosition
+} from '../actions/questionnaire';
 import Box from '@material-ui/core/Box';
+import { H5PContext } from '../contexts/H5PContext';
 
 function Questionnaire (props) {
   let currentPage = (<InstructionPageContainer {...props.settings} isReadyToStart={false}/>);
+  const h5pContext = useContext(H5PContext);
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(initializeUserData(h5pContext.contentId));
+  }, [])
   const currentStep = useSelector((state) => state.currentStep)
 
   switch (currentStep) {

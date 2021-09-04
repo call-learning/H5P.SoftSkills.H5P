@@ -12,9 +12,15 @@ const DEFAULT_COMPETENCY_IMAGE = [socialImage, personalImage, methodologicalImag
 /**
  * Get default image for competency (it is modulo the number of expected competencies, i.e. 3)
  * @param competencyIndex
+ * @param competencyImage image object
+ * @param contentId H5P contentId
  */
-export function getCompetencyImageFromIndex (competencyIndex) {
-  return DEFAULT_COMPETENCY_IMAGE[competencyIndex % DEFAULT_COMPETENCY_IMAGE.length]; // DEFAULT image.
+export function getCompetencyImageFromIndex (competencyIndex, competencyImage, contentId) {
+  if ((typeof competencyImage != 'undefined') && competencyImage) {
+    return getAbsoluteURL(competencyImage, contentId);
+  } else {
+    return DEFAULT_COMPETENCY_IMAGE[competencyIndex % DEFAULT_COMPETENCY_IMAGE.length]; // DEFAULT image.
+  }
 }
 
 /**
@@ -539,21 +545,14 @@ export function handleBadgeEmit (email, score, callbackSuccess, callbackFailure)
 }
 
 /**
- * Get absolute URL for resources
+ * Get absolute URL for a given resource
  *
  * Use the fact we know the context to try and get the absolute path.
  * @param res
+ * @param contentId H5P Content ID
  * @return {T[]}
  */
 
-export function resourcesWithAbsoluteURL (res) {
-  return res.resources.map((r) => {
-    let newResource = {...r};
-    newResource.imageUrl = '';
-    if (r.image && r.image.path) {
-      // eslint-disable-next-line no-undef
-      newResource.imageUrl = H5P.getPath(r.image.path, h5pContext.contentId);
-    }
-    return newResource;
-  });
+export function getAbsoluteURL (image, contentId) {
+  return H5P.getPath(image.path, contentId);
 }
