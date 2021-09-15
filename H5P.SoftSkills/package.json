@@ -40,7 +40,6 @@
   },
   "peerDependencies": {},
   "devDependencies": {
-    "storybook": "^6.3.7",
     "@babel/preset-env": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
     "@jest/globals": "^27.0.3",
@@ -51,10 +50,12 @@
     "babel-jest": "^27.0.2",
     "eslint": "^7.28.0",
     "eslint-plugin-react": "^7.24.0",
+    "image-webpack-loader": "^7.0.1",
     "jest": "^27.0.6",
     "jest-transform-stub": "^2.0.0",
     "nwb": "^0.25.2",
-    "react-syntax-highlighter": "^15.4.3"
+    "react-syntax-highlighter": "^15.4.3",
+    "storybook": "^6.3.7"
   },
   "author": "@CALL Learning 2020 - Laurent David (<laurent@call-learning.fr>)",
   "homepage": "",

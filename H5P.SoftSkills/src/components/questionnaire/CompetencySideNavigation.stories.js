@@ -1,7 +1,6 @@
 import React from 'react';
 import CompetencySideNavigation from './CompetencySideNavigation';
 import H5P from '../../utils/H5P.mock';
-import { socialImage } from '../../../assets/social.svg';
 import Box from '@material-ui/core/Box';
 
 export default { title: 'Questionnaire/Page' };
@@ -15,7 +14,7 @@ export const basicSideNavigation = () => (
     competencyIndex={3}
     subCompetencyIndex={2}
     competencyTitle={'compétences sociales'}
-    competencyImagePath={socialImage}
+    competencyPartLabel={'Première partie'}
     maxPages={5}
     currentPage={1}/>
 );
@@ -39,7 +38,7 @@ export const sideNavigationWithScrollContent = () => {
         <CompetencySideNavigation
           competencyIndex={1}
           competencyTitle={'compétences sociales'}
-          competencyImagePath={socialImage}
+          competencyPartLabel={'Première partie'}
           answeredQuestionCount={4}
           totalQuestion={28}
           competencyProgressData={subCompetencyProgressData}

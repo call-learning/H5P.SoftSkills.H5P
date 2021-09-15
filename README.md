@@ -41,3 +41,15 @@ Note also the use of .h5pignore for development purpose (this will help not to c
 the files from node_modules folder for example in drupal development mode).
 
 
+## H5P Notes
+
+H5P has some quirks that makes it difficult to install the library if ever some h5p.json / library.json settings
+are not aligned.
+The process for packaging is the following:
+
+    cd H5P.SoftSkills
+    npm run build
+    cd ..
+    < change versions in H5P.SoftSkills/library.json et h5p.json >
+    make
+

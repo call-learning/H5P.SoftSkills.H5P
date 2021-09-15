@@ -8,15 +8,6 @@ import { getCompetencyImageFromIndex } from '../../utils/ComponentsUtils';
 import { makeStyles } from '@material-ui/core/styles';
 import { H5PContext } from '../../contexts/H5PContext';
 
-const DEFAULT_STRING_NUMBERING = ['firstpart',
-  'secondpart',
-  'thirdpart',
-  'fourthpart',
-  'sixthpart',
-  'seventhpart',
-  'eigthpart',
-  'ninthpart'];
-
 const useStyles = makeStyles(theme => ({
   partNumber: {
     fontSize: 'smaller',
@@ -24,6 +15,17 @@ const useStyles = makeStyles(theme => ({
   },
   progressBarLegend: {
     fontSize: 'smaller',
+  },
+  sideBarStyle: {
+    width: "300px",
+    height: "100%",
+    position: "absolute",
+    display: "flex",
+    flexDirection: "row",
+    top: 0
+  },
+  competencyIllustration: {
+    width: "90%",
   }
 }));
 
@@ -45,22 +47,21 @@ const CompetencySideNavigation = (props) => {
   const classes = useStyles(props);
   const h5pContext = useContext(H5PContext);
   return (
-    <Box display="flex" flexDirection="row" height="100%" position="absolute" top={0}>
+    <Box className={classes.sideBarStyle}>
       <Box display="flex" flexDirection="column" alignItems="center" px={{ xs: 0, sm: 3 }}>
-        <Box display={{ xs: 'none', sm: 'flex' }} pt="15%" justifyContent="center">
+        <Box display={{ sm: 'none', md: 'flex' }} pt="15%" justifyContent="center">
           <Box>
-            <img className="IllustrationImage"
+            <img className={classes.competencyIllustration}
                  src={getCompetencyImageFromIndex(props.competencyIndex, props.competencyImage, h5pContext.contentId)}
                  alt={props.competencyTitle}
                  role="presentation"/>
             <Typography className={classes.partNumber} color="textSecondary">
-              <H5PTranslatedText
-                text={DEFAULT_STRING_NUMBERING[props.competencyIndex % DEFAULT_STRING_NUMBERING.length]}/>
+              {props.competencyPartLabel}
             </Typography>
             <Typography>{props.competencyTitle}</Typography>
           </Box>
         </Box>
-        <Box display={{ xs: 'none', sm: 'flex' }} mb={2} mt="auto">
+        <Box display={{ sm: 'none', md: 'flex' }} mb={2} mt="auto">
           <Box>
             <Typography className={classes.progressBarLegend} color="textSecondary">
               <H5PTranslatedText text="overcompleted" arguments={
@@ -81,6 +82,7 @@ CompetencySideNavigation.propTypes = {
   answeredQuestionsCount: PropTypes.number,
   questionsCount: PropTypes.number,
   competencyTitle: PropTypes.string,
+  competencyPartLabel: PropTypes.string,
   competencyImage: PropTypes.shape(
     {
       path: PropTypes.string,
@@ -98,6 +100,7 @@ CompetencySideNavigation.defaultProps = {
   answeredQuestionsCount: 0,
   questionsCount: 1,
   competencyTitle: '',
+  competencyPartLabel: '',
   competencyIndex: 0,
   competencyImage: undefined,
   competencyProgressData: []

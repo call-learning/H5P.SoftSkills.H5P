@@ -6,8 +6,6 @@
     "congratulationtext": "Vous avez répondu à toutes les questions.<br>Maintenant il est temps pour vous de découvrir votre bilan de compétences soft skills.",
     "detailpercompetency": "Vos résultats par type de compétence",
     "finishquestionnaire": "Valider vos réponses",
-    "firstpart": "Première Partie",
-    "fourthpart": "Quatrième Partie",
     "globalResultFeedBack0": "Continuez !<br/>Vos réponses indiquent que les compétences soft relatives au métier d'ingénieur nécessitent d'être travaillées. Accédez au détail ci-dessous pour une compréhension plus fine des aspects développés et des axes d'amélioration possibles.",
     "globalResultFeedBack100": "Félicitations !<br/>Vos réponses indiquent que vous avez acquis les compétences soft nécessaires au métier d'ingénieur. Accédez au détail ci-dessous pour une compréhension plus fine des aspects dévéloppés et des axes d'amélioration possible.",
     "globalResultFeedBack25": "Continuez !<br/>Vos réponses indiquent que certaines compétences soft relatives au métier d'ingénieur sont acquises. Accédez au détail ci-dessous pour une compréhension plus fine des aspects développés et des axes d'amélioration possibles.",
@@ -31,10 +29,8 @@
     "resultspercompetency": "Détail par compétence",
     "results": "Résultats",
     "reviewquestionnaire": "Revoir mes réponses",
-    "secondpart": "Seconde Partie",
     "seeresults": "Voir les résultats",
     "startquestionnaire": "Démarrer le test",
-    "thirdpart": "Troisième Partie",
     "toImprove": "A améliorer",
     "yourAnswer": "Votre Réponse",
     "yourcompetencyresults": "Votre maîtrise de cette compétence",
@@ -515,7 +511,8 @@
           ]
         }
       ],
-      "label": "Compétences Sociales"
+      "label": "Compétences Sociales",
+      "partname": "Première partie"
     },
     {
       "subCompetencies": [
@@ -722,7 +719,8 @@
           ]
         }
       ],
-      "label": "Compétences Personnelles"
+      "label": "Compétences Personnelles",
+      "partname": "Deuxième partie"
     },
     {
       "subCompetencies": [
@@ -1003,7 +1001,8 @@
           ]
         }
       ],
-      "label": "Compétences Méthodologiques"
+      "label": "Compétences Méthodologiques",
+      "partname": "Troisième partie"
     },
     {
       "subCompetencies": [
@@ -1384,7 +1383,8 @@
           ]
         }
       ],
-      "label": "Compétences liées à la conduite de projets"
+      "label": "Compétences liées à la conduite de projets",
+      "partname": "Quatrième partie"
     }
   ]
 }

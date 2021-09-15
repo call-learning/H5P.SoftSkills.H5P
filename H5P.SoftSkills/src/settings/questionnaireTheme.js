@@ -32,7 +32,7 @@ const palette = {
 export const questionnaireTheme = createMuiTheme({
   palette: palette,
   typography: {
-    fontFamily: '\'Noto Sans SC\', sans-serif',
+    fontFamily: '\'Gandhi Sans SC\', sans-serif',
     h3: {
       fontSize: '2.1rem',
     },

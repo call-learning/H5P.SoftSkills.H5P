@@ -13,8 +13,8 @@
   "preloadedDependencies": [
     {
       "machineName": "H5P.SoftSkills",
-      "majorVersion": 1,
-      "minorVersion": 6
+      "majorVersion": 2,
+      "minorVersion": 2
     },
     {
       "machineName": "FontAwesome",

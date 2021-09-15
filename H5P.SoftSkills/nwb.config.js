@@ -18,12 +18,18 @@ module.exports = {
       },
     },
     rules: {
+      graphics: {
+        loader: 'url-loader',
+        options: {
+          limit: undefined, // This is to ensure that webpack will embed all images
+        },
+      },
       svg: {
         loader: 'url-loader',
         options: {
-          limit: undefined, // This is to ensure that the
+          limit: undefined, // This is to ensure that webpack will load all images
         },
-      }
+      },
     },
     extractCSS: {
       filename: 'h5p-softskills.css',

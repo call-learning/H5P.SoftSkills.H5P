@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     marginLeft: '2.5em'
   },
   roundedControl: {
-    paddingLeft: '1.5em',
+    //paddingLeft: '1.5em',
     marginTop: '0.25em',
     marginBottom: '0.25em',
     padding: '0 1em',

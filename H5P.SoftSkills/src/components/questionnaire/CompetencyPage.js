@@ -20,7 +20,7 @@ function CompetencyPage (props) {
   const competencyProgressData = props.progressData
     .competenciesProgress.map((cdata) => (100 * cdata.answeredQuestionsCount / cdata.questionsCount));
 
-  // Competency informations
+  // Competency information.
   const currentCompetency = props.questionsByCompetencyAndSubCompetencies[competencyIndex];
   const currentCompetencyProgress = props.progressData.competenciesProgress[competencyIndex];
 
@@ -30,6 +30,7 @@ function CompetencyPage (props) {
         answeredQuestionsCount={currentCompetencyProgress.answeredQuestionsCount}
         questionsCount={currentCompetencyProgress.questionsCount}
         competencyTitle={currentCompetency.label}
+        competencyPartLabel={currentCompetency.partname}
         competencyImage={currentCompetency.image?currentCompetency.image:null}
         competencyProgressData={competencyProgressData}
         competencyIndex={props.currentCompetencyIndex}

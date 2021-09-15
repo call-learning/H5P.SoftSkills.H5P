@@ -20,7 +20,14 @@
         {
           "name": "label",
           "type": "text",
-          "label": "Competency",
+          "label": "Competency Label",
+          "importance": "high",
+          "optional": true
+        },
+        {
+          "name": "partlabel",
+          "type": "text",
+          "label": "Competency Part",
           "importance": "high",
           "optional": true
         },
@@ -28,7 +35,7 @@
           "name": "image",
           "type": "image",
           "label": "Image",
-          "description": "The relevant image",
+          "description": "The competency's image",
           "importance": "high",
           "optional": true
         },
@@ -221,7 +228,8 @@
     "type": "group",
     "label": "Miscellaneous Settings",
     "description": "Miscellaneous Settings",
-    "importance": "high",
+    "importance": "low",
+    "optional": true,
     "fields": [
       {
         "name": "welcomeTitle",
@@ -315,6 +323,12 @@
         ],
         "label": "Footer Text",
         "default": "SOK@A est un projet soutenu dans le cadre de l’AMI<br> 2017 TRANSFORMATION PÉDAGOGIQUE ET<br> NUMÉRIQUE."
+      },
+      {
+        "name": "footerImage",
+        "type": "image",
+        "widget": "image",
+        "optional": true
       },
       {
         "name": "possibleAnswers",
