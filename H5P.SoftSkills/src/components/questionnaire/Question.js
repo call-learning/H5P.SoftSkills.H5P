@@ -21,7 +21,11 @@ const useStyles = makeStyles(theme => ({
     fontSize: 'xx-large'
   },
   radioGroup: {
-    marginLeft: '2.5em'
+    marginLeft: '2.5em',
+    flexWrap: 'nowrap',
+    [theme.breakpoints.down('md')]: {
+      marginLeft: 'initial'
+    },
   },
   roundedControl: {
     //paddingLeft: '1.5em',

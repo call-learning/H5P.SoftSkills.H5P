@@ -195,8 +195,9 @@ export function computeProgressPerCompetency (
           subCompetencyQuestionsCount += 1;
         }
       }
+      const label = typeof SubCompetency.shortname === 'undefined'  ? SubCompetency.label : SubCompetency.shortname;
       subCompetenciesResults.push({
-        label: SubCompetency.label,
+        label: label,
         value: Math.floor(100 * currentsubCompetenciesResults / (subCompetencyQuestionsCount * maxPossibleAnswerValue)),
         totalQuestions: subCompetencyQuestionsCount,
         totalAnswered: subCompetencyAnsweredCount
@@ -205,8 +206,9 @@ export function computeProgressPerCompetency (
       competencyQuestionsCount += subCompetencyQuestionsCount;
     }
     const categoryResults = subCompetenciesResults.reduce((acc, subCompetencyval) => (acc + subCompetencyval.value), 0) / subCompetenciesResults.length;
+    const label = typeof comp.shortname === 'undefined'  ? comp.label : comp.shortname;
     competenciesResults.push({
-      label: comp.label,
+      label: label,
       value: Math.floor(categoryResults),
       subCompetenciesResults: subCompetenciesResults,
       totalQuestions: competencyQuestionsCount,

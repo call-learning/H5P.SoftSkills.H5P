@@ -1,10 +1,9 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import Questionnaire from './containers/Questionnaire';
 import { Provider } from 'react-redux';
 import { questionnaireTheme } from './settings/questionnaireTheme';
 import { ThemeProvider } from '@material-ui/styles';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
 import {
   questionnaireCompetenciesQuestionsDefault, questionnaireResourceDefault,
   questionnaireSettings,

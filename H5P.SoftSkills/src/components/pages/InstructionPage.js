@@ -54,7 +54,8 @@ const InstructionPage = (props) => {
             {
               props.isReadyToStart ?
                 (<NavigationButton isNext
-                                   onClick={props.startQuestionnaire}><H5PTranslatedText text="startquestionnaire"/>
+                                   onClick={() => {props.startQuestionnaire(h5pContext.startAction)}}>
+                    <H5PTranslatedText text="startquestionnaire"/>
                   </NavigationButton>
                 ) : <CircularProgress/>
             }

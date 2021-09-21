@@ -17,8 +17,8 @@ const useStyles = makeStyles(theme => ({
     listStyleType: 'none',
     marginTop: '3em',
     marginBottom: '3em',
-    [theme.breakpoints.down('xs')]: {
-      paddingInlineStart: '0px',
+    [theme.breakpoints.down('md')]: {
+      paddingInlineStart: '5px',
     },
   },
   subCompetencyListItem: {
@@ -32,6 +32,9 @@ const useStyles = makeStyles(theme => ({
     '&.visible': {
       counterReset: 'question'
     }
+  },
+  contextListItemNoNumber: {
+    listStyleType: 'none',
   },
   questionListItem: {
     // counterIncrement: 'question',
@@ -66,8 +69,9 @@ const QuestionsList = (props) => {
                 subCompetency.contexts.map(
                   (context, contextIndex) =>
                     (
-                      <li className={`${classes.contextListItem} ${context.isVisible ? 'visible' : ''}`}
-                          key={`context-${contextIndex}-${subCompetencyIndex}-${compIndex}`}>
+                      <li
+                        className={`${subCompetency.contexts.length > 1 ? classes.contextListItem : classes.contextListItemNoNumber} ${context.isVisible ? 'visible' : ''}`}
+                        key={`context-${contextIndex}-${subCompetencyIndex}-${compIndex}`}>
                         {
                           (context.isVisible) ? <Typography
                             className={classes.contextLabel}>

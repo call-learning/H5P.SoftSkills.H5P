@@ -27,15 +27,17 @@ const NavigationButton = (props) => {
 };
 
 NavigationButton.propTypes = {
-  components: PropTypes.arrayOf(PropTypes.element),
   isNext: PropTypes.bool,
   isBack: PropTypes.bool,
-  children: PropTypes.func
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
 };
 NavigationButton.defaultProps = {
-  components: [],
   isNext: false,
   isBack: false,
+  children: {}
 };
 
 export default NavigationButton;

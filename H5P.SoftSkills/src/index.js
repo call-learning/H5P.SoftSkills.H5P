@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import 'material-design-icons/iconfont/material-icons.css';
 import { render } from 'react-dom';
 import { QuestionnaireApp } from './QuestionnaireApp';
@@ -23,7 +23,6 @@ H5P.SoftSkills = class {
      * @param {jQuery} $wrapper
      */
 
-
     this.attach = function (container) {
       render(
         (
@@ -32,7 +31,9 @@ H5P.SoftSkills = class {
               contentId: contentId,
               currentLibrary: params.library,
               saveState: this.save.bind(this),
-              finishAction: this.finish.bind(this)
+              finishAction: this.finish.bind(this),
+              startAction: this.start.bind(this),
+              resizeAction: this.resize.bind(this),
             }}>
               <QuestionnaireApp {...params}/>
             </H5PContext.Provider>
@@ -46,10 +47,21 @@ H5P.SoftSkills = class {
       const progress = computeProgressPerCompetency(params.questionsByCompetencyAndSubCompetencies,
         state.answeredQuestions,
         params.settings);
-      this.trigger('finish', {score: progress.value, maxScore: 100, time: Date.now() });
+      this.trigger('finish', { score: progress.value, maxScore: 100, time: Date.now() });
+      if (this.triggerXAPIScored) {
+        this.triggerXAPIScored(progress.value, 100, 'completed', true);
+      }
+    };
+    this.start = function () {
+      if (this.setActivityStarted) {
+        this.setActivityStarted();
+      }
     };
     this.save = function (state, dataId) {
       H5P.setUserData(contentId, dataId, state);
+    };
+    this.resize = function () {
+      this.trigger('resize', {}, { external: true, bubbles: true });
     };
   }
 };

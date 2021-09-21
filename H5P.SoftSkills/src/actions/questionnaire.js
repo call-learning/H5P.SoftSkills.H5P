@@ -75,10 +75,13 @@ export function resetNavigation () {
 }
 
 /** Thunk types of actions */
-export function startQuestionnaireAndPosition () {
+export function startQuestionnaireAndPosition (startAction) {
   return function (dispatch) {
     dispatch(resetNavigation());
     dispatch(startQuestionnaire());
+    if (startAction) {
+      startAction();
+    }
   };
 }
 

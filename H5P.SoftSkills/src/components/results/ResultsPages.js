@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import {
   MemoryRouter,
@@ -20,6 +20,7 @@ import { computeProgressPerCompetency, isFullyAcquired } from '../../utils/Compo
 import QuestionnaireResultsPage from './QuestionaireResultsPage';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
 import NavigationButton from '../elements/NavigationButton';
+import { H5PContext } from '../../contexts/H5PContext';
 
 function CompetencyResultsPageWithRoute (props) {
   const { compId } = useParams();
@@ -54,6 +55,12 @@ function ResultsPage (props) {
     props.answeredQuestions,
     props.settings
   );
+  const h5pContext = useContext(H5PContext);
+  useEffect(() => {
+    if (h5pContext && typeof h5pContext.resizeAction !== "undefined") {
+      h5pContext.resizeAction();
+    }
+  }, []);
   return (
     <Switch>
       <Route path="/competencies/:compId/subcomp/:subCompId">

@@ -11,7 +11,7 @@ const MIN_ITEM_RADAR = 3;
 const MAX_LABEL_CHARACTERS = 25;
 
 const CompetencyLabel = (props) => {
-  const { payload, x, y, textAnchor, resultsList, ...otherprops } = props;
+  const { payload, x, y, textAnchor, resultsList } = props;
   return (
     <g>
       <text x={x} y={y} className="label-compname" textAnchor={textAnchor}

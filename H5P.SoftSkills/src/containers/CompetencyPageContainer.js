@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProgressData } from '../utils/ComponentsUtils';
 import { CompetenciesContext } from '../contexts/CompetenciesContext';
@@ -19,7 +19,11 @@ const CompetencyPageContainer = () =>{
   const allCompetencies = useContext(CompetenciesContext);
   const h5pContext = useContext(H5PContext);
   const progressData = getProgressData(allCompetencies, answeredQuestions);
-
+  useEffect(() => {
+    if (h5pContext && typeof h5pContext.resizeAction !== "undefined") {
+      h5pContext.resizeAction();
+    }
+  }, []);
   return (<CompetencyPage questionsByCompetencyAndSubCompetencies={allCompetencies}
                           progressData={progressData}
                           questionComponent={QuestionWrapper}

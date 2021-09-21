@@ -22,6 +22,13 @@
           "type": "text",
           "label": "Competency Label",
           "importance": "high",
+          "optional": false
+        },
+        {
+          "name": "shortname",
+          "type": "text",
+          "label": "Competency Shortname Label",
+          "importance": "high",
           "optional": true
         },
         {
@@ -58,6 +65,13 @@
                 "label": "Sub Competency Name",
                 "widget": "text",
                 "default": "",
+                "optional": true
+              },
+              {
+                "name": "shortname",
+                "type": "text",
+                "label": "Competency Shortname Label",
+                "importance": "high",
                 "optional": true
               },
               {

@@ -6,7 +6,7 @@ import { startQuestionnaireAndPosition } from '../actions/questionnaire';
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    startQuestionnaire: () => dispatch(startQuestionnaireAndPosition())
+    startQuestionnaire: (startAction) => dispatch(startQuestionnaireAndPosition(startAction))
   };
 };
 

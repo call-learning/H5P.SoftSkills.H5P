@@ -18,6 +18,9 @@ const useStyles = makeStyles(theme => ({
   },
   sideBarStyle: {
     width: "300px",
+    [theme.breakpoints.down('md')]: {
+      width: "150px",
+    },
     height: "100%",
     position: "absolute",
     display: "flex",
@@ -48,7 +51,7 @@ const CompetencySideNavigation = (props) => {
   const h5pContext = useContext(H5PContext);
   return (
     <Box className={classes.sideBarStyle}>
-      <Box display="flex" flexDirection="column" alignItems="center" px={{ xs: 0, sm: 3 }}>
+      <Box display="flex" flexDirection="column" alignItems="center" px={{ xs: 3, sm: 1 }}>
         <Box display={{ sm: 'none', md: 'flex' }} pt="15%" justifyContent="center">
           <Box>
             <img className={classes.competencyIllustration}
