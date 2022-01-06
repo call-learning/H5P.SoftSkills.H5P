@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
+import { resourceCreateMarkup } from '../../utils/ComponentsUtils';
 
 
 const WAVEBOX_HEIGHT = 300;
@@ -63,7 +64,7 @@ const WaveHeading = (props) => {
   const classes = useStyles(props);
   return (
     <Container className={classes.waveHeadingBox} maxWidth={false}>
-      <Container maxWidth={'md'}><Typography variant="h3" className={classes.title}>{props.title}</Typography></Container>
+      <Container maxWidth={'md'}><Typography variant="h3" className={classes.title}><span dangerouslySetInnerHTML={resourceCreateMarkup(props.title)}/></Typography></Container>
       <div className={classes.waveDividerWrap}>
         <svg className={classes.waveHeadingShape} xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 1000 ${WAVEBOX_HEIGHT}`} preserveAspectRatio="none">
           <path
