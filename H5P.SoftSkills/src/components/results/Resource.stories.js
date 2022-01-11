@@ -16,7 +16,7 @@ export const resourceList = () => (<Container disableGutters={true}>
       <AccordionDetails>
         <Box>
           <Box py={1}>
-            {sampleData.resources.map((resource) => <Resource key={resource.id} resource={resource}/>)}
+            {sampleData.questionsByCompetencyAndSubCompetencies[0].subCompetencies[0].contexts[0].questions[0].resources.map((resource, index) => <Resource key={index} resource={resource}/>)}
           </Box>
         </Box>
       </AccordionDetails>
