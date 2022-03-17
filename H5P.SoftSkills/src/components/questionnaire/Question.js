@@ -88,11 +88,6 @@ const Question = (props) => {
 
   const checkBoxValue = allRadioButtonsValues.pop(); // The value for checkbox is the last one.
 
-  const maxTextLength = allRadioButtonsValues.reduce(
-    (maxLength, possibleValue) => (possibleValue.text.length > maxLength ? possibleValue.text.length : maxLength),
-    0
-  );
-
   const hSelect = (e, value) => {
     e.stopPropagation();
     props.handleSelectAnswer(
@@ -104,7 +99,7 @@ const Question = (props) => {
   return (
     <Container disableGutters={true}>
       <FormControl component="fieldset" disabled={props.isDisabled} onClick={
-        (e) => {
+        () => {
           if (props.isDisabled) {
             props.handleEnableQuestion(props.questionID);
           }

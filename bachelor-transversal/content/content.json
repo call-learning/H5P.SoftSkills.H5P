@@ -45,9 +45,12 @@
     "obtainbadgegenerationsuccess": "Votre badge a été généré, vérifiez votre email pour l'obtenir."
   },
   "settings": {
-    "welcomeTitle": "Bachelor\nTest d’auto-positionnement compétences managériales & conduite de projet.",
-    "generalInstructions": "Ce questionnaire vous permettra d’identifier vos compétences transversales, autrement appelées soft skills, et vous proposera des ressources d’auto-formation afin d’accompagner le développement de ces compétences.",
-    "footerText": "Le projet  « HESAM 2030 - Construisons nos Métiers ! » est lauréat du second  <br/> appel à projets « Nouveaux cursus à l’université » du troisième Programme <br/> d’Investissements d’Avenir (PIA 3) - convention n°ANR – 18 - NCU – 0028.",
+    "welcomeTitle": "Bachelor\nTest d’auto-positionnement compétences\nmanagériales & conduite de projet.",
+    "generalInstructions": "Ce questionnaire vous permettra d’identifier vos compétences transversales, autrement appelées soft skills, et vous proposera des ressources d’auto-formation afin d’accompagner le développement de ces compétences.<br/>Les compétences suivantes sont évaluées lors de ce test :<ul><li>Compétences sociales</li><li>Compétences personnelles</li><li>Compétences methodologiques</li><li>Compétences conduite de projet</li></ul>.",
+    "footerText": "Le projet « HESAM 2030 - Construisons nos Métiers ! » est lauréat du second appel à projets « Nouveaux cursus à l’université » du troisième Programme d’Investissements d’Avenir (PIA 3) - convention n°ANR – 18 - NCU – 0028.",
+    "footerLogo": {
+      "path": "/images/hesam2030.png"
+    },
     "instructionsDesc": [
       {
         "icon": "timer",

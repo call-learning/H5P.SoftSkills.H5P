@@ -41,7 +41,9 @@ Note also the use of .h5pignore for development purpose (this will help not to c
 the files from node_modules folder for example in drupal development mode).
 
 
-## H5P Notes
+## H5P
+
+### Packaging
 
 H5P has some quirks that makes it difficult to install the library if ever some h5p.json / library.json settings
 are not aligned.
@@ -52,4 +54,25 @@ The process for packaging is the following:
     cd ..
     < change versions in H5P.SoftSkills/library.json et h5p.json >
     make
+
+
+### Installation in Moodle
+
+#### Install the library (H5P.Softskill)
+
+This will be needed to use the other packages, so you need as an admin to be able to access:
+ Site administration > H5P > Manage H5P content types
+
+Upload the h5p-softskills-libs.h5p, this package should appear in the "Installed H5P content types".
+
+The library can now be used anywhere in Moodle.
+
+
+#### Install the prebuilt content packages
+
+Go to a content library (either in a course or in the system Content bank).
+You can upload h5-softskills-bachelor-informational.h5p or h5-softskills-bachelor-transversal.h5p.
+
+This will upload the package with the related content (questionnaire is already setup with content).
+
 

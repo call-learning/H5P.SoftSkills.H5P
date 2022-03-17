@@ -17,6 +17,7 @@ import {
   isAcquiredAnswer
 } from '../../utils/ComponentsUtils';
 import H5PTranslatedText from '../../utils/H5PTranslatedText';
+import SubCompetencyResultsQuestion from './SubCompetencyResultsQuestion';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -78,33 +79,8 @@ const SubCompetencyResultsList = (props) => {
                   <Container py={1}>
                     {
                       context.questionsAnswers.map((q, qindex) =>
-                        (<Box key={qindex} display="flex" py={2}
-                              flexDirection={{ xs: 'column', sm: 'row' }}
-                              alignItems={{ xs: 'center', sm: 'initial' }}
-                        >
-                          <Box mx={4} maxWidth="80%" flexGrow={1}>
-                            <Typography variant="body2">{q.questionData.label}</Typography>
-                          </Box>
-                          {
-                            !q.answer ? '' :
-                              (<Box display="flex" flexDirection="column" alignSelf={'right'} minWidth="20%">
-                                <Typography display="inline"><H5PTranslatedText text='yourAnswer'/>:</Typography>
-                                <Typography display="inline"
-                                            className={isAcquiredAnswer(props.settings,
-                                              q.questionData,
-                                              q.answer) ? classes.acquiredStyle : classes.inAcquisitionStyle}>
-                                  {
-                                    <span dangerouslySetInnerHTML={{
-                                      __html: getTextValueFromPossibleValue(
-                                        props.settings,
-                                        q.questionData,
-                                        q.answer)
-                                    }}/>
-                                  }
-                                </Typography>
-                              </Box>)
-                          }
-                        </Box>)
+                        (<SubCompetencyResultsQuestion questionIndex={qindex} questionData={q} settings={props.settings}
+                                                       key={'sqResult' + cindex + qindex}/>)
                       )
                     }
                   </Container>

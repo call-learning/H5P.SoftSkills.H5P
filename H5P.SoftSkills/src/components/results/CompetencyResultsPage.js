@@ -52,6 +52,7 @@ const CompetencyResultsPage = (props) => {
             currentCompetenyResults.subCompetenciesResults) ? '' :
             currentCompetenyResults.subCompetenciesResults.map((subC, subCompIndex) =>
               (<HorizontalCardWithAction
+                boxShadow={5}
                 width={'80%'} key={'resultcontainer' + subCompIndex}
                 handleActionClick={(e) => props.handleViewSubCompetencyClick(props.competencyIndex, subCompIndex)}
                 components={[

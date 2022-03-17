@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     maxHeight: "50px"
   },
   textBox: {
-    overflowWrap: "break-word",
+    overflowWrap: "anywhere",
   },
   icon: {
     fontSize: 50

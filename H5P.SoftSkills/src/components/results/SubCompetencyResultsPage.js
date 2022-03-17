@@ -12,7 +12,6 @@ import {
 import {
   questionsByCompetencyAndSubCompetencies,
   questionnaireCompetenciesQuestionsDefault,
-  questionnaireResourcesDefault,
   questionnaireAnsweredQuestions,
   questionnaireAnsweredQuestionsDefault, questionnaireSettings, questionnaireSettingsDefault
 } from '../../utils/CommonProptypes';

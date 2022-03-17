@@ -15,7 +15,7 @@ function HorizontalCardWithAction (props) {
   const { handleActionClick, components, ...otherprops } = props;
   // const classes = useStyles(props);
   return (
-    <Box boxShadow={5} p={1} m={1} {...otherprops}>
+    <Box p={1} m={1} {...otherprops}>
       <Box display="flex" alignItems="center" flexDirection={{ xs: 'column', sm:'row' }}>
         {
           components.map((component, index) => (<Box mx={4} key={index} flexGrow={(index === 0)?1:0} >{component}</Box>))

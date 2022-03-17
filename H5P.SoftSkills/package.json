@@ -31,31 +31,31 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-redux": "^7.2.4",
-    "react-router-dom": "^5.2.0",
-    "react-scroll": "^1.8.2",
-    "recharts": "^2.1.1",
-    "redux": "^4.1.1",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^5.2.1",
+    "react-scroll": "^1.8.6",
+    "recharts": "^2.1.9",
+    "redux": "^4.1.2",
     "redux-thunk": "^2.3.0"
   },
   "peerDependencies": {},
   "devDependencies": {
-    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-env": "^7.14.9",
     "@babel/preset-react": "^7.14.5",
-    "@jest/globals": "^27.0.3",
+    "@jest/globals": "^27.0.6",
     "@storybook/addon-info": "^5.3.21",
-    "@storybook/react": "^6.3.4",
+    "@storybook/react": "^6.3.13",
     "@testing-library/react": "^11.2.7",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^27.0.2",
+    "babel-jest": "^27.0.6",
     "eslint": "^7.28.0",
     "eslint-plugin-react": "^7.24.0",
     "image-webpack-loader": "^7.0.1",
     "jest": "^27.0.6",
     "jest-transform-stub": "^2.0.0",
     "nwb": "^0.25.2",
-    "react-syntax-highlighter": "^15.4.3",
-    "storybook": "^6.3.7"
+    "react-syntax-highlighter": "^15.4.5",
+    "storybook": "^6.3.13"
   },
   "author": "@CALL Learning 2020 - Laurent David (<laurent@call-learning.fr>)",
   "homepage": "",
@@ -65,5 +65,9 @@
     "h5p",
     "softskills",
     "questionnaire"
-  ]
+  ],
+  "engines" : {
+    "npm" : ">=8.3.1",
+    "node" : ">=16.14.0 <17"
+  }
 }

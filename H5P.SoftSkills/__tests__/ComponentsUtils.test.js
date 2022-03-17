@@ -29,31 +29,35 @@ test('getCompetencyImageFromIndex from first competenty', () => {
 
 test('getProgressData Start of questionnaire', () => {
   expect(getProgressData(sampleData.questionsByCompetencyAndSubCompetencies, sampleAnswerData)).toEqual({
-    "answeredQuestionsCount": 67,
+    "answeredQuestionsCount": 57,
     "competenciesProgress": [
       {
-        "answeredQuestionsCount": 27,
-        "questionsCount": 27
+        "answeredQuestionsCount": 19,
+        "questionsCount": 19
       },
       {
-        "answeredQuestionsCount": 15,
-        "questionsCount": 15
+        "answeredQuestionsCount": 11,
+        "questionsCount": 11
       },
       {
-        "answeredQuestionsCount": 25,
-        "questionsCount": 25
+        "answeredQuestionsCount": 14,
+        "questionsCount": 14
+      },
+      {
+        "answeredQuestionsCount": 13,
+        "questionsCount": 13
       }
     ],
-    "questionsCount": 67
+    "questionsCount": 57
   });
 });
 
 test('getTotalQuestionCount', () => {
-  expect(getTotalQuestionCount(sampleData.questionsByCompetencyAndSubCompetencies)).toEqual(67);
+  expect(getTotalQuestionCount(sampleData.questionsByCompetencyAndSubCompetencies)).toEqual(57);
 });
 
 test('getTotalQuestionCountCompetency', () => {
-  expect(getTotalQuestionCountCompetency(sampleData.questionsByCompetencyAndSubCompetencies[0])).toEqual(27);
+  expect(getTotalQuestionCountCompetency(sampleData.questionsByCompetencyAndSubCompetencies[0])).toEqual(19);
 });
 
 test('getGlobalQuestionIndex simple', () => {
@@ -63,7 +67,7 @@ test('getGlobalQuestionIndex simple', () => {
     0,
     0,
     0
-  )).toEqual(27);
+  )).toEqual(19);
 });
 
 test('getGlobalQuestionIndex next competency', () => {
@@ -73,7 +77,7 @@ test('getGlobalQuestionIndex next competency', () => {
     1,
     0,
     0
-  )).toEqual(30);
+  )).toEqual(22);
 });
 
 test('getGlobalQuestionIndex wrong question index', () => {
@@ -83,7 +87,7 @@ test('getGlobalQuestionIndex wrong question index', () => {
     1,
     0,
     156
-  )).toEqual(34);
+  )).toEqual(26);
 });
 
 test('getComponentIndexesFromGlobalQuestionIndex first question', () => {
@@ -99,8 +103,8 @@ test('getComponentIndexesFromGlobalQuestionIndex first question', () => {
 test('getComponentIndexesFromGlobalQuestionIndex first competency', () => {
   expect(getComponentIndexesFromGlobalQuestionIndex(
     sampleData.questionsByCompetencyAndSubCompetencies, 30)).toEqual({
-    competencyIndex: 1,
-    subCompetencyIndex: 1,
+    competencyIndex: 2,
+    subCompetencyIndex: 0,
     contextIndex: 0,
     questionIndex: 0
   });
@@ -114,105 +118,113 @@ test('computeProgressPerCompetency', () => {
     {
       "competenciesResults": [
         {
-          "label": "Compétences Sociales",
+          "label": "Sociales",
           "subCompetenciesResults": [
             {
-              "label": "Communiquer pour transmettre des idées et des informations nécessaires au travail",
+              "label": "Communiquer",
+              "totalAnswered": 7,
+              "totalQuestions": 7,
+              "value": 62
+            },
+            {
+              "label": "Manager projet",
               "totalAnswered": 11,
               "totalQuestions": 11,
               "value": 63
             },
             {
-              "label": "Manager une équipe",
-              "totalAnswered": 11,
-              "totalQuestions": 11,
-              "value": 61
-            },
-            {
-              "label": "Le leadership: un des leviers pour mener et conduire des individus ou des organisations",
-              "totalAnswered": 3,
-              "totalQuestions": 3,
-              "value": 66
-            },
-            {
               "label": "S'adapter",
-              "totalAnswered": 2,
-              "totalQuestions": 2,
-              "value": 80
+              "totalAnswered": 1,
+              "totalQuestions": 1,
+              "value": 60
             }
           ],
-          "totalAnswered": 27,
-          "totalQuestions": 27,
-          "value": 67
+          "totalAnswered": 19,
+          "totalQuestions": 19,
+          "value": 61
         },
         {
-          "label": "Compétences Personnelles",
+          "label": "Personnelles",
           "subCompetenciesResults": [
             {
-              "label": "Identification des apprentissages liés à mon activité professionnelle",
+              "label": "Identifier apprentissages",
               "totalAnswered": 3,
               "totalQuestions": 3,
-              "value": 80
-            },
-            {
-              "label": "Faire preuve de créativité, chercher à innover et à entreprendre",
-              "totalAnswered": 4,
-              "totalQuestions": 4,
               "value": 60
             },
             {
               "label": "L’éthique",
               "totalAnswered": 4,
               "totalQuestions": 4,
-              "value": 60
+              "value": 70
             },
             {
               "label": "L’esprit critique",
               "totalAnswered": 4,
               "totalQuestions": 4,
-              "value": 75
+              "value": 80
             }
           ],
-          "totalAnswered": 15,
-          "totalQuestions": 15,
-          "value": 68
+          "totalAnswered": 11,
+          "totalQuestions": 11,
+          "value": 70
         },
         {
-          "label": "Compétences Méthodologiques",
+          "label": "Méthodologiques",
           "subCompetenciesResults": [
             {
-              "label": "Se tenir au courant des nouvelles technologies et de nouveaux développements",
-              "totalAnswered": 2,
-              "totalQuestions": 2,
-              "value": 80
+              "label": "Faire preuve de créativité, chercher à innover et à entreprendre",
+              "totalAnswered": 5,
+              "totalQuestions": 5,
+              "value": 60
             },
             {
               "label": "Négocier",
               "totalAnswered": 5,
               "totalQuestions": 5,
-              "value": 64
-            },
-            {
-              "label": "Conduire un projet",
-              "totalAnswered": 13,
-              "totalQuestions": 13,
-              "value": 66
+              "value": 68
             },
             {
               "label": "Résoudre un problème",
-              "totalAnswered": 5,
-              "totalQuestions": 5,
-              "value": 68
+              "totalAnswered": 4,
+              "totalQuestions": 4,
+              "value": 75
             }
           ],
-          "totalAnswered": 25,
-          "totalQuestions": 25,
-          "value": 69
+          "totalAnswered": 14,
+          "totalQuestions": 14,
+          "value": 67
+        },
+        {
+          "label": "Conduite Projets",
+          "subCompetenciesResults": [
+            {
+              "label": "Rechercher des informations",
+              "totalAnswered": 5,
+              "totalQuestions": 5,
+              "value": 64
+            },
+            {
+              "label": "Monter un projet",
+              "totalAnswered": 5,
+              "totalQuestions": 5,
+              "value": 64
+            },
+            {
+              "label": "Piloter un projet",
+              "totalAnswered": 3,
+              "totalQuestions": 3,
+              "value": 60
+            }
+          ],
+          "totalAnswered": 13,
+          "totalQuestions": 13,
+          "value": 62
         }
       ],
-      "totalAnswered": 67,
-      "totalQuestions": 67,
-      "value": 68.58333333333333
+      "totalAnswered": 57,
+      "totalQuestions": 57,
+      "value": 65.5
     }
   )
   ;
@@ -237,16 +249,14 @@ test('getSubCompetencyResultsAndResources', () => {
     0,
     0);
 
-  expect(result.length == 3).toBeTruthy();
+  expect(result.length == 2).toBeTruthy();
   expect(result[0].resources.length == 6).toBeTruthy();
-  expect(result[1].resources.length == 7).toBeTruthy();
-  expect(result[2].resources.length == 8).toBeTruthy();
+  expect(result[1].resources.length == 4).toBeTruthy();
   expect(result[0].resources[0]).toEqual(
     {
       "id": "3100862142",
       "content": "Sous forme de tableau, quel format pour quel public et quelle situation ? Ressource mise à disposition sur le site de l’académie de Poitiers ©2005<br><a href=\"http://ww2.ac-poitiers.fr/ecogest/IMG/pdf/Adapter_les_outils_de_com.pdf\">http://ww2.ac-poitiers.fr/ecogest/IMG/pdf/Adapter_les_outils_de_com.pdf</a>",
       "type": "document",
-      "references": "0:0:0:0"
     }
   );
 });
@@ -262,10 +272,9 @@ test('getSubCompetencyResultsAndResourcesWithHiddenParam', () => {
     0,
     0);
   settingsIgnoreHidden.ignoreHiddenThreshold = false;
-  expect(result.length == 3).toBeTruthy();
-  expect(result[0].resources.length == 6).toBeTruthy();
-  expect(result[1].resources.length == 14).toBeTruthy();
-  expect(result[2].resources.length == 8).toBeTruthy();
+  expect(result.length == 2).toBeTruthy();
+  expect(result[0].resources.length == 7).toBeTruthy();
+  expect(result[1].resources.length == 9).toBeTruthy();
 });
 
 
@@ -289,19 +298,16 @@ test('getSubCompetencyResultsAndResourcesWithTopAnswers', () => {
     sampleData.questionsByCompetencyAndSubCompetencies,
     sampleAnswerDataRectified,
     sampleData.settings,
-    0,
-    0);
+    1,
+    1);
 
-  expect(result.length == 3).toBeTruthy();
-  expect(result[0].resources.length == 0).toBeTruthy();
-  expect(result[1].resources.length == 0).toBeTruthy();
-  expect(result[2].resources.length == 1).toBeTruthy();
-  expect(result[2].resources[0]).toEqual(
+  expect(result.length == 1).toBeTruthy();
+  expect(result[0].resources.length == 5).toBeTruthy();
+  expect(result[0].resources[0]).toEqual(
     {
-      "id": "3666240837",
-      "content": "La prise de parole en public : posture, gestuelle, gestion de l’espace Vidéo proposée par l’IUT de Roanne © 2016<br><a href=\"https://www.youtube.com/watch?v=ZQNBfE85n2s\">https://www.youtube.com/watch?v=ZQNBfE85n2s</a>",
-      "type": "video",
-      "references": "0:0:2:2"
+      "id": "3985926268",
+      "content": "« L’éthique au travail : des valeurs à cultiver », récapitulatif des valeurs essentielles dans toute organisation de travail, par la Commission des droits de la personne et des droits de la jeunesse du Québec. © 2010 :<br><a href=\"http://www.cdpdj.qc.ca/Publications/valeurs_organisationnelles_Commission.pdf\">http://www.cdpdj.qc.ca/Publications/valeurs_organisationnelles_Commission.pdf</a>",
+      "type": "document"
     }
   );
 });
@@ -362,9 +368,9 @@ test('getTextValueFromPossibleValue', () => {
   expect(getTextValueFromPossibleValue(sampleData.settings, sampleQuestionData, 2)).toEqual('Jamais');
   expect(getTextValueFromPossibleValue(sampleData.settings, sampleQuestionData, 50)).toEqual('');
   expect(getTextValueFromPossibleValue(sampleData.settings,
-    { 'label': 'Test question', 'answerLabelsOverride': answerOverride }, 1)).toEqual('Pas d\'accord');
+    { 'label': 'Test question', overrides : { answerLabelsOverride: answerOverride }}, 1)).toEqual('Pas d\'accord');
   expect(getTextValueFromPossibleValue(sampleData.settings,
-    { 'label': 'Test question', 'answerLabelsOverride': answerOverride }, 5)).toEqual('Tout à fait d\'accord');
+    { 'label': 'Test question', overrides : { answerLabelsOverride: answerOverride }}, 5)).toEqual('Tout à fait d\'accord');
 });
 
 test('isAcquiredAnswer', () => {
@@ -373,8 +379,8 @@ test('isAcquiredAnswer', () => {
   expect(isAcquiredAnswer(sampleData.settings, sampleQuestionData, 5)).toEqual(true);
   expect(isAcquiredAnswer(sampleData.settings, sampleQuestionData, 4)).toEqual(true);
   expect(isAcquiredAnswer(sampleData.settings, sampleQuestionData, 3)).toEqual(false);
-  expect(isAcquiredAnswer(sampleData.settings, modifiedQuestionData, 3)).toEqual(true);
-  expect(isAcquiredAnswer(sampleData.settings, modifiedQuestionData, 2)).toEqual(true);
+  expect(isAcquiredAnswer(sampleData.settings, modifiedQuestionData, 3)).toEqual(false);
+  expect(isAcquiredAnswer(sampleData.settings, modifiedQuestionData, 2)).toEqual(false);
   expect(isAcquiredAnswer(sampleData.settings, modifiedQuestionData, 1)).toEqual(false);
 
 });

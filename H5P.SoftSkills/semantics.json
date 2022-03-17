@@ -339,7 +339,7 @@
         "default": "SOK@A est un projet soutenu dans le cadre de l’AMI<br> 2017 TRANSFORMATION PÉDAGOGIQUE ET<br> NUMÉRIQUE."
       },
       {
-        "name": "footerImage",
+        "name": "footerLogo",
         "type": "image",
         "widget": "image",
         "optional": true

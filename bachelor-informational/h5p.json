@@ -1,0 +1,34 @@
+{
+  "title": "SoftSkills - Bachelor Informational",
+  "language": "en",
+  "author": "CALL Learning (2020) for HESAM Sok@a project",
+  "license": "CC BY-SA",
+  "licenseVersion": "4.0",
+  "authors": [
+    {
+      "name": "Laurent David <laurent@call-learning.fr>",
+      "role": "Author"
+    }
+  ],
+  "preloadedDependencies": [
+    {
+      "machineName": "H5P.SoftSkills",
+      "majorVersion": 3,
+      "minorVersion": 1
+    },
+    {
+      "machineName": "FontAwesome",
+      "majorVersion": "4",
+      "minorVersion": "5"
+    },
+    {
+      "machineName": "H5PEditor.VerticalTabs",
+      "majorVersion": "1",
+      "minorVersion": "3"
+    }
+  ],
+  "mainLibrary": "H5P.SoftSkills",
+  "embedTypes": [
+    "div"
+  ]
+}

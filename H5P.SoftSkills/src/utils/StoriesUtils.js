@@ -47,10 +47,10 @@ SampleQuestionHandler.propTypes = {
 };
 
 export const sampleInstructionPageSettings = {
-  welcomeTitle: 'Bienvenue sur le\nTest d\'auto-positionnement sur les soft skills.',
+  welcomeTitle: "Bachelor\nTest d’auto-positionnement compétences\nmanagériales & conduite de projet.",
   generalInstructions: 'Ce questionnaire vous permettra d’identifier vos compétences transversales, autrement appelées soft skills, et vous proposera des ressources d’auto-formation afin d’accompagner le développement de ces compétences.',
   startButtonLabel: 'Démarrer le test',
-  footerText: "SOK@A est un projet soutenu dans le cadre de l’AMI<br> 2017 TRANSFORMATION PÉDAGOGIQUE ET<br> NUMÉRIQUE.",
+  footerText: "Le projet  « HESAM 2030 - Construisons nos Métiers ! » est lauréat du second  <br/> appel à projets « Nouveaux cursus à l’université » du troisième Programme <br/> d’Investissements d’Avenir (PIA 3) - convention n°ANR – 18 - NCU – 0028.",
   instructionsDesc: [
     {
       icon: 'timer',

@@ -1,4 +1,4 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles';
 import '../Questionnaire.css';
 
 const palette = {
@@ -29,7 +29,7 @@ const palette = {
   },
 };
 
-export const questionnaireTheme = createMuiTheme({
+export const questionnaireTheme = createTheme({
   palette: palette,
   typography: {
     fontFamily: '\'Gandhi Sans SC\', sans-serif',

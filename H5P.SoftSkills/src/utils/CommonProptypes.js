@@ -161,6 +161,7 @@ export const questionnaireSettings = {
       alwaysDeliverBadge: PropTypes.bool,
       generalInstructions: PropTypes.string,
       footerText: PropTypes.string,
+      footerLogo: PropTypes.object,
       startButtonLabel: PropTypes.string,
       instructionsDesc: PropTypes.arrayOf(
         PropTypes.shape({
@@ -220,5 +221,9 @@ export const progressDataDefault = {
     questionsCount: 1,
     competenciesProgress: []
   }
+};
+
+export const questionAnswerData = {
+
 };
 

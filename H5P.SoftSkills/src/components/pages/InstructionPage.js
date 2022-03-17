@@ -12,7 +12,6 @@ import 'material-design-icons/iconfont/material-icons.css';
 import NavigationButton from '../elements/NavigationButton';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { H5PContext } from '../../contexts/H5PContext';
-import defaultFooterImage from '../../../assets/hesam2030.png';
 
 const useStyles = makeStyles(theme => ({
   competencyTitle: {
@@ -30,16 +29,27 @@ const useStyles = makeStyles(theme => ({
     }
   },
   footerImage: {
-    maxWidth: "200px"
+    maxWidth: '200px'
+  },
+  horizontalDiv: {
+    width: '3em',
+    margin: '1em auto',
+    border: `2px solid ${theme.palette.primary.main}`,
+    background: `${theme.palette.primary.main}`,
+    borderRadius: '4px',
+    boxShadow: 'inset 0 1px 1px rgba(0, 0, 0, .05)',
+    alignSelf: 'center'
   }
 }));
 
 const InstructionPage = (props) => {
   const classes = useStyles(props);
   const h5pContext = useContext(H5PContext);
-  const logoFooterImageUrl = props.footerLogo ? getAbsoluteURL(props.footerLogo, h5pContext.contentId)
-    : defaultFooterImage;
-    return(<Container maxWidth={false} disableGutters={true} className={classes.root}>
+  const logoFooterImageUrl = (props.footerLogo && typeof props.footerLogo.path !== "undefined") ?
+    getAbsoluteURL(props.footerLogo, h5pContext.contentId)
+    : null;
+
+  return (<Container maxWidth={false} disableGutters={true} className={classes.root}>
       <Container maxWidth={false} disableGutters={true} className={classes.containerNoPadding}>
         <WaveHeading title={props.welcomeTitle}/>
       </Container>
@@ -54,7 +64,7 @@ const InstructionPage = (props) => {
             {
               props.isReadyToStart ?
                 (<NavigationButton isNext
-                                   onClick={() => {props.startQuestionnaire(h5pContext.startAction)}}>
+                                   onClick={() => {props.startQuestionnaire(h5pContext.startAction);}}>
                     <H5PTranslatedText text="startquestionnaire"/>
                   </NavigationButton>
                 ) : <CircularProgress/>
@@ -79,13 +89,15 @@ const InstructionPage = (props) => {
           </Box>
         </Box>
         <Container display="flex" py={2}>
-          <Typography align={'center'} color="textSecondary">
+          <Box className={classes.horizontalDiv}></Box>
+          <Typography align={'center'}>
             <span dangerouslySetInnerHTML={resourceCreateMarkup(props.footerText)}/>
           </Typography>
-          <Box display="flex" justifyContent="center" padding={"2em"}>
-            <img className={classes.footerImage}
-                 src={logoFooterImageUrl}
-                 role="presentation"/>
+          <Box display="flex" justifyContent="center" padding={'2em'}>
+            {
+              logoFooterImageUrl ?
+                (<img className={classes.footerImage} src={logoFooterImageUrl} role="presentation"/>) : ''
+            }
           </Box>
         </Container>
 
