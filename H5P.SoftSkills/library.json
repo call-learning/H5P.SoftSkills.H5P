@@ -3,7 +3,7 @@
   "description": "Soft Skill Questionnaire for HESAM Soka project (Bachelor and Pitch)",
   "majorVersion": 3,
   "minorVersion": 1,
-  "patchVersion": 8,
+  "patchVersion": 9,
   "author": "CALL Learning 2022 (contact@call-learning.fr)",
   "license": "MIT",
   "machineName": "H5P.SoftSkills",
