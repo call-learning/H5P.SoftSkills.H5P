@@ -98,29 +98,57 @@
     {
       "subCompetencies": [
         {
-          "label": "Savoir reconnaître et caractériser son besoin d’information et l’objectif de sa recherche",
+          "label": "Savoir reconnaître et caractériser son besoin d’information et l’objectif de sa recherche.",
           "shortname": "Reconnaître et caractériser",
           "isVisible": true,
           "contexts": [
             {
-              "label": "Savoir reconnaître et caractériser son besoin d’information et l’objectif de sa recherche",
+              "label": "Savoir reconnaître et caractériser son besoin d’information et l’objectif de sa recherche.",
               "isVisible": false,
               "questions": [
                 {
                   "label": "Lorsque j’ai besoin d’information sur un sujet, je définis clairement le but de ma recherche.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Comment formuler un objectif adéquat, Guide de pratique Professionnelle, Ordre des Ingénieurs du Québec, 2011. <a href=\"http://gpp.oiq.qc.ca/comment_formule_t_on_des_objectifs_adequats.htm\">Lien</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Elaborer une stratégie de recherche d'information: Introduction, FORMADOCT, Doctorat Bretagne Loire, 2020. <a href=\"https://formadoct.doctorat-bretagneloire.fr/recherchedocumentaire\">Lien</a>",
+                      "type": "module"
+                    }
+                  ]
                 },
                 {
                   "label": "Je réfléchis au type et au niveau d’information nécessaire pour atteindre ce but.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Les compétences Informationnelles et Vous, Chaîne Apprendre et Guider, 2015. <a href=\"https://www.youtube.com/watch?v=kweUusQiFDY\">Lien</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "J’effectue une recherche pour me faire une première idée sur mon sujet, avec des moteurs de recherche, des médias généralistes ou des encyclopédies.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Cerner un sujet de recherche : Se familiariser avec le thème, Chaîne Faire Une recherche, 2014. <a href=\"https://www.youtube.com/watch?v=KzmBhEK3TRY\">Lien</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Le processus de recherche – c’est important, Chaîne Apprendre et Guider, 2015. <a href=\"https://www.youtube.com/watch?v=IlKIrj2F574\">Lien</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "A partir des résultats de ma recherche, je replace mon sujet dans son contexte.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Capsule TD1: Contextualiser la Recherche, Institut Marocain de Formation Scientifique et Technique, 2021. <a href=\"https://www.youtube.com/watch?v=20aYJaD33jU\">Lien</a>",
+                      "type": "module"
+                    }
+                  ]
                 }
               ]
             }
@@ -132,16 +160,26 @@
           "isVisible": true,
           "contexts": [
             {
-              "label": "Comprendre la portée et la pertinence des différentes sources d'information à interroger",
+              "label": "Comprendre la portée et la pertinence des différentes sources d'information à interroger.",
               "isVisible": false,
               "questions": [
                 {
                   "label": "En fonction de mon but et de mon sujet, je décide des types d’information que je vais utiliser.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Méthodologie de la Recherche documentaire: principes-clés, Université d’Avignon-Vaucluse, 2013. <a href=\"https://bu.univ-avignon.fr/wp-content/uploads/2013/08/Methodo_documentaire.pdf\">Lien</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
                   "label": "Je comprends que certains sites sont plus fiables que d’autre.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Analyser l’information, Evaluer un site Web, INFO Sphère, Université du Québec à Montréal. <a href=\"http://www.infosphere.uqam.ca/analyser-linformation/evaluer-un-site-web\">Lien</a>",
+                      "type": "web"
+                    }
+                  ]
                 }
               ]
             }
@@ -158,15 +196,34 @@
               "questions": [
                 {
                   "label": "Je fais la différence entre les sources qui existent et je les classe par type de source.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Préparer sa recherche, Distinguer les Différents Types de Documents, INFO Sphère, Université du Québec à Montréal. <a href=\"http://www.infosphere.uqam.ca/preparer-sa-recherche/distinguer-les-types-documents\">Lien</a>",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
                   "label": "Je choisis les sources qui correspondent à mes besoins.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Comment reconnaître les types de documents adaptés à son besoin, Infotrack UNIGE, 2016. <a href=\"https://www.youtube.com/watch?v=6k2jRRXVsnA&list=PLG33bLGaKUYgM5eptasA0lV0XNQTPnRHP&index=5\">Lien</a>",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
                   "label": "Je reste informé sur le sujet de ma recherche.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Créer une veille documentaire sur internet, Pourquoi créer une veille ?, 2018. <a href=\"https://coop-ist.cirad.fr/trouver-l-information/creer-une-veille/1-pourquoi-creer-une-veille\">Lien</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Pourquoi pratiquer une veille documentaire et comment s’organiser, Réussir ses Recherches, Recherche Documentaire USPC. <a href=\"https://moodle.uspc.fr/mod/scorm/view.php?id=718\">Lien</a>",
+                      "type": "module"
+                    }
+                  ]
                 }
               ]
             }
@@ -185,16 +242,38 @@
           "isVisible": true,
           "contexts": [
             {
-              "label": "Connaître et repérer les différents services d'assistance et de veille documentaire disponibles",
+              "label": "Connaître et repérer les différents services d'assistance et de veille documentaire disponibles.",
               "isVisible": false,
               "questions": [
                 {
                   "label": "Je connais le site Web et les services de la bibliothèque de mon école..",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Me repérer dans la BU Centrale, Université de Rennes 2, 2016.. <a href=\"https://www.bu.univ-rennes2.fr/service/me-reperer-bu-centrale\">Lien</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Bienvenue sur le Site Internet des Bibliothèques Universitaires de Lyon 2, Université Lumière Lyon 2, 2021. <a href=\"https://bu.univ-lyon2.fr/\">Lien</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Bibliothèque Universitaire SHS, Université de Lille 2, 2022. <a href=\"https://bushs.univ-lille.fr/ressources-en-ligne/\">Lien</a>",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
                   "label": "Je sais quels services de la bibliothèque utiliser et comment le faire.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Comment accéder aux Documents, Infotrack UNIGE, 2021. <a href=\"https://www.youtube.com/watch?v=ILCCIBDVets\">Lien</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Connaître le fonctionnement d’une bibliothèque, Réussir ses Recherches, Recherche Documentaire USPC. <a href=\"https://bu.univ-lyon2.fr/\">Lien</a>",
+                      "type": "module"
+                    }
+                  ]
                 }
               ]
             }
@@ -211,19 +290,69 @@
               "questions": [
                 {
                   "label": "Je connais et j’utilise les sources et les outils adaptés à mon besoin.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Types of Information Sources, Chaîne de CSUN University Library, 2017. <a href=\"https://www.youtube.com/watch?v=6sylTfkjydE\">Lien</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "La hiérachie de l’info- Les Clés des médias, Chaîne CLEMI, 2021. <a href=\"https://www.youtube.com/watch?v=u3jTngMjWfs\">Lien</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "Je traduis mon besoin d’information en questions simples.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Cerner le Sujet d’une Recherche, chaîne de Florence Guédel, 2015. <a href=\"https://www.youtube.com/watch?v=_2aM8IpVQx0\">Lien</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Les 5W, ou comment bien aborder un sujet donné, 2020. <a href=\"https://www.youtube.com/watch?v=6K96m4ptjDI\">Lien</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "A partir de ces questions, je liste les mots-clés de ma recherche.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "L’identification des mots-clés pertinents pour sa question de recherche, Chaîne InfoTrack UNIGE, 2016. <a href=\"https://www.youtube.com/watch?v=qINY6lSxr9A\">Lien</a>",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
                   "label": "Je sais utiliser les outils que j’ai choisis pour lancer ma recherche et trier les résultats.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Rechercher l’Information, Chercher dans le Web, INFO Sphère, Université du Québec à Montréal. <a href=\"http://www.infosphere.uqam.ca/rechercher-linformation/chercher-web\">Lien</a>",
+                      "type": "web"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Utiliser les fonctions de recherche avancée.",
+          "shortname": "Recherche avancée",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "Utiliser les fonctions de recherche avancée.",
+              "isVisible": false,
+              "questions": [
+                {
+                  "label": "J’utilise les filtres et les opérateurs logiques.",
+                  "resources": [
+                    {
+                      "content": "Astuce pour devenir un pro de la recherche. <a href=\"https://www.01net.com/astuces/google-12-astuces-pour-devenir-un-pro-de-la-recherche-1525291.html\">Lien</a>",
+                      "type": "web"
+                    }
+                  ]
                 }
               ]
             }
@@ -247,11 +376,25 @@
               "questions": [
                 {
                   "label": "Je cherche et j’utilise des sources différentes pour trouver les informations.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "La Recherche Documentaire, 2. Choisir ses Sources et Valider l’Information, Académie de Versailles. <a href=\"http://blog.ac-versailles.fr/cdicorot/public/AP/Etude_de_gestion/AP2_STMG_blog.pdf\">Lien</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Un réseau social, ce n’est pas un journal, Les Clés des Médias, Chaîne CLEMI, 2021. <a href=\"https://www.youtube.com/watch?v=r6ydUmeLJgA\">Lien</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "Je repère ce qui manque dans mes résultats et je cherche comment les compléter.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Adopter une Méthode de Recherche Documentaire, Rehcerche Documentaire USPC. <a href=\"https://moodle.uspc.fr/mod/scorm/view.php?id=599\">Lien</a>",
+                      "type": "module"
+                    }
+                  ]
                 }
               ]
             }
@@ -268,11 +411,47 @@
               "questions": [
                 {
                   "label": "Je sais connais reconnaître une information fiable et je fais la différence avec les «fakenews» et les préjugés.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Moynet N., «Fakenews: Comment reconnaître le Vrai du Faux?», 2021, Site internet Archimag. <a href=\"https://www.archimag.com/veille-documentation/2020/01/21/fake-news-comment-reconnaitre-vrai-faux\">Lien</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Méthodologie de la Recherche Documentaire, Aix-Marseille Université, 2022. <a href=\"https://bu.univ-amu.libguides.com/methodologie_recherche_documentaire/evaluer\">Lien</a>",
+                      "type": "web"
+                    }
+                  ]
                 },
                 {
                   "label": "Je fais attention à mes propres préjugés et opinions pour ne pas me laisser influencer.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Teixier B., «Caroline Faillet: Face aux fake news, nous sommes tous sous l’influence de nos biais cognitifs!», 2019, Site internet Archimag. <a href=\"https://www.archimag.com/veille-documentation/2019/08/26/caroline-faillet-fake-news-influence-biais-cognitifs\">Lien</a>",
+                      "type": "web"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Contrôler l'exactitude des informations ou la cohérence des informations.",
+          "shortname": "Contrôler l'exactitude",
+          "isVisible": true,
+          "contexts": [
+            {
+              "label": "Définir et appliquer des critères pour évaluer l'information obtenue.",
+              "isVisible": false,
+              "questions": [
+                {
+                  "label": "Je connais les outils de fact checking.",
+                  "resources": [
+                    {
+                      "content": "Fact Checker ou vérifier l’info. <a href=\"https://ver.afev.org/ressources/conseils-aux-engages/fact-checker-ou-verifier-linfo-les-sites-utiles\">Lien</a>",
+                      "type": "web"
+                    }
+                  ]
                 }
               ]
             }
@@ -296,11 +475,29 @@
               "questions": [
                 {
                   "label": "Je classe les informations que j’ai trouvées pour garder celles qui répondent à mes besoins ; je sais comment les sauvegarder pour les retrouver.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Traiter l’information, ABCDOC, Université Toulouse III – Paul Sabatier. <a href=\"http://sup.ups-tlse.fr/abcdoc/rechercher-traiter-information/int/traiter.html\">Lien</a>",
+                      "type": "module"
+                    },
+                    {
+                      "content": "Analyser des Notes de Lecture, Prendre des Notes, INFO Sphère, Université du Québec à Montréal. <a href=\"http://www.infosphere.uqam.ca/analyser-linformation/prendre-notes-lectures\">Lien</a>",
+                      "type": "web"
+                    },
+                    {
+                      "content": "Lecture efficace, Service de Soutien à l’Apprentissage, Université du Québec à Montréal. <a href=\"https://vie-etudiante.uqam.ca/medias/fichiers/conseils-soutien/Lecture_efficace.pdf\">Lien</a>",
+                      "type": "document"
+                    }
+                  ]
                 },
                 {
                   "label": "Je connais les règles de ma discipline pour rédiger une bibliographie.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Gérer sa Bibliographie, Les Bibliothèques Arts et Métiers, 2016. <a href=\"https://bibliotheques.ensam.eu/page/gerer-sa-bibliographie\">Lien</a>",
+                      "type": "web"
+                    }
+                  ]
                 }
               ]
             }
@@ -317,15 +514,34 @@
               "questions": [
                 {
                   "label": "Je cite correctement les sources et les auteurs de l’information que j’utilise.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "JACQUET R., Boedec F., «2016/2017: Guide de Rédaction des Références Bibliographiques», Université d’Orléans. <a href=\"https://scd.univ-orleans.fr/sites/default/files/contributeurs/guide-biblio-orle.pdf\">Lien</a>",
+                      "type": "document"
+                    },
+                    {
+                      "content": "Les usages en matière de citation, Chaîne Infotrack UNIGE, 2016. <a href=\"https://www.youtube.com/watch?v=DkNjQ_yOhyA&list=PLG33bLGaKUYgM5eptasA0lV0XNQTPnRHP&index=23\">Lien</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "Je fais la différence entre le plagiat et la citation.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "C’est quoi le plagiat?, Chaîne Scribbr, 2020. <a href=\"https://www.youtube.com/watch?v=sQN6UQeNGmY\">Lien</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "Je connais les règles de mon école et de ma discipline sur l’utilisation de l’information.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "JACQUET R., BOEDEC F., «2016/2017: Guide de Rédaction des Références Bibliographiques», Université d’Orléans. <a href=\"https://scd.univ-orleans.fr/sites/default/files/contributeurs/guide-biblio-orle.pdf\">Lien</a>",
+                      "type": "web"
+                    }
+                  ]
                 }
               ]
             }
@@ -342,15 +558,34 @@
               "questions": [
                 {
                   "label": "Je garde les informations les plus importante pour faire une synthèse de mes résultats.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Les techniques pour synthétiser sa recherche documentaire, Chaîne Infotrack UNIGE. <a href=\"https://www.youtube.com/watch?v=Jo8xmS1klas\">Lien</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "J’utilise les informations que j’ai trouvées pour appuyer mon raisonnement en citant toujours les sources de ces informations.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Pourquoi et Comment citer les sources de vos Travaux?, Chaîne de Romain Willmann, 2020,. <a href=\"https://www.youtube.com/watch?v=ghrrX_Kh8Jg\">Lien</a>",
+                      "type": "video"
+                    },
+                    {
+                      "content": "Les usages en matière de citation, Chaîne Infotrack UNIGE, 2016. <a href=\"https://www.youtube.com/watch?v=DkNjQ_yOhyA&list=PLG33bLGaKUYgM5eptasA0lV0XNQTPnRHP&index=23\">Lien</a>",
+                      "type": "video"
+                    }
+                  ]
                 },
                 {
                   "label": "Je rédige une bibliographie qui liste toutes mes sources et je la présente selon les règles de mon école ou de ma discipline.",
-                  "resources": []
+                  "resources": [
+                    {
+                      "content": "Présenter des références bibliographiques. <a href=\"https://www.univ-tours.fr/bibliotheques/formation-documentaire/presenter-des-references-bibliographiques\">Lien</a>",
+                      "type": "web"
+                    }
+                  ]
                 }
               ]
             }
