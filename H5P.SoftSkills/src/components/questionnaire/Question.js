@@ -24,7 +24,8 @@ const useStyles = makeStyles(theme => ({
     marginLeft: '2.5em',
     flexWrap: 'nowrap',
     [theme.breakpoints.down('md')]: {
-      marginLeft: 'initial'
+      marginLeft: 'initial',
+      flexWrap: 'wrap',
     },
   },
   roundedControl: {

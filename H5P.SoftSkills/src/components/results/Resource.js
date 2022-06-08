@@ -24,6 +24,13 @@ const useStyles = makeStyles(theme => ({
     maxWidth: "50px",
     maxHeight: "50px"
   },
+  illustrationContainer: {
+    alignSelf: "center",
+    width: "50px",
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+  },
   textBox: {
     overflowWrap: "anywhere",
   },
@@ -57,7 +64,7 @@ function Resource (props) {
   const classes = useStyles(props);
   return (
     <Box display="flex" flexDirection="row" py={1}>
-      <Box width={"50px"} alignSelf={"center"} px={3}>
+      <Box className={classes.illustrationContainer} px={3}>
         {
         props.resource.imageUrl ?
           <img className={classes.illustrationImage} src={props.resource.imageUrl} alt={""} role="presentation"/>

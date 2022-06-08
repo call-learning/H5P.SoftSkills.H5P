@@ -12,23 +12,38 @@ const useStyles = makeStyles(theme => ({
   partNumber: {
     fontSize: 'smaller',
     textTransform: 'lowercase',
+    [theme.breakpoints.down('sm')]: {
+      textOrientation: 'upright',
+      writingMode: 'vertical-rl',
+    },
   },
   progressBarLegend: {
     fontSize: 'smaller',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    },
   },
   sideBarStyle: {
-    width: "300px",
-    [theme.breakpoints.down('md')]: {
-      width: "150px",
+    width: '300px',
+    [theme.breakpoints.down('sm')]: {
+      width: '50px',
     },
-    height: "100%",
-    position: "absolute",
-    display: "flex",
-    flexDirection: "row",
+    height: '100%',
+    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'row',
     top: 0
   },
+  competencyTitle: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    },
+  },
   competencyIllustration: {
-    width: "90%",
+    width: '90%',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
   }
 }));
 
@@ -51,9 +66,9 @@ const CompetencySideNavigation = (props) => {
   const h5pContext = useContext(H5PContext);
   return (
     <Box className={classes.sideBarStyle}>
-      <Box display="flex" flexDirection="column" alignItems="center" px={{ xs: 3, sm: 1 }}>
-        <Box display={{ sm: 'none', md: 'flex' }} pt="15%" justifyContent="center">
-          <Box>
+      <Box display="flex" flexDirection="column" alignItems="center" px={{ sm: 0 }}>
+        <Box px={{ sm: 0 }} pt="15%" justifyContent="center">
+          <Box px={{ sm: 0 }}>
             <img className={classes.competencyIllustration}
                  src={getCompetencyImageFromIndex(props.competencyIndex, props.competencyImage, h5pContext.contentId)}
                  alt={props.competencyTitle}
@@ -61,7 +76,7 @@ const CompetencySideNavigation = (props) => {
             <Typography className={classes.partNumber} color="textSecondary">
               {props.competencyPartLabel}
             </Typography>
-            <Typography>{props.competencyTitle}</Typography>
+            <Typography className={classes.competencyTitle}>{props.competencyTitle}</Typography>
           </Box>
         </Box>
         <Box display={{ sm: 'none', md: 'flex' }} mb={2} mt="auto">
