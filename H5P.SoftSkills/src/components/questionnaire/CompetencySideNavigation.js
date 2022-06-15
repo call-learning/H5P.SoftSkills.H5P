@@ -29,7 +29,6 @@ const useStyles = makeStyles(theme => ({
       width: '50px',
     },
     height: '100%',
-    position: 'absolute',
     display: 'flex',
     flexDirection: 'row',
     top: 0
